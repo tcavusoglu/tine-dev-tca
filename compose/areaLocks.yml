@@ -1,0 +1,4 @@
+services:
+  web:
+    volumes:
+      - ./configs/areaLocks/areaLocks.inc.php:/etc/tine20/conf.d/areaLocks.inc.php:ro

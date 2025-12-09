@@ -1,0 +1,22 @@
+# this is a override file to add a clamav container
+services:
+  clamav:
+    image: clamav/clamav
+    platform: linux/x86_64
+    container_name: clamav
+    volumes:
+      # need to be created on the host
+      - ./data/clamav/var/lib:/var/lib/clamav
+      - ./data/clamav/run:/run/clamav
+      - ./configs/clamav/clamd.conf:/etc/clamav/clamd.conf:ro
+      - ./configs/clamav/freshclam.conf:/etc/clamav/freshclam.conf:ro
+      - ./configs/clamav/init:/init
+    networks:
+      - internal_network
+      - external_network
+  web:
+    volumes:
+      - ./configs/clamav/clamav.inc.php:/etc/tine20/conf.d/clamav.inc.php:ro
+      # install ubuntu package "clamav-testfiles" first
+      # TODO only mount if existing?
+      # - /usr/share/clamav-testfiles/:/usr/share/clamav-testfiles/:ro

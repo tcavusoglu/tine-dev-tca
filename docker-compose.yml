@@ -1,0 +1,132 @@
+name: "tine20"
+services:
+  traefik:
+    image: "traefik:v3.3"
+    restart: always
+    container_name: "traefik"
+    command:
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --providers.file.directory=/etc/traefik/dynamic
+      - --entrypoints.web.address=:80
+      - --entrypoints.web.http.redirections.entryPoint.to=websecure
+      - --entrypoints.web.http.redirections.entryPoint.scheme=https
+      - --entrypoints.web.http.redirections.entrypoint.permanent=true
+      - --entrypoints.websecure.address=:443
+      - --entrypoints.webpacksecure.address=:10443
+      - --accesslog=true
+      - --api=true
+    ports:
+      - 80:80
+      - 443:443
+      - 10443:10443
+    volumes:
+      - ./configs/traefik/:/etc/traefik/:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - external_network
+      - internal_network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik.rule=Host(`traefik.local.tine-dev.de`)"
+      - "traefik.http.routers.traefik.entrypoints=websecure"
+      - "traefik.http.routers.traefik.tls=true"
+      - "traefik.http.routers.traefik.service=api@internal"
+    stop_grace_period: 1s
+
+  db:
+    image: mariadb:10.9.8
+    command: --max-allowed-packet=209715210
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD:-root}"
+      MYSQL_DATABASE: &MYSQL_DATABASE "${MYSQL_DATABASE:-tine20}"
+      MYSQL_USER: &MYSQL_USER "${MYSQL_USER:-tine20}"
+      MYSQL_PASSWORD: &MYSQL_PASSWORD "${MYSQL_PASSWORD:-tine20pw}"
+      # [ERROR] Incorrect definition of table mysql.column_stats
+      # see https://github.com/wallabag/wallabag/issues/6572
+      MARIADB_AUTO_UPGRADE: 1
+    networks:
+      - internal_network
+      - external_network
+    ports:
+      - "3306:3306"
+
+  cache:
+    image: redis:6.0.16
+    networks:
+      - internal_network
+      - external_network
+    ports:
+      - "6379:6379"
+
+  web:
+    image: ${WEB_IMAGE:-tinegroupware/dev:2023.11-8.1}
+    depends_on:
+      - db
+      - cache
+    environment:
+      TINE20_DATABASE_HOST: db
+      TINE20_DATABASE_DBNAME: *MYSQL_DATABASE
+      TINE20_DATABASE_USERNAME: *MYSQL_USER
+      TINE20_DATABASE_PASSWORD: *MYSQL_PASSWORD
+      TINE20_DATABASE_TABLEPREFIX: ${TINE20_DATABASE_TABLEPREFIX:-main}
+      TINE20_SETUPUSER_USERNAME: tine20setup
+      TINE20_SETUPUSER_PASSWORD: tine20setup
+      TINE20_LOGIN_USERNAME: tine20admin
+      TINE20_LOGIN_PASSWORD: tine20admin
+      TINE20_ADMIN_EMAIL: tine20admin@mail.test
+      TINE20_CACHING_BACKEND: Redis
+      TINE20_CACHING_REDIS_HOST: cache
+      TINE20_CACHING_REDIS_PREFIX: ${TINE20_DATABASE_TABLEPREFIX:-main}
+      TINE20_SESSION_BACKEND: Redis
+      TINE20_SESSION_HOST: cache
+      TINE20_FILESDIR: /var/lib/tine20/files/${TINE20_DATABASE_TABLEPREFIX:-main}
+      TINE20_ACTIONQUEUE_HOST: cache
+      TINE20_CREDENTIALCACHESHAREDKEY: change_me
+      TINE20_ACCEPTED_TERMS_VERSION: 0
+      TINE20_INSTALL_LANG: de
+      TINE20_BUILDTYPE: DEVELOPMENT
+      TINE20_APPLICATION_TO_INSTALL: all
+      TINE20_LOGGER_PRIORITY: "7"
+      TINE20_ACTIONQUEUE: "false"
+      TINE20_LICENSE_PATH: /usr/share/tests/tine20/Tinebase/License/license_contract_MW-TEST-3.0.0.pem
+      TINE20_SETUP_HTPASSWD: "dev:$$apr1$$Ivpb7VfS$$kLnOg/uI0eNpTUhbeZF7n/" # dev:dev
+      TINE20_FQDN: tine.local.tine-dev.de
+      TINE20_URL: https://tine.local.tine-dev.de
+      DEBUG_COLORS: "true"
+      TERM: xterm-256color
+      COLORTERM: truecolor
+      PHP_DISPLAY_ERRORS: "On"
+    volumes:
+      - ./tine20/tine20:/usr/share/tine20/:ro
+      - ./tine20/tests:/usr/share/tests/:ro
+      - ./tine20/scripts:/usr/share/scripts/:ro
+      - ./configs/conf.d/custom.inc.php:/etc/tine20/conf.d/custom.inc.php:ro
+      - ./configs/default/cert.pem:/etc/nginx/certs/cert.pem:ro
+      - ./configs/default/key.pem:/etc/nginx/certs/key.pem:ro
+      - ${HOMEDIR}/.dockertine20web_ash_history:/root/.ash_history
+      - ${HOMEDIR}/.dockertine20web_bash_history:/root/.bash_history
+      # tine filesdir
+      - tinefiles:/var/lib/tine20/files
+    networks:
+      - external_network
+      - internal_network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.web.rule=Host(`tine.local.tine-dev.de`)"
+      - "traefik.http.routers.web.entrypoints=websecure"
+      - "traefik.http.routers.web.tls=true"
+      - "traefik.http.services.web.loadbalancer.server.port=80"
+    stop_grace_period: 1s
+
+networks:
+  internal_network:
+    internal: true
+  external_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.118.0.0/16
+
+volumes:
+  tinefiles:

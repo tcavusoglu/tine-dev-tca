@@ -1,0 +1,4 @@
+services:
+  web:
+    volumes:
+      - ./configs/spam/spam.inc.php:/etc/tine20/conf.d/spam.inc.php:ro

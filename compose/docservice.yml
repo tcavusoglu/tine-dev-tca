@@ -1,0 +1,12 @@
+# this is a override file to add a docservice container
+services:
+  document-preview:
+    image: tinegroupware/document-preview-service:2.1.994783a
+    container_name: docservice
+    ports:
+      - "4050:80"
+    networks:
+      - internal_network
+  web:
+    volumes:
+      - ./configs/docservice/docservice.inc.php:/etc/tine20/conf.d/docservice.inc.php:ro

@@ -1,0 +1,136 @@
+/*
+ * Tine 2.0
+ *
+ * @license     http://www.gnu.org/licenses/agpl.html AGPL Version 3
+ * @author      Cornelius Weiss <c.weiss@metaways.de>
+ * @copyright   Copyright (c) 2021 Metaways Infosystems GmbH (http://www.metaways.de)
+ */
+
+Ext.ns('Tine.Tinebase');
+
+const WebAuthnPublicKeyDataField = Ext.extend(Ext.form.FieldSet, {
+    height: 200,
+
+    initComponent: function() {
+        this.title = i18n._('FIDO2 WebAuthn Device');
+        // this.explainText = new Ext.form.Label({
+        //     text: i18n._("Please note: After saving you cannot view this auto-generated secret key again!")
+        // });
+        // chrome://settings/securityKeys
+        this.settingsText = new Ext.form.TextField({
+            fieldLabel: formatMessage("Please open the following URL in your browser for additional security key options"),
+            hidden: !Ext.isChrome,
+            value: 'chrome://settings/securityKeys',
+            anchor: '100%',
+            readOnly: true,
+            plugins: [{ptype: 'ux.fieldclipboardplugin'}]
+        });
+        this.publicKeyDataField = new Ext.form.TextField({
+            name: 'publicKeyData',
+            readOnly: true,
+            anchor: '100%',
+            hideLabel: true,
+            setValue: this.setValue.createDelegate(this),
+            getValue: function() {return this.value}
+        });
+        this.items = [
+            // this.explainText,
+            this.publicKeyDataField,
+            this.settingsText
+        ];
+
+        this.supr().initComponent.call(this);
+    },
+
+    onRender: function() {
+        this.supr().onRender.apply(this, arguments);
+        this.editDialog = this.findParentBy(function (c) {
+            return c instanceof Tine.widgets.dialog.EditDialog
+        });
+    },
+
+    setValue: function(value, record) {
+        const supr = Ext.form.TextField.prototype.setValue.createDelegate(this.publicKeyDataField);
+
+        if (!value && [0, "0"].indexOf(record.id) >= 0) {
+            this.register();
+            supr(i18n._('Configuring FIDO2 WebAuthn Device...'));
+        } else {
+            // this.explainText.setText(i18n._("Existing secret keys can't be viewed. You need to generate a new one if the old one is lost."));
+            supr(i18n._('FIDO2 WebAuthn Device is configured.'));
+            this.publicKeyDataField.value = value;
+        }
+    },
+
+    async register() {
+        await this.afterIsRendered();
+        const rfc4648 = await import('rfc4648');
+        const accountId = this.editDialog.blConfigPanel.account.getId();
+        const mfaId = this.editDialog.configWrapper.get('mfa_config_id');
+        const publicKeyOptions = await Tine.Tinebase.getWebAuthnRegisterPublicKeyOptionsForMFA(mfaId, accountId);
+
+        if (Ext.isGecko && (Ext.isMac || Ext.isLinux) && _.get(publicKeyOptions, 'authenticatorSelection.userVerification') === 'required') {
+            // alert(window.formatMessage('This installation requires user verification for FIDO2 devices. Firefox does not support user verification. You need to use a different browser to use FIDO2.'));
+            const url = 'https://developers.yubico.com/WebAuthn/WebAuthn_Browser_Support/';
+            await Ext.MessageBox.show({
+                buttons: Ext.Msg.OK,
+                icon: Ext.MessageBox.WARNING,
+                title: window.formatMessage('Unsupported Configuration'),
+                msg: window.formatMessage('This installation requires user verification for FIDO2 devices. Firefox for {OS} does not support user verification ({details}). You need to use a different browser to use FIDO2.', {
+                    details: window.formatMessage('see {url} for details', { url: `<a href="${url}" target="_blank">${url}</a>` }),
+                    OS: Ext.isMac ? 'macOS' : 'Linux'
+                }),
+            });
+            // NOTE: we don't return here - future versions of FF might support userVerification
+        }
+
+        publicKeyOptions.challenge = rfc4648.base64url.parse(publicKeyOptions.challenge, { loose: true });
+        publicKeyOptions.user.id = rfc4648.base64url.parse(publicKeyOptions.user.id, { loose: true });
+
+        try {
+            const publicKeyCredential = await navigator.credentials.create({
+                publicKey: publicKeyOptions
+            });
+            // NOTE: publicKeyCredential is a browser object which can't be JSON.serilized
+            const publicKeyData = {
+                id: publicKeyCredential.id,
+                type: publicKeyCredential.type,
+                rawId: rfc4648.base64url.stringify(new Uint8Array(publicKeyCredential.rawId)),
+                response: {
+                    clientDataJSON: rfc4648.base64url.stringify(new Uint8Array(publicKeyCredential.response.clientDataJSON)),
+                    attestationObject: rfc4648.base64url.stringify(new Uint8Array(publicKeyCredential.response.attestationObject))
+                }
+            }
+            
+            this.publicKeyDataField.setValue(JSON.stringify(publicKeyData));
+            this.editDialog.record.set('id', Tine.Tinebase.data.Record.generateUID());
+            this.editDialog.onSaveAndClose();
+        } catch (e) {
+            console.error(e);
+            Ext.MessageBox.show({
+                icon: Ext.MessageBox.WARNING,
+                buttons: Ext.MessageBox.OKCANCEL,
+                title: i18n._('Error'),
+                msg: i18n._("FIDO2 WebAuthn registration failed. Try again?"),
+                fn: (btn) => {
+                    if (btn === 'ok') {
+                        Ext.MessageBox.hide();
+                        return this.register();
+                    } else {
+                        this.editDialog.window.close(true);
+                    }
+                }
+            });
+        }
+        
+        return publicKeyOptions;
+    }
+});
+
+Ext.reg('mfa-webauthn-publickeydatafield', WebAuthnPublicKeyDataField)
+
+Tine.widgets.form.FieldManager.register('Tinebase', 'MFA_WebAuthnUserConfig', 'publicKeyData', {
+    xtype: 'mfa-webauthn-publickeydatafield',
+    height: 200,
+}, Tine.widgets.form.FieldManager.CATEGORY_EDITDIALOG);
+

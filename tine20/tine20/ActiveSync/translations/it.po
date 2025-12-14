@@ -1,0 +1,247 @@
+#
+# Translators:
+# Daniele Gobbetti <daniele@gobbetti.name>, 2013
+# George Sirbu, 2019
+# George Sirbu, 2019
+# Samuel Barbera <samuel.barbera@email.it>, 2013
+# Vincenzo Anzisi <v.anzisi@gurusys.it>, 2012
+# Vincenzo Anzisi <v.anzisi@gurusys.it>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-04-02 13:30+0000\n"
+"Last-Translator: Vincenzo Anzisi <v.anzisi@gurusys.it>, 2012\n"
+"Language-Team: Italian (http://app.transifex.com/tine/groupware/language/it/)\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Manage ActiveSync devices"
+msgstr ""
+
+msgid "See, edit and delete ActiveSync devices"
+msgstr ""
+
+msgid "Reset ActiveSync devices"
+msgstr ""
+
+msgid "Remotely reset ActiveSync devices to factory state, deleting all data"
+msgstr ""
+
+msgid "Default policy for new devices"
+msgstr "Politica predefinita per i nuovi device"
+
+msgid "Enter the id of the policy to apply to newly created devices."
+msgstr "Inserisci l'ID della politica da applicare ai nuovi device"
+
+msgid "Device Model Agent Deny List"
+msgstr ""
+
+msgid "Array of regular expressions of Device-Model strings"
+msgstr ""
+
+msgid "User Agent Deny List"
+msgstr ""
+
+msgid "Array of regular expressions of User-Agent strings"
+msgstr ""
+
+msgid "Disable Remote Reset Action"
+msgstr ""
+
+msgid "Disable Remote Reset Action AdminPanel"
+msgstr ""
+
+msgid "Disable Access Log"
+msgstr "Disattiva log degli accessi"
+
+msgid "Disable ActiveSync Access Log creation."
+msgstr "Disabilita la creazione del log degli accessi ActiveSync."
+
+msgid "Filter timeslot for e-mails"
+msgstr ""
+
+msgid "For how long in the past the e-mails should be synchronized."
+msgstr ""
+
+msgid "Filter timeslot for events"
+msgstr "Periodo di sincronizzazione degli eventi"
+
+msgid "For how long in the past the events should be synchronized."
+msgstr "Per quanto tempo nel passato dovrebbero essere sincronizzati gli eventi."
+
+msgid "%1$s ActiveSync failure"
+msgstr ""
+
+msgid "Sync Devices"
+msgstr ""
+
+msgid "Active Sync"
+msgstr "Active Sync"
+
+msgid "Select a Device"
+msgstr "Seleziona un Device"
+
+msgid "No ActiveSync Device registered"
+msgstr "Nessun Device registrato in ActiveSync"
+
+#, python-brace-format
+msgid "Set as {0} Filter"
+msgstr "Imposta come filtro {0}"
+
+msgid "Resetted Sync Filter"
+msgstr "Filtro Sync Resettato"
+
+#, python-brace-format
+msgid "{0} filter for device \"{1}\" is now \"{2}\""
+msgstr "{0} filtro per il dispositivo \"{1}\" è ora \"{2}\""
+
+msgid "resetted"
+msgstr "resettato"
+
+msgid "Set Sync Filter"
+msgstr "Imposta Filtro Sync"
+
+msgid "Device ID"
+msgstr ""
+
+msgid "Devicetype"
+msgstr ""
+
+msgid "Owned by"
+msgstr "Proprietario"
+
+msgid "Policy"
+msgstr ""
+
+msgid "ActiveSync Version"
+msgstr ""
+
+msgid "User agent"
+msgstr ""
+
+msgid "Model"
+msgstr "Modello"
+
+msgid "IMEI"
+msgstr ""
+
+msgid "Friendly Name"
+msgstr "Nomignolo"
+
+msgid "OS"
+msgstr ""
+
+msgid "OS Language"
+msgstr ""
+
+msgid "Phonenumber"
+msgstr "Telefono"
+
+msgid "Device"
+msgid_plural "Devices"
+msgstr[0] "Device"
+msgstr[1] "Device"
+msgstr[2] "Device"
+
+msgid "Devices"
+msgstr "Device"
+
+msgid "ID"
+msgstr ""
+
+msgid "Device Type"
+msgstr ""
+
+msgid "Operating System"
+msgstr ""
+
+msgid "Phone Number"
+msgstr ""
+
+msgid "Ping Lifetime"
+msgstr ""
+
+msgid "Ping Folder"
+msgstr "Ping Cartella"
+
+msgid "Remote Wipe"
+msgstr ""
+
+msgid "Calendar Filter"
+msgstr ""
+
+msgid "Contacts Filter"
+msgstr ""
+
+msgid "E-mail Filter"
+msgstr ""
+
+msgid "Tasks Filter"
+msgstr ""
+
+msgid "Last Ping"
+msgstr ""
+
+msgid "Monitor Last Ping"
+msgstr ""
+
+msgid "Remote Device Reset"
+msgstr ""
+
+msgid "Please confirm"
+msgstr "Conferma"
+
+msgid "Do you really want to wipe the selected devices? All personal data will be removed and the device will be reset to factory settings!"
+msgstr ""
+
+msgid "Quicksearch"
+msgstr "Ricerca veloce"
+
+msgid "Sync Device"
+msgid_plural "Sync Devices"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Default Address book"
+msgstr ""
+
+msgid "The default address book to create new contacts in."
+msgstr ""
+
+msgid "Default Calendar"
+msgstr "Calendario predefinito"
+
+msgid "The default calendar to create new events in."
+msgstr "Il calendario predefinito per la creazione di nuovi eventi"
+
+msgid "Default Task List"
+msgstr "Elenco Attività predefinito"
+
+msgid "The default task list to create new tasks in."
+msgstr "Lista predefinita di attività in cui crearne una nuova."
+
+msgid "Default Policy"
+msgstr "Politica predefinita"
+
+msgid "Default Policy installed during setup"
+msgstr "Politica predefinita installata durante il setup"
+
+msgid "Dear user,"
+msgstr ""
+
+msgid "%1$s has noticed that the syncronization with your ActiveSync device is no longer active. Please trigger the syncronisation on your device."
+msgstr ""
+
+msgid "Thank you."
+msgstr ""
+
+msgid "Your %1$s Team"
+msgstr ""

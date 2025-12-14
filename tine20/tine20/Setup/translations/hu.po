@@ -1,0 +1,626 @@
+#
+# Translators:
+# Tamás Faragó <>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:59+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Hungarian (http://www.transifex.com/tine20/tine20/language/hu/)\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Maximum number of users reached. "
+msgstr ""
+
+msgid "Please contact Metaways Infosystems GmbH to buy a license that supports a "
+msgstr ""
+
+msgid "Name"
+msgstr "Név"
+
+msgid "Enabled"
+msgstr "Engedélyezett"
+
+msgid "Order"
+msgstr "Sorrend"
+
+msgid "Installed Version"
+msgstr "Telepített verzió"
+
+msgid "Available Version"
+msgstr "Elérhető verzió"
+
+msgid "Status"
+msgstr "Állapot"
+
+msgid "Depends on"
+msgstr "Függőségek"
+
+msgid "Install application"
+msgstr "Program telepítése"
+
+msgid "Uninstall application"
+msgstr "Program eltávolítása"
+
+msgid "Update applications"
+msgstr ""
+
+#, python-brace-format
+msgid "Go to {0} login"
+msgstr "{0} bejelentkezéshez ugrás"
+
+msgid "uninstall"
+msgstr "eltávolítás"
+
+msgid "Do you really want to uninstall the application(s)?"
+msgstr "Biztosan el szeretnéd távolítani a programo(ka)t?"
+
+msgid "This may take a while"
+msgstr "Ez eltarthat egy ideig"
+
+msgid "Dependency Violation"
+msgstr "Függőségek megszegése"
+
+msgid "CLI Required"
+msgstr ""
+
+msgid "Delete all existing users and groups"
+msgstr "Minden meglévő csoport és felhasználó törlése"
+
+msgid "Switching from SQL to LDAP will delete all existing User Accounts, Groups and Roles. Do you really want to switch the accounts storage backend to LDAP ?"
+msgstr "SQL-ről LDAP-ra váltás törölni fogja az összes meglévő Felhasználói fiókokat, Csoportokat és Szabályokat. Biztosan szeretnéd váltani az azonsítók tárolási hátterét LDAP-ra?"
+
+msgid "Backend"
+msgstr "Háttér"
+
+msgid "TLS client certificate"
+msgstr ""
+
+msgid "Initial Admin User"
+msgstr "Kezdő Admin felhasználó"
+
+msgid "Initial admin login name"
+msgstr "Kezdő Admin felhasználónév"
+
+msgid "Initial admin Password"
+msgstr "Kezdő Admin jelszó"
+
+msgid "Password confirmation"
+msgstr "Jelszó megerősítés"
+
+msgid "Authentication provider"
+msgstr "Azonsítási szolgáltató"
+
+msgid "Try to split username"
+msgstr "Próbáld kettéválasztani a felhasználónevet"
+
+msgid "Yes"
+msgstr "Igen"
+
+msgid "No"
+msgstr "Nem"
+
+msgid "Account canonical form"
+msgstr "Azonosító kanonikus forma"
+
+msgid "Account domain name"
+msgstr ""
+
+msgid "Account domain short name"
+msgstr "Azonosító rövid domain név"
+
+msgid "Host"
+msgstr "Gép"
+
+msgid "Login name"
+msgstr "Felhasználó név"
+
+msgid "Password"
+msgstr "Jelszó"
+
+msgid "Bind requires DN"
+msgstr "Bindnek szükséges a DN"
+
+msgid "Start TLS"
+msgstr ""
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Base DN"
+msgstr "Alap DN"
+
+msgid "Search filter"
+msgstr "Keresési szűrő"
+
+msgid "Hostname"
+msgstr "Gépnév"
+
+msgid "Secure Connection"
+msgstr "Biztonságos kapcsolat"
+
+msgid "None"
+msgstr "Semmi"
+
+msgid "TLS"
+msgstr "TLS"
+
+msgid "Append domain to login name"
+msgstr "Domain csatolása a felhasználónévhez"
+
+msgid "Certificate validation"
+msgstr ""
+
+msgid "CA file"
+msgstr ""
+
+msgid "CRL directory"
+msgstr ""
+
+msgid "Accounts storage"
+msgstr "Azonsítók tárolása"
+
+msgid "Default user group name"
+msgstr "Alapértelmezett felhasználói csoport neve"
+
+msgid "Default admin group name"
+msgstr "Alapértelmezett admin csoport neve"
+
+msgid "Login panel"
+msgstr ""
+
+msgid "Reuse last username logged"
+msgstr ""
+
+msgid "Password Settings"
+msgstr "Jelszó beállítások"
+
+msgid "User can change password"
+msgstr "Felhasználó változtathat jelszót"
+
+msgid "Enable password policy"
+msgstr "Jelszó szabályok engedélyezése"
+
+msgid "Only ASCII"
+msgstr "Csak ASCII"
+
+msgid "Minimum length"
+msgstr "Minimum hossz"
+
+msgid "Minimum word chars"
+msgstr "Minimum betű karakterek"
+
+msgid "Minimum uppercase chars"
+msgstr "Minimum nagy karakterek"
+
+msgid "Minimum special chars"
+msgstr "Minimum speciális karakterek"
+
+msgid "Minimum numbers"
+msgstr "Minimum számok"
+
+msgid "Change password after ... days"
+msgstr ""
+
+msgid "Forbid part of username in password"
+msgstr ""
+
+msgid "Redirect Settings"
+msgstr "Átirányítási beállítások"
+
+msgid "Redirect Url (redirect to login screen if empty)"
+msgstr "Átirányítási URL (átirányítás a belépő oldalra ha üres)"
+
+msgid "Redirect Always (if No, only redirect after logout)"
+msgstr "Átirányítás mindig (ha Nem, átirányítás csak kilépés után)"
+
+msgid "Redirect to referring site, if exists"
+msgstr "Átirányítás a hivatkozó oldalra, ha létezik"
+
+msgid "Password encoding"
+msgstr "Jelszó kódolás"
+
+msgid "des"
+msgstr ""
+
+msgid "crypt"
+msgstr ""
+
+msgid "blowfish_crypt"
+msgstr ""
+
+msgid "md5_crypt"
+msgstr ""
+
+msgid "ext_crypt"
+msgstr ""
+
+msgid "md5"
+msgstr ""
+
+msgid "smd5"
+msgstr ""
+
+msgid "sha"
+msgstr ""
+
+msgid "ssha"
+msgstr ""
+
+msgid "ntpassword"
+msgstr ""
+
+msgid "plain"
+msgstr ""
+
+msgid "User DN"
+msgstr "Felhasználó DN"
+
+msgid "User Filter"
+msgstr "Felhasználó szűrő"
+
+msgid "E-Mail Attribute"
+msgstr ""
+
+msgid "Write Password to SQL backend"
+msgstr ""
+
+msgid "User Search Scope"
+msgstr "Felhasználó keresési kör"
+
+msgid "Groups DN"
+msgstr "Csoportok DN"
+
+msgid "Group Filter"
+msgstr "Csoport szűrő"
+
+msgid "Group Search Scope"
+msgstr "Csoport keresési kör"
+
+msgid "Use Rfc 2307 bis"
+msgstr "RFC 2307 használata"
+
+msgid "Maintain RFC 2307 attributes"
+msgstr ""
+
+msgid "Min User Id"
+msgstr "Min felhasználó Id"
+
+msgid "Max User Id"
+msgstr "Max felhasználó Id"
+
+msgid "Min Group Id"
+msgstr "Min csoport Id"
+
+msgid "Max Group Id"
+msgstr "Max csoport Id"
+
+msgid "Group UUID Attribute name"
+msgstr "Csoport UUID tulajdonság név"
+
+msgid "User UUID Attribute name"
+msgstr "Felhasználó UUID tulajdonság név"
+
+msgid "Readonly access"
+msgstr "Csak olvasható elérés"
+
+msgid "Save config and install"
+msgstr "Beállítás elmentése és telepítés"
+
+msgid "Save config"
+msgstr "Beállítás elmentése"
+
+msgid "Passwords don't match"
+msgstr "Jelszó nem egyezik"
+
+msgid "Should not be empty"
+msgstr "Nem lehet üres"
+
+msgid "File"
+msgstr "File"
+
+msgid "Setup Authentication"
+msgstr "Telepítési azonosítás"
+
+msgid "Username"
+msgstr "Felhasználónév"
+
+msgid "Database"
+msgstr "Adatbázis"
+
+msgid "User"
+msgstr "Felhasználó"
+
+msgid "Prefix"
+msgstr "Előképző"
+
+msgid "Logging"
+msgstr "Naplózás"
+
+msgid "Filename"
+msgstr "Filenév"
+
+msgid "Priority"
+msgstr "Prioritás"
+
+msgid "Caching"
+msgstr "Gyorsítótárazás"
+
+msgid "Lifetime (seconds)"
+msgstr "Élettartam (másodperc)"
+
+msgid "Path"
+msgstr "Elérési út"
+
+msgid "Queue"
+msgstr ""
+
+msgid "Session"
+msgstr "Munkafázis"
+
+msgid "Temporary files"
+msgstr "Ideiglenes fileok"
+
+msgid "Temporary Files Path"
+msgstr "Ideiglenes filok elérési útja"
+
+msgid "Filestore directory"
+msgstr "Filetárolási könyvtár"
+
+msgid "Filestore Path"
+msgstr "Filetárolás elérési útja"
+
+msgid "Addressbook Map panel"
+msgstr "Címjegyzék Térkép fül"
+
+msgid "Map panel"
+msgstr "Térkép fül"
+
+msgid "disabled"
+msgstr "letiltva"
+
+msgid "enabled"
+msgstr "engedélyezve"
+
+msgid "Config file is not writable"
+msgstr "Beállítási file nem írható"
+
+msgid "Download config file"
+msgstr "Beállítási file letöltése"
+
+#, python-brace-format
+msgid "This prefix is too long. Please choose a prefix no longer than {0} chars."
+msgstr ""
+
+msgid "Standard IMAP"
+msgstr "Standard IMAP"
+
+msgid "Standard SMTP"
+msgstr "Standard SMTP"
+
+msgid "Imap"
+msgstr "Imap"
+
+msgid "Verify peer Certificate"
+msgstr ""
+
+msgid "Use system account"
+msgstr "Rendszer azonosító használata"
+
+msgid "Use email address as login name"
+msgstr ""
+
+msgid "Cyrus Admin"
+msgstr "Cyrus Admin"
+
+msgid "Cyrus Admin Password"
+msgstr "Cyrus Admin jelszó"
+
+msgid "Use proxy auth"
+msgstr ""
+
+msgid "Smtp"
+msgstr "Smtp"
+
+msgid "Authentication"
+msgstr "Azonosítás"
+
+msgid "Login"
+msgstr "Felhasználónév"
+
+msgid "Plain"
+msgstr "Egyszerű"
+
+msgid "Primary Domain"
+msgstr "Elsődleges Domain"
+
+msgid "Secondary Domains (comma separated)"
+msgstr "Másodlagos Domainek (vesszővel elválasztva)"
+
+msgid "Aditional Domains (comma separated)"
+msgstr ""
+
+msgid "Notifications service address"
+msgstr "Értesítési szolgáltatás címe"
+
+msgid "Notification Username"
+msgstr "Értesítés felhasználóneve"
+
+msgid "Notification Password"
+msgstr "Értesítés jelszava"
+
+msgid "Notifications local client (hostname or IP address)"
+msgstr "Helyi kliens értesítések (hosztnév vagy IP cím)"
+
+msgid "SIEVE"
+msgstr "SIEVE"
+
+msgid "MySql Hostname"
+msgstr "MySql gépnév"
+
+msgid "MySql Database"
+msgstr "MySql adatbázis"
+
+msgid "MySql User"
+msgstr "MySql felhasználónév"
+
+msgid "MySql Password"
+msgstr "MySql jelszó"
+
+msgid "MySql Port"
+msgstr "MySql Port"
+
+msgid "User or UID"
+msgstr "Felhasználónév vagy UID"
+
+msgid "Group or GID"
+msgstr "Csoport vagy GID"
+
+msgid "Home Template"
+msgstr "Home sablon"
+
+msgid "Password Scheme"
+msgstr "Jelszó séma"
+
+msgid "PLAIN-MD5"
+msgstr "Alap-MD5"
+
+msgid "MD5-CRYPT"
+msgstr "MD5-Kódolt"
+
+msgid "SHA1"
+msgstr "SHA1"
+
+msgid "SHA256"
+msgstr "SHA256"
+
+msgid "SSHA256"
+msgstr "SSHA256"
+
+msgid "SHA512"
+msgstr "SHA512"
+
+msgid "SSHA512"
+msgstr "SSHA512"
+
+msgid "PLAIN"
+msgstr "Egyszerű"
+
+msgid "Performing Environment Checks..."
+msgstr "Környezeti ellenörzés végrehajtása..."
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria, view-options or the {1} you search in."
+msgstr "Nem található semmi {0}. Kérlek próbáld megváltoztatni a szűrő feltételeket, a nézet opciókat vagy a {1} amiben keresel."
+
+msgid "Check"
+msgstr "Ellenörzés"
+
+msgid "Result"
+msgstr "Eredmény"
+
+msgid "Message"
+msgstr ""
+
+msgid "Run setup tests"
+msgstr "Telepítési tesztek futtatása"
+
+msgid "Ignore setup tests"
+msgstr "Telepítési tesztek figyelmen kívül hagyása"
+
+msgid "Setup"
+msgstr ""
+
+msgid "Delete current Subscription"
+msgstr ""
+
+msgid "Your Subscription is not valid."
+msgstr ""
+
+msgid "Subscription Configuration"
+msgstr ""
+
+msgid "Upload from disk"
+msgstr ""
+
+msgid "Select file containing your Subscription key"
+msgstr ""
+
+msgid "No valid Subscription"
+msgstr ""
+
+msgid "Contract ID"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "Activation Key"
+msgstr ""
+
+msgid "Maximum Users (0=unlimited)"
+msgstr ""
+
+msgid "Valid from"
+msgstr ""
+
+msgid "Valid to"
+msgstr ""
+
+msgid "Subscription Information"
+msgstr ""
+
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] "Program"
+msgstr[1] "Programok"
+
+msgid "I have read the license agreement and accept it"
+msgstr "Elolvastam a licensz megállapodást és elfogadtam"
+
+msgid "License Agreement"
+msgstr "Licensz megállapodás"
+
+msgid "I have read the privacy agreement and accept it"
+msgstr "Elolvastam a titoktartási megállapodást és elfogadtam"
+
+msgid "Privacy Agreement"
+msgstr "Titoktartási megállapodás"
+
+msgid "Accept Terms and Conditions"
+msgstr "Kikötések és feltételek elfogadása"
+
+msgid "Terms and Conditions"
+msgstr "Kikötések és feltételek"
+
+msgid "Setup Checks"
+msgstr "Telepítési ellenörzések"
+
+msgid "Config Manager"
+msgstr "Beállítások kezelése"
+
+msgid "Authentication/Accounts"
+msgstr "Azonosítás/Belépések"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Application Manager"
+msgstr "Programok kezelése"
+
+msgid "Subscription"
+msgstr ""
+
+#~ msgid "Update application"
+#~ msgstr "Program frissítése"

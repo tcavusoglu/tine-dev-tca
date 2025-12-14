@@ -1,0 +1,634 @@
+#
+# Translators:
+# Aleksey <aleksdem@aleksdem.com>, 2013-2015
+# Артур Мудрых <arturmon82@gmail.com>, 2012
+# Nikolay Parukhin <parukhin@gmail.com>, 2012-2013
+# Nikolay Parukhin <parukhin@gmail.com>, 2012
+# Артур Мудрых <arturmon82@gmail.com>, 2012
+# Артур Мудрых <arturmon82@gmail.com>, 2012
+# Устинов Евгений Викторович <Ystinov83@mail.ru>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:59+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Russian (http://www.transifex.com/tine20/tine20/language/ru/)\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Maximum number of users reached. "
+msgstr ""
+
+msgid "Please contact Metaways Infosystems GmbH to buy a license that supports a "
+msgstr ""
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "Enabled"
+msgstr "Позволенный"
+
+msgid "Order"
+msgstr "Последовательность"
+
+msgid "Installed Version"
+msgstr "Установленная версия"
+
+msgid "Available Version"
+msgstr "Доступная версия"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Depends on"
+msgstr "Зависит от"
+
+msgid "Install application"
+msgstr "Установить приложение"
+
+msgid "Uninstall application"
+msgstr "Удалить приложение"
+
+msgid "Update applications"
+msgstr ""
+
+#, python-brace-format
+msgid "Go to {0} login"
+msgstr "Залогиниться в {0}"
+
+msgid "uninstall"
+msgstr "удалить"
+
+msgid "Do you really want to uninstall the application(s)?"
+msgstr "Вы действительно хотите удалить приложение(я)?"
+
+msgid "This may take a while"
+msgstr "Это может занять некоторое время"
+
+msgid "Dependency Violation"
+msgstr "Нарушена зависимость"
+
+msgid "CLI Required"
+msgstr ""
+
+msgid "Delete all existing users and groups"
+msgstr "Удалить всех существующих пользователей и группы"
+
+msgid "Switching from SQL to LDAP will delete all existing User Accounts, Groups and Roles. Do you really want to switch the accounts storage backend to LDAP ?"
+msgstr "Переключение с SQL на LDAP удалит все учётные записи, группы и роли. Вы действительно хотите переключить хранилище учётных записей на LDAP?"
+
+msgid "Backend"
+msgstr "Бэкенд"
+
+msgid "TLS client certificate"
+msgstr "TLS сертификат клиента"
+
+msgid "Initial Admin User"
+msgstr "Первоначальный администратор"
+
+msgid "Initial admin login name"
+msgstr "имя первоначального администратора"
+
+msgid "Initial admin Password"
+msgstr "пароль первоначального администратора"
+
+msgid "Password confirmation"
+msgstr "Подтверждение пароля"
+
+msgid "Authentication provider"
+msgstr "Проверка подлинности поставщика"
+
+msgid "Try to split username"
+msgstr "Попробуйте разделить имя пользователя"
+
+msgid "Yes"
+msgstr "Да"
+
+msgid "No"
+msgstr "Нет"
+
+msgid "Account canonical form"
+msgstr ""
+
+msgid "Account domain name"
+msgstr "Название Домена"
+
+msgid "Account domain short name"
+msgstr ""
+
+msgid "Host"
+msgstr "Хост"
+
+msgid "Login name"
+msgstr "Имя"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Bind requires DN"
+msgstr ""
+
+msgid "Start TLS"
+msgstr ""
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "Port"
+msgstr "Порт"
+
+msgid "Base DN"
+msgstr ""
+
+msgid "Search filter"
+msgstr "Фильтр поиска"
+
+msgid "Hostname"
+msgstr "Имя узла"
+
+msgid "Secure Connection"
+msgstr "Безопасное подключение"
+
+msgid "None"
+msgstr "Нет"
+
+msgid "TLS"
+msgstr "TLS"
+
+msgid "Append domain to login name"
+msgstr "Добавить имя домена в логин"
+
+msgid "Certificate validation"
+msgstr "Проверка сертификата"
+
+msgid "CA file"
+msgstr "CA файл"
+
+msgid "CRL directory"
+msgstr "CRL директория"
+
+msgid "Accounts storage"
+msgstr "Хранилище учётных записей"
+
+msgid "Default user group name"
+msgstr "Группа пользователей по-умолчанию"
+
+msgid "Default admin group name"
+msgstr "Группа администраторов по-умолчанию"
+
+msgid "Login panel"
+msgstr "Авторизация"
+
+msgid "Reuse last username logged"
+msgstr ""
+
+msgid "Password Settings"
+msgstr "Настройки пароля"
+
+msgid "User can change password"
+msgstr "Пользователь должен сменить пароль"
+
+msgid "Enable password policy"
+msgstr "Включить политику паролей"
+
+msgid "Only ASCII"
+msgstr "Только ASCII"
+
+msgid "Minimum length"
+msgstr "Минимальная длина"
+
+msgid "Minimum word chars"
+msgstr "Минимум символов"
+
+msgid "Minimum uppercase chars"
+msgstr "Минимум прописных букв"
+
+msgid "Minimum special chars"
+msgstr "Минимум спецсимволов"
+
+msgid "Minimum numbers"
+msgstr "Минимум цифр"
+
+msgid "Change password after ... days"
+msgstr ""
+
+msgid "Forbid part of username in password"
+msgstr ""
+
+msgid "Redirect Settings"
+msgstr "Перенаравление настройка"
+
+msgid "Redirect Url (redirect to login screen if empty)"
+msgstr ""
+
+msgid "Redirect Always (if No, only redirect after logout)"
+msgstr ""
+
+msgid "Redirect to referring site, if exists"
+msgstr ""
+
+msgid "Password encoding"
+msgstr "Кодирование паролей"
+
+msgid "des"
+msgstr "des"
+
+msgid "crypt"
+msgstr ""
+
+msgid "blowfish_crypt"
+msgstr "blowfish_crypt"
+
+msgid "md5_crypt"
+msgstr "md5_crypt"
+
+msgid "ext_crypt"
+msgstr "ext_crypt"
+
+msgid "md5"
+msgstr "md5"
+
+msgid "smd5"
+msgstr "smd5"
+
+msgid "sha"
+msgstr "sha"
+
+msgid "ssha"
+msgstr "ssha"
+
+msgid "ntpassword"
+msgstr "ntpassword"
+
+msgid "plain"
+msgstr "простой"
+
+msgid "User DN"
+msgstr ""
+
+msgid "User Filter"
+msgstr "Фильтр пользователей"
+
+msgid "E-Mail Attribute"
+msgstr ""
+
+msgid "Write Password to SQL backend"
+msgstr ""
+
+msgid "User Search Scope"
+msgstr "Область поиска для пользователей"
+
+msgid "Groups DN"
+msgstr "DN групп"
+
+msgid "Group Filter"
+msgstr "Фильтр группы"
+
+msgid "Group Search Scope"
+msgstr "Область поиска для группы"
+
+msgid "Use Rfc 2307 bis"
+msgstr "Использовать Rfc 2307 bis"
+
+msgid "Maintain RFC 2307 attributes"
+msgstr ""
+
+msgid "Min User Id"
+msgstr "Мин ID пользователя"
+
+msgid "Max User Id"
+msgstr "Макс ID пользователя"
+
+msgid "Min Group Id"
+msgstr "Минимальный ID группы"
+
+msgid "Max Group Id"
+msgstr "Максимальный ID группы"
+
+msgid "Group UUID Attribute name"
+msgstr ""
+
+msgid "User UUID Attribute name"
+msgstr ""
+
+msgid "Readonly access"
+msgstr "Доступ только на чтение"
+
+msgid "Save config and install"
+msgstr "Сохранить конфигурацию и установить"
+
+msgid "Save config"
+msgstr "Сохранить конфигурацию"
+
+msgid "Passwords don't match"
+msgstr "Пароли не совпадают"
+
+msgid "Should not be empty"
+msgstr "Не должен быть пустым"
+
+msgid "File"
+msgstr "Файл"
+
+msgid "Setup Authentication"
+msgstr "Аутентификация установки"
+
+msgid "Username"
+msgstr "Имя пользователя"
+
+msgid "Database"
+msgstr "База данных"
+
+msgid "User"
+msgstr "Пользователь"
+
+msgid "Prefix"
+msgstr "Префикс"
+
+msgid "Logging"
+msgstr "Регистрация"
+
+msgid "Filename"
+msgstr "Имя файла"
+
+msgid "Priority"
+msgstr "Приоритет"
+
+msgid "Caching"
+msgstr "Кэширование"
+
+msgid "Lifetime (seconds)"
+msgstr "Время жизни (секунд)"
+
+msgid "Path"
+msgstr "Путь"
+
+msgid "Queue"
+msgstr "Очередь"
+
+msgid "Session"
+msgstr "Сессия"
+
+msgid "Temporary files"
+msgstr "Временные файлы"
+
+msgid "Temporary Files Path"
+msgstr "Путь к временным файлам"
+
+msgid "Filestore directory"
+msgstr "Каталог хранилища файлов"
+
+msgid "Filestore Path"
+msgstr ""
+
+msgid "Addressbook Map panel"
+msgstr ""
+
+msgid "Map panel"
+msgstr "Карта"
+
+msgid "disabled"
+msgstr "отключен"
+
+msgid "enabled"
+msgstr "включен"
+
+msgid "Config file is not writable"
+msgstr "Config файл защищен от записи"
+
+msgid "Download config file"
+msgstr "Загрузить файл конфигурации"
+
+#, python-brace-format
+msgid "This prefix is too long. Please choose a prefix no longer than {0} chars."
+msgstr ""
+
+msgid "Standard IMAP"
+msgstr "Стандартный IMAP"
+
+msgid "Standard SMTP"
+msgstr "Стандартный SMTP"
+
+msgid "Imap"
+msgstr "Imap"
+
+msgid "Verify peer Certificate"
+msgstr ""
+
+msgid "Use system account"
+msgstr "Использование системной учетной записи"
+
+msgid "Use email address as login name"
+msgstr ""
+
+msgid "Cyrus Admin"
+msgstr ""
+
+msgid "Cyrus Admin Password"
+msgstr ""
+
+msgid "Use proxy auth"
+msgstr ""
+
+msgid "Smtp"
+msgstr "Smtp"
+
+msgid "Authentication"
+msgstr "Аутентификация"
+
+msgid "Login"
+msgstr "Имя пользователя"
+
+msgid "Plain"
+msgstr "Обычная"
+
+msgid "Primary Domain"
+msgstr "Основной домен"
+
+msgid "Secondary Domains (comma separated)"
+msgstr ""
+
+msgid "Aditional Domains (comma separated)"
+msgstr ""
+
+msgid "Notifications service address"
+msgstr "Адрес службы уведомлений"
+
+msgid "Notification Username"
+msgstr "Имя службы уведомлений"
+
+msgid "Notification Password"
+msgstr "Пароль службы уведомлений"
+
+msgid "Notifications local client (hostname or IP address)"
+msgstr ""
+
+msgid "SIEVE"
+msgstr "SIEVE"
+
+msgid "MySql Hostname"
+msgstr "Хост MySQL"
+
+msgid "MySql Database"
+msgstr "База данных MySql"
+
+msgid "MySql User"
+msgstr "Пользователь MySql"
+
+msgid "MySql Password"
+msgstr "Пароль MySql"
+
+msgid "MySql Port"
+msgstr "Порт MySql"
+
+msgid "User or UID"
+msgstr "Пользователь или UID"
+
+msgid "Group or GID"
+msgstr "Группа или GID"
+
+msgid "Home Template"
+msgstr ""
+
+msgid "Password Scheme"
+msgstr "Схема пароля"
+
+msgid "PLAIN-MD5"
+msgstr "PLAIN-MD5"
+
+msgid "MD5-CRYPT"
+msgstr "MD5-CRYPT"
+
+msgid "SHA1"
+msgstr "SHA1"
+
+msgid "SHA256"
+msgstr "SHA256"
+
+msgid "SSHA256"
+msgstr "SSHA256"
+
+msgid "SHA512"
+msgstr "SHA512"
+
+msgid "SSHA512"
+msgstr "SSHA512"
+
+msgid "PLAIN"
+msgstr "PLAIN"
+
+msgid "Performing Environment Checks..."
+msgstr "Проведение проверок окружения..."
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria, view-options or the {1} you search in."
+msgstr ""
+
+msgid "Check"
+msgstr "Проверка"
+
+msgid "Result"
+msgstr "Результат"
+
+msgid "Message"
+msgstr ""
+
+msgid "Run setup tests"
+msgstr "Запуск тестов установки"
+
+msgid "Ignore setup tests"
+msgstr "Пропустить тестирование"
+
+msgid "Setup"
+msgstr ""
+
+msgid "Delete current Subscription"
+msgstr ""
+
+msgid "Your Subscription is not valid."
+msgstr ""
+
+msgid "Subscription Configuration"
+msgstr ""
+
+msgid "Upload from disk"
+msgstr ""
+
+msgid "Select file containing your Subscription key"
+msgstr ""
+
+msgid "No valid Subscription"
+msgstr ""
+
+msgid "Contract ID"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "Activation Key"
+msgstr ""
+
+msgid "Maximum Users (0=unlimited)"
+msgstr ""
+
+msgid "Valid from"
+msgstr ""
+
+msgid "Valid to"
+msgstr ""
+
+msgid "Subscription Information"
+msgstr ""
+
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] "Приложение"
+msgstr[1] "Приложения"
+msgstr[2] "Приложений"
+msgstr[3] "Приложений"
+
+msgid "I have read the license agreement and accept it"
+msgstr "Я прочитал лицензионное соглашение и согласен его соблюдать"
+
+msgid "License Agreement"
+msgstr "Лицензионное соглашение"
+
+msgid "I have read the privacy agreement and accept it"
+msgstr "Я прочёл соглашение о приватных данных и согласен с ними"
+
+msgid "Privacy Agreement"
+msgstr "Соглашение о приватных данных"
+
+msgid "Accept Terms and Conditions"
+msgstr "Согласен с правилами и условиями"
+
+msgid "Terms and Conditions"
+msgstr "Условия и Положения"
+
+msgid "Setup Checks"
+msgstr "Проверки установки"
+
+msgid "Config Manager"
+msgstr "Управление конфигурацией"
+
+msgid "Authentication/Accounts"
+msgstr ""
+
+msgid "Email"
+msgstr "Электронная почта"
+
+msgid "Application Manager"
+msgstr "Управление приложениями"
+
+msgid "Subscription"
+msgstr ""
+
+#~ msgid "Update application"
+#~ msgstr "Обновить приложение"

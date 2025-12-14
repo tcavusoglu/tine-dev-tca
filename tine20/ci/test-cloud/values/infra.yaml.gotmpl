@@ -1,0 +1,12 @@
+ingress:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+persistence:
+  storageClass: csi-cephfs-sc
+database:
+  username: tine
+  name: {{ .Values.instance }}
+  host: vdb01-test-k8s.tine20.net
+redis:
+  host: vdb01-test-k8s.tine20.net
+  prefix: {{ .Values.instance }}

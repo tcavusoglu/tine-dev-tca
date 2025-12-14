@@ -1,0 +1,45 @@
+tine:
+  features:
+    mail:
+      enabled: true
+      imap:
+        active: true
+        host: mailtest.tine20.net
+        port: 993
+        useSystemAccount: 1
+        ssl: SSL
+        verifyPeer: 1
+        backend: dovecot_imap
+        domain: {{ .Values.mailDomain }}
+        instanceName: {{ .Values.domain }}
+        dovecot:
+          host: mysql2.metaways.net
+          dbname: test_dovecot
+          uid: vmail
+          gid: vmail
+          home: /var/vmail/%d/%u
+          scheme: SSHA256
+      smtp:
+        active: true
+        backend: postfix
+        hostname: mailtest.tine20.net
+        port: 25
+        ssl: tls
+        auth: login
+        name: common.tine20.net
+        primarydomain: {{ .Values.mailDomain }}
+        instanceName: {{ .Values.domain }}
+        from: {{ .Values.domain }}
+        postfix:
+          host: mysql2.metaways.net
+          dbname: test_postfix
+      sieve:
+        active: true
+        hostname: mailtest.tine20.net
+        port: 4190
+        ssl: tls
+      virt:
+        active: true
+        domain: {{ .Values.mailDomain }}
+        host: mysql2.metaways.net
+        database: test_postfix

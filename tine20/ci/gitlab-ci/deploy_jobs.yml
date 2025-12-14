@@ -1,0 +1,438 @@
+.release-dev-image-to-dockerhub:
+  image: ${CI_REGISTRY}/se/util-images/image-tools:1.0.0-mw0
+  stage: deploy
+  before_script:
+    - skopeo login --compat-auth-file ~/.docker/config.json --username "${REGISTRY_USER}" --password "${REGISTRY_PASSWORD}" ${REGISTRY}
+    - skopeo login --compat-auth-file ~/.docker/config.json --username "${DOCKERHUB_USER}" --password "${DOCKERHUB_TOKEN}" index.docker.io
+  script:
+    - !reference [.lib, script]
+    - docker_registry_release_dev_image docker.io/tinegroupware/dev
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /release-dev-image-to-dockerhub/
+    - if: $RELEASE_DEV_IMAGE_TO_DOCKERHUB == "true"
+    - if: $PIPELINE_TYPE =~ /build-dev-images(,|$)/
+# needs can not contain variables, therefore we need to write out all job. this should be equivalent to the following, but the following dose not work:
+# needs:
+#   - job: docker_build_dev_new
+#     parallel:
+#       matrix:
+#         - ARCH: $ARCH
+#           PHP_VERSION: $PHP_VERSION
+# parallel:
+#   matrix:
+#     - ARCH: amd64
+#       PHP_VERSION:
+#         - "8.1"
+#         - "8.2"
+#         - "8.3"
+#     - ARCH: arm64
+#       PHP_VERSION:
+#         - "8.1"
+#         - "8.2"
+#         - "8.3"
+# A less verbose solution might be not using needs, but we do not want to wait for arm64 builds to finish, before releasing amd64 builds. ((Emulated) Arm builds are slow (x10).)
+release-dev-image-to-dockerhub [amd64, 8.1]:
+  extends: .release-dev-image-to-dockerhub
+  variables:
+    ARCH: amd64
+    PHP_VERSION: "8.1"
+  needs:
+    - job: docker-build-dev
+      parallel:
+        matrix:
+          - ARCH: amd64
+            PHP_VERSION: "8.1"
+release-dev-image-to-dockerhub [amd64, 8.2]:
+  extends: .release-dev-image-to-dockerhub
+  variables:
+    ARCH: amd64
+    PHP_VERSION: "8.2"
+  needs:
+    - job: docker-build-dev
+      parallel:
+        matrix:
+          - ARCH: amd64
+            PHP_VERSION: "8.2"
+release-dev-image-to-dockerhub [amd64, 8.3]:
+  extends: .release-dev-image-to-dockerhub
+  variables:
+    ARCH: amd64
+    PHP_VERSION: "8.3"
+  needs:
+    - job: docker-build-dev
+      parallel:
+        matrix:
+          - ARCH: amd64
+            PHP_VERSION: "8.3"
+release-dev-image-to-dockerhub [amd64, 8.4]:
+  extends: .release-dev-image-to-dockerhub
+  variables:
+    ARCH: amd64
+    PHP_VERSION: "8.4"
+  needs:
+    - job: docker-build-dev
+      parallel:
+        matrix:
+          - ARCH: amd64
+            PHP_VERSION: "8.4"
+release-dev-image-to-dockerhub [arm64, 8.1]:
+  extends: .release-dev-image-to-dockerhub
+  variables:
+    ARCH: arm64
+    PHP_VERSION: "8.1"
+  needs:
+    - job: docker-build-dev
+      parallel:
+        matrix:
+          - ARCH: arm64
+            PHP_VERSION: "8.1"
+release-dev-image-to-dockerhub [arm64, 8.2]:
+  extends: .release-dev-image-to-dockerhub
+  variables:
+    ARCH: arm64
+    PHP_VERSION: "8.2"
+  needs:
+    - job: docker-build-dev
+      parallel:
+        matrix:
+          - ARCH: arm64
+            PHP_VERSION: "8.2"
+release-dev-image-to-dockerhub [arm64, 8.3]:
+  extends: .release-dev-image-to-dockerhub
+  variables:
+    ARCH: arm64
+    PHP_VERSION: "8.3"
+  needs:
+    - job: docker-build-dev
+      parallel:
+        matrix:
+          - ARCH: arm64
+            PHP_VERSION: "8.3"
+release-dev-image-to-dockerhub [arm64, 8.4]:
+  extends: .release-dev-image-to-dockerhub
+  variables:
+    ARCH: arm64
+    PHP_VERSION: "8.4"
+  needs:
+    - job: docker-build-dev
+      parallel:
+        matrix:
+          - ARCH: arm64
+            PHP_VERSION: "8.4"
+
+deploy-built-image-to-dockerhub:
+  extends: .abstract_jobs.docker
+  stage: deploy
+  script:
+    - !reference [.lib, script]
+    - docker login -u "${DOCKERHUB_USER}" -p "${DOCKERHUB_TOKEN}" "docker.io"
+    - docker_registry_release_image built docker.io/tinegroupware/tine $LATEST
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /deploy-built-image-to-dockerhub/
+      when: manual
+    - if: $PIPELINE_TYPE =~ /release-lts(,|$)/
+    - if: $PIPELINE_TYPE =~ /release-be(,|$)/
+      variables:
+        LATEST: "true"
+    - if: $PIPELINE_TYPE =~ /release-beta(,|$)/
+    - if: $PIPELINE_TYPE =~ /release-weekly(,|$)/
+  timeout: 20m
+  interruptible: false
+
+release-image-to-mw-registry:
+  extends: .abstract_jobs.docker
+  stage: deploy
+  script:
+    - !reference [.lib, script]
+    - docker login -u "tine+gitlabci " -p "${REGISTRY_RZ1_METAWAYS_NET_PASSWORD}" "registry.rz1.metaways.net"
+    - docker_registry_release_image built registry.rz1.metaways.net/tine/tine false
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /release-image-to-mw-registry/
+      when: manual
+    - !reference [deploy-test-cloud, rules]
+    - !reference [deploy-test-cloud-nightly, rules]
+    - !reference [deploy-test-cloud-review, rules]
+  timeout: 20m
+  interruptible: false
+
+deploy-customer-image-to-registry:
+  extends: .abstract_jobs.docker
+  stage: deploy
+  variables:
+    GIT_DEPTH: 100
+  script:
+    - !reference [.lib, script]
+    - docker login --username $CUSTOMER_IMAGE_REGISTRY_USERNAME --password $CUSTOMER_IMAGE_REGISTRY_PASSWORD $CUSTOMER_IMAGE_REGISTRY_REPO
+    - docker_registry_release_image built "$CUSTOMER_IMAGE_REGISTRY_REPO" true
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /deploy-customer-image-to-registry/
+      when: manual
+    - if: $PIPELINE_TYPE =~ /release-customer(,|$)/ &&  $DEPLOY_CUSTOMER_IMAGE_TO_REGISTRY == "true"
+  timeout: 20m
+  interruptible: false
+
+# creates a gitlab release - some text, changelog and link to the local packages
+release-to-gitlab:
+  extends: .abstract_jobs.docker
+  variables:
+    GIT_DEPTH: 100
+  stage: deploy
+  needs:
+    - docker_build_packages
+  before_script:
+    # todo move to docker image
+    - wget https://gitlab.com/api/v4/projects/16573099/packages/generic/release-cli/v0.10.0/release-cli-linux-amd64
+    - mv release-cli-linux-amd64 /usr/local/bin/release-cli
+    - chmod +x /usr/local/bin/release-cli
+  script:
+    - !reference [.lib, script]
+    - release_to_gitlab
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /release-to-gitlab/
+      when: manual
+    - if: $PIPELINE_TYPE =~ /release-be(,|$)/
+      variables:
+        RELEASE_TYPE: be
+    - if: $PIPELINE_TYPE =~ /release-lts(,|$)/
+      variables:
+        RELEASE_TYPE: lts
+    - if: $PIPELINE_TYPE =~ /release-beta(,|$)/
+      variables:
+        RELEASE_TYPE: beta
+    - if: $PIPELINE_TYPE =~ /release-weekly(,|$)/
+      variables:
+        RELEASE_TYPE: weekly
+    - if: $PIPELINE_TYPE =~ /release-monthly(,|$)/
+      variables:
+        RELEASE_TYPE: monthly
+    - if: $PIPELINE_TYPE =~ /release-customer(,|$)/
+      variables:
+        RELEASE_TYPE: customer
+  timeout: 20m
+  interruptible: true
+
+release-packages-to-vpackages:
+  extends: .abstract_jobs.docker
+  stage: deploy
+  before_script:
+    - apk add openssh
+    - eval $(ssh-agent -s)
+    - echo "$VPACKAGES_DEPLOY_KEY" | tr -d '\r' | ssh-add -
+  script:
+    - !reference [.lib, script]
+    - release_packages_vpackages_push
+    - if [ "$CREATE_CURRENT_LINK" == "true" ]; then release_packages_vpackages_create_current_link; fi
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /release-packages-to-vpackages/
+      when: manual
+    - if: $PIPELINE_TYPE =~ /release-be(,|$)/
+      variables:
+        CREATE_CURRENT_LINK: "true"
+        RELEASE_TYPE: be
+    - if: $PIPELINE_TYPE =~ /release-lts(,|$)/
+      variables:
+        RELEASE_TYPE: lts
+    - if: $PIPELINE_TYPE =~ /release-customer(,|$)/ && $PUSH_TO_VPACKAGES == "true"
+      variables:
+        RELEASE_TYPE: customer
+  timeout: 20m
+  interruptible: false
+
+# only set current link - packages where already pushed by the packaging job
+release-packages-to-gitlab:
+  extends: .abstract_jobs.docker          
+  stage: deploy
+  script:
+    - !reference [.lib, script]
+    - release_packages_gitlab_set_current_link
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /release-packages-to-gitlab/
+      when: manual
+    - if: $PIPELINE_TYPE =~ /release-weekly(,|$)/
+      variables:
+        RELEASE_TYPE: weekly
+    - if: $PIPELINE_TYPE =~ /release-monthly(,|$)/
+      variables:
+        RELEASE_TYPE: monthly
+    - if: $PIPELINE_TYPE =~ /release-beta(,|$)/
+      variables:
+        RELEASE_TYPE: beta
+    - if: $PIPELINE_TYPE =~ /release-be(,|$)/
+      variables:
+        RELEASE_TYPE: be
+    - if: $PIPELINE_TYPE =~ /release-customer(,|$)/
+      variables:
+        RELEASE_TYPE: customer
+  timeout: 20m
+  interruptible: false
+
+# creates a github release - some text, changelog, packages
+release-packages-to-github:
+  extends: .abstract_jobs.docker
+  stage: deploy
+  script:
+    - !reference [.lib, script]
+    - release_push_release_tag_to_github
+    - release_packages_github_create_release
+    - release_packages_notify_matrix
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /release-packages-to-github/
+      when: manual
+      variables:
+        RELEASE_TYPE: nightly
+    - if: $PIPELINE_TYPE =~ /release-be(,|$)/
+      variables:
+        RELEASE_TYPE: be
+    - if: $PIPELINE_TYPE =~ /release-weekly(,|$)/ # should/is only be pushed as pre release
+      variables:
+        RELEASE_TYPE: weekly
+    - if: $PIPELINE_TYPE =~ /release-beta(,|$)/ # should/is only be pushed as pre release
+      variables:
+        RELEASE_TYPE: beta
+  timeout: 20m
+  interruptible: false
+
+trigger-release:
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+  image: ${UTIL_REGISTRY}/docker:19.03.1-r3
+  needs: []
+  script:
+    - !reference [.lib, script]
+    - release_tag
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /trigger-release/
+    - if: $TRIGGER_RELEASE == "false"
+      when: never
+    - if: $TRIGGER_RELEASE == "true"
+    - if: $PIPELINE_TYPE =~ /trigger-release(,|$)/
+  timeout: 20m
+  interruptible: false
+
+trigger-weekly-release:
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+  image: ${UTIL_REGISTRY}/docker:19.03.1-r3
+  needs: []
+  script:
+    - !reference [.lib, script]
+    - release_weekly_tag
+  rules:
+    - if: $BASE_MAJOR_COMMIT_REF_NAME != "main" || $CUSTOMER_MAJOR_COMMIT_REF_NAME != ""
+      when: never
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /trigger-weekly-release/
+    - if: $TRIGGER_WEEKLY_RELEASE == "false"
+      when: never
+    - if: $PIPELINE_TYPE =~ /trigger-weekly-release/
+  timeout: 20m
+  interruptible: false
+
+mkdocs-deploy:
+  stage: deploy
+  image: ${UTIL_REGISTRY}/mkdocs:1
+  needs: []
+  script:
+    - cd tine20
+    - composer install --ignore-platform-reqs
+    - vendor/bin/phpdoc-md
+    - cd ..
+    - mkdocs build
+    - s3cmd --access_key=${DOCS_S3_ACCESS_KEY} --secret_key=${DOCS_S3_SECRET_KEY} --host ${DOCS_S3_HOST} --host-bucket "%(bucket)s.${DOCS_S3_HOST}" --acl-public --delete-removed --no-mime-magic sync ./site/ s3://${DOCS_S3_BUCKET}
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /mkdocs-deploy/
+    - if: $MKDOCS_DEPLOY == "false"
+      when: never
+    - if: $MKDOCS_DEPLOY == "true"
+    # mkdocs-deploy is triggered by a nightly pipeline and if docs changes. Maybe we only need one of them?
+    - if: $PIPELINE_TYPE =~ /mkdocs-deploy(,|$)/ && $CI_COMMIT_REF_NAME == $TINE_VERSION_BE
+    - if: $CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_REF_NAME == $TINE_VERSION_BE
+      changes:
+        - docs/**/*
+  timeout: 20m
+  interruptible: false
+
+update-version-check:
+  stage: deploy
+  extends: .abstract_jobs.docker
+  variables:
+    PACKAGE_STRING: ${CI_COMMIT_TAG}
+    CODE_NAME: ${CODENAME}
+    BUILD: "1"
+  script:
+    - !reference [.lib, script]
+    - version_check_update
+  rules:
+    - if: $PIPELINE_TYPE =~ /release-be(,|$)/
+
+.deploy-test-cloud:
+  image: ghcr.io/helmfile/helmfile:v0.162.0
+  stage: deploy
+  needs:
+    - release-image-to-mw-registry
+  variables:
+    DEPLOYMENT_BASE_DOMAIN: tcloud.tine-dev.de
+  environment:
+    url: $DYNAMIC_ENVIRONMENT_URL
+  before_script:
+    - apk add coreutils yq mariadb-client
+  script:
+    - !reference [.lib, script]
+    - test_cloud_deploy
+  timeout: 20m
+  interruptible: false
+  artifacts:
+    reports:
+      dotenv: deploy.env
+deploy-test-cloud:
+  extends: .deploy-test-cloud
+  variables:
+    DEPLOY_TYPE: "release"
+  environment:
+    name: $MAJOR_COMMIT_REF_NAME
+  rules:
+    - if: $PIPELINE_TYPE =~ /release-be(,|$)/
+      variables:
+        RELEASE_TYPE: be
+    - if: $PIPELINE_TYPE =~ /release-monthly(,|$)/
+      variables:
+        RELEASE_TYPE: monthly
+deploy-test-cloud-nightly:
+  extends: .deploy-test-cloud
+  variables:
+    DEPLOY_TYPE: "nightly"
+  environment:
+    name: nightly/$CI_COMMIT_REF_NAME
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /deploy-test-cloud/
+      variables:
+        RELEASE_TYPE: nightly
+      when: manual
+    - if: $PIPELINE_TYPE =~ /deploy-test-cloud-nightly(,|$)/
+      variables:
+        RELEASE_TYPE: nightly
+deploy-test-cloud-review:
+  extends: .deploy-test-cloud
+  variables:
+    DEPLOYMENT_BASE_DOMAIN: ci.tine-dev.de
+    DEPLOY_TYPE: "review"
+  environment:
+    name: review/$CI_COMMIT_REF_NAME
+    on_stop: teardown-test-cloud-review
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_COMMIT_REF_NAME =~ /(^tcloud)/
+      variables:
+        RELEASE_TYPE: nightly
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /tcloud/
+      variables:
+        RELEASE_TYPE: nightly
+
+teardown-test-cloud-review:
+  extends: deploy-test-cloud-review
+  environment:
+    action: stop
+  script:
+    - !reference [.lib, script]
+    - test_cloud_teardown
+  when: manual

@@ -1,0 +1,72 @@
+# This is the main gitlab ci configuration. (https://docs.gitlab.com/ee/ci/yaml/)
+
+# The jobs are definde in these files:
+include:
+    # basic job definition
+  - local: '/ci/gitlab-ci/abstract_jobs.yml'
+    # ci default configuration
+  - local: '/ci/ci-config.yml'
+    # docker image build jobs, package build jobs
+  - local: '/ci/gitlab-ci/build_jobs.yml'
+    # phpunit tests, for source and build images
+  - local: '/ci/gitlab-ci/test_php_jobs.yml'
+    # js tests
+  - local: '/ci/gitlab-ci/test_js_jobs.yml'
+    # all other tests
+  - local: '/ci/gitlab-ci/test_jobs.yml'
+    # deploy jobs 
+  - local: '/ci/gitlab-ci/deploy_jobs.yml'
+    # housekeeping jobs, jobs needed for the ci to work correctly
+  - local: '/ci/gitlab-ci/housekeeping_jobs.yml'
+  - local: '/ci/gitlab-ci/nodification_jobs.yml'
+  - local: '/ci/gitlab-ci/merge_jobs.yml'
+  - local: '/ci/gitlab-ci/lib.yml'
+
+variables:
+  IMAGE_TAG: ${CI_PIPELINE_ID}-${PHP_VERSION}
+
+stages:
+  - build0
+  - build1
+  - push0
+  - build2
+  - test
+  - build3
+  - deploy
+  - housekeeping
+  - housekeeping-cleanup
+  - merge1
+  - merge2
+  - merge3
+  - merge4
+  - notify
+
+workflow:
+  rules:
+    # Disable ci pipeline
+    - if: $RUN_CI_PIPELINE == "false"
+      when: never
+    # Do not run pipelines on push for feature branches. Only merge requests should run feature branche pipelines.
+    - if: $CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_REF_NAME =~ /(^feat)|(^pu)|(^change)|(^tcloud)/
+      when: never
+    # Set PIPELINE_TYPE variable for tag pipelines
+    # Overwriting pipeline types is ok here. PIPELINE_TYPE should be empty for pipelines where $CI_COMMIT_TAG != ""
+    - if: $CI_COMMIT_TAG =~ /^weekly-.*/
+      variables:
+        PIPELINE_TYPE: release, release-weekly
+    - if: $CI_COMMIT_TAG =~ /^main-.*/
+      variables:
+        PIPELINE_TYPE: release, release-monthly
+    - if: $CI_COMMIT_TAG =~ /^20..\.11\-.*/ && $BASE_MAJOR_COMMIT_REF_NAME == $TINE_VERSION_BETA && $CUSTOMER_MAJOR_COMMIT_REF_NAME == ""
+      variables:
+        PIPELINE_TYPE: release, release-beta
+    - if: $CI_COMMIT_TAG =~ /^20..\.11\..*/ && $BASE_MAJOR_COMMIT_REF_NAME == $TINE_VERSION_BE && $CUSTOMER_MAJOR_COMMIT_REF_NAME == ""
+      variables:
+        PIPELINE_TYPE: release, release-be
+    - if: $CI_COMMIT_TAG =~ /^20..\.11\..*/ && $CUSTOMER_MAJOR_COMMIT_REF_NAME == ""
+      variables:
+        PIPELINE_TYPE: release, release-lts
+    - if: $CI_COMMIT_TAG
+      variables:
+        PIPELINE_TYPE: release, release-customer
+    - when: always

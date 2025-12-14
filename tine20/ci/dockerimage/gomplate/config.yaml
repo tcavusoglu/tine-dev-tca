@@ -1,0 +1,16 @@
+inputFiles:
+  - "/etc/gomplate/templates/config.inc.php.tmpl"
+  - "/etc/gomplate/templates/nginx-vhost.conf.tmpl"
+  - "/etc/gomplate/templates/nginx.conf.tmpl"
+  - "/etc/gomplate/templates/php-fpm.conf.tmpl"
+  - "/etc/gomplate/templates/php.ini.tmpl"
+  - "/etc/gomplate/templates/php.ini.tmpl"
+  - "/etc/gomplate/templates/actionQueue.ini.tmpl"
+outputFiles:
+  - "/etc/tine20/config.inc.php"
+  - "/etc/nginx/http.d/tine20.conf"
+  - "/etc/nginx/nginx.conf"
+  - "/etc/php/default/fpm/pool.d/www.conf"
+  - "/etc/php/default/fpm/php.ini"
+  - "/etc/php/default/cli/php.ini"
+  - "/etc/tine20/actionQueue.ini"

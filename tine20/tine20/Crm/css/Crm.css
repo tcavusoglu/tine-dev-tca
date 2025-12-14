@@ -1,0 +1,134 @@
+.CrmIconCls, .CrmLead {
+    background-image:url(../../images/icon-set/icon_crm.svg) !important;
+}
+
+.activities-item-small {
+    padding: 2px 4px; 
+    border-bottom: 1px solid #B5B8C8;
+    font-size: 11px;
+}
+
+.activities-item-small i {
+
+}
+
+.productSummary-item-small {
+    padding: 2px 4px; 
+    border-bottom: 1px solid #B5B8C8;
+    font-size: 11px;    
+}
+
+.contact-item-small {
+    padding: 2px 4px; 
+    border-bottom: 1px solid #B5B8C8;
+    font-size: 11px;
+}
+
+.contact-item {
+    padding: 2px 4px; 
+    border-bottom: 1px solid #B5B8C8;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+    color: #999999
+}
+
+.contact-item p {
+    line-height: 13px;
+    margin: 7px 0px;
+}
+
+.contacts_background {
+    background: #FFFFFF url(../../library/ExtJS/resources/images/default/form/text-bg.gif) repeat-x scroll 0pt 19pt;
+    border: 1px solid #B5B8C8;
+    margin-right: 10px;
+}
+
+.contactIcon {
+    position: relative;
+}
+
+
+.contactIconResponsible {
+    background-image:url(../../images/icon-set/icon_responsible.svg) !important;
+}
+
+.contactIconCustomer {
+    background-image:url(../../images/icon-set/icon_client.svg) !important;
+}
+
+.contactIconPartner {
+    background-image:url(../../images/icon-set/icon_partner.svg) !important;
+}
+
+.productSummary {
+    background: transparent none repeat;
+    border: 0px;
+    color: #000000;
+    opacity: 1;
+    padding: 0px 0px;
+}
+
+/* if this is realy wantet, limit this to the grid this is wanted!!!
+.x-grid3-cell-inner, .x-grid3-hd-inner {
+    white-space: normal;
+}
+*/
+
+.lowPadding {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.borderTop {
+    border-top: solid;
+    border-top-color: #bbbbbb;
+    border-top-width: 1px;
+    
+}
+
+.x-view-over {
+                background-color: #efefef
+            }
+
+.contact-grid {
+    border: 1px solid #cccccc;
+}
+
+/** details panel **/
+.crm-leadgrid-detailspanel-status {
+    margin: 5px 2px 5px 5px;
+    width: 20%;
+}
+
+.crm-leadgrid-detailspanel-contacts {
+    margin: 5px 2px 5px 5px;
+    width: 36%;
+}
+
+.crm-leadgrid-detailspanel .preview-panel-description {
+    margin: 5px 2px 5px 5px;
+    width: 36%;
+    overflow: hidden;
+}
+
+.crm-leadgrid-detailspanel-status .preview-panel-symbolcompare{
+    width: 90px;    
+}
+
+.crm-leadgrid-detailspanel-contact {
+    width: 50%;
+    float:right;
+    height:108px;
+    position:relative;
+}
+
+.crm-highlight-task {
+    color: red;
+}

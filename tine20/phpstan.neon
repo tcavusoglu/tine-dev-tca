@@ -1,0 +1,47 @@
+includes:
+    - phpstan-baseline.neon
+parameters:
+    bootstrapFiles:
+        - ci/phpstan/bootstrap.php
+    universalObjectCratesClasses:
+      - Tinebase_Config_Abstract
+      - Tinebase_Config_Struct
+      - Tinebase_Preference_Abstract
+      - Tinebase_Record_Interface
+      - Tinebase_Record_RecordSet
+      - Zend_Config
+      - Zend_Config_Xml
+      - Zend_Console_Getopt
+      - Zend_Session_Namespace
+      - Zend_Translate
+      - Zend_View
+      - Laminas\Stdlib\ParametersInterface
+      # TODO fix in Syncroton phpdoc ...
+      - Syncroton_Model_Email
+      - Syncroton_Model_EmailBody
+      - Syncroton_Model_Event
+      - Syncroton_Model_EventAttendee
+      - Syncroton_Model_EventException
+      - Syncroton_Model_EventRecurrence
+      - Syncroton_Model_IDevice
+      - Syncroton_Model_IFolder
+      - Syncroton_Model_MeetingResponse
+      - Syncroton_Model_StoreResponse
+      - Syncroton_Model_StoreRequest
+    reportUnmatchedIgnoredErrors: false
+    level: 2
+    excludePaths:
+      analyse:
+        - 'tine20/library'
+        - 'tine20/vendor*'
+        - 'tests'
+      analyseAndScan:
+        # TODO maybe we can fix the directory recursion issue someday ...
+        - 'tine20/GDPR/translations/extra'
+        # TODO fix problems with the following classes
+        - 'tine20/Tinebase/User/Typo3.php'
+        - 'tine20/Setup/Backend/Oracle.php'
+        - 'tine20/Setup/Backend/Pgsql.php'
+    parallel:
+      maximumNumberOfProcesses: 32
+    tmpDir:

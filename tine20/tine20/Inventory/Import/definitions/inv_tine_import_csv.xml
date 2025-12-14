@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <name>inv_tine_import_csv</name>
+    <model>Inventory_Model_InventoryItem</model>
+    <plugin>Inventory_Import_Csv</plugin>
+    <type>import</type>
+    <headline>1</headline>
+    <dryrun>0</dryrun>
+    <delimiter>,</delimiter>
+    <mapUndefinedFieldsEnable>1</mapUndefinedFieldsEnable>
+    <mapUndefinedFieldsTo>description</mapUndefinedFieldsTo>
+    <label>Inventory CSV import</label>
+    <!-- _("Inventory CSV import") -->
+    <description>tine inv import</description>
+    <example>Inventory/Import/examples/inv_tine_import.csv</example>
+    <extension>csv</extension>
+    <autotags>
+        <tag>
+            <name>Import list (###CURRENTDATE###)</name>
+            <!-- _("Import list (###CURRENTDATE###)") -->
+            <description>Items imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###</description>
+            <!-- _("Items imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###") -->
+            <contexts>
+                <Inventory />
+            </contexts>
+            <type>shared</type>
+        </tag>
+    </autotags>
+    <mapping>
+        <field>
+            <source>Inventarnummer</source>
+            <destination>inventory_id</destination>
+        </field>
+        <field>
+            <source>Name</source>
+            <destination>name</destination>
+        </field>
+        <field>
+            <source>Beschreibung</source>
+            <destination>description</destination>
+        </field>
+        <field>
+            <source>Anschaffung</source>
+            <destination>added_date</destination>
+            <typecast>datetime</typecast>
+        </field>
+        <field>
+            <source>Standort</source>
+            <destination>location</destination>
+        </field>
+        <field>
+            <source>Garantie</source>
+            <typecast>datetime</typecast>
+            <destination>warranty</destination>
+        </field>
+        <field>
+            <source>Status</source>
+            <destination>status</destination>
+        </field>
+        <field>
+            <source>Preis</source>
+            <destination>price</destination>
+            <typecast>float</typecast>
+        </field>
+        <field>
+            <source>Kostenstelle</source>
+            <destination>costcenter</destination>
+            <typecast>integer</typecast>
+        </field>
+        <field>
+            <source>Rechnung</source>
+            <destination>invoice</destination>
+        </field>
+        <field>
+            <source>Rechnungsdatum</source>
+            <typecast>datetime</typecast>
+            <destination>invoice_date</destination>
+        </field>
+        <field>
+            <source>Abgeschrieben</source>
+            <destination>deprecated_status</destination>
+            <typecast>integer</typecast>
+        </field>
+        
+        <field>
+            <source>Seriennummer</source>
+            <destination>serial_number</destination>
+        </field>
+        <field>
+            <source>IMEI</source>
+            <destination>imei</destination>
+        </field>
+        <field>
+            <source>Author</source>
+            <destination>Author</destination>
+        </field>
+        <field>
+            <source>ISBN</source>
+            <destination>ISBN</destination>
+        </field>
+        <field>
+            <source>Verlag</source>
+            <destination>Verlag</destination>
+        </field>
+        <field>
+            <source>Erscheinungs Datum</source>
+            <typecast>datetime</typecast>
+            <destination>Erscheinungs Datum</destination>
+        </field>
+        <field>
+            <source>Verfügbare Anzahl</source>
+            <destination>active_number</destination>
+            <typecast>integer</typecast>
+        </field>
+        <field>
+            <source>Totale Anzahl</source>
+            <destination>total_number</destination>
+            <typecast>integer</typecast>
+        </field>
+    </mapping>
+</config>

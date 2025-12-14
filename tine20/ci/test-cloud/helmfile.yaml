@@ -1,0 +1,41 @@
+environments:
+  default:
+    values:
+      - domain: {{ requiredEnv "DEPLOYMENT_NAME" }}.{{ requiredEnv "DEPLOYMENT_BASE_DOMAIN" }}
+        mailDomain: {{ requiredEnv "DEPLOYMENT_NAME" }}.{{ requiredEnv "DEPLOYMENT_BASE_DOMAIN" }}
+        instance: {{ requiredEnv "DEPLOYMENT_NAME" }}
+
+---
+
+helmDefaults:
+  wait: true
+  waitForJobs: true
+
+repositories:
+- name: tine-charts
+  url: registry.rz1.metaways.net/tine-charts
+  oci: true
+
+releases:
+- name: tine-{{ .Values.instance }}
+  kubeContext: tine20/gitlab-agent:k8s-se01
+  namespace: test-tine #tine-test-cloud
+  chart: tine-charts/tine
+  version: 0.1.3
+  secrets:
+  - values/infra.secrets.yaml
+  - values/mail.secrets.yaml
+  - values/onlyoffice.secrets.yaml
+  - values/tine.secrets.yaml
+  values:
+  - image:
+      repository: registry.rz1.metaways.net/tine/tine
+      tag: {{ requiredEnv "DEPLOYMENT_IMAGE_TAG" }}
+  - values/av-scan.yaml
+  - values/broadcasthub.yaml
+  - values/demodata.yaml
+  - values/onlyoffice.yaml
+  - values/document-preview.yaml
+  - values/infra.yaml.gotmpl
+  - values/mail.yaml.gotmpl
+  - values/tine.yaml.gotmpl

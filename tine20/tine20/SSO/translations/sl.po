@@ -1,0 +1,286 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0 - SSO\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2024-11-25 16:04+0000\n"
+"Language-Team: Slovenian (https://app.transifex.com/tine/teams/16133/sl/)\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Passwordless Login"
+msgstr ""
+
+msgid "Oauth2"
+msgstr ""
+
+msgid "SAML2"
+msgstr ""
+
+msgid "SAML2 Bindings"
+msgstr ""
+
+msgid "Key rotation enabled"
+msgstr ""
+
+msgid "Relying Parties"
+msgstr ""
+
+msgid "External Identity Providers"
+msgstr ""
+
+msgid "Authentication Successfully"
+msgstr ""
+
+#, python-brace-format
+msgid "Please proceed with {0}."
+msgstr ""
+
+msgid "Please proceed with your device or program."
+msgstr ""
+
+msgid "You can close this page now."
+msgstr ""
+
+msgid "Device Could Not Be Found"
+msgstr ""
+
+msgid "No device authentication request found, please recheck your code!"
+msgstr ""
+
+msgid "Enter Device Code"
+msgstr ""
+
+#, python-brace-format
+msgid "Please enter the device code for {0}."
+msgstr ""
+
+msgid "Please enter the device code provided by external device or program."
+msgstr ""
+
+msgid "SSO"
+msgstr ""
+
+#, python-brace-format
+msgid "Login for {0} (external device/program)"
+msgstr ""
+
+#, python-brace-format
+msgid "After successful login you will be redirected to {0}"
+msgstr ""
+
+msgid "External Identity Provider Domain"
+msgid_plural "External Identity Provider Domains"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+msgid "Name"
+msgstr ""
+
+msgid "External Identity Provider Config"
+msgid_plural "External Identity Provider Configs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+msgid "Provider URL"
+msgstr ""
+
+msgid "Issuer"
+msgstr ""
+
+msgid "Client ID"
+msgstr ""
+
+msgid "Client Secret"
+msgstr ""
+
+msgid "External Identity Provider"
+msgid_plural "External Identity Providers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Specific Type"
+msgstr ""
+
+msgid "Specific Configuration"
+msgstr ""
+
+msgid "Domains"
+msgstr ""
+
+msgid "Show on Login Screen"
+msgstr ""
+
+msgid "Label"
+msgstr ""
+
+msgid "Logo Light"
+msgstr ""
+
+msgid "Logo Dark"
+msgstr ""
+
+msgid "Allow assignment of existing local accounts"
+msgstr ""
+
+msgid "Allow reassignment of existing local accounts"
+msgstr ""
+
+msgid "Allow creation of new local accounts"
+msgstr ""
+
+msgid "Allow local login of assigned accounts"
+msgstr ""
+
+msgid "Require local MFA"
+msgstr ""
+
+msgid "Update local properties"
+msgstr ""
+
+msgid "Primary group for created local accounts"
+msgstr ""
+
+msgid "Groups to be set for created local accounts"
+msgstr ""
+
+msgid "Groups that deny login for existing local accounts"
+msgstr ""
+
+msgid "Roles that deny login for existing local accounts"
+msgstr ""
+
+msgid "One of these group claims needs to be present"
+msgstr ""
+
+msgid "The name of the \"groups\" claim, defaults to \"groups\""
+msgstr ""
+
+msgid "Create groups locally"
+msgstr ""
+
+msgid "Assign groups locally"
+msgstr ""
+
+msgid "Account Name Prefix"
+msgstr ""
+
+msgid "String prefixed to local account names when created from this IDP"
+msgstr ""
+
+msgid "Group Name Prefix"
+msgstr ""
+
+msgid "String prefixed to local group names when created from this IDP"
+msgstr ""
+
+msgid "Account Display Name Prefix"
+msgstr ""
+
+msgid "String prefixed to local account display names when created from this IDP"
+msgstr ""
+
+msgid "Addressbook Container"
+msgstr ""
+
+msgid "Addressbook container to store newly created account contacts and lists"
+msgstr ""
+
+msgid "OAuth Device Code"
+msgid_plural "OAuth Device Codes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+msgid "OAuth2 Grant"
+msgid_plural "OAuth2 Grants"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+msgid "OAuth Grant"
+msgstr ""
+
+msgid "OAuth2 Relying Party Config"
+msgid_plural "OAuth2 Relying Party Configs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+msgid "Redirect URLs"
+msgstr ""
+
+msgid "Secret"
+msgstr ""
+
+msgid "Relying Party"
+msgid_plural "Relying Parties"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+msgid "Logo"
+msgstr ""
+
+msgid "SAML2 Relying Party Config"
+msgid_plural "SAML2 Relying Party Configs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+msgid "Entity ID"
+msgstr ""
+
+msgid "Metadata URL"
+msgstr ""
+
+msgid "Assertion Consumer Service Binding"
+msgstr ""
+
+msgid "Assertion Consumer Service Location"
+msgstr ""
+
+msgid "Logout Service Binding"
+msgstr ""
+
+msgid "Logout Service Location"
+msgstr ""
+
+msgid "OAuth2 Access Token"
+msgid_plural "OAuth2 Access Tokens"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+msgid "Token"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Data"
+msgstr ""
+
+msgid "TTL"
+msgstr ""

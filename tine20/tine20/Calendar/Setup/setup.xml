@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<application>
+    <name>Calendar</name>
+    <!-- gettext('Calendar') -->
+    <version>19.0</version>
+    <order>15</order>
+    <status>enabled</status>
+    <tables>
+        <!-- exceptions (dates when recuring event does not take palce) -->
+        <table>
+            <name>cal_exdate</name>
+            <version>1</version>
+            <declaration>
+                <field>
+                    <name>id</name>
+                    <type>text</type>
+                    <length>40</length>
+                    <notnull>true</notnull>
+                </field>
+                <field>
+                    <name>cal_event_id</name>
+                    <type>text</type>
+                    <length>40</length>
+                    <notnull>true</notnull>
+                </field>
+                <field>
+                    <name>exdate</name>
+                    <type>datetime</type>
+                </field>
+                <index>
+                    <name>id</name>
+                    <primary>true</primary>
+                    <field>
+                        <name>id</name>
+                    </field>
+                </index>
+                <index>
+                    <name>cal_exdate::cal_event_id-cal_events::id</name>
+                    <field>
+                        <name>cal_event_id</name>
+                    </field>
+                    <foreign>true</foreign>
+                    <reference>
+                        <table>cal_events</table>
+                        <field>id</field>
+                        <ondelete>CASCADE</ondelete>
+                        <!-- add onupdate? -->
+                    </reference>
+                </index>
+                <index>
+                    <name>exdate</name>
+                    <field>
+                        <name>exdate</name>
+                    </field>
+                </index>
+            </declaration>
+        </table>
+    </tables>
+</application>

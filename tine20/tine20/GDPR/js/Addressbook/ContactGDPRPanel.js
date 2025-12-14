@@ -1,0 +1,194 @@
+/*
+ * Tine 2.0
+ *
+ * @license     http://www.gnu.org/licenses/agpl.html AGPL Version 3
+ * @author      Cornelius Weiß <c.weiss@metaways.de>
+ * @copyright   Copyright (c) 2019 Metaways Infosystems GmbH (http://www.metaways.de)
+ */
+
+Ext.ns('Tine.GDPR.Addressbook');
+
+Tine.GDPR.Addressbook.ContactGDPRPanel = Ext.extend(Ext.Panel, {
+
+    layout: 'fit',
+    border: false,
+    requiredGrant: 'editGrant',
+
+    canonicalName: ['Addressbook',  'EditDialog', 'Contact', 'GDPRPanel'].join(Tine.Tinebase.CanonicalPath.separator),
+
+    initComponent: function () {
+        var me = this;
+        this.app = this.app || Tine.Tinebase.appMgr.get('GDPR');
+        this.title = this.app.i18n._('GDPR');
+        this.action_gdpr = new Ext.Button({
+            text: this.app.i18n._('GRPR LINK'),
+            handler: () => {
+                window.open(this.gdprLink, '_blank');
+            },
+            disabled: false,
+            hidden: true,
+            scope: this
+        });
+    
+        this.blacklistContactLabel = new Ext.form.Label({
+            text: this.app.i18n._('Must not be contacted')
+        });
+        this.blacklistContactCheckbox = new Ext.form.Checkbox({
+            hideLabel: true,
+            disabled: true,
+            boxLabel: this.app.i18n._("This contact has withdrawn consent to use their data for any purpose."),
+            listeners: {scope: this, check: this.onBlacklistContactCheck}
+        });
+        this.expiryDatePicker = new Ext.ux.form.ClearableDateField({
+            fieldLabel: this.app.i18n._('Expiry Date'),
+        });
+
+        this.expiryDateDescription = new Ext.form.Label({
+            style: 'margin-left: 10px; margin-top: 19px; position: absolute;',
+            text: this.app.i18n._('The contact will be deleted automatically after this date.')
+        });
+
+        this.dataIntendedPurposesGrid = new Tine.widgets.grid.QuickaddGridPanel({
+            border: true,
+            frame: false,
+            enableBbar: false,
+            allowCreateNew: true,
+            allowDelete: false,
+            editDialogConfig: {mode: 'local'},
+            recordClass: Tine.GDPR.Model.DataIntendedPurposeRecord,
+            columns: ['intendedPurpose', 'agreeDate', 'agreeComment', 'withdrawDate', 'withdrawComment'],
+            defaultSortInfo: {field: 'agreeDate'},
+            columnsConfig: {
+                agreeComment: {width: 200},
+                withdrawComment: {width: 200}
+            },
+            quickaddMandatory: 'intendedPurpose',
+            validate: true,
+            flex: 1,
+        });
+
+
+        this.items = [{
+            layout: 'vbox',
+            align: 'stretch',
+            pack: 'start',
+            border: false,
+            items: [{
+                layout: 'form',
+                frame: true,
+                width: '100%',
+                labelAlign: 'top',
+                items: [
+                    [this.action_gdpr],
+                    this.blacklistContactLabel,
+                    this.blacklistContactCheckbox,
+                    {
+                        layout: 'hbox',
+                        height: 50,
+                        layoutConfig: {
+                            align : 'stretch',
+                            pack  : 'start'
+                        },
+                        items: [{
+                                layout: 'form',
+                                width: 100,
+                                items: this.expiryDatePicker
+                            },
+                            {
+                                layout: 'form',
+                                flex: 1,
+                                items: this.expiryDateDescription
+                            },
+                        ]
+                    },
+                ]},
+                this.dataIntendedPurposesGrid
+            ]
+        }];
+
+        this.supr().initComponent.call(this);
+
+
+    },
+
+    onRender: function() {
+        this.supr().onRender.apply(this, arguments);
+
+        this.editDialog = this.findParentBy(function(c) {return c instanceof Tine.Addressbook.ContactEditDialog});
+
+        this.editDialog.on('load', this.onRecordLoad, this);
+        this.editDialog.on('recordUpdate', this.onRecordUpdate, this);
+
+        // NOTE: panel is usually rendered after record was load
+        this.onRecordLoad(this.editDialog, this.editDialog.record);
+    },
+
+    onBlacklistContactCheck: function(cb, checked) {
+        if (checked) {
+            this.dataIntendedPurposesGrid.getStore().each(function (r) {
+                if (!r.get('withdrawDate')) {
+                    r.set('withdrawDate', new Date());
+
+                    if (!r.get('withdrawComment')) {
+                        r.set('withdrawComment', this.app.i18n._('Blacklist'));
+                    }
+                }
+            }, this);
+        } else {
+            this.dataIntendedPurposesGrid.getStore().each(function (r) {
+                Ext.each(['withdrawDate', 'withdrawComment'], function(k) {
+                    if (r.isModified(k)) {
+                        r.set(k, r.modified[k]);
+                    }
+                }, this);
+            }, this);
+        }
+
+        this.dataIntendedPurposesGrid.setReadOnly(checked);
+    },
+
+    onRecordLoad: function(editDialog, record) {
+        var _ = window.lodash,
+            evalGrants = editDialog.evalGrants,
+            container = editDialog.getForm().findField('container_id').selectedRecord,
+            hasRequiredGrant = !evalGrants|| _.get(container, 'data.account_grants' + '.' + this.requiredGrant),
+            blacklistContact = !!+record.get('GDPR_Blacklist'),
+            expiryDate = record.get('GDPR_DataExpiryDate');
+        
+        this.blacklistContactCheckbox.setValue(blacklistContact);
+        if (expiryDate) {
+            this.expiryDatePicker.setValue(expiryDate);
+        }
+        this.dataIntendedPurposesGrid.setStoreFromArray(record.get('GDPR_DataIntendedPurposeRecord') || []);
+
+        this.setReadOnly(!hasRequiredGrant);
+
+        if (blacklistContact) {
+            this.dataIntendedPurposesGrid.setReadOnly(true);
+        }
+        this.gdprLink = Tine.Tinebase.common.getUrl() + `GDPR/view/manageConsent/${record.id}`;
+    },
+
+    setReadOnly: function(readOnly) {
+        this.readOnly = readOnly;
+        this.dataIntendedPurposesGrid.setReadOnly(readOnly);
+        this.blacklistContactCheckbox.setDisabled(readOnly);
+        this.expiryDatePicker.setReadOnly(readOnly);
+    },
+
+    onRecordUpdate: function(editDialog, record) {
+        record.set('GDPR_DataIntendedPurposeRecord', this.dataIntendedPurposesGrid.getFromStoreAsArray());
+        record.set('GDPR_Blacklist', this.blacklistContactCheckbox.getValue());
+        record.set('GDPR_DataExpiryDate', this.expiryDatePicker.getValue());
+    },
+
+    getCanonicalPathSegment: function () {
+        return ['',
+            this.app.appName,
+            this.canonicalName,
+        ].join(Tine.Tinebase.CanonicalPath.separator);
+    }
+
+});
+
+Ext.ux.ItemRegistry.registerItem('Tine.Addressbook.editDialog.mainTabPanel', Tine.GDPR.Addressbook.ContactGDPRPanel, 20);

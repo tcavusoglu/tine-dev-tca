@@ -1,0 +1,199 @@
+#
+# Translators:
+# Michael Spahn <michael@spahn.me>, 2014
+# pschuele <p.schuele@metaways.de>, 2013
+# pschuele <p.schuele@metaways.de>, 2012
+# pschuele <p.schuele@metaways.de>, 2012-2013
+# sstamer <s.stamer@metaways.de>, 2014-2016
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2025-01-14 08:47+0100\n"
+"Last-Translator: pschuele <p.schuele@metaways.de>, 2012-2013\n"
+"Language-Team: German (http://app.transifex.com/tine/groupware/language/de/)\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 3.4.2\n"
+
+msgid "Add a new user"
+msgstr "Eine neue Person hinzufügen"
+
+msgid "Add a new user as a member to a course"
+msgstr "Eine neue Person als Schüler*in zur Klasse hinzufügen"
+
+msgid "Add an existing user"
+msgstr "Bereits vorhandene Person hinzufügen"
+
+msgid "Add an existing user as a member to a course"
+msgstr "Eine bereits vorhandene Person als Schüler*in zur Klasse hinzufügen"
+
+msgid "Manage shared course favorites"
+msgstr "Verwalte geteilte Kurs-Favoriten"
+
+msgid "Create or update shared course favorites"
+msgstr "Erstelle oder aktualisiere geteilte Kurs-Favoriten"
+
+msgid "Set additional memberships"
+msgstr "Weitere Mitgliedschaften setzen"
+
+msgid "Set additional group memberships for course members"
+msgstr "Weitere Gruppen-Mitgliedschaften für Kurs-Mitglieder setzen"
+
+msgid "Additional Group Memberships"
+msgstr "Weitere Gruppen-Mitgliedschaften"
+
+msgid "Array of group IDs that students can be members of"
+msgstr "Array von Gruppen-IDs, denen Schüler*innen angehören können"
+
+msgid "Internet Access"
+msgstr "Internetzugang"
+
+msgid "Internet access options."
+msgstr "Internet Zugangsoptionen"
+
+msgid "On"
+msgstr "An"
+
+msgid "Off"
+msgstr "Aus"
+
+msgid "Filtered"
+msgstr "Gefiltert"
+
+msgid "Internet Access Group (ON)"
+msgstr "Internet Zugangsgruppe (AN)"
+
+msgid "Internet Access Group (FILTERED)"
+msgstr "Internet Zugangsgruppe (GEFILTERT)"
+
+msgid "Student Group"
+msgstr "Gruppe von Schüler*innen"
+
+msgid "Student Import Definition"
+msgstr "Importdefinition für Schüler*innen"
+
+msgid "Student login name prefix"
+msgstr "Präfix für Loginnamen von Schüler*innen"
+
+msgid "Student password suffix"
+msgstr "Passwort-Suffix für Schüler*innen"
+
+msgid "Teacher password"
+msgstr "Passwort für Lehrende"
+
+msgid "Student username schema"
+msgstr "Benutzernamensschema für Schüler*innen"
+
+msgid "Student username schema (0 = only lastname (10 chars), 1 = lastname + 2 chars of firstname"
+msgstr "Benutzernamensschema für Schüler*innen (0 = nur Nachname (10 Zeichen), 1 = Nachname + 2 Zeichen des Vornamens)"
+
+msgid "Samba user settings"
+msgstr "Samba-Benutzereinstellungen"
+
+msgid "Default department"
+msgstr "Standard Abteilung"
+
+msgid "The default department for new Courses"
+msgstr "Die standard Abteilung für neue Kurse"
+
+msgid "Course -> Department Mapping"
+msgstr ""
+
+msgid "Course"
+msgid_plural "Courses"
+msgstr[0] "Klasse"
+msgstr[1] "Klassen"
+
+msgid "Teacher"
+msgstr "Lehrerende"
+
+msgid "Teacher Account"
+msgstr "Zugang für Lehrende"
+
+msgid "My course"
+msgstr "Meine Klasse"
+
+msgid "First Name"
+msgstr "Vorname"
+
+msgid "Last Name"
+msgstr "Nachname"
+
+msgid "Add a new member to a course"
+msgstr "Neues Mitglied zur Klasse hinzufügen"
+
+msgid "Errors"
+msgstr "Fehler"
+
+msgid "Please fix the noted errors."
+msgstr "Bitte beheben Sie die genannten Fehler."
+
+msgid "Import course members"
+msgstr "Klassenmitglieder importieren"
+
+msgid "Add a new member"
+msgstr "Neues Mitglied hinzufügen"
+
+msgid "Course Name"
+msgstr "Klassenname"
+
+msgid "Course / School Type"
+msgstr "Schultyp"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "Members"
+msgstr "Mitglieder"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "unknown"
+msgstr "unbekannt"
+
+msgid "Reset Password"
+msgstr "Passwort zurücksetzen"
+
+msgid "Please enter the new password."
+msgstr "Bitte geben sie das neue Password ein."
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "Failed"
+msgstr "Fehlgeschlagen"
+
+msgid "An error occurred while trying to update the courses"
+msgstr "Beim aktualisieren der Klasse(n) trat ein Fehler auf."
+
+msgid "Quick Search"
+msgstr "Schnellsuche"
+
+msgid "Course Type"
+msgid_plural "Course Types"
+msgstr[0] "Klassentyp"
+msgstr[1] "Klassentypen"
+
+msgid "All courses"
+msgstr "Alle Klassen"
+
+msgid "The default favorite that is loaded when Classes start up."
+msgstr "Standardfilter, der beim Starten der Klassenverwaltung geladen wird"
+
+msgid "School"
+msgstr "Schule"
+
+msgid "Default school for the Courses application"
+msgstr "Standard Schule für die Klassen Applikation"
+
+msgid "Courses"
+msgstr "Klassen"

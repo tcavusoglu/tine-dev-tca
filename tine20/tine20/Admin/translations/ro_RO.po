@@ -1,0 +1,1171 @@
+#
+# Translators:
+# Doru  DEACONU <dumitrudeaconu@yahoo.com>, 2014
+# Doru  DEACONU <dumitrudeaconu@yahoo.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:46+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Romanian (Romania) (http://www.transifex.com/tine20/tine20/language/ro_RO/)\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Manage access log"
+msgstr ""
+
+msgid "Delete access log entries."
+msgstr ""
+
+msgid "Manage accounts"
+msgstr ""
+
+msgid "Add and edit users and groups, add group members, change user passwords."
+msgstr ""
+
+msgid "Manage e-mail accounts"
+msgstr ""
+
+msgid "Add and edit shared and personal e-mail accounts."
+msgstr ""
+
+msgid "Manage applications"
+msgstr ""
+
+msgid "Enable and disable applications, edit application settings."
+msgstr ""
+
+msgid "Manage roles"
+msgstr ""
+
+msgid "Add and edit roles, add new members to roles, add application rights to roles."
+msgstr ""
+
+msgid "Manage shared tags"
+msgstr ""
+
+msgid "Add, delete and edit shared tags."
+msgstr ""
+
+msgid "Manage shared filesystem quotas"
+msgstr ""
+
+msgid "Add, delete and edit shared filesystem quotas."
+msgstr ""
+
+msgid "Manage shared email quotas"
+msgstr ""
+
+msgid "Add, delete and edit shared email quotas."
+msgstr ""
+
+msgid "Manage computers"
+msgstr ""
+
+msgid "Add, delete and edit (samba) computers."
+msgstr ""
+
+msgid "Manage containers"
+msgstr ""
+
+msgid "Add, delete and edit containers and manage container grants."
+msgstr ""
+
+msgid "Manage customfields"
+msgstr ""
+
+msgid "Add and edit customfields."
+msgstr ""
+
+msgid "Manage import and export definitions"
+msgstr ""
+
+msgid "Add and edit import and export definitions"
+msgstr ""
+
+msgid "View access log"
+msgstr ""
+
+msgid "View access log list."
+msgstr ""
+
+msgid "View accounts"
+msgstr ""
+
+msgid "View accounts list and details."
+msgstr ""
+
+msgid "View e-mail accounts"
+msgstr ""
+
+msgid "View shared and personal e-mail accounts."
+msgstr ""
+
+msgid "View applications"
+msgstr ""
+
+msgid "View applications list and details."
+msgstr ""
+
+msgid "View roles"
+msgstr ""
+
+msgid "View roles list and details."
+msgstr ""
+
+msgid "View shared tags"
+msgstr ""
+
+msgid "View shared tags list and details."
+msgstr ""
+
+msgid "View computers"
+msgstr ""
+
+msgid "View computers list and details."
+msgstr ""
+
+msgid "View containers"
+msgstr ""
+
+msgid "View personal and shared containers."
+msgstr ""
+
+msgid "View customfields"
+msgstr ""
+
+msgid "View customfields list."
+msgstr ""
+
+msgid "View serverinfo"
+msgstr ""
+
+msgid "View serverinfo list."
+msgstr ""
+
+msgid "View quota usage"
+msgstr ""
+
+msgid "View quota usage."
+msgstr ""
+
+msgid "view ImportExportDefinitions"
+msgstr ""
+
+msgid "Manage SSO"
+msgstr ""
+
+msgid "Manage relying parties for single sign on"
+msgstr ""
+
+msgid "Apps to show"
+msgstr ""
+
+msgid "Applications to show in quota, defaults null means all apps"
+msgstr ""
+
+msgid "Modules to show"
+msgstr ""
+
+msgid "Allow total quota in MB management"
+msgstr ""
+
+msgid "Default password must change for new user"
+msgstr ""
+
+msgid "Default IMAP user settings"
+msgstr ""
+
+msgid "Enabled Features"
+msgstr ""
+
+msgid "Enabled Features in Admin Application."
+msgstr ""
+
+msgid "Prevent special chars in login name"
+msgstr ""
+
+msgid "Force retype of new password in user edit dialog"
+msgstr ""
+
+msgid "Enable XProps Editor in Edit-Dialogs"
+msgstr ""
+
+msgid "Prevent applications disable in front end"
+msgstr ""
+
+msgid "Allow to change user type"
+msgstr ""
+
+msgid "Modules to show in admin app, default value null means all modules."
+msgstr ""
+
+msgid "Your container has been changed"
+msgstr ""
+
+msgid "Your container has been changed by %1$s %2$sNote: %3$s"
+msgstr ""
+
+msgid "Email address is already in use"
+msgstr ""
+
+msgid "A group with this name already exists"
+msgstr ""
+
+msgid "Record data needs to be set!"
+msgstr ""
+
+msgid "Account E-Mail needs to be set!"
+msgstr ""
+
+msgid "E-Mail account not found."
+msgstr ""
+
+msgid "Password is needed for system account creation"
+msgstr ""
+
+msgid "Maximum number of users reached."
+msgstr ""
+
+msgid "Please contact Metaways Infosystems GmbH to buy a license that supports a higher number of users."
+msgstr ""
+
+msgid "Delete user will trigger the [V] events, do you still want to execute this action?"
+msgstr ""
+
+msgid "CSV all data"
+msgstr ""
+
+msgid "Notifications"
+msgstr ""
+
+msgid "Access Log"
+msgid_plural "Access Logs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "IP Address"
+msgstr ""
+
+msgid "User"
+msgid_plural "Users"
+msgstr[0] "Utilizator"
+msgstr[1] "Utilizatori"
+msgstr[2] "Utilizatori"
+
+msgid "Login Time"
+msgstr ""
+
+msgid "Logout Time"
+msgstr ""
+
+msgid "Client Type"
+msgstr "Tip Client "
+
+msgid "Session ID"
+msgstr "ID Sesiune"
+
+msgid "Login Name"
+msgstr "Nume Login"
+
+msgid "Name"
+msgstr "Nume"
+
+msgid "Result"
+msgstr "Resultat"
+
+msgid "User Agent"
+msgstr ""
+
+msgid "user blocked"
+msgstr "utilizator blocat"
+
+msgid "password expired"
+msgstr "parolă expirată"
+
+msgid "user disabled"
+msgstr "utilizator dezactivat"
+
+msgid "invalid password"
+msgstr "parolă invalidă"
+
+msgid "ambiguous username"
+msgstr "nume utilizator ambigu"
+
+msgid "user not found"
+msgstr "utilizator negăsit"
+
+msgid "failure"
+msgstr "eşec"
+
+msgid "success"
+msgstr "succes"
+
+msgid "Groups"
+msgstr "Grupuri"
+
+msgid "Roles"
+msgstr "Roluri"
+
+msgid "Applications"
+msgstr "Aplicaţii"
+
+msgid "Containers"
+msgstr "Containere"
+
+msgid "Shared Tags"
+msgstr ""
+
+msgid "Customfields"
+msgstr ""
+
+msgid "Computers"
+msgstr "Calculatoare"
+
+msgid "Log"
+msgstr ""
+
+msgid "Server Information"
+msgstr ""
+
+msgid "ActiveSync Devices"
+msgstr ""
+
+msgid "E-mail Accounts"
+msgstr ""
+
+msgid "Import Export Definitions"
+msgstr ""
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "Refresh"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Feature is disabled by configuration."
+msgstr ""
+
+msgid "Default Addressbook for new contacts and groups"
+msgstr ""
+
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] "Aplicaţie"
+msgstr[1] "Aplicaţii"
+msgstr[2] "Aplicaţii"
+
+msgid "Enable Application"
+msgstr "Activare Aplicaţie"
+
+msgid "Disable Application"
+msgstr "Dezctivare Aplicaţie"
+
+msgid "Settings"
+msgstr "Setări"
+
+#, python-brace-format
+msgid "{0} Settings"
+msgstr "{0} Setări"
+
+msgid "Search:"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+#, python-brace-format
+msgid "Unknown status ({0})"
+msgstr ""
+
+#, python-brace-format
+msgid "Displaying application {0} - {1} of {2}"
+msgstr ""
+
+msgid "No applications to display"
+msgstr ""
+
+msgid "Order"
+msgstr ""
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Version"
+msgstr "Versiune"
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Config"
+msgid_plural "Configs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Description"
+msgstr "Descriere"
+
+msgid "Label"
+msgstr "Etichetă"
+
+msgid "Value"
+msgstr "Valoare"
+
+#, python-brace-format
+msgid "Default ({0})"
+msgstr ""
+
+msgid "Container"
+msgid_plural "Containers"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Model"
+msgstr "Model"
+
+msgid "Type"
+msgstr "Tip"
+
+msgid "personal"
+msgstr "personal"
+
+msgid "shared"
+msgstr ""
+
+msgid "Color"
+msgstr "Culoare"
+
+msgid "Container Hierarchy/Name"
+msgstr ""
+
+msgid "Note for Owner"
+msgstr ""
+
+msgid "Info"
+msgstr ""
+
+msgid "Please create Resources in Addressbook or CoreData."
+msgstr ""
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Container Name"
+msgstr ""
+
+msgid "Container Order"
+msgstr ""
+
+msgid "Customfield"
+msgid_plural "Customfields"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Anyone"
+msgstr ""
+
+msgid "Errors"
+msgstr "Erori"
+
+msgid "Please configure store for this field type"
+msgstr ""
+
+msgid "Record Class"
+msgstr "Clasă înregistrată"
+
+msgid "Given record class not found"
+msgstr ""
+
+msgid "Cancel"
+msgstr "Anulează"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Configure store"
+msgstr ""
+
+msgid "Permissions"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "Use"
+msgstr ""
+
+msgid "Custom field definition"
+msgstr ""
+
+msgid "Text"
+msgstr "Text"
+
+msgid "Textarea"
+msgstr ""
+
+msgid "Number"
+msgstr "Număr"
+
+msgid "Date"
+msgstr "Date"
+
+msgid "DateTime"
+msgstr "DateTimp"
+
+msgid "Time"
+msgstr "Timp"
+
+msgid "Boolean"
+msgstr "Boolean"
+
+msgid "Search Combo"
+msgstr ""
+
+msgid "Key Field"
+msgstr ""
+
+msgid "Record"
+msgstr ""
+
+msgid "Record List"
+msgstr ""
+
+msgid "Length"
+msgstr "Lungime"
+
+msgid "Required"
+msgstr ""
+
+msgid "Custom field additional properties"
+msgstr ""
+
+msgid "Tab Panel"
+msgstr ""
+
+msgid "Group"
+msgid_plural "Groups"
+msgstr[0] "Grup"
+msgstr[1] "Grupuri"
+msgstr[2] "Grupuri"
+
+msgid "Key"
+msgstr ""
+
+msgid "Customfield already exists. Please choose another name."
+msgstr ""
+
+msgid "UI Config"
+msgstr ""
+
+msgid "This custom field is still in use!"
+msgstr ""
+
+msgid "Are you sure you want to delete them?"
+msgstr ""
+
+msgid "Group Name"
+msgstr "Nume Grup"
+
+msgid "Visibility"
+msgstr ""
+
+msgid "Display in addressbook"
+msgstr ""
+
+msgid "Hide from addressbook"
+msgstr ""
+
+msgid "Saved in Addressbook"
+msgstr ""
+
+msgid "E-mail"
+msgstr ""
+
+msgid "Only system accounts can be added to Addressbook group"
+msgstr ""
+
+msgid "Group Members"
+msgstr ""
+
+msgid "Domain is not allowed. Check your SMTP domain configuration."
+msgstr ""
+
+msgid "Confirm"
+msgstr "Confirm"
+
+msgid "Do you really want to delete the selected groups?"
+msgstr ""
+
+msgid "Deleting group(s)..."
+msgstr ""
+
+msgid "Add Group"
+msgstr "Adaugă Grup"
+
+msgid "Edit Group"
+msgstr "Editează Grup"
+
+msgid "Delete Group"
+msgstr "Şterge Grup"
+
+#, python-brace-format
+msgid "Displaying groups {0} - {1} of {2}"
+msgstr ""
+
+msgid "No groups to display"
+msgstr ""
+
+msgid "Account only"
+msgstr ""
+
+msgid "Creation Time"
+msgstr ""
+
+msgid "Created By"
+msgstr ""
+
+msgid "Last Modified Time"
+msgstr ""
+
+msgid "Last Modified By"
+msgstr ""
+
+msgid "ImportExportDefinition"
+msgid_plural "ImportExportDefinitions"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Configs"
+msgstr ""
+
+msgid "Quota"
+msgstr ""
+
+msgid "Email User"
+msgid_plural "Email Users"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "IMAP Quota"
+msgstr ""
+
+msgid "Current Mailbox size"
+msgstr ""
+
+msgid "Sieve Quota"
+msgstr ""
+
+msgid "Current Sieve size"
+msgstr ""
+
+msgid "path"
+msgstr ""
+
+msgid "This folder has own quota"
+msgstr ""
+
+msgid "No quota set (examples: 10 GB, 900 MB)"
+msgstr ""
+
+msgid "Current Usage"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Revision Size"
+msgstr ""
+
+msgid "Total size of all available revisions"
+msgstr ""
+
+msgid "Edit Quota"
+msgstr ""
+
+msgid "Manage Total Quota"
+msgstr ""
+
+msgid "Total quota"
+msgstr ""
+
+msgid "no quota set"
+msgstr ""
+
+msgid "Quota Management"
+msgstr ""
+
+msgid "Please wait"
+msgstr ""
+
+msgid "Updating Memberships"
+msgstr ""
+
+msgid "Failed"
+msgstr ""
+
+msgid "Could not save role."
+msgstr ""
+
+msgid "Please fix the errors noted."
+msgstr ""
+
+msgid "Deleting role..."
+msgstr ""
+
+msgid "Some error occurred while trying to delete the role."
+msgstr ""
+
+msgid "Rights"
+msgstr ""
+
+msgid "Members"
+msgstr "Membri"
+
+msgid "Role Name"
+msgstr "Nume Rol"
+
+#, python-brace-format
+msgid "Transferring {0}..."
+msgstr ""
+
+msgid "Role"
+msgstr "Rol"
+
+msgid "Add New Role"
+msgstr "Adaugă Rol Nou"
+
+#, python-brace-format
+msgid "Edit Role \"{0}\""
+msgstr ""
+
+msgid "Do you really want to delete the selected roles?"
+msgstr ""
+
+msgid "Deleting role(s)..."
+msgstr ""
+
+msgid "Add Role"
+msgstr "Adaugă Rol"
+
+msgid "Edit Role"
+msgstr "Editează Rol"
+
+msgid "Delete Role"
+msgstr "Şterge Rol"
+
+#, python-brace-format
+msgid "Displaying roles {0} - {1} of {2}"
+msgstr ""
+
+msgid "No roles to display"
+msgstr ""
+
+msgid "Computer Name"
+msgstr ""
+
+msgid "Computer"
+msgid_plural "Computers"
+msgstr[0] "Calculator"
+msgstr[1] "Calculatoare"
+msgstr[2] "Calculatoare"
+
+msgid "Built in configs"
+msgstr ""
+
+msgid "Scheduler"
+msgstr ""
+
+msgid "Updating Tag"
+msgstr ""
+
+#, python-brace-format
+msgid "Could not save tag ({0})"
+msgstr ""
+
+msgid "Allowed Contexts"
+msgstr ""
+
+msgid "Context"
+msgstr ""
+
+msgid "Account Rights"
+msgstr ""
+
+msgid "Tag Name"
+msgstr ""
+
+msgid "Tag"
+msgstr "Tag"
+
+msgid "Add New Tag"
+msgstr ""
+
+#, python-brace-format
+msgid "Edit Tag \"{0}\""
+msgstr ""
+
+msgid "Do you really want to delete the selected tags?"
+msgstr ""
+
+msgid "Deleting tag(s)..."
+msgstr ""
+
+msgid "Add Tag"
+msgstr "Adaugă Tag"
+
+msgid "Edit Tag"
+msgstr "Editează Tag"
+
+msgid "Delete Tag"
+msgstr "Şterge  Tag"
+
+#, python-brace-format
+msgid "Displaying tags {0} - {1} of {2}"
+msgstr ""
+
+msgid "No tags to display"
+msgstr ""
+
+msgid "Usage:&#160;"
+msgstr ""
+
+msgid "System Tag"
+msgstr ""
+
+msgid "Allowed Domains"
+msgstr ""
+
+msgid "Special characters are not allowed in login name."
+msgstr ""
+
+msgid "Passwords do not match!"
+msgstr ""
+
+msgid "Passwords match!"
+msgstr "Parolele corespund!"
+
+msgid "Primary group"
+msgstr ""
+
+msgid "Unix"
+msgstr "Unix"
+
+msgid "Home Directory"
+msgstr ""
+
+msgid "Login Shell"
+msgstr ""
+
+msgid "Windows"
+msgstr "Windows"
+
+msgid "Home Drive"
+msgstr ""
+
+msgid "never logged in"
+msgstr ""
+
+msgid "Home Path"
+msgstr ""
+
+msgid "never logged off"
+msgstr ""
+
+msgid "Profile Path"
+msgstr ""
+
+msgid "Password Last Set"
+msgstr ""
+
+msgid "never"
+msgstr ""
+
+msgid "Logon Script"
+msgstr ""
+
+msgid "Password Can Change"
+msgstr ""
+
+msgid "not set"
+msgstr ""
+
+msgid "Password Must Change"
+msgstr ""
+
+msgid "Kick Off Time"
+msgstr ""
+
+msgid "Filesystem Quota"
+msgstr ""
+
+msgid "Current Filesystem usage"
+msgstr ""
+
+msgid "Information"
+msgstr "Informare"
+
+msgid "Last Login"
+msgstr ""
+
+msgid "Forward Only"
+msgstr ""
+
+msgid "E-mail Alias"
+msgstr ""
+
+msgid "Add an alias address..."
+msgstr ""
+
+msgid "This alias can be used for sending e-mails."
+msgstr ""
+
+msgid "Domain not allowed"
+msgstr ""
+
+#, python-brace-format
+msgid "The domain {0} of the alias {1} you tried to add is neither configured as primary domain nor set as a secondary domain in the setup. Please add this domain to the secondary domains in SMTP setup or use another domain which is configured already."
+msgstr ""
+
+msgid "Forwarding to self"
+msgstr ""
+
+msgid "You are not allowed to set a forwarding e-mail address that is identical to the users primary e-mail or one of his aliases."
+msgstr ""
+
+msgid "E-mail Forward"
+msgstr ""
+
+msgid "Add a forwarding address..."
+msgstr ""
+
+msgid "Password confirmation"
+msgstr "Confirmare parolă"
+
+msgid "Repeat password"
+msgstr "Repetă parola"
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "Password is expired in accordance with the password policy and needs to be changed"
+msgstr ""
+
+msgid "Account"
+msgstr "Cont"
+
+msgid "First name"
+msgstr "Prenume"
+
+msgid "Last name"
+msgstr "Nume"
+
+msgid "Display name"
+msgstr "Nume afişat"
+
+msgid "Full Name"
+msgstr ""
+
+msgid "Full name is used to create the distinguishedName (DN) in AD integration"
+msgstr ""
+
+msgid "Login name"
+msgstr ""
+
+msgid "Password"
+msgstr "Parola"
+
+msgid "Multi Factor Authentication Config"
+msgstr ""
+
+msgid "OpenID"
+msgstr "OpenID"
+
+msgid "User Type"
+msgstr ""
+
+msgid "enabled"
+msgstr ""
+
+msgid "disabled"
+msgstr ""
+
+msgid "expired"
+msgstr "expirat"
+
+msgid "blocked"
+msgstr "blocat"
+
+msgid "Invalid Status"
+msgstr ""
+
+msgid "Blocked status is only valid if the user tried to login with a wrong password to often. It is not possible to set this status here."
+msgstr ""
+
+msgid "Expires"
+msgstr ""
+
+msgid "Last login at"
+msgstr ""
+
+msgid "don't know"
+msgstr ""
+
+msgid "Last login from"
+msgstr ""
+
+msgid "Password set"
+msgstr ""
+
+msgid "Account ID"
+msgstr ""
+
+msgid "User groups"
+msgstr ""
+
+msgid "User roles"
+msgstr ""
+
+msgid "Fileserver"
+msgstr ""
+
+msgid "Filesystem"
+msgstr ""
+
+msgid "IMAP"
+msgstr "IMAP"
+
+msgid "SMTP"
+msgstr "SMTP"
+
+msgid "Enable Account"
+msgstr "Activează Cont"
+
+msgid "Disable Account"
+msgstr "Dezactivează Cont"
+
+msgid "Reset Password"
+msgstr ""
+
+msgid "E-mail usage"
+msgstr ""
+
+msgid "Filesystem usage"
+msgstr ""
+
+msgid "MFA Configured"
+msgstr ""
+
+msgid "Password changed"
+msgstr ""
+
+msgid "Set new password"
+msgstr ""
+
+msgid "Please enter the new password:"
+msgstr ""
+
+msgid "Users"
+msgstr "Utilizatori"
+
+msgid "Samba User"
+msgid_plural "Samba Users"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "GENDER_Task config"
+msgstr ""
+
+msgid "Task config"
+msgid_plural "Task configs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "GENDER_Scheduled Import Task config"
+msgstr ""
+
+msgid "Scheduled Import Task config"
+msgid_plural "Scheduled Import Task configs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Plugin"
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "Period"
+msgstr ""
+
+msgid "Task type"
+msgstr ""
+
+msgid "Emails"
+msgstr ""
+
+#~ msgid "view access log"
+#~ msgstr "vezi  logurile de acces"
+
+#~ msgid "view access log list"
+#~ msgstr "vezi lista  logurilor de acces"
+
+#~ msgid "view accounts"
+#~ msgstr "vezi conturile"
+
+#~ msgid "view accounts list and details"
+#~ msgstr "vezilista conturilor si detaliilor"
+
+#~ msgid "view applications"
+#~ msgstr "vezi  aplicaţiile"
+
+#~ msgid "view roles"
+#~ msgstr "vezi rolurile"
+
+#~ msgid "view computers"
+#~ msgstr "vezi calculatoarele"
+
+#~ msgid "view containers"
+#~ msgstr "vezi containerele"
+
+#~ msgid "view customfields"
+#~ msgstr "vezi câmpurile custom"
+
+#~ msgid "view customfields list"
+#~ msgstr "vezi lista câmpurilor custom"
+
+#~ msgid "view serverinfo"
+#~ msgstr "vezi info server"
+
+#~ msgid "view serverinfo list"
+#~ msgstr "vezi lista info server"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "enable application"
+#~ msgstr "activare aplicaţie"
+
+#~ msgid "disable application"
+#~ msgstr "dezactivare aplicaţie"

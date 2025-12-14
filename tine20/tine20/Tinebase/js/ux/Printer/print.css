@@ -1,0 +1,85 @@
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0;}img,body,html{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul {list-style:none;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;}q:before,q:after{content:'';}
+
+table {
+  width: 100%;
+  text-align: left;
+  font-size: 11px;
+  font-family: arial;
+  border-collapse: collapse;
+}
+
+table th {
+  padding: 4px 3px 4px 5px;
+  border: 1px solid #d0d0d0;
+  border-left-color: #eee;
+  background-color: #ededed;
+}
+
+table td {
+  padding: 4px 3px 4px 5px;
+  border-style: none solid solid;
+  border-width: 1px;
+  border-color: #ededed;
+}
+
+@media print {
+  thead {display: table-header-group;}
+
+  .clear {
+    clear: both;
+  }
+}
+
+#csscheck {
+  display: none;
+}
+
+div.page
+{
+  page-break-after: always;
+  page-break-inside: avoid;
+}
+
+.tine-keyfield-icon {
+  width: 12px;
+  height: 12px;
+  vertical-align: text-bottom;
+}
+
+.gridpanelrenderer_header_title {
+  float: left;
+  font-size: 30px;
+  width: 50%;
+}
+
+.gridpanelrenderer_header_logo {
+  float: right;
+  padding-bottom: 8px;
+}
+
+.gridpanelrenderer_header_logo img {
+  max-width: 400px;
+  max-height: 80px;
+}
+
+.table-noborder table, .table-noborder th, .table-noborder tr, .table-noborder td {
+  border: 0;
+}
+
+.preview-panel-left {
+  float: left;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 5px;
+  font-size: 12px;
+  font-family: arial;
+}
+
+.preview-panel-right {
+  float: right;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 5px;
+  font-size: 12px;
+  font-family: arial;
+}

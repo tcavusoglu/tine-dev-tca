@@ -1,0 +1,253 @@
+#
+# Translators:
+# Etienne <inscription@arrakeen.net>, 2012-2013
+# Etienne <inscription@arrakeen.net>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:43+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: French (http://www.transifex.com/tine20/tine20/language/fr/)\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Manage ActiveSync devices"
+msgstr ""
+
+msgid "See, edit and delete ActiveSync devices"
+msgstr ""
+
+msgid "Reset ActiveSync devices"
+msgstr ""
+
+msgid "Remotely reset ActiveSync devices to factory state, deleting all data"
+msgstr ""
+
+msgid "Default policy for new devices"
+msgstr "Politique par défaut pour les nouveaux appareils"
+
+msgid "Enter the id of the policy to apply to newly created devices."
+msgstr "Entrez le numéro de la politique qui s'appliquera aux appareils nouvellement enregistrés"
+
+msgid "Device Model Agent Deny List"
+msgstr ""
+
+msgid "Array of regular expressions of Device-Model strings"
+msgstr ""
+
+msgid "User Agent Deny List"
+msgstr ""
+
+msgid "Array of regular expressions of User-Agent strings"
+msgstr ""
+
+msgid "Disable Remote Reset Action"
+msgstr ""
+
+msgid "Disable Remote Reset Action AdminPanel"
+msgstr ""
+
+msgid "Disable Access Log"
+msgstr "Désactiver la journalisation des accès"
+
+msgid "Disable ActiveSync Access Log creation."
+msgstr "Désactiver la journalisation des accès"
+
+msgid "Filter timeslot for e-mails"
+msgstr ""
+
+msgid "For how long in the past the e-mails should be synchronized."
+msgstr ""
+
+msgid "Filter timeslot for events"
+msgstr "Jours à synchroniser pour les évènements"
+
+msgid "For how long in the past the events should be synchronized."
+msgstr "Période de synchronisation des événements passés"
+
+msgid "%1$s ActiveSync failure"
+msgstr ""
+
+msgid "Sync Devices"
+msgstr ""
+
+msgid "Active Sync"
+msgstr "ActiveSync"
+
+msgid "Select a Device"
+msgstr "Sélectionnez un appareil"
+
+msgid "No ActiveSync Device registered"
+msgstr "Aucun appareil ActiveSync enregistré"
+
+#, python-brace-format
+msgid "Set as {0} Filter"
+msgstr "Définir en tant que filtre {0}"
+
+msgid "Resetted Sync Filter"
+msgstr "Filtre de synchronisations réinitialisé"
+
+#, python-brace-format
+msgid "{0} filter for device \"{1}\" is now \"{2}\""
+msgstr "Le filtre {0} pour l'appareil \"{1}\" est désormais \"{2}\""
+
+msgid "resetted"
+msgstr "réinitialisé"
+
+msgid "Set Sync Filter"
+msgstr "Définir le filtre de synchronisation"
+
+msgid "Device ID"
+msgstr ""
+
+msgid "Devicetype"
+msgstr ""
+
+msgid "Owned by"
+msgstr ""
+
+msgid "Policy"
+msgstr ""
+
+msgid "ActiveSync Version"
+msgstr ""
+
+msgid "User agent"
+msgstr ""
+
+msgid "Model"
+msgstr ""
+
+msgid "IMEI"
+msgstr ""
+
+msgid "Friendly Name"
+msgstr ""
+
+msgid "OS"
+msgstr ""
+
+msgid "OS Language"
+msgstr ""
+
+msgid "Phonenumber"
+msgstr ""
+
+msgid "Device"
+msgid_plural "Devices"
+msgstr[0] "Appareil"
+msgstr[1] "Appareils"
+
+msgid "Devices"
+msgstr "Appareils"
+
+msgid "ID"
+msgstr ""
+
+msgid "Device Type"
+msgstr ""
+
+msgid "Operating System"
+msgstr ""
+
+msgid "Phone Number"
+msgstr ""
+
+msgid "Ping Lifetime"
+msgstr ""
+
+msgid "Ping Folder"
+msgstr ""
+
+msgid "Remote Wipe"
+msgstr ""
+
+msgid "Calendar Filter"
+msgstr ""
+
+msgid "Contacts Filter"
+msgstr ""
+
+msgid "E-mail Filter"
+msgstr ""
+
+msgid "Tasks Filter"
+msgstr ""
+
+msgid "Last Ping"
+msgstr ""
+
+msgid "Monitor Last Ping"
+msgstr ""
+
+msgid "Remote Device Reset"
+msgstr ""
+
+msgid "Please confirm"
+msgstr ""
+
+msgid "Do you really want to wipe the selected devices? All personal data will be removed and the device will be reset to factory settings!"
+msgstr ""
+
+msgid "Quicksearch"
+msgstr ""
+
+msgid "Sync Device"
+msgid_plural "Sync Devices"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Default Address book"
+msgstr ""
+
+msgid "The default address book to create new contacts in."
+msgstr ""
+
+msgid "Default Calendar"
+msgstr "Agenda par défaut"
+
+msgid "The default calendar to create new events in."
+msgstr "Calendrier où seront créés par défaut les nouveaux évènements."
+
+msgid "Default Task List"
+msgstr "Liste des tâches par défaut"
+
+msgid "The default task list to create new tasks in."
+msgstr "Liste où seront créés par défaut les nouvelles tâches."
+
+msgid "Default Policy"
+msgstr "Règle par défaut"
+
+msgid "Default Policy installed during setup"
+msgstr "Politique par défaut configurée durant l'installation"
+
+msgid "Dear user,"
+msgstr ""
+
+msgid "%1$s has noticed that the syncronization with your ActiveSync device is no longer active. Please trigger the syncronisation on your device."
+msgstr ""
+
+msgid "Thank you."
+msgstr ""
+
+msgid "Your %1$s Team"
+msgstr ""
+
+#~ msgid "Default Addressbook"
+#~ msgstr "Carnet d'adresses par défaut"
+
+#~ msgid "The default addressbook to create new contacts in."
+#~ msgstr "Carnet d'adresse où seront créés par défaut les nouveaux contacts."
+
+#~ msgid "Filter timeslot for emails"
+#~ msgstr "Jours à synchroniser pour les messages"
+
+#~ msgid "For how long in the past the emails should be synchronized."
+#~ msgstr "Période de synchronisation des messages passés"

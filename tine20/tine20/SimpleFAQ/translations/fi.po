@@ -1,0 +1,138 @@
+#
+# Translators:
+# Tommi Turkia <sahkari@saunalahti.fi>, 2012
+# Tommi Turkia <sahkari@saunalahti.fi>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-04-02 13:32+0000\n"
+"Last-Translator: Tommi Turkia <sahkari@saunalahti.fi>, 2012\n"
+"Language-Team: Finnish (http://app.transifex.com/tine/groupware/language/fi/)\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Draft"
+msgstr "Luonnos"
+
+msgid "released"
+msgstr "julkaistu"
+
+msgid "obsolete"
+msgstr "vanhentunut"
+
+msgid "Internal"
+msgstr "sisäinen"
+
+msgid "Public"
+msgstr "Julkinen"
+
+msgid "FAQ Status"
+msgid_plural "FAQ Status"
+msgstr[0] "UKK Tila"
+msgstr[1] "UKK Tilat"
+
+msgid "FAQ Type"
+msgid_plural "FAQ Types"
+msgstr[0] "Apua Tyyppi"
+msgstr[1] "UKK Tyypit"
+
+msgid "Defaults"
+msgstr "Oletukset"
+
+msgid "Question"
+msgstr "Kysymys"
+
+msgid "Enter a question..."
+msgstr "Lisää kysymys..."
+
+msgid "Answer"
+msgstr "Vastaus"
+
+msgid "Enter a answer..."
+msgstr "Lisää vastaus..."
+
+msgid "Type"
+msgstr "Tyyppi"
+
+msgid "Status"
+msgstr "Tila"
+
+msgid "FAQ Infos"
+msgstr "UKK Info"
+
+msgid "Tags"
+msgstr "Tagit"
+
+msgid "Creation Time"
+msgstr "Luontiaika"
+
+msgid "Created By"
+msgstr "Luonut"
+
+msgid "No answer yet"
+msgstr "Ei vastauksia vielä"
+
+msgid "FAQ id"
+msgstr "UKK tunnus"
+
+msgid "Add a new FAQ Status..."
+msgstr "Lisää uusi UKK tila..."
+
+msgid "Add a new FAQ Type..."
+msgstr "Lisää uusi UKK tyyppi.."
+
+msgid "FAQ"
+msgid_plural "FAQs"
+msgstr[0] "UKK"
+msgstr[1] "UKK:t"
+
+msgid "FAQ List"
+msgid_plural "FAQ Lists"
+msgstr[0] "UKK Lista"
+msgstr[1] "UKK Listat"
+
+msgid "FAQ Lists"
+msgstr "UKK LIstat"
+
+msgid "Quick Search"
+msgstr ""
+
+msgid "Search FAQ"
+msgstr ""
+
+msgid "Find Question"
+msgstr ""
+
+msgid "Search question"
+msgstr ""
+
+msgid "All my FAQs"
+msgstr "Kaikki omat UKK:t"
+
+msgid "Default Favorite"
+msgstr "Oletus suosikki"
+
+msgid "The default favorite which is loaded on FAQ startup"
+msgstr "Oletus suosikki ladataan UKK käynnistyessä"
+
+msgid "Default FAQ List"
+msgstr "Oletus UKK lista"
+
+msgid "The default FAQ list to create new FAQ in."
+msgstr "Oletus UKK  lista luodaan uudelle UKK:lle"
+
+msgid "All FAQs of my FAQ Lists"
+msgstr "Kaikki UKK:t omassa UKK listassa"
+
+msgid "Last modified by me"
+msgstr "Omat muokkaukset"
+
+msgid "All FAQs that I have last modified"
+msgstr "Kaikki UKK:t joita olen muokannut"

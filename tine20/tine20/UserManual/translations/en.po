@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0 - UserManual\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2008-07-29 21:14+0100\n"
+"Last-Translator: Cornelius Weiss <c.weiss@metaways.de>\n"
+"Language-Team: Tine 2.0 Translators\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Manual page not found"
+msgstr "Manual page not found"
+
+msgid "Help"
+msgstr "Help"
+
+msgid "Show Canonical Path"
+msgstr "Show Canonical Path"
+
+msgid "Canonical Path"
+msgstr "Canonical Path"
+
+msgid "User Manual"
+msgstr "User Manual"
+
+msgid "Previous"
+msgstr "Previous"
+
+msgid "Next"
+msgstr "Next"
+
+msgid "Up"
+msgstr "Up"
+
+msgid "Go to Index"
+msgstr "Go to Index"
+
+msgid "Search in User Manual"
+msgstr "Search in User Manual"
+
+msgid "Close"
+msgstr "Close"
+
+msgid "Loading Manual Page..."
+msgstr "Loading Manual Page..."
+
+msgid "ManualContext"
+msgid_plural "ManualContexts"
+msgstr[0] "ManualContext"
+msgstr[1] "ManualContexts"
+
+msgid "Context"
+msgstr "Context"
+
+msgid "Filename"
+msgstr "Filename"
+
+msgid "Title"
+msgstr "Title"
+
+msgid "Target"
+msgstr "Target"
+
+msgid "Chapter"
+msgstr "Chapter"
+
+msgid "ManualPage"
+msgid_plural "ManualPages"
+msgstr[0] "ManualPage"
+msgstr[1] "ManualPages"
+
+msgid "ManualPages list"
+msgid_plural "ManualPages lists"
+msgstr[0] "ManualPages list"
+msgstr[1] "ManualPages lists"
+
+msgid "Content"
+msgstr "Content"

@@ -1,0 +1,135 @@
+#
+# Translators:
+# 1a8e3140e5b8a374784ecdfdf83f7d9e_5e6d67c <d882eac74045deada33a9c470758040d_143165>, 2014
+# 1a8e3140e5b8a374784ecdfdf83f7d9e_5e6d67c <d882eac74045deada33a9c470758040d_143165>, 2014
+# 1a8e3140e5b8a374784ecdfdf83f7d9e_5e6d67c <d882eac74045deada33a9c470758040d_143165>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-04-02 13:32+0000\n"
+"Last-Translator: 1a8e3140e5b8a374784ecdfdf83f7d9e_5e6d67c <d882eac74045deada33a9c470758040d_143165>, 2014\n"
+"Language-Team: Thai (http://app.transifex.com/tine/groupware/language/th/)\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Draft"
+msgstr "โครงร่าง"
+
+msgid "released"
+msgstr "ได้ปล่อย"
+
+msgid "obsolete"
+msgstr "เลิกใช้"
+
+msgid "Internal"
+msgstr "ภายใน"
+
+msgid "Public"
+msgstr "สาธารณะ"
+
+msgid "FAQ Status"
+msgid_plural "FAQ Status"
+msgstr[0] "สถานะ คำถามที่ถามบ่อย"
+
+msgid "FAQ Type"
+msgid_plural "FAQ Types"
+msgstr[0] "ประเภทของคำถามที่ถามบ่อย"
+
+msgid "Defaults"
+msgstr "ค่าหลัก"
+
+msgid "Question"
+msgstr "คำถาม"
+
+msgid "Enter a question..."
+msgstr "ใส่คำถาม"
+
+msgid "Answer"
+msgstr "คำตอบ"
+
+msgid "Enter a answer..."
+msgstr "ใส่คำตอบ"
+
+msgid "Type"
+msgstr "ประเภท"
+
+msgid "Status"
+msgstr "สถานะ"
+
+msgid "FAQ Infos"
+msgstr "ข้อมูลเกี่ยวกับคำถามที่ถามบ่อย"
+
+msgid "Tags"
+msgstr "ป้ายกำกับ"
+
+msgid "Creation Time"
+msgstr "เวลาที่สร้างขึ้น"
+
+msgid "Created By"
+msgstr "สร้าง โดย"
+
+msgid "No answer yet"
+msgstr "ยังไม่มีคำตอบ"
+
+msgid "FAQ id"
+msgstr "รหัสของคำถามที่ถามบ่อย"
+
+msgid "Add a new FAQ Status..."
+msgstr "ใส่สถานะคำถามที่ถามบ่อยใหม่"
+
+msgid "Add a new FAQ Type..."
+msgstr "ใส่ประเภทคำถามที่ถามบ่อยใหม่"
+
+msgid "FAQ"
+msgid_plural "FAQs"
+msgstr[0] "คำถามที่ถามบ่อย"
+
+msgid "FAQ List"
+msgid_plural "FAQ Lists"
+msgstr[0] "รายชื่อคำถามที่ถามบ่อย"
+
+msgid "FAQ Lists"
+msgstr "รายการคำถามที่ถามบ่อย"
+
+msgid "Quick Search"
+msgstr "ค้นหาอย่างรวดเร็ว"
+
+msgid "Search FAQ"
+msgstr "ค้นหาคำถามที่ถามบ่อย"
+
+msgid "Find Question"
+msgstr "หาคำถาม"
+
+msgid "Search question"
+msgstr "ค้นหาคำถาม"
+
+msgid "All my FAQs"
+msgstr "คำถามที่ถามบ่อยของฉันทั้งหมด"
+
+msgid "Default Favorite"
+msgstr "ค่าที่ชอบหลัก"
+
+msgid "The default favorite which is loaded on FAQ startup"
+msgstr "ค่าที่ชอบหลักจะโหลดทันทีเมื่อเริ่มเปิด FAQ"
+
+msgid "Default FAQ List"
+msgstr "รายการคำถามหลักที่ถามบ่อย"
+
+msgid "The default FAQ list to create new FAQ in."
+msgstr "รายการ FAQ ค่าหลัก ที่จะสร้าง FAQ ใหม่เข้าไป"
+
+msgid "All FAQs of my FAQ Lists"
+msgstr "คำถามที่ถามบ่อยทั้งหมดของรายการคำถามที่ถามบ่อยของฉัน"
+
+msgid "Last modified by me"
+msgstr "ปรับปรุงครั้งล่าสุด โดยฉัน"
+
+msgid "All FAQs that I have last modified"
+msgstr "คำถามที่ถามบ่อยที่ฉันได้ปรับปรุงครั้งล่าสุด"

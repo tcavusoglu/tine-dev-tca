@@ -1,0 +1,18 @@
+# add custom / branch specific merge jobs here (merge2-x)
+# TODO is this still needed?
+merge_be:
+  stage: merge2
+  extends: .abstract.merge
+  script:
+    - merge_trigger_next
+  rules:
+    - if: $AUTO_MERGE_BE == "true"
+      when: on_success
+    - when: never
+
+.mergecustom3:
+  stage: merge3
+  extends: .abstract.merge
+  rules:
+    - if: $AUTO_MERGE == "never"
+      when: never

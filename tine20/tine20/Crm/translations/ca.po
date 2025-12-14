@@ -1,0 +1,516 @@
+#
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:49+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Catalan (http://www.transifex.com/tine20/tine20/language/ca/)\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "manage shared lead folders"
+msgstr "gestiona les carpetes de clients potencials compartides"
+
+msgid "Create new shared lead folders"
+msgstr "Crea noves carpetes de clients potencials compartides"
+
+msgid "manage shared leads favorites"
+msgstr "gestiona preferits de clients potencials compartits"
+
+msgid "Create or update shared leads favorites"
+msgstr "Crea o actualitza preferits de clients potencials compartits"
+
+msgid "controls sending notification of Leads"
+msgstr ""
+
+msgid "send notification)description"
+msgstr ""
+
+msgid "send notification to all access container"
+msgstr ""
+
+msgid "send notification to responsible"
+msgstr ""
+
+msgid "send notification to responsible)description"
+msgstr ""
+
+msgid "send notification to customer"
+msgstr ""
+
+msgid "send notification to partner"
+msgstr ""
+
+msgid "Lead States Available"
+msgstr ""
+
+msgid "Possible lead status, with their associated turnover probabilities. If a status is flagged, leads with this status are treated as closed."
+msgstr ""
+
+msgid "open"
+msgstr "obert"
+
+msgid "contacted"
+msgstr "contactat"
+
+msgid "waiting for feedback"
+msgstr "esperant resposta"
+
+msgid "quote sent"
+msgstr "pressupost enviat"
+
+msgid "accepted"
+msgstr "acceptat"
+
+msgid "lost"
+msgstr "perdut"
+
+msgid "read-only"
+msgstr ""
+
+msgid "Lead Sources Available"
+msgstr ""
+
+msgid "Possible lead sources. If a source is flagged as archived, leads of this source are treated as closed."
+msgstr ""
+
+msgid "Lead Types Available"
+msgstr ""
+
+msgid "Possible lead types."
+msgstr ""
+
+msgid "Customer"
+msgstr "Client"
+
+msgid "Partner"
+msgstr "Col·laborador"
+
+msgid "Reseller"
+msgstr "Distribuïdor"
+
+msgid "Enabled Features"
+msgstr ""
+
+msgid "Enabled Features in CRM Application."
+msgstr ""
+
+msgid "Lead Import"
+msgstr ""
+
+msgid "Lead Notification Confirmation"
+msgstr ""
+
+msgid "Add new task on lead import"
+msgstr ""
+
+msgid "Automatically creates a task for the responsible person if a new lead is imported."
+msgstr ""
+
+msgid "Send notification e-mail on lead import"
+msgstr ""
+
+msgid "Sends an e-mail to all responsible persons for the imported leads."
+msgstr ""
+
+msgid "Lead duplicate check fields"
+msgstr ""
+
+msgid "These fields are checked when a new lead is created. If a record with the same data in the fields is found, a duplicate exception is thrown."
+msgstr ""
+
+msgid "State"
+msgstr "Estat"
+
+msgid "Role"
+msgstr "Rol"
+
+msgid "Source"
+msgstr "Font"
+
+msgid "Start"
+msgstr "Inici"
+
+msgid "Scheduled end"
+msgstr "Finalització prevista"
+
+msgid "End"
+msgstr "Finalització"
+
+msgid "Turnover"
+msgstr "Volum de negoci"
+
+msgid "Probability"
+msgstr "Probabilitat"
+
+msgid "Folder"
+msgstr "Carpeta"
+
+msgid "Updated by"
+msgstr "Actualitzat per"
+
+msgid "Updated Fields:"
+msgstr "Camps actualitzats:"
+
+#, python-format
+msgid "'%s' changed from '%s' to '%s'."
+msgstr ""
+
+msgid "Tags"
+msgstr "Etiquetes"
+
+#, python-format
+msgid "Lead %s has been changed"
+msgstr "S'ha modificat el client potencial %s"
+
+#, python-format
+msgid "Lead %s has been deleted"
+msgstr ""
+
+#, python-format
+msgid "Lead %s has been created"
+msgstr ""
+
+msgid "This Lead state is set to read-only therefore updating this Lead is not possible."
+msgstr ""
+
+msgid "CSV all data"
+msgstr ""
+
+msgid "Lead Data"
+msgstr "Dades del client potencial"
+
+msgid "Leadstate"
+msgstr "Estat"
+
+msgid "Leadtype"
+msgstr "Tipus"
+
+msgid "Leadsource"
+msgstr "Font"
+
+msgid "End Scheduled"
+msgstr "Finalització prevista"
+
+msgid "Contacts"
+msgstr "Contactes"
+
+msgid "Address"
+msgstr "Adreça"
+
+msgid "Telephone"
+msgstr "Telèfon"
+
+msgid "Email"
+msgstr "Correu electrònic"
+
+msgid "Tasks"
+msgstr "Tasques"
+
+msgid "Due Date"
+msgstr "Data de venciment"
+
+msgid "Priority"
+msgstr "Prioritat"
+
+msgid "Products"
+msgstr "Productes"
+
+msgid "low"
+msgstr "baixa"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "high"
+msgstr "alta"
+
+msgid "urgent"
+msgstr "urgent"
+
+msgid "Edit new lead"
+msgstr ""
+
+#, python-format
+msgid "The following leads have just been imported into lead list %s"
+msgstr ""
+
+#, python-format
+msgid "%s new leads have been imported"
+msgstr ""
+
+msgid "Lead CSV import"
+msgstr ""
+
+msgid "Import list (###CURRENTDATE###)"
+msgstr ""
+
+msgid "Leads imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr ""
+
+msgid "Please choose the Lead to add the contacts to"
+msgstr ""
+
+msgid "Please select the attenders' role"
+msgstr ""
+
+msgid "Lead"
+msgid_plural "Leads"
+msgstr[0] "Client potencial"
+msgstr[1] "Clients potencials"
+
+msgid "Select Lead"
+msgstr ""
+
+msgid "Select Role"
+msgstr ""
+
+#, python-brace-format
+msgid "Adding {0} contacts to lead"
+msgstr ""
+
+msgid "Change type to Customer"
+msgstr "Canvia el tipus a Client"
+
+msgid "Responsible"
+msgstr "Responsable"
+
+msgid "Change type to Responsible"
+msgstr "Canvia el tipus a Responsable"
+
+msgid "Change type to Partner"
+msgstr "Canvia el tipus a Col·laborador"
+
+msgid "Change contact type"
+msgstr "Canvia el tipus de contacte"
+
+msgid "Search for Contacts to add ..."
+msgstr "Cerca contactes a afegir ..."
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Data"
+msgstr "Informació"
+
+msgid "Phone"
+msgstr "Telèfon"
+
+msgid "Cellphone"
+msgstr "Mòbil"
+
+msgid "New Lead"
+msgstr ""
+
+msgid "Notifications are enabled"
+msgstr ""
+
+msgid "Notifications are disabled"
+msgstr ""
+
+msgid "Send Notification?"
+msgstr ""
+
+msgid "Changes to this lead might send notifications. Press the button \"Notifcation are enabled\" to switch to \"Notification are disabled\""
+msgstr ""
+
+msgid "You do not have the run right for the Tasks application or it is not activated."
+msgstr "No disposeu dels permisos per a executar l'aplicació Tasques o bé aquesta no es troba activada."
+
+msgid "You do not have the run right for the Sales application or it is not activated."
+msgstr "No disposeu dels permisos per a executar l'aplicació Vendes o bé aquesta no es troba activada."
+
+msgid "Enter lead name"
+msgstr ""
+
+msgid "Expected turnover"
+msgstr "Volum de negoci previst"
+
+msgid "Resubmission Date"
+msgstr ""
+
+msgid "Estimated end"
+msgstr "Finalització estimada"
+
+msgid "Description"
+msgstr "Descripció"
+
+msgid "Enter description"
+msgstr "Introduïu una descripció"
+
+msgid "Contact"
+msgstr "Contacte"
+
+msgid "CRM Role"
+msgstr "Rol CRM"
+
+msgid "Mobile"
+msgstr "Mòbil"
+
+msgid "Fax"
+msgstr "Fax"
+
+msgid "E-Mail"
+msgstr "Correu electrònic"
+
+msgid "Web"
+msgstr "Web"
+
+msgid "Status"
+msgstr "Estat"
+
+msgid "Lead name"
+msgstr "Nom del client potencial"
+
+msgid "Probable Turnover"
+msgstr "Volum de negoci probable"
+
+msgid "Import leads"
+msgstr ""
+
+#, python-brace-format
+msgid "Add new {0}"
+msgstr "Afegeix un nou {0}"
+
+#, python-brace-format
+msgid "Unlink {0}"
+msgstr "Desenllaça {0}"
+
+#, python-brace-format
+msgid "Unlink selected {0}"
+msgstr "Desenllaça el {0} seleccionat"
+
+#, python-brace-format
+msgid "Edit {0}"
+msgstr "Edita {0}"
+
+#, python-brace-format
+msgid "Edit selected {0}"
+msgstr "Edita el {0} seleccionat"
+
+msgid "lead list"
+msgid_plural "lead lists"
+msgstr[0] "llista de clients potencials"
+msgstr[1] "llistes de clients potencials"
+
+msgid "lead lists"
+msgstr "llistes de clients potencials"
+
+msgid "Quick Search"
+msgstr ""
+
+msgid "Last Modified Time"
+msgstr ""
+
+msgid "Last Modified By"
+msgstr ""
+
+msgid "Creation Time"
+msgstr "Data de creació"
+
+msgid "Created By"
+msgstr ""
+
+msgid "X Lead"
+msgstr ""
+
+msgid "disabled"
+msgstr ""
+
+msgid "Archived"
+msgstr ""
+
+msgid "Product"
+msgstr "Producte"
+
+msgid "Price"
+msgstr "Preu"
+
+msgid "Quantity"
+msgstr "Quantitat"
+
+msgid "Search for Products to add ..."
+msgstr "Cerca productes a afegir ..."
+
+msgid "No Tasks to display"
+msgstr "Cap tasca a mostrar"
+
+msgid "Summary"
+msgstr "Resum"
+
+msgid "Add a task..."
+msgstr "Afegeix una tasca..."
+
+msgid "Percent"
+msgstr "Percentatge"
+
+msgid "Organizer"
+msgstr ""
+
+msgid "GENDER_Lead"
+msgstr ""
+
+msgid "Show Closed"
+msgstr ""
+
+msgid "All leads"
+msgstr "Tots els clients potencials"
+
+msgid "Default Lead List"
+msgstr ""
+
+msgid "The default list for new leads"
+msgstr ""
+
+msgid "Get Notification E-mails"
+msgstr ""
+
+msgid "The level of actions you want to be notified about."
+msgstr "El nivell de les accions sobre les quals voleu que se us notifiqui."
+
+msgid "Send Notifications e-mails for own actions"
+msgstr ""
+
+msgid "Get notifications e-mails for actions you did yourself"
+msgstr ""
+
+msgid "Default Favorite"
+msgstr "Preferit per defecte"
+
+msgid "The default favorite which is loaded on crm startup"
+msgstr "El preferit per defecte que es carrega a l'inici del crm"
+
+msgid "All leads I have read grants for"
+msgstr "Tots els clients potencials sobre els quals tenc permís de lectura"
+
+msgid "Last modified by me"
+msgstr ""
+
+msgid "All leads that I have last modified"
+msgstr ""
+
+msgid "My leads"
+msgstr ""
+
+msgid "All leads that I am responsible for"
+msgstr ""
+
+msgid "Leads with overdue tasks"
+msgstr ""
+
+#~ msgid "Get Notification Emails"
+#~ msgstr "Rep correus electrònics de notificació"
+
+#~ msgid "Send Notifications Emails for own actions"
+#~ msgstr "Envia correus electrònics de notificació de les accions pròpies"
+
+#~ msgid "Get notifications emails for actions you did yourself"
+#~ msgstr "Rep correus electrònics de notificació de les accions que hagueu fet"

@@ -1,0 +1,196 @@
+#
+# Translators:
+# Enri Mullai <enri_mullai@albnet.net>, 2013-2014
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2018-11-28 11:09+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Albanian (http://www.transifex.com/tine20/tine20/language/sq/)\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Add new user"
+msgstr "Shto një përdorues të ri"
+
+msgid "Add new user as member to a course"
+msgstr "Shto një përdorues të ri si pjesëtar të një kursi"
+
+msgid "Add existing user"
+msgstr "Shto përdorues ekzistues"
+
+msgid "Add existing user as member to a course"
+msgstr "Shto përdorues ekzistues si pjesëtar tek një kurs"
+
+msgid "Manage shared courses favorites"
+msgstr ""
+
+msgid "Create or update shared courses favorites"
+msgstr ""
+
+msgid "Set additional memberships"
+msgstr ""
+
+msgid "Set additional course member group memberships"
+msgstr ""
+
+msgid "Additional Group Memberships"
+msgstr ""
+
+msgid "Array of IDs of Groups students can be members of"
+msgstr ""
+
+msgid "Internet Access"
+msgstr "Mundësi hyrje në internet"
+
+msgid "Internet access options."
+msgstr "Opsionet e hyrjes në internet"
+
+msgid "On"
+msgstr "Ndezur"
+
+msgid "Off"
+msgstr "Fikur"
+
+msgid "Filtered"
+msgstr "Filtruar"
+
+msgid "Internet Access Group (ON)"
+msgstr "Hyrje në Internet e grupit (ON)"
+
+msgid "Internet Access Group (FILTERED)"
+msgstr "Hyrje në internet e grupit (FILTRUAR)"
+
+msgid "Students Group"
+msgstr "Grupi Studentëve"
+
+msgid "Students Import Definition"
+msgstr "Percaktimi i importimit të studentëve"
+
+msgid "Students login name prefix"
+msgstr "Parashtesa i emrit hyrës së studentëve"
+
+msgid "Students password suffix"
+msgstr ""
+
+msgid "Teacher password"
+msgstr ""
+
+msgid "Student username schema"
+msgstr "Skema e emrit të perdoruesit të studentit"
+
+msgid "Student username schema (0 = only lastname (10 chars), 1 = lastname + 2 chars of firstname"
+msgstr "Skema e emrit të perdoruesit të studentit (0 = vetëm mbiemri (10 karaktere), 1 = mbiemri + 2 karaktere të emrit"
+
+msgid "Samba user settings"
+msgstr "Konfigurimet e përdoruesit Samba"
+
+msgid "Default department"
+msgstr ""
+
+msgid "The default department for new Courses"
+msgstr ""
+
+msgid "Course -> Department Mapping"
+msgstr ""
+
+msgid "Course"
+msgid_plural "Courses"
+msgstr[0] "Kurs"
+msgstr[1] "Kurse"
+
+msgid "Teacher"
+msgstr "Mësues"
+
+msgid "Teacher Account"
+msgstr "Llogari e Mësuesit"
+
+msgid "My course"
+msgstr "Kursi Im"
+
+msgid "First Name"
+msgstr "Emëri"
+
+msgid "Last Name"
+msgstr "Mbiemri"
+
+msgid "Add new member to course"
+msgstr "Shto një pjetar të ri në kurs"
+
+msgid "Errors"
+msgstr "Gabime"
+
+msgid "Please fix the errors noted."
+msgstr "Lutemi rregulloni  gabimet e vëna në dukje"
+
+msgid "Import course members"
+msgstr "Importo pjestarët e kursit"
+
+msgid "Add new member"
+msgstr "Shto një pjesëtar të ri"
+
+msgid "Course Name"
+msgstr "Emri i kursit"
+
+msgid "Course / School Type"
+msgstr "Kursi / lloi i shkollës"
+
+msgid "Description"
+msgstr "Përshkrimi"
+
+msgid "Members"
+msgstr "Pjestarë"
+
+msgid "Login"
+msgstr "Hyrje"
+
+msgid "unknown"
+msgstr "i/e panjohur"
+
+msgid "Reset Password"
+msgstr "Rivendos fjalëkalimin"
+
+msgid "Please enter the new Password."
+msgstr ""
+
+msgid "Name"
+msgstr "Emri"
+
+msgid "Type"
+msgstr "Lloji"
+
+msgid "Failed"
+msgstr "Dështoi"
+
+msgid "Some error occured while trying to update the courses."
+msgstr "Ndodhën disa gabime gjatë përpjekjes për të përditësuar kurset"
+
+msgid "Quick Search"
+msgstr "Kërkim i shpejtë"
+
+msgid "Course Type"
+msgid_plural "Course Types"
+msgstr[0] "Lloi i kursit"
+msgstr[1] "Llojet e kursit"
+
+msgid "All courses"
+msgstr "Të gjithë kurset"
+
+msgid "The default favorite which is loaded on Classes startup"
+msgstr "E preferuara e paracktuar që ngarkohet në fillim të klasës"
+
+msgid "School"
+msgstr ""
+
+msgid "Defaul school for Courses application"
+msgstr ""
+
+msgid "Courses"
+msgstr "Kurset"

@@ -1,0 +1,625 @@
+#
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:59+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Catalan (http://www.transifex.com/tine20/tine20/language/ca/)\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Maximum number of users reached. "
+msgstr ""
+
+msgid "Please contact Metaways Infosystems GmbH to buy a license that supports a "
+msgstr ""
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Enabled"
+msgstr "Habilitat"
+
+msgid "Order"
+msgstr "Ordre"
+
+msgid "Installed Version"
+msgstr "Versió instal·lada"
+
+msgid "Available Version"
+msgstr "Versió disponible"
+
+msgid "Status"
+msgstr "Estat"
+
+msgid "Depends on"
+msgstr "Depèn de"
+
+msgid "Install application"
+msgstr "Instal·la aplicació"
+
+msgid "Uninstall application"
+msgstr "Desinstal·la aplicació"
+
+msgid "Update applications"
+msgstr ""
+
+#, python-brace-format
+msgid "Go to {0} login"
+msgstr "Vés a l'inici de sessió de {0}"
+
+msgid "uninstall"
+msgstr "desinstal·la"
+
+msgid "Do you really want to uninstall the application(s)?"
+msgstr "Esteu segur que voleu deinstal·lar l'aplicació o aplicacions?"
+
+msgid "This may take a while"
+msgstr "Això pot tardar una estona"
+
+msgid "Dependency Violation"
+msgstr "S'ha produït una violació de dependències"
+
+msgid "CLI Required"
+msgstr ""
+
+msgid "Delete all existing users and groups"
+msgstr "Elimina tots els usuaris i grups existents"
+
+msgid "Switching from SQL to LDAP will delete all existing User Accounts, Groups and Roles. Do you really want to switch the accounts storage backend to LDAP ?"
+msgstr "El canvi d'SQL a LDAP eliminarà tots els comptes d'usuari, els grups i els rols existents. Esteu segur que voleu canviar l'administració d'emmagatzematge de comptes a LDAP?"
+
+msgid "Backend"
+msgstr "Administració"
+
+msgid "TLS client certificate"
+msgstr ""
+
+msgid "Initial Admin User"
+msgstr ""
+
+msgid "Initial admin login name"
+msgstr "Nom d'inici de sessió administratiu inicial"
+
+msgid "Initial admin Password"
+msgstr "Contrasenya administrativa inicial"
+
+msgid "Password confirmation"
+msgstr "Confirmació de la contrasenya"
+
+msgid "Authentication provider"
+msgstr "Proveïdor d'autenticació"
+
+msgid "Try to split username"
+msgstr ""
+
+msgid "Yes"
+msgstr "Sí"
+
+msgid "No"
+msgstr "No"
+
+msgid "Account canonical form"
+msgstr "Forma canònica del compte"
+
+msgid "Account domain name"
+msgstr ""
+
+msgid "Account domain short name"
+msgstr "Nom curt de domini del compte"
+
+msgid "Host"
+msgstr "Amfitrió"
+
+msgid "Login name"
+msgstr "Nom d'inici de sessió"
+
+msgid "Password"
+msgstr "Contrasenya"
+
+msgid "Bind requires DN"
+msgstr "La vinculació requereix DN"
+
+msgid "Start TLS"
+msgstr ""
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Base DN"
+msgstr "DN base"
+
+msgid "Search filter"
+msgstr "Filtre de cerca"
+
+msgid "Hostname"
+msgstr "Nom de l'amfitrió"
+
+msgid "Secure Connection"
+msgstr "Connexió segura"
+
+msgid "None"
+msgstr "Cap"
+
+msgid "TLS"
+msgstr "TLS"
+
+msgid "Append domain to login name"
+msgstr "Afegeix el domini al nom d'inici de sessió"
+
+msgid "Certificate validation"
+msgstr ""
+
+msgid "CA file"
+msgstr ""
+
+msgid "CRL directory"
+msgstr ""
+
+msgid "Accounts storage"
+msgstr "Emmagatzematge de comptes"
+
+msgid "Default user group name"
+msgstr "Nom de grup d'usuari per defecte"
+
+msgid "Default admin group name"
+msgstr "Nom de grup d'administració per defecte"
+
+msgid "Login panel"
+msgstr ""
+
+msgid "Reuse last username logged"
+msgstr ""
+
+msgid "Password Settings"
+msgstr ""
+
+msgid "User can change password"
+msgstr "L'usuari pot canviar la contrasenya"
+
+msgid "Enable password policy"
+msgstr ""
+
+msgid "Only ASCII"
+msgstr ""
+
+msgid "Minimum length"
+msgstr ""
+
+msgid "Minimum word chars"
+msgstr ""
+
+msgid "Minimum uppercase chars"
+msgstr ""
+
+msgid "Minimum special chars"
+msgstr ""
+
+msgid "Minimum numbers"
+msgstr ""
+
+msgid "Change password after ... days"
+msgstr ""
+
+msgid "Forbid part of username in password"
+msgstr ""
+
+msgid "Redirect Settings"
+msgstr "Configuració de redireccionament"
+
+msgid "Redirect Url (redirect to login screen if empty)"
+msgstr "Url on redirigir (es redirigeix a la pantalla d'inici de sessió si ho deixeu buit)"
+
+msgid "Redirect Always (if No, only redirect after logout)"
+msgstr "Sempre es redirigeix (si poseu No, només es redirigirà després d'un tancament de sessió)"
+
+msgid "Redirect to referring site, if exists"
+msgstr "Si existeix, es redirigeix al lloc referent"
+
+msgid "Password encoding"
+msgstr "Codificació de la contrasenya"
+
+msgid "des"
+msgstr ""
+
+msgid "crypt"
+msgstr ""
+
+msgid "blowfish_crypt"
+msgstr ""
+
+msgid "md5_crypt"
+msgstr ""
+
+msgid "ext_crypt"
+msgstr ""
+
+msgid "md5"
+msgstr ""
+
+msgid "smd5"
+msgstr ""
+
+msgid "sha"
+msgstr ""
+
+msgid "ssha"
+msgstr ""
+
+msgid "ntpassword"
+msgstr ""
+
+msgid "plain"
+msgstr ""
+
+msgid "User DN"
+msgstr "DN d'usuari"
+
+msgid "User Filter"
+msgstr "Filtre d'usuari"
+
+msgid "E-Mail Attribute"
+msgstr ""
+
+msgid "Write Password to SQL backend"
+msgstr ""
+
+msgid "User Search Scope"
+msgstr "Abast de la cerca d'usuari"
+
+msgid "Groups DN"
+msgstr "DN de grups"
+
+msgid "Group Filter"
+msgstr "Filtre de grup"
+
+msgid "Group Search Scope"
+msgstr "Abast de la cerca de grup"
+
+msgid "Use Rfc 2307 bis"
+msgstr "Utilitza Rfc 2307 bis"
+
+msgid "Maintain RFC 2307 attributes"
+msgstr ""
+
+msgid "Min User Id"
+msgstr "Identificador d'usuari mínim"
+
+msgid "Max User Id"
+msgstr "Identificador d'usuari màxim"
+
+msgid "Min Group Id"
+msgstr "Identificador de grup mínim"
+
+msgid "Max Group Id"
+msgstr "Identificador de grup màxim"
+
+msgid "Group UUID Attribute name"
+msgstr "Nom d'atribut UUID de grup"
+
+msgid "User UUID Attribute name"
+msgstr "Nom d'atribut UUID d'usuari"
+
+msgid "Readonly access"
+msgstr ""
+
+msgid "Save config and install"
+msgstr "Desa la configuració i instal·la"
+
+msgid "Save config"
+msgstr "Desa la configuració"
+
+msgid "Passwords don't match"
+msgstr "Les contrasenyes no coincideixen"
+
+msgid "Should not be empty"
+msgstr "No pot ser buit"
+
+msgid "File"
+msgstr ""
+
+msgid "Setup Authentication"
+msgstr "Estableix l'autenticació"
+
+msgid "Username"
+msgstr "Nom d'usuari"
+
+msgid "Database"
+msgstr "Base de dades"
+
+msgid "User"
+msgstr "Usuari"
+
+msgid "Prefix"
+msgstr "Prefix"
+
+msgid "Logging"
+msgstr "Registre d'esdeveniments"
+
+msgid "Filename"
+msgstr "Nom de fitxer"
+
+msgid "Priority"
+msgstr "Prioritat"
+
+msgid "Caching"
+msgstr "Emmagatzematge cau"
+
+msgid "Lifetime (seconds)"
+msgstr "temps de vida (segons)"
+
+msgid "Path"
+msgstr "Camí"
+
+msgid "Queue"
+msgstr ""
+
+msgid "Session"
+msgstr ""
+
+msgid "Temporary files"
+msgstr "Fitxers temporals"
+
+msgid "Temporary Files Path"
+msgstr "Camí als fitxers temporals"
+
+msgid "Filestore directory"
+msgstr ""
+
+msgid "Filestore Path"
+msgstr ""
+
+msgid "Addressbook Map panel"
+msgstr "Tauler Mapa de llibreta d'adreces"
+
+msgid "Map panel"
+msgstr "Tauler Mapa"
+
+msgid "disabled"
+msgstr "inhabilitat"
+
+msgid "enabled"
+msgstr "habilitat"
+
+msgid "Config file is not writable"
+msgstr "El fitxer de configuració no es pot escriure"
+
+msgid "Download config file"
+msgstr "Descarrega el fitxer de configuració"
+
+#, python-brace-format
+msgid "This prefix is too long. Please choose a prefix no longer than {0} chars."
+msgstr ""
+
+msgid "Standard IMAP"
+msgstr "IMAP estàndard"
+
+msgid "Standard SMTP"
+msgstr "SMTP estàndard"
+
+msgid "Imap"
+msgstr "Imap"
+
+msgid "Verify peer Certificate"
+msgstr ""
+
+msgid "Use system account"
+msgstr "Utilitza el compte de sistema"
+
+msgid "Use email address as login name"
+msgstr ""
+
+msgid "Cyrus Admin"
+msgstr ""
+
+msgid "Cyrus Admin Password"
+msgstr ""
+
+msgid "Use proxy auth"
+msgstr ""
+
+msgid "Smtp"
+msgstr "Smtp"
+
+msgid "Authentication"
+msgstr "Autenticació"
+
+msgid "Login"
+msgstr "Inici de sessió"
+
+msgid "Plain"
+msgstr "Pla"
+
+msgid "Primary Domain"
+msgstr "Domini primari"
+
+msgid "Secondary Domains (comma separated)"
+msgstr "Dominis secundaris (separats per comes)"
+
+msgid "Aditional Domains (comma separated)"
+msgstr ""
+
+msgid "Notifications service address"
+msgstr "Adreça del servei de notificacions"
+
+msgid "Notification Username"
+msgstr "Nom d'usuari de notificació"
+
+msgid "Notification Password"
+msgstr "Contrasenya de notificació"
+
+msgid "Notifications local client (hostname or IP address)"
+msgstr ""
+
+msgid "SIEVE"
+msgstr ""
+
+msgid "MySql Hostname"
+msgstr "Nom de l'amfitrió MySql"
+
+msgid "MySql Database"
+msgstr "Base de dades MySql"
+
+msgid "MySql User"
+msgstr "Usuari MySql"
+
+msgid "MySql Password"
+msgstr "Contrasenya MySql"
+
+msgid "MySql Port"
+msgstr "Port MySql"
+
+msgid "User or UID"
+msgstr ""
+
+msgid "Group or GID"
+msgstr ""
+
+msgid "Home Template"
+msgstr ""
+
+msgid "Password Scheme"
+msgstr ""
+
+msgid "PLAIN-MD5"
+msgstr ""
+
+msgid "MD5-CRYPT"
+msgstr ""
+
+msgid "SHA1"
+msgstr ""
+
+msgid "SHA256"
+msgstr ""
+
+msgid "SSHA256"
+msgstr ""
+
+msgid "SHA512"
+msgstr ""
+
+msgid "SSHA512"
+msgstr ""
+
+msgid "PLAIN"
+msgstr ""
+
+msgid "Performing Environment Checks..."
+msgstr "Es realitzen comprovacions d'entorn..."
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria, view-options or the {1} you search in."
+msgstr ""
+
+msgid "Check"
+msgstr "Comprova"
+
+msgid "Result"
+msgstr "Resultat"
+
+msgid "Message"
+msgstr ""
+
+msgid "Run setup tests"
+msgstr "Executa proves de configuració"
+
+msgid "Ignore setup tests"
+msgstr "Ignora les proves de configuració"
+
+msgid "Setup"
+msgstr ""
+
+msgid "Delete current Subscription"
+msgstr ""
+
+msgid "Your Subscription is not valid."
+msgstr ""
+
+msgid "Subscription Configuration"
+msgstr ""
+
+msgid "Upload from disk"
+msgstr ""
+
+msgid "Select file containing your Subscription key"
+msgstr ""
+
+msgid "No valid Subscription"
+msgstr ""
+
+msgid "Contract ID"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "Activation Key"
+msgstr ""
+
+msgid "Maximum Users (0=unlimited)"
+msgstr ""
+
+msgid "Valid from"
+msgstr ""
+
+msgid "Valid to"
+msgstr ""
+
+msgid "Subscription Information"
+msgstr ""
+
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] "Aplicació"
+msgstr[1] "Aplicacions"
+
+msgid "I have read the license agreement and accept it"
+msgstr "He llegit i acceptat l'acord de llicència"
+
+msgid "License Agreement"
+msgstr "Acord de llicència"
+
+msgid "I have read the privacy agreement and accept it"
+msgstr "He llegit i acceptat l'acord de privadesa"
+
+msgid "Privacy Agreement"
+msgstr "Acord de privadesa"
+
+msgid "Accept Terms and Conditions"
+msgstr "Accepta els termes i condicions"
+
+msgid "Terms and Conditions"
+msgstr "Termes i condicions"
+
+msgid "Setup Checks"
+msgstr "Proves de configuració"
+
+msgid "Config Manager"
+msgstr "Gestor de configuracions"
+
+msgid "Authentication/Accounts"
+msgstr "Autenticació/Comptes"
+
+msgid "Email"
+msgstr "Correu electrònic"
+
+msgid "Application Manager"
+msgstr "Gestor d'aplicacions"
+
+msgid "Subscription"
+msgstr ""
+
+#~ msgid "Update application"
+#~ msgstr "Actualitza aplicació"

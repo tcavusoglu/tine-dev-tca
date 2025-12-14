@@ -1,0 +1,170 @@
+#
+# Translators:
+# DECIO FERREIRA LINDOSO <decio.lindoso@gmail.com>, 2013
+# Flávio Gomes da Silva Lisboa <flavio.lisboa@serpro.gov.br>, 2017
+# Flávio Gomes da Silva Lisboa <flavio.lisboa@serpro.gov.br>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-10-04 15:23+0000\n"
+"Last-Translator: Flávio Gomes da Silva Lisboa <flavio.lisboa@serpro.gov.br>, 2017\n"
+"Language-Team: Portuguese (Brazil) (http://app.transifex.com/tine/groupware/language/pt_BR/)\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Inventory Status Available"
+msgstr "Situação do Inventário Disponível"
+
+msgid "Possible status."
+msgstr "Situação possível."
+
+msgid "Ordered"
+msgstr ""
+
+msgid "Available"
+msgstr ""
+
+msgid "Defect"
+msgstr ""
+
+msgid "Missing"
+msgstr ""
+
+msgid "Removed"
+msgstr "Removido"
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Stored"
+msgstr ""
+
+msgid "Sold"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Types"
+msgstr ""
+
+msgid "Tine 2.0 inventory CSV import"
+msgstr ""
+
+msgid "Import CSV formated contacts from Tine 2.0 Inventory (Export Format)"
+msgstr ""
+
+msgid "Import list (###CURRENTDATE###)"
+msgstr "Lista de Importação (###CURRENTDATE###)"
+
+msgid "Inventory Items imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr ""
+
+msgid "Inventory CSV import"
+msgstr "Importar arquivo CVS de Inventário"
+
+msgid "Items imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr "Ítens importados  em ###CURRENTDATE### às ###CURRENTTIME### por ###USERFULLNAME###"
+
+msgid "The active number must be less than or equal total number."
+msgstr "O número ativo deve ser menor ou igual ao número total"
+
+msgid "Purchase Invoice"
+msgstr ""
+
+msgid "General"
+msgstr "Geral"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Serial Number"
+msgstr ""
+
+msgid "Inventory Type"
+msgstr ""
+
+msgid "Employee"
+msgstr ""
+
+msgid "Description"
+msgstr "Descrição"
+
+msgid "Enter description"
+msgstr "Informe a descrição"
+
+msgid "Location"
+msgstr "Posição"
+
+msgid "Added"
+msgstr "Adicionado"
+
+msgid "Warranty"
+msgstr "Garantia"
+
+msgid "Total number"
+msgstr "Número total"
+
+msgid "Available number"
+msgstr "Número disponível"
+
+msgid "Status"
+msgstr "Situação"
+
+msgid "Accounting"
+msgstr "Contabilidade"
+
+msgid "Price"
+msgstr "Preço"
+
+msgid "Invoice date"
+msgstr "Data da fatura"
+
+msgid "Depreciate"
+msgstr "Depreciar"
+
+msgid "Inventory item"
+msgid_plural "Inventory items"
+msgstr[0] "Item de inventário"
+msgstr[1] "itens de inventário"
+msgstr[2] "itens de inventário"
+
+msgid "Inventory item list"
+msgid_plural "Inventory item lists"
+msgstr[0] "Listas de itens de inventário"
+msgstr[1] "Listas de itens de inventário"
+msgstr[2] "Listas de itens de inventário"
+
+msgid "Inventory ID"
+msgstr "ID do Inventário"
+
+msgid "Depreciated"
+msgstr ""
+
+msgid "Inventory type"
+msgid_plural "Inventory types"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Default Inventory Item Container"
+msgstr "Repositório Padrão de Item de Inventário"
+
+msgid "The default container for new items"
+msgstr "O repositório padrão para novos ítens"
+
+msgid "All Inventory Items"
+msgstr "Todos os ítens do inventário"
+
+msgid "All existing Inventory Items"
+msgstr "Todos os ítens de inventário existentes"
+
+msgid "Inventory"
+msgstr "Inventário"

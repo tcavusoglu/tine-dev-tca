@@ -1,0 +1,251 @@
+#
+# Translators:
+# 1a8e3140e5b8a374784ecdfdf83f7d9e_5e6d67c <d882eac74045deada33a9c470758040d_143165>, 2014
+# 1a8e3140e5b8a374784ecdfdf83f7d9e_5e6d67c <d882eac74045deada33a9c470758040d_143165>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:43+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Thai (http://www.transifex.com/tine20/tine20/language/th/)\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Manage ActiveSync devices"
+msgstr ""
+
+msgid "See, edit and delete ActiveSync devices"
+msgstr ""
+
+msgid "Reset ActiveSync devices"
+msgstr ""
+
+msgid "Remotely reset ActiveSync devices to factory state, deleting all data"
+msgstr ""
+
+msgid "Default policy for new devices"
+msgstr "นโยบายหลักสำหรับอุปกรณ์ใหม่"
+
+msgid "Enter the id of the policy to apply to newly created devices."
+msgstr "ใส่รหัสของนโยบายเพื่อใช้สำหรับอุปกรณ์ที่เพิ่งสร้างขึ้น"
+
+msgid "Device Model Agent Deny List"
+msgstr ""
+
+msgid "Array of regular expressions of Device-Model strings"
+msgstr ""
+
+msgid "User Agent Deny List"
+msgstr ""
+
+msgid "Array of regular expressions of User-Agent strings"
+msgstr ""
+
+msgid "Disable Remote Reset Action"
+msgstr ""
+
+msgid "Disable Remote Reset Action AdminPanel"
+msgstr ""
+
+msgid "Disable Access Log"
+msgstr "ไม่สามารถบันทึกการใช้งาน"
+
+msgid "Disable ActiveSync Access Log creation."
+msgstr ""
+
+msgid "Filter timeslot for e-mails"
+msgstr ""
+
+msgid "For how long in the past the e-mails should be synchronized."
+msgstr ""
+
+msgid "Filter timeslot for events"
+msgstr "ตัวกรองช่วงเวลาสำหรับเหตุการณ์ต่าง ๆ"
+
+msgid "For how long in the past the events should be synchronized."
+msgstr "ระยะเวลานานแค่ไหนในอดีที่เหตุการณ์ควรจะได้รับการอัพเดท"
+
+msgid "%1$s ActiveSync failure"
+msgstr ""
+
+msgid "Sync Devices"
+msgstr ""
+
+msgid "Active Sync"
+msgstr ""
+
+msgid "Select a Device"
+msgstr "เลือกอุปกรณ์"
+
+msgid "No ActiveSync Device registered"
+msgstr ""
+
+#, python-brace-format
+msgid "Set as {0} Filter"
+msgstr "ตั้งเป็นตัวกรอง {0}"
+
+msgid "Resetted Sync Filter"
+msgstr ""
+
+#, python-brace-format
+msgid "{0} filter for device \"{1}\" is now \"{2}\""
+msgstr "ตัวกรอง {0} สำหรับอุปกรณ์ \"{1}\" ตอนนี้เป็น \"{2}\""
+
+msgid "resetted"
+msgstr ""
+
+msgid "Set Sync Filter"
+msgstr ""
+
+msgid "Device ID"
+msgstr ""
+
+msgid "Devicetype"
+msgstr ""
+
+msgid "Owned by"
+msgstr ""
+
+msgid "Policy"
+msgstr ""
+
+msgid "ActiveSync Version"
+msgstr ""
+
+msgid "User agent"
+msgstr ""
+
+msgid "Model"
+msgstr ""
+
+msgid "IMEI"
+msgstr ""
+
+msgid "Friendly Name"
+msgstr ""
+
+msgid "OS"
+msgstr ""
+
+msgid "OS Language"
+msgstr ""
+
+msgid "Phonenumber"
+msgstr ""
+
+msgid "Device"
+msgid_plural "Devices"
+msgstr[0] "อุปกรณ์"
+
+msgid "Devices"
+msgstr "อุปกรณ์"
+
+msgid "ID"
+msgstr ""
+
+msgid "Device Type"
+msgstr ""
+
+msgid "Operating System"
+msgstr ""
+
+msgid "Phone Number"
+msgstr ""
+
+msgid "Ping Lifetime"
+msgstr ""
+
+msgid "Ping Folder"
+msgstr ""
+
+msgid "Remote Wipe"
+msgstr ""
+
+msgid "Calendar Filter"
+msgstr ""
+
+msgid "Contacts Filter"
+msgstr ""
+
+msgid "E-mail Filter"
+msgstr ""
+
+msgid "Tasks Filter"
+msgstr ""
+
+msgid "Last Ping"
+msgstr ""
+
+msgid "Monitor Last Ping"
+msgstr ""
+
+msgid "Remote Device Reset"
+msgstr ""
+
+msgid "Please confirm"
+msgstr ""
+
+msgid "Do you really want to wipe the selected devices? All personal data will be removed and the device will be reset to factory settings!"
+msgstr ""
+
+msgid "Quicksearch"
+msgstr ""
+
+msgid "Sync Device"
+msgid_plural "Sync Devices"
+msgstr[0] ""
+
+msgid "Default Address book"
+msgstr ""
+
+msgid "The default address book to create new contacts in."
+msgstr ""
+
+msgid "Default Calendar"
+msgstr "ปฏิทินหลัก"
+
+msgid "The default calendar to create new events in."
+msgstr "ปฏิทินหลักที่จะสร้างเหตุการณ์ใหม่เข้าไป"
+
+msgid "Default Task List"
+msgstr "รายชื่อหน้าที่หลัก"
+
+msgid "The default task list to create new tasks in."
+msgstr "รายชื่อหน้าที่หลักเพื่อสร้างหน้าที่ใหม่เข้า"
+
+msgid "Default Policy"
+msgstr "นโยบายหลัก"
+
+msgid "Default Policy installed during setup"
+msgstr "นโยบายหลักได้ถูกคัดลอกแล้วระหว่างการติดตั้ง"
+
+msgid "Dear user,"
+msgstr ""
+
+msgid "%1$s has noticed that the syncronization with your ActiveSync device is no longer active. Please trigger the syncronisation on your device."
+msgstr ""
+
+msgid "Thank you."
+msgstr ""
+
+msgid "Your %1$s Team"
+msgstr ""
+
+#~ msgid "Default Addressbook"
+#~ msgstr "สมุดรายชื่อหลัก"
+
+#~ msgid "The default addressbook to create new contacts in."
+#~ msgstr "สมุดรายชื่อหลักที่จะสร้างการติดต่อใหม่เข้าไป"
+
+#~ msgid "Filter timeslot for emails"
+#~ msgstr "ตัวกรองช่วงเวลาสำหรับอีเมล"
+
+#~ msgid "For how long in the past the emails should be synchronized."
+#~ msgstr "ระยะเวลานานแค่ไหนในอดีตที่อีเมลควรจะได้รับการอัพเดท"

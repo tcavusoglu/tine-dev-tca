@@ -1,0 +1,994 @@
+#
+# Translators:
+# Tamás Faragó <>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-04-02 13:30+0000\n"
+"Last-Translator: Tamás Faragó <>, 2012\n"
+"Language-Team: Hungarian (http://app.transifex.com/tine/groupware/language/hu/)\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "manage shared addressbooks"
+msgstr "megosztott címjegyzékek kezelése"
+
+msgid "Create new shared addressbook folders"
+msgstr "Új megosztott címjegyzék mappa készítése"
+
+msgid "manage shared addressbook favorites"
+msgstr "kedvenc megosztott címjegyzék kezelése"
+
+msgid "Create or update shared addressbook favorites"
+msgstr "Kedvenc megosztott címjegyzék készítése vagy frissítése"
+
+msgid "Manage lists in CoreData"
+msgstr ""
+
+msgid "View, create, delete or update lists in CoreData application"
+msgstr ""
+
+msgid "Manage list functions in CoreData"
+msgstr ""
+
+msgid "View, create, delete or update list functions in CoreData application"
+msgstr ""
+
+msgid "Manage list email options"
+msgstr ""
+
+msgid "Manage list email options like mailing lists"
+msgstr ""
+
+msgid "CardDAV readonly policy"
+msgstr ""
+
+msgid "Possible values: always, unknown, never"
+msgstr ""
+
+msgid "Enabled Features"
+msgstr ""
+
+msgid "Enabled Features in Addressbook Application."
+msgstr ""
+
+msgid "Addressbook Contact Event List"
+msgstr ""
+
+msgid "Shows contact events in edit dialog tab panel"
+msgstr ""
+
+msgid "Addressbook List View"
+msgstr ""
+
+msgid "Shows an additional view for lists inside the addressbook"
+msgstr ""
+
+msgid "Addressbook Industries"
+msgstr ""
+
+msgid "Add Industry field to Adressbook"
+msgstr ""
+
+msgid "Mailinglists"
+msgstr ""
+
+msgid "Make group and lists to mailinglists"
+msgstr ""
+
+msgid "Addressbook Short Names"
+msgstr ""
+
+msgid "Add Short Name field to Adressbook"
+msgstr ""
+
+msgid "Manage resources in Addressbook"
+msgstr ""
+
+msgid "Show the resources grid also inside the Addressbook"
+msgstr ""
+
+msgid "Show Structure Panel in Addressbook"
+msgstr ""
+
+msgid "Visualize relations of records"
+msgstr ""
+
+msgid "Contact (id) representing this installation"
+msgstr ""
+
+msgid "Contact duplicate check fields"
+msgstr "Kapcsolat mezőinek duplikálási ellenőrzése"
+
+msgid "These fields are checked when a new contact is created. If a record with the same data in the fields is found, a duplicate exception is thrown."
+msgstr "Ezeket a mezőket ellenőrzi egy új kapcsolat felvételekor. Ha egy rekordt egyforma mező adatokkal megtalál, a duplikált kivételt eldobja."
+
+msgid "Contact Hidden Criteria"
+msgstr ""
+
+msgid "The contact is hidden if it is ... (one of: disabled, expired or never)"
+msgstr ""
+
+msgid "Contact types available"
+msgstr ""
+
+msgid "Possible contact types"
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "Contact"
+msgid_plural "Contacts"
+msgstr[0] "Kapcsolat"
+msgstr[1] "Kapcsolatok"
+
+msgid "Email Account"
+msgstr ""
+
+msgid "Contact salutations available"
+msgstr "Kapcsolat megszólítás elérhető"
+
+msgid "Possible contact salutations. Please note that additional values might impact other Addressbook systems on export or syncronisation."
+msgstr "Lehetséges kapcsolat megszólítás- Kérlek jegyezd meg, hogy azok további értékek ütközhetnek más Címjegyzék rendszerekkel exportáláskor vagy szinkronizáláskor."
+
+msgid "Mr"
+msgstr "Úr"
+
+msgid "Ms"
+msgstr "Asszony"
+
+msgid "Company"
+msgstr "Cég"
+
+msgid "Person"
+msgstr ""
+
+msgid "Parsing rules for addresses"
+msgstr "Címek felbontási szabályai"
+
+msgid "Path to a XML file with address parsing rules."
+msgstr "Címek felbontási szabályait tartalmazó XML fájl elérése"
+
+msgid "Template for file_as field"
+msgstr ""
+
+msgid "List types available"
+msgstr ""
+
+msgid "List types available."
+msgstr ""
+
+msgid "Department"
+msgstr ""
+
+msgid "Mailing list"
+msgstr ""
+
+msgid "Use Nominatim during contact import"
+msgstr ""
+
+msgid "Site Filter"
+msgstr ""
+
+msgid "Filter configuration for site record pickers. Sites can be a special type of contacts/groups for example defined by this filter."
+msgstr ""
+
+msgid "Sync Backends"
+msgstr ""
+
+msgid "Default telephone country code"
+msgstr ""
+
+msgid "It is not allowed to delete a contact linked to an user account!"
+msgstr ""
+
+msgid "It is not allowed to delete email account type contact!"
+msgstr ""
+
+#, python-brace-format
+msgid "This Short Name already exists. How about {0}?"
+msgstr ""
+
+msgid "It is not allowed to add non-account contacts to this list"
+msgstr ""
+
+msgid "E-Mail address is already given. Please choose another one."
+msgstr ""
+
+msgid "Maximum number of role members reached"
+msgstr ""
+
+#, python-format
+msgid "%s's personal addressbook"
+msgstr "%s személyes címjegyzéke"
+
+msgid "Groups"
+msgstr ""
+
+msgid "Group Functions"
+msgstr ""
+
+msgid "Industries"
+msgstr ""
+
+msgid "3CX CSV export"
+msgstr ""
+
+msgid "CSV all data"
+msgstr ""
+
+msgid "OpenDocument all data"
+msgstr ""
+
+msgid "VCard Report"
+msgstr ""
+
+msgid "Export multiple addressbooks to vcf files"
+msgstr ""
+
+msgid "VCard/VCF"
+msgstr ""
+
+msgid "Export contact data into vcf file"
+msgstr ""
+
+msgid "Word letter"
+msgstr ""
+
+msgid "Word details"
+msgstr ""
+
+msgid "Relations"
+msgstr ""
+
+msgid "Excel overview"
+msgstr ""
+
+msgid "Excel all data"
+msgstr ""
+
+msgid "Excel current columns"
+msgstr ""
+
+msgid "Addressbooks to export"
+msgstr ""
+
+msgid "Export target"
+msgstr ""
+
+msgid "All Contacts"
+msgstr ""
+
+msgid "This contact has been automatically added by the system as an event attender"
+msgstr ""
+
+msgid "Import CSV formated contacts from Google address book"
+msgstr ""
+
+msgid "Contact import from Google address book"
+msgstr "Kapcsolatok importálása a Google címjegyzékből"
+
+msgid "Import vCard formated contacts"
+msgstr ""
+
+msgid "Contact VCARD import"
+msgstr "Kapcsolat VCARD importja"
+
+msgid "LX-Office CSV Contact import"
+msgstr ""
+
+msgid "Import CSV formated contacts from LX-Office"
+msgstr ""
+
+msgid "Contact CSV import from mac address book"
+msgstr "Kapcsolat CSV importja mac címjegyzékből"
+
+msgid "Import CSV formated contacts from Outlook 2007 German address book"
+msgstr ""
+
+msgid "CSV Outlook 2007 German"
+msgstr "Német Outlook 2007 CSV"
+
+msgid "Import CSV formated contacts from Outlook 2010 German address book"
+msgstr ""
+
+msgid "CSV Outlook 2010 German"
+msgstr ""
+
+msgid "Import CSV formated contacts from Exchange / Outlook address book"
+msgstr ""
+
+msgid "Contact CSV import from Outlook address book"
+msgstr "Kapcsolat CSV importja Outlook címjegyzékből"
+
+msgid "Tine contact CSV import"
+msgstr ""
+
+msgid "Import CSV formated contacts from tine address book"
+msgstr ""
+
+msgid "Import list (###CURRENTDATE###)"
+msgstr "Import lista (###CURRENTDATE###)"
+
+msgid "Contacts imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr "Kapcsolatokat importálta ###USERFULLNAME### ekkor: ###CURRENTDATE###  ###CURRENTTIME###"
+
+msgid "New Contact"
+msgstr "Új kapcsolat"
+
+msgid "Addressbook"
+msgid_plural "Addressbooks"
+msgstr[0] "Címjegyzék"
+msgstr[1] "Címjegyzékek"
+
+msgid "ID"
+msgstr ""
+
+msgid "Name"
+msgstr "Név"
+
+msgid "Description"
+msgstr "Leírás"
+
+msgid "Structure"
+msgid_plural "Structures"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Resources"
+msgstr ""
+
+msgid "Private"
+msgstr "Privát"
+
+msgid "The grant to access contacts private information"
+msgstr ""
+
+msgid "Preferred Address"
+msgstr ""
+
+msgid "Street"
+msgstr "Utca"
+
+msgid "Street 2"
+msgstr "Utca 2"
+
+msgid "Region"
+msgstr "Régió"
+
+msgid "Postal Code"
+msgstr "Irányítószám"
+
+msgid "City"
+msgstr "Város"
+
+msgid "Country"
+msgstr "Ország"
+
+msgid "Contact Properties"
+msgstr ""
+
+msgid "CardDAV URL"
+msgstr "CardDAV URL"
+
+msgid "Map"
+msgstr "Térkép"
+
+msgid "This field is automatically taken from the email account and therefore cannot be edited here."
+msgstr ""
+
+msgid "Personal Information"
+msgstr "Személyes információk"
+
+msgid "Salutation"
+msgstr "Megszólítás"
+
+msgid "Title"
+msgstr "Előtag"
+
+msgid "Short Name"
+msgstr ""
+
+msgid "First Name"
+msgstr "Kereszt név"
+
+msgid "Middle Name"
+msgstr "Középső név"
+
+msgid "Last Name"
+msgstr "Vezeték név"
+
+msgid "Company / Organisation"
+msgstr ""
+
+msgid "Unit"
+msgstr "Egység"
+
+msgid "Sites"
+msgstr ""
+
+msgid "Color"
+msgstr ""
+
+msgid "Display Name"
+msgstr "Kijelzett név"
+
+msgid "Job Title"
+msgstr "Beosztás"
+
+msgid "Birthday (private)"
+msgstr ""
+
+msgid "Industry"
+msgid_plural "Industries"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Contact Information"
+msgstr "Kapcsolati információk"
+
+msgid "Note"
+msgstr "Leírás"
+
+msgid "Enter Note"
+msgstr ""
+
+msgid "Parse address"
+msgstr "Cím felbontása"
+
+msgid "Print contact"
+msgstr ""
+
+msgid "Paste address"
+msgstr "Cím beillesztése"
+
+msgid "Please paste an address or a URI to a vcard that should be parsed:"
+msgstr ""
+
+msgid "Failed to parse address!"
+msgstr ""
+
+msgid "The address could not be read."
+msgstr ""
+
+msgid "End token mode"
+msgstr "Token mód vége"
+
+msgid "You do not have the required private grant to view history."
+msgstr ""
+
+msgid "Business"
+msgstr ""
+
+msgid "Phone"
+msgid_plural "Phones"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Mobile"
+msgstr "Mobil"
+
+msgid "Fax"
+msgstr "Fax"
+
+msgid "E-Mail"
+msgstr "E-Mail"
+
+msgid "Web"
+msgstr "Web"
+
+msgid "Import contacts"
+msgstr "Kapcsolatok importálása"
+
+msgid "Contact of a user account"
+msgstr ""
+
+msgid "Email Account Contact"
+msgstr ""
+
+msgid "No name"
+msgstr ""
+
+msgid "Not set"
+msgstr ""
+
+msgid "Type"
+msgstr "Típus"
+
+msgid "Contact Image"
+msgstr ""
+
+msgid "Tags"
+msgstr "Címkék"
+
+msgid "Full Name"
+msgstr "Teljes név"
+
+msgid "Job Role"
+msgstr "Szerepkör"
+
+msgid "Room"
+msgstr "Szoba"
+
+msgid "Postalcode"
+msgstr "Irányítószám"
+
+msgid "Street (private)"
+msgstr "Utca (privát)"
+
+msgid "City (private)"
+msgstr "Város (privát)"
+
+msgid "Region (private)"
+msgstr "Régió (privát)"
+
+msgid "Postalcode (private)"
+msgstr "Irányítószám (privát)"
+
+msgid "Country (private)"
+msgstr "Ország (privát)"
+
+msgid "Preferred E-Mail"
+msgstr ""
+
+msgid "Email"
+msgid_plural "Emails"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Car phone"
+msgstr "Autó telefon"
+
+msgid "Pager"
+msgstr "Személyhívó"
+
+msgid "Phone (private)"
+msgstr "Telefon (privát)"
+
+msgid "Fax (private)"
+msgstr "Fax (privát)"
+
+msgid "Mobile (private)"
+msgstr "Mobil (privát)"
+
+msgid "Email (private)"
+msgstr "Email (privát)"
+
+msgid "URL (private)"
+msgstr "URL (privát)"
+
+msgid "Language"
+msgstr ""
+
+msgid "Timezone"
+msgstr "Időzóna"
+
+msgid "Geo"
+msgstr "Geo"
+
+msgid "Birthday"
+msgstr "Születésnap"
+
+msgid "Set as preferred E-Mail"
+msgstr ""
+
+msgid "Search for users ..."
+msgstr ""
+
+msgid "Search for Contacts ..."
+msgstr ""
+
+msgid "Group Information"
+msgstr ""
+
+msgid "List type"
+msgstr ""
+
+msgid "System accounts only"
+msgstr ""
+
+msgid "Enter description"
+msgstr "Leírás megadása"
+
+#, python-brace-format
+msgid "{0} must be given"
+msgstr ""
+
+msgid "This is a system group. To edit this group you need the Admin.ManageAccounts right."
+msgstr ""
+
+msgid "Members"
+msgstr ""
+
+msgid "Select Group"
+msgstr ""
+
+msgid "Group"
+msgid_plural "Groups"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Search for members ..."
+msgstr ""
+
+msgid "List Roles"
+msgstr ""
+
+msgid "Search for system groups ..."
+msgstr ""
+
+msgid "Search for groups ..."
+msgstr ""
+
+msgid "Mailing List"
+msgstr ""
+
+msgid "This group is a mailing list"
+msgstr ""
+
+msgid "Reply to"
+msgstr ""
+
+msgid "Distribution list"
+msgstr ""
+
+msgid "Sender"
+msgstr ""
+
+msgid "Sender and Distributor"
+msgstr ""
+
+msgid "Keep copy of group mails"
+msgstr ""
+
+msgid "Forward external mails"
+msgstr ""
+
+msgid "Only forward member mails"
+msgstr ""
+
+msgid "Only forward to system email accounts"
+msgstr ""
+
+msgid "Company address"
+msgstr "Céges cím"
+
+msgid "Private address"
+msgstr "Privát cím"
+
+msgid "Contact Personal Grant"
+msgid_plural "Contact Personal Grants"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Email Address"
+msgid_plural "Email Addresses"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Email Addresses"
+msgstr ""
+
+msgid "Addressbooks"
+msgstr "Címjegyzékek"
+
+msgid "Quick search"
+msgstr ""
+
+msgid "Structures"
+msgstr ""
+
+msgid "List Personal Grant"
+msgid_plural "List Personal Grants"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Company Address"
+msgstr "Céges cím"
+
+msgid "Private Address"
+msgstr "Privát cím"
+
+msgid "Related to"
+msgstr ""
+
+msgid "Customfields"
+msgstr ""
+
+msgid "System Group"
+msgstr ""
+
+msgid "Select record to see its details"
+msgstr ""
+
+msgid "This module visualises hierarchically depended relations between records of different types."
+msgstr ""
+
+msgid "Hierarchically depended relations are created automatically for some data types like users and groups, but can also be created manually via the corresponding relation types."
+msgstr ""
+
+msgid "Loading Structure data..."
+msgstr ""
+
+msgid "GENDER_Addressbook"
+msgstr ""
+
+msgid "GENDER_Contact"
+msgstr ""
+
+msgid "Show Disabled"
+msgstr ""
+
+msgid "Group Function"
+msgid_plural "Group Functions"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Phone Numbers"
+msgstr ""
+
+msgid "Emails"
+msgstr ""
+
+msgid "Name/Emails"
+msgstr ""
+
+msgid "Longitude"
+msgstr ""
+
+msgid "Latitude"
+msgstr ""
+
+msgid "Street 2 (private)"
+msgstr ""
+
+msgid "Longitude (private)"
+msgstr ""
+
+msgid "Latitude (private)"
+msgstr ""
+
+msgid "Assistent"
+msgstr ""
+
+msgid "Calendar URI"
+msgstr ""
+
+msgid "Free/Busy URI"
+msgstr ""
+
+msgid "Suffix"
+msgstr "Utótag"
+
+msgid "Paths"
+msgstr ""
+
+msgid "Preferred Email"
+msgstr ""
+
+msgid "syncBackendIds"
+msgstr ""
+
+msgid "Label"
+msgstr ""
+
+msgid "GENDER_Address"
+msgstr ""
+
+msgid "Address"
+msgid_plural "Addresses"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "GENDER_Property definition"
+msgstr ""
+
+msgid "Property definition"
+msgid_plural "Property definitions"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Grouping"
+msgstr ""
+
+msgid "Sorting"
+msgstr ""
+
+msgid "System"
+msgstr ""
+
+msgid "Model"
+msgstr ""
+
+msgid "Link Type"
+msgstr ""
+
+msgid "Grant Matrix"
+msgstr ""
+
+msgid "ActiveSync Map"
+msgstr ""
+
+msgid "VCard Map"
+msgstr ""
+
+msgid "Last Error"
+msgstr ""
+
+msgid "GENDER_Email"
+msgstr ""
+
+msgid "GENDER_Instant Messenger"
+msgstr ""
+
+msgid "Instant Messenger"
+msgid_plural "Instant Messengers"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "GENDER_Phone"
+msgstr ""
+
+msgid "GENDER_URL"
+msgstr ""
+
+msgid "URL"
+msgid_plural "URLs"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Site"
+msgid_plural "Sites"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "GENDER_Group"
+msgstr ""
+
+msgid "Name/Email"
+msgstr ""
+
+msgid "GENDER_Group Function"
+msgstr ""
+
+msgid "Maximum Members"
+msgstr ""
+
+msgid "All contacts"
+msgstr "Összes kapcsolat"
+
+msgid "Default Addressbook"
+msgstr "Alapértelmezett címjegyzék"
+
+msgid "The default addressbook for new contacts"
+msgstr "Alapértelmezett címjegyzék az új kapcsolatoknak"
+
+msgid "Default Favorite"
+msgstr "Alapértelmezett kedvenc"
+
+msgid "The default favorite which is loaded on addressbook startup"
+msgstr "Alapértelmezett kedvenc ami a címjegyzék indításakor betöltődik"
+
+msgid "Contacts ODS export configuration"
+msgstr ""
+
+msgid "Use this configuration for the contact ODS export."
+msgstr ""
+
+msgid "Contacts XLS export configuration"
+msgstr ""
+
+msgid "Use this configuration for the contact XLS export."
+msgstr ""
+
+msgid "Contact Title Template"
+msgstr ""
+
+msgid "How to build contact titles."
+msgstr ""
+
+msgid "default"
+msgstr ""
+
+msgid "All contacts I have read grants for"
+msgstr "Összes kapcsolat, amihez olvasási engedélyem van"
+
+msgid "My company"
+msgstr "Saját cégem"
+
+msgid "All coworkers in my company"
+msgstr "Minden alkalmazott a saját cégemnél"
+
+msgid "My contacts"
+msgstr "Kapcsolataim"
+
+msgid "All contacts in my Addressbooks"
+msgstr "Minden kapcsolat a saját Címjegyzékemben"
+
+msgid "Last modified by me"
+msgstr "Utoljára módosítottam"
+
+msgid "All contacts that I have last modified"
+msgstr "Minden kapcsolat amit utoljára én módosítottam"
+
+msgid "Company Communication"
+msgstr "Céges kapcsolatok"
+
+msgid "E-Mail (private)"
+msgstr "E-Mail (privát)"
+
+msgid "Private Communication"
+msgstr "Privát kapcsolatok"
+
+msgid "Matrix-ID"
+msgstr ""
+
+msgid "Assistant"
+msgstr "Aszisztens"
+
+msgid "Car"
+msgstr ""
+
+msgid "Other"
+msgstr ""
+
+msgid "Prefer"
+msgstr ""
+
+msgid "Internal Contacts"
+msgstr "Belső kapcsolatok"
+
+msgid "Account"
+msgstr ""
+
+msgid "Exporttime"
+msgstr ""
+
+msgid "28"
+msgstr ""
+
+msgid "20"
+msgstr ""
+
+msgid "00877546"
+msgstr ""
+
+msgid "en-GB"
+msgstr ""
+
+msgid "00813B4E"
+msgstr ""
+
+msgid "Gruppenrollen"
+msgstr ""
+
+msgid "00DA3FCD"
+msgstr ""
+
+msgid "00997199"
+msgstr ""
+
+msgid "0009326B"
+msgstr ""
+
+msgid "008C27A5"
+msgstr ""
+
+msgid "00C96397"
+msgstr ""
+
+msgid "00046462"
+msgstr ""
+
+msgid "Relation"
+msgid_plural "Relations"
+msgstr[0] ""
+msgstr[1] ""

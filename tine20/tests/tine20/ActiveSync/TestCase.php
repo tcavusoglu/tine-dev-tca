@@ -1,0 +1,416 @@
+<?php
+/**
+ * Tine 2.0 - http://www.tine20.org
+ * 
+ * @package     ActiveSync
+ * @license     http://www.gnu.org/licenses/agpl.html AGPL Version 3
+ * @copyright   Copyright (c) 2010-2015 Metaways Infosystems GmbH (http://www.metaways.de)
+ * @author      Lars Kneschke <l.kneschke@metaways.de>
+ */
+
+/**
+ * abstract test class for activesync tests
+ * 
+ * @package     ActiveSync
+ */
+abstract class ActiveSync_TestCase extends TestCase
+{
+    /**
+     * name of the application
+     * 
+     * @var string
+     */
+    protected $_applicationName = 'Calendar';
+    
+    /**
+     * @var ActiveSync_Model_Device
+     */
+    protected $_device;
+    
+    protected $_specialFolderName;
+    
+    /**
+     * @var Tinebase_Model_FullUser
+     */
+    protected $_testUser;
+    
+    /**
+     * @var array test objects
+     */
+    protected $objects = array();
+    
+    protected $_testXMLInput;
+    
+    protected $_testXMLOutput;
+    
+    protected $_testEmptyXML;
+
+    const TYPE_ANDROID_5         = 'android5';
+    const TYPE_ANDROID_6         = 'android6';
+    const TYPE_ANDROID_7         = 'android7';
+    const TYPE_IOS_11            = 'iOS11';
+
+    /**
+     * (non-PHPdoc)
+     * @see \PHPUnit\Framework\TestCase::setUp()
+     */
+    protected function setUp(): void
+{
+        parent::setUp();
+        
+        $this->_testUser          = Tinebase_Core::getUser();
+        $this->_specialFolderName = strtolower($this->_applicationName) . '-root';
+        
+        $this->objects['container'] = array();
+        $this->objects['devices']   = array();
+        
+        $this->objects['tasks']   = array();
+        $this->objects['events']   = array();
+
+        Syncroton_Registry::set(Syncroton_Registry::IS_UNITTEST, true);
+        Syncroton_Registry::set(Syncroton_Registry::DEVICEBACKEND,       new Syncroton_Backend_Device(Tinebase_Core::getDb(), SQL_TABLE_PREFIX . 'acsync_'));
+        Syncroton_Registry::set(Syncroton_Registry::FOLDERBACKEND,       new Syncroton_Backend_Folder(Tinebase_Core::getDb(), SQL_TABLE_PREFIX . 'acsync_'));
+        Syncroton_Registry::set(Syncroton_Registry::SYNCSTATEBACKEND,    new Syncroton_Backend_SyncState(Tinebase_Core::getDb(), SQL_TABLE_PREFIX . 'acsync_'));
+        Syncroton_Registry::set(Syncroton_Registry::CONTENTSTATEBACKEND, new Syncroton_Backend_Content(Tinebase_Core::getDb(), SQL_TABLE_PREFIX . 'acsync_'));
+        Syncroton_Registry::set('loggerBackend',                         Tinebase_Core::getLogger());
+        
+        Syncroton_Registry::setContactsDataClass('Addressbook_Frontend_ActiveSync');
+        Syncroton_Registry::setCalendarDataClass('Calendar_Frontend_ActiveSync');
+        Syncroton_Registry::setEmailDataClass('Felamimail_Frontend_ActiveSync');
+        Syncroton_Registry::setTasksDataClass('Tasks_Frontend_ActiveSync');
+    }
+    
+    /**
+     * create container with sync grant
+     * 
+     * @return Tinebase_Model_Container
+     */
+    protected function _getContainerWithSyncGrant()
+    {
+        if (isset($this->objects['container']['withSyncGrant'])) {
+            return $this->objects['container']['withSyncGrant'];
+        }
+        
+        switch ($this->_applicationName) {
+            case 'Calendar':    $recordClass = 'Calendar_Model_Event'; break;
+            case 'Addressbook': $recordClass = 'Addressbook_Model_Contact'; break;
+            case 'Tasks':       $recordClass = 'Tasks_Model_Task'; break;
+            default: throw new Exception('handle this model!');
+        }
+        try {
+            $containerWithSyncGrant = Tinebase_Container::getInstance()->getContainerByName(
+                $recordClass,
+                'ContainerWithSyncGrant-' . $this->_applicationName, 
+                Tinebase_Model_Container::TYPE_PERSONAL,
+                Tinebase_Core::getUser()
+            );
+        } catch (Tinebase_Exception_NotFound $e) {
+            $containerWithSyncGrant = new Tinebase_Model_Container(array(
+                'name'              => 'ContainerWithSyncGrant-' . $this->_applicationName,
+                'type'              => Tinebase_Model_Container::TYPE_PERSONAL,
+                'owner_id'          => Tinebase_Core::getUser(),
+                'backend'           => 'Sql',
+                'application_id'    => Tinebase_Application::getInstance()->getApplicationByName($this->_applicationName)->getId(),
+                'model'             => $recordClass
+            ));
+            $containerWithSyncGrant = Tinebase_Container::getInstance()->addContainer($containerWithSyncGrant);
+        }
+        
+        $this->objects['container']['withSyncGrant'] = $containerWithSyncGrant;
+        
+        return $this->objects['container']['withSyncGrant'];
+    }
+    
+    /**
+     * create container without sync grant
+     * 
+     * @return Tinebase_Model_Container
+     */
+    protected function _getContainerWithoutSyncGrant()
+    {
+        if (isset($this->objects['container']['withoutSyncGrant'])) {
+            return $this->objects['container']['withoutSyncGrant'];
+        }
+
+        switch ($this->_applicationName) {
+            case 'Calendar':    $recordClass = 'Calendar_Model_Event'; break;
+            case 'Addressbook': $recordClass = 'Addressbook_Model_Contact'; break;
+            case 'Tasks':       $recordClass = 'Tasks_Model_Task'; break;
+            default: throw new Exception('handle this model!');
+        }
+        
+        try {
+            $containerWithoutSyncGrant = Tinebase_Container::getInstance()->getContainerByName(
+                $recordClass,
+                'ContainerWithoutSyncGrant-' . $this->_applicationName, 
+                Tinebase_Model_Container::TYPE_PERSONAL,
+                Tinebase_Core::getUser()
+            );
+        } catch (Tinebase_Exception_NotFound $e) {
+            $creatorGrants = array(
+                'account_id' => $this->_testUser->getId(),
+                'account_type' => Tinebase_Acl_Rights::ACCOUNT_TYPE_USER,
+                Tinebase_Model_Grants::GRANT_READ => true,
+                Tinebase_Model_Grants::GRANT_ADD => true,
+                Tinebase_Model_Grants::GRANT_EDIT => true,
+                Tinebase_Model_Grants::GRANT_DELETE => true,
+                //Tinebase_Model_Grants::GRANT_EXPORT    => true,
+                //Tinebase_Model_Grants::GRANT_SYNC      => true,
+                // NOTE: Admin Grant implies all other grants
+                //Tinebase_Model_Grants::GRANT_ADMIN     => true,
+            );
+
+            switch ($this->_applicationName) {
+                case 'Calendar':
+                    $recordClass = 'Calendar_Model_Event';
+                    break;
+                case 'Addressbook':
+                    $recordClass = 'Addressbook_Model_Contact';
+                    break;
+                case 'Tasks':
+                    $recordClass = 'Tasks_Model_Task';
+                    break;
+                default:
+                    throw new Exception('handle this model!');
+            }
+
+            $containerWithoutSyncGrant = new Tinebase_Model_Container(array(
+                'name' => 'ContainerWithoutSyncGrant-' . $this->_applicationName,
+                'type' => Tinebase_Model_Container::TYPE_PERSONAL,
+                'owner_id' => Tinebase_Core::getUser(),
+                'backend' => 'Sql',
+                'application_id' => Tinebase_Application::getInstance()->getApplicationByName($this->_applicationName)->getId(),
+                'model' => $recordClass,
+            ));
+
+            $containerWithSyncGrant = Tinebase_Container::getInstance()->addContainer($containerWithoutSyncGrant);
+            Tinebase_Container::getInstance()->setGrants($containerWithSyncGrant, new Tinebase_Record_RecordSet(
+                $containerWithoutSyncGrant->getGrantClass(), [$creatorGrants]), true, false);
+        }
+        $this->objects['container']['withoutSyncGrant'] = $containerWithoutSyncGrant;
+        
+        return $this->objects['container']['withoutSyncGrant'];
+    }
+    
+    /**
+     * return active device
+     * 
+     * @param string $_deviceType
+     * @return ActiveSync_Model_Device
+     */
+    protected function _getDevice($_deviceType)
+    {
+        if (! isset($this->objects['devices'][$_deviceType])) {
+            $this->objects['devices'][$_deviceType] = Syncroton_Registry::getDeviceBackend()->create( 
+                ActiveSync_TestCase::getTestDevice($_deviceType)
+            );
+        }
+
+        return $this->objects['devices'][$_deviceType];
+    }
+
+    protected function _asXML($syncrotonModel)
+    {
+        $imp                   = new DOMImplementation();
+
+        $dtd                   = $imp->createDocumentType('AirSync', "-//AIRSYNC//DTD AirSync//EN", "http://www.microsoft.com/");
+        $testDoc               = $imp->createDocument('uri:AirSync', 'Sync', $dtd);
+        $testDoc->formatOutput = true;
+        $testDoc->encoding     = 'utf-8';
+
+        $appData    = $testDoc->documentElement->appendChild($testDoc->createElementNS('uri:AirSync', 'ApplicationData'));
+
+        $syncrotonModel->appendXML($appData, $this->_getDevice(Syncroton_Model_Device::TYPE_IPHONE));
+
+        return $testDoc->saveXML();
+    }
+    /**
+     * returns a test event
+     * 
+     * @param Tinebase_Model_Container $personalContainer
+     * @param string $attendeeStatus
+     * @param boolean $addScleverAttendee
+     * @return Calendar_Model_Event
+     */
+    public static function getTestEvent($personalContainer = NULL, $attendeeStatus = Calendar_Model_Attender::STATUS_ACCEPTED, $addScleverAttendee = false)
+    {
+        $personalContainer = ($personalContainer) ? $personalContainer : Tinebase_Container::getInstance()->getPersonalContainer(
+            Tinebase_Core::getUser(),
+            Calendar_Model_Event::class,
+            Tinebase_Core::getUser(),
+            Tinebase_Model_Grants::GRANT_EDIT
+        )->getFirstRecord();
+
+        $attendee = array(
+            array(
+                'user_id' => Tinebase_Core::getUser()->contact_id,
+                'user_type' => Calendar_Model_Attender::USERTYPE_USER,
+                'status' => $attendeeStatus
+            )
+        );
+
+        if ($addScleverAttendee) {
+            $sclever = Tinebase_User::getInstance()->getFullUserByLoginName('sclever');
+            $attendee[] = array(
+                'user_id' => $sclever->contact_id,
+                'user_type' => Calendar_Model_Attender::USERTYPE_USER,
+                'status' => Calendar_Model_Attender::STATUS_NEEDSACTION
+            );
+        }
+
+        return new Calendar_Model_Event(array(
+            'uid'           => Tinebase_Record_Abstract::generateUID(),
+            'summary'       => 'SyncTest',
+            'dtstart'       => Tinebase_DateTime::now()->addMonth(1)->toString(Tinebase_Record_Abstract::ISO8601LONG), //'2009-04-25 18:00:00',
+            'dtend'         => Tinebase_DateTime::now()->addMonth(1)->addHour(1)->toString(Tinebase_Record_Abstract::ISO8601LONG), //'2009-04-25 18:30:00',
+            'originator_tz' => 'Europe/Berlin',
+            'container_id'  => $personalContainer->getId(),
+            Tinebase_Model_Grants::GRANT_EDIT     => true,
+            'attendee'      => new Tinebase_Record_RecordSet('Calendar_Model_Attender', $attendee),
+        ));
+    }
+    
+    /**
+     *
+     * @return Syncroton_Model_Device
+     */
+    public static function getTestDevice($_type = null)
+    {
+        switch($_type) {
+            case Syncroton_Model_Device::TYPE_ANDROID:
+                $device = new Syncroton_Model_Device(array(
+                    'deviceid'   => 'android-htcvision',
+                    'devicetype' => Syncroton_Model_Device::TYPE_ANDROID,
+                    'policykey'  => null,
+                    'policyId'   => null,
+                    'ownerId'    => Tinebase_Core::getUser()->getId(),
+                    'useragent'  => 'Android-EAS/3.10.000.084109.405',
+                    'acsversion' => '12.0',
+                    'remotewipe' => 0
+                ));
+                break;
+
+            case self::TYPE_ANDROID_5:
+                $device = new Syncroton_Model_Device(array(
+                    'deviceid'   => 'android-htcvision',
+                    'devicetype' => Syncroton_Model_Device::TYPE_ANDROID,
+                    'policykey'  => null,
+                    'policyId'   => null,
+                    'ownerId'    => Tinebase_Core::getUser()->getId(),
+                    'useragent'  => 'Android/5.1.1-EAS-2.0',
+                    'acsversion' => '12.0',
+                    'remotewipe' => 0
+                ));
+                break;
+
+            case self::TYPE_ANDROID_6:
+                $device = new Syncroton_Model_Device(array(
+                    'deviceid'   => 'android-nexus5',
+                    'devicetype' => Syncroton_Model_Device::TYPE_ANDROID,
+                    'policykey'  => null,
+                    'policyId'   => null,
+                    'ownerId'    => Tinebase_Core::getUser()->getId(),
+                    'useragent'  => 'Android-Mail/7.9.10.169126262.release',
+                    'os'         => 'Android 6.0.1',
+                    'acsversion' => '12.0',
+                    'remotewipe' => 0
+                ));
+                break;
+
+            case self::TYPE_ANDROID_7:
+                $device = new Syncroton_Model_Device(array(
+                    'deviceid'   => 'android-FRD-L09',
+                    'devicetype' => Syncroton_Model_Device::TYPE_ANDROID,
+                    'policykey'  => null,
+                    'policyId'   => null,
+                    'ownerId'    => Tinebase_Core::getUser()->getId(),
+                    'useragent'  => 'Android/7.0-EAS-2.0',
+                    'acsversion' => '12.0',
+                    'remotewipe' => 0
+                ));
+                break;
+
+            case Syncroton_Model_Device::TYPE_BLACKBERRY:
+                $device = new Syncroton_Model_Device(array(
+                    'deviceid'   => 'BB2B2449CA',
+                    'devicetype' => Syncroton_Model_Device::TYPE_BLACKBERRY,
+                    'policykey'  => null,
+                    'policyId'   => null,
+                    'ownerId'    => Tinebase_Core::getUser()->getId(),
+                    'useragent'  => 'RIM-Q10-SQN100-3/10.2.0.1443',
+                    'acsversion' => '14.1',
+                    'remotewipe' => 0
+                )); 
+                break;
+                
+            case Syncroton_Model_Device::TYPE_WEBOS:
+                $device = new Syncroton_Model_Device(array(
+                    'deviceid'   => 'webos-abcd',
+                    'devicetype' => Syncroton_Model_Device::TYPE_WEBOS,
+                    'policykey'  => null,
+                    'policyId'   => null,
+                    'ownerId'    => Tinebase_Core::getUser()->getId(),
+                    'useragent'  => 'blabla',
+                    'acsversion' => '12.0',
+                    'remotewipe' => 0
+                ));
+                break;
+                
+            case Syncroton_Model_Device::TYPE_SMASUNGGALAXYS2:
+                $device = new Syncroton_Model_Device(array(
+                    'deviceid'   => Tinebase_Record_Abstract::generateUID(64),
+                    'devicetype' => 'SAMSUNGGTI9100',
+                    'policy_id'  => null,
+                    'policykey'  => null,
+                    'owner_id'   => Tinebase_Core::getUser()->getId(),
+                    'useragent'  => 'SAMSUNG-GT-I9100/100.20304',
+                    'acsversion' => '12.1',
+                    'remotewipe' => 0
+                ));
+                break;
+                
+            case 'windowsoutlook15':
+                $device = new Syncroton_Model_Device(array(
+                    'deviceid'   => Tinebase_Record_Abstract::generateUID(64),
+                    'devicetype' => 'WindowsOutlook15',
+                    'policy_id'  => null,
+                    'policykey'  => null,
+                    'owner_id'   => Tinebase_Core::getUser()->getId(),
+                    'useragent'  => 'Microsoft.Outlook.15',
+                    'acsversion' => '14.0',
+                    'remotewipe' => 0
+                ));
+                break;
+
+            case self::TYPE_IOS_11:
+                $device = new Syncroton_Model_Device(array(
+                    'deviceid'   => 'iphone9c1',
+                    'devicetype' => Syncroton_Model_Device::TYPE_IPHONE,
+                    'policykey'  => null,
+                    'policyId'   => null,
+                    'ownerId'    => Tinebase_Core::getUser()->getId(),
+                    'useragent'  => 'Apple-iPhone9C1/1501.530400009',
+                    'acsversion' => '12.1',
+                    'remotewipe' => 0
+                ));
+                break;
+
+                
+            case Syncroton_Model_Device::TYPE_IPHONE:
+            default:
+                $device = new Syncroton_Model_Device(array(
+                    'deviceid'   => 'iphone-abcd',
+                    'devicetype' => Syncroton_Model_Device::TYPE_IPHONE,
+                    'policykey'  => null,
+                    'policyId'   => null,
+                    'ownerId'    => Tinebase_Core::getUser()->getId(),
+                    'useragent'  => 'blabla',
+                    'acsversion' => '12.1',
+                    'remotewipe' => 0
+                ));
+                break;
+        }
+    
+        return $device;
+    }
+}

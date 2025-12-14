@@ -1,0 +1,520 @@
+#
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:49+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Czech (http://www.transifex.com/tine20/tine20/language/cs/)\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "manage shared lead folders"
+msgstr "spravovat sdílené složky leadů"
+
+msgid "Create new shared lead folders"
+msgstr "Vytvořit novou sdílenou složku leadů"
+
+msgid "manage shared leads favorites"
+msgstr "spravovat sdílené oblíbené položky leadů"
+
+msgid "Create or update shared leads favorites"
+msgstr "Vytvořit nebo aktualizovat sdílené oblíbené položky leadů"
+
+msgid "controls sending notification of Leads"
+msgstr ""
+
+msgid "send notification)description"
+msgstr ""
+
+msgid "send notification to all access container"
+msgstr ""
+
+msgid "send notification to responsible"
+msgstr ""
+
+msgid "send notification to responsible)description"
+msgstr ""
+
+msgid "send notification to customer"
+msgstr ""
+
+msgid "send notification to partner"
+msgstr ""
+
+msgid "Lead States Available"
+msgstr ""
+
+msgid "Possible lead status, with their associated turnover probabilities. If a status is flagged, leads with this status are treated as closed."
+msgstr ""
+
+msgid "open"
+msgstr "otevřený"
+
+msgid "contacted"
+msgstr "kontaktovaný"
+
+msgid "waiting for feedback"
+msgstr "čeká se na odezvu"
+
+msgid "quote sent"
+msgstr "odeslána nabídka"
+
+msgid "accepted"
+msgstr "přijatý"
+
+msgid "lost"
+msgstr "ztracený"
+
+msgid "read-only"
+msgstr ""
+
+msgid "Lead Sources Available"
+msgstr ""
+
+msgid "Possible lead sources. If a source is flagged as archived, leads of this source are treated as closed."
+msgstr ""
+
+msgid "Lead Types Available"
+msgstr ""
+
+msgid "Possible lead types."
+msgstr ""
+
+msgid "Customer"
+msgstr "Zákazník"
+
+msgid "Partner"
+msgstr "Partner"
+
+msgid "Reseller"
+msgstr "Dealer"
+
+msgid "Enabled Features"
+msgstr ""
+
+msgid "Enabled Features in CRM Application."
+msgstr ""
+
+msgid "Lead Import"
+msgstr ""
+
+msgid "Lead Notification Confirmation"
+msgstr ""
+
+msgid "Add new task on lead import"
+msgstr ""
+
+msgid "Automatically creates a task for the responsible person if a new lead is imported."
+msgstr ""
+
+msgid "Send notification e-mail on lead import"
+msgstr ""
+
+msgid "Sends an e-mail to all responsible persons for the imported leads."
+msgstr ""
+
+msgid "Lead duplicate check fields"
+msgstr ""
+
+msgid "These fields are checked when a new lead is created. If a record with the same data in the fields is found, a duplicate exception is thrown."
+msgstr ""
+
+msgid "State"
+msgstr "Status"
+
+msgid "Role"
+msgstr "Role"
+
+msgid "Source"
+msgstr "Zdroj"
+
+msgid "Start"
+msgstr "Začátek"
+
+msgid "Scheduled end"
+msgstr "Plánovaný konec"
+
+msgid "End"
+msgstr "Konec"
+
+msgid "Turnover"
+msgstr "Obrat"
+
+msgid "Probability"
+msgstr "Pravděpodobnost"
+
+msgid "Folder"
+msgstr "Složka"
+
+msgid "Updated by"
+msgstr "Aktualizoval(a)"
+
+msgid "Updated Fields:"
+msgstr "Aktualizované položky:"
+
+#, python-format
+msgid "'%s' changed from '%s' to '%s'."
+msgstr ""
+
+msgid "Tags"
+msgstr "Štítky"
+
+#, python-format
+msgid "Lead %s has been changed"
+msgstr "Lead %s byl změněn"
+
+#, python-format
+msgid "Lead %s has been deleted"
+msgstr ""
+
+#, python-format
+msgid "Lead %s has been created"
+msgstr ""
+
+msgid "This Lead state is set to read-only therefore updating this Lead is not possible."
+msgstr ""
+
+msgid "CSV all data"
+msgstr ""
+
+msgid "Lead Data"
+msgstr "Data leadu"
+
+msgid "Leadstate"
+msgstr "Stav leadu"
+
+msgid "Leadtype"
+msgstr "Typ leadu"
+
+msgid "Leadsource"
+msgstr "Zdroj leadu"
+
+msgid "End Scheduled"
+msgstr "Plánovaný konec"
+
+msgid "Contacts"
+msgstr "Kontakty"
+
+msgid "Address"
+msgstr "Adresa"
+
+msgid "Telephone"
+msgstr "Telefon"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Tasks"
+msgstr "Úkoly"
+
+msgid "Due Date"
+msgstr "Termín dokončení"
+
+msgid "Priority"
+msgstr "Priorita"
+
+msgid "Products"
+msgstr "Produkty"
+
+msgid "low"
+msgstr "nízká"
+
+msgid "normal"
+msgstr "normální"
+
+msgid "high"
+msgstr "vysoká"
+
+msgid "urgent"
+msgstr "urgentní"
+
+msgid "Edit new lead"
+msgstr ""
+
+#, python-format
+msgid "The following leads have just been imported into lead list %s"
+msgstr ""
+
+#, python-format
+msgid "%s new leads have been imported"
+msgstr ""
+
+msgid "Lead CSV import"
+msgstr ""
+
+msgid "Import list (###CURRENTDATE###)"
+msgstr ""
+
+msgid "Leads imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr ""
+
+msgid "Please choose the Lead to add the contacts to"
+msgstr ""
+
+msgid "Please select the attenders' role"
+msgstr ""
+
+msgid "Lead"
+msgid_plural "Leads"
+msgstr[0] "Lead"
+msgstr[1] "Leady"
+msgstr[2] "Leadů"
+msgstr[3] "Leadů"
+
+msgid "Select Lead"
+msgstr ""
+
+msgid "Select Role"
+msgstr ""
+
+#, python-brace-format
+msgid "Adding {0} contacts to lead"
+msgstr ""
+
+msgid "Change type to Customer"
+msgstr "Změnit typ na Zákazník"
+
+msgid "Responsible"
+msgstr "Odpovědná osoba"
+
+msgid "Change type to Responsible"
+msgstr "Změnit typ na Odpovědná osoba"
+
+msgid "Change type to Partner"
+msgstr "Změnit typ na Partner"
+
+msgid "Change contact type"
+msgstr "Změnit typ kontaktu"
+
+msgid "Search for Contacts to add ..."
+msgstr "Hledat kontakty pro přidání"
+
+msgid "Name"
+msgstr "Jméno"
+
+msgid "Data"
+msgstr "Data"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Cellphone"
+msgstr "Mobilní telefon"
+
+msgid "New Lead"
+msgstr ""
+
+msgid "Notifications are enabled"
+msgstr ""
+
+msgid "Notifications are disabled"
+msgstr ""
+
+msgid "Send Notification?"
+msgstr ""
+
+msgid "Changes to this lead might send notifications. Press the button \"Notifcation are enabled\" to switch to \"Notification are disabled\""
+msgstr ""
+
+msgid "You do not have the run right for the Tasks application or it is not activated."
+msgstr "Nemáte oprávnění ke spuštění aplikace Úkoly nebo aplikace není povolena."
+
+msgid "You do not have the run right for the Sales application or it is not activated."
+msgstr "Nemáte oprávnění ke spuštění aplikace Prodej nebo aplikace není povolena."
+
+msgid "Enter lead name"
+msgstr ""
+
+msgid "Expected turnover"
+msgstr "Očekávaný obrat"
+
+msgid "Resubmission Date"
+msgstr ""
+
+msgid "Estimated end"
+msgstr "Odhadovaný konec"
+
+msgid "Description"
+msgstr "Popis"
+
+msgid "Enter description"
+msgstr "Zadejte popis"
+
+msgid "Contact"
+msgstr "Kontakt"
+
+msgid "CRM Role"
+msgstr "CRM role"
+
+msgid "Mobile"
+msgstr "Mobil"
+
+msgid "Fax"
+msgstr "Fax"
+
+msgid "E-Mail"
+msgstr "E-mail"
+
+msgid "Web"
+msgstr "Web"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Lead name"
+msgstr "Jméno leadu"
+
+msgid "Probable Turnover"
+msgstr "Předpokládaný obrat"
+
+msgid "Import leads"
+msgstr ""
+
+#, python-brace-format
+msgid "Add new {0}"
+msgstr "Přidat nový {0}"
+
+#, python-brace-format
+msgid "Unlink {0}"
+msgstr "Zrušit odkaz {0}"
+
+#, python-brace-format
+msgid "Unlink selected {0}"
+msgstr "Zrušit odkaz(y) na vybraný/é {0}"
+
+#, python-brace-format
+msgid "Edit {0}"
+msgstr "Editovat {0}"
+
+#, python-brace-format
+msgid "Edit selected {0}"
+msgstr "Editovat vybraný/é {0}"
+
+msgid "lead list"
+msgid_plural "lead lists"
+msgstr[0] "seznam leadů"
+msgstr[1] "seznamy leadů"
+msgstr[2] "seznamů leadů"
+msgstr[3] "seznamů leadů"
+
+msgid "lead lists"
+msgstr "seznamy leadů"
+
+msgid "Quick Search"
+msgstr ""
+
+msgid "Last Modified Time"
+msgstr ""
+
+msgid "Last Modified By"
+msgstr ""
+
+msgid "Creation Time"
+msgstr "Vytvořeno"
+
+msgid "Created By"
+msgstr ""
+
+msgid "X Lead"
+msgstr ""
+
+msgid "disabled"
+msgstr ""
+
+msgid "Archived"
+msgstr ""
+
+msgid "Product"
+msgstr "Produkt"
+
+msgid "Price"
+msgstr "Cena"
+
+msgid "Quantity"
+msgstr "Množství"
+
+msgid "Search for Products to add ..."
+msgstr "Hledat produkty pro přidání ..."
+
+msgid "No Tasks to display"
+msgstr "Žádné úkoly ke zobrazení"
+
+msgid "Summary"
+msgstr "Přehled"
+
+msgid "Add a task..."
+msgstr "Přidat úkol..."
+
+msgid "Percent"
+msgstr "Procent"
+
+msgid "Organizer"
+msgstr ""
+
+msgid "GENDER_Lead"
+msgstr ""
+
+msgid "Show Closed"
+msgstr ""
+
+msgid "All leads"
+msgstr "Všechny leady"
+
+msgid "Default Lead List"
+msgstr ""
+
+msgid "The default list for new leads"
+msgstr ""
+
+msgid "Get Notification E-mails"
+msgstr ""
+
+msgid "The level of actions you want to be notified about."
+msgstr "Úroveň činností o kterých chcete být informováni."
+
+msgid "Send Notifications e-mails for own actions"
+msgstr ""
+
+msgid "Get notifications e-mails for actions you did yourself"
+msgstr ""
+
+msgid "Default Favorite"
+msgstr "Výchozí oblíbené položky CRM"
+
+msgid "The default favorite which is loaded on crm startup"
+msgstr "Výchozí oblíbené položky, které jsou načteny při spuštění CRM."
+
+msgid "All leads I have read grants for"
+msgstr "Všechny leady, které jsem oprávněn číst"
+
+msgid "Last modified by me"
+msgstr ""
+
+msgid "All leads that I have last modified"
+msgstr ""
+
+msgid "My leads"
+msgstr ""
+
+msgid "All leads that I am responsible for"
+msgstr ""
+
+msgid "Leads with overdue tasks"
+msgstr ""
+
+#~ msgid "Get Notification Emails"
+#~ msgstr "Dostávat e-maily s upozorněním"
+
+#~ msgid "Send Notifications Emails for own actions"
+#~ msgstr "Odesílat e-maily s upozorněním pro vlastní činnosti."
+
+#~ msgid "Get notifications emails for actions you did yourself"
+#~ msgstr "Dostávat e-maily s upozorněním pro činnosti, které jste udělal(a)."

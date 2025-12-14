@@ -1,0 +1,166 @@
+#
+# Translators:
+# Niklas Ye <niklas@idontgetlaid.com>, 2013
+# S P <sebbe088@gmail.com>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-10-04 15:23+0000\n"
+"Last-Translator: S P <sebbe088@gmail.com>, 2018\n"
+"Language-Team: Swedish (Sweden) (http://app.transifex.com/tine/groupware/language/sv_SE/)\n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Inventory Status Available"
+msgstr ""
+
+msgid "Possible status."
+msgstr ""
+
+msgid "Ordered"
+msgstr ""
+
+msgid "Available"
+msgstr ""
+
+msgid "Defect"
+msgstr ""
+
+msgid "Missing"
+msgstr ""
+
+msgid "Removed"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Stored"
+msgstr ""
+
+msgid "Sold"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Types"
+msgstr ""
+
+msgid "Tine 2.0 inventory CSV import"
+msgstr ""
+
+msgid "Import CSV formated contacts from Tine 2.0 Inventory (Export Format)"
+msgstr ""
+
+msgid "Import list (###CURRENTDATE###)"
+msgstr ""
+
+msgid "Inventory Items imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr ""
+
+msgid "Inventory CSV import"
+msgstr ""
+
+msgid "Items imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr ""
+
+msgid "The active number must be less than or equal total number."
+msgstr ""
+
+msgid "Purchase Invoice"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "Name"
+msgstr "Benämning"
+
+msgid "Serial Number"
+msgstr ""
+
+msgid "Inventory Type"
+msgstr ""
+
+msgid "Employee"
+msgstr ""
+
+msgid "Description"
+msgstr "Beskrivning"
+
+msgid "Enter description"
+msgstr "Ange beskrivning"
+
+msgid "Location"
+msgstr ""
+
+msgid "Added"
+msgstr ""
+
+msgid "Warranty"
+msgstr "Garanti"
+
+msgid "Total number"
+msgstr ""
+
+msgid "Available number"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Accounting"
+msgstr ""
+
+msgid "Price"
+msgstr "Pris"
+
+msgid "Invoice date"
+msgstr "Fakturadatum"
+
+msgid "Depreciate"
+msgstr ""
+
+msgid "Inventory item"
+msgid_plural "Inventory items"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Inventory item list"
+msgid_plural "Inventory item lists"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Inventory ID"
+msgstr "Lager ID"
+
+msgid "Depreciated"
+msgstr ""
+
+msgid "Inventory type"
+msgid_plural "Inventory types"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Default Inventory Item Container"
+msgstr ""
+
+msgid "The default container for new items"
+msgstr ""
+
+msgid "All Inventory Items"
+msgstr "Alla lagerobjekt"
+
+msgid "All existing Inventory Items"
+msgstr "Alla befintliga lagerobjekt"
+
+msgid "Inventory"
+msgstr "Lager"

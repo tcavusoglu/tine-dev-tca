@@ -1,0 +1,448 @@
+#
+# Translators:
+# Daniele Gobbetti <daniele@gobbetti.name>, 2013
+# Samuel Barbera <samuel.barbera@email.it>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-04-02 13:32+0000\n"
+"Last-Translator: Samuel Barbera <samuel.barbera@email.it>, 2013\n"
+"Language-Team: Italian (http://app.transifex.com/tine/groupware/language/it/)\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Manage timeaccounts"
+msgstr "Gestisci rendiconto ore"
+
+msgid "Add, edit and delete timeaccounts (includes all timesheet grants)"
+msgstr "Aggiungere, modificare ed eliminare i rendiconto ore (include tutte i permessi della scheda attività)"
+
+msgid "Add timeaccounts"
+msgstr "Aggiungi rendiconto ore"
+
+msgid "Manage shared timeaccount favorites"
+msgstr "Gestisci i rendiconto ore condivisi preferiti"
+
+msgid "Create or update shared timeaccount favorites"
+msgstr "Crea o aggiorna i rendiconto ore condivisi preferiti"
+
+msgid "Manage shared timesheet favorites"
+msgstr "gestisci le schede attività condivise preferite"
+
+msgid "Create or update shared timesheet favorites"
+msgstr "Crea o aggiorna le schede attività condivise preferite"
+
+msgid "Enabled Features"
+msgstr ""
+
+msgid "Enabled Features in Timetracker Application."
+msgstr ""
+
+msgid "Timeaccount Bookmarks"
+msgstr ""
+
+msgid "none"
+msgstr "nessuno"
+
+msgid "last week"
+msgstr "la scorsa settimana"
+
+msgid "not yet billed"
+msgstr "non ancora fatturata"
+
+msgid "status to bill"
+msgstr ""
+
+msgid "billed"
+msgstr "fatturata"
+
+msgid "Requested"
+msgstr ""
+
+msgid "Accepted"
+msgstr ""
+
+msgid "Declined"
+msgstr ""
+
+msgid "Add timeaccounts as favorite to speedup timesheet creation.)"
+msgstr ""
+
+msgid "Timeaccounts are still in use! Are you sure you want to delete them?"
+msgstr ""
+
+msgid "The Invoice you tried to edit is cleared already, change date will rebill the invoice, do you still want to execute this action?"
+msgstr ""
+
+msgid "Add Timesheet"
+msgstr ""
+
+msgid "Timesheets of this Task:"
+msgstr ""
+
+msgid "Time Account - Billed"
+msgstr "Rendiconto Ore - Fatturato"
+
+msgid "to bill"
+msgstr "da fatturare"
+
+msgid "Contract"
+msgstr "Contratto"
+
+msgid "without contract"
+msgstr "senza contratto"
+
+msgid "Unit"
+msgstr "Unità"
+
+msgid "Unit Price"
+msgstr "Prezzo unitario"
+
+msgid "Factor"
+msgstr ""
+
+msgid "Budget in hours"
+msgstr ""
+
+msgid "Status"
+msgstr "Stato"
+
+msgid "closed"
+msgstr "chiuso"
+
+msgid "open"
+msgstr "aperto"
+
+msgid "Cleared at"
+msgstr "Approvata in data"
+
+msgid "Responsible Person"
+msgstr ""
+
+msgid "Timesheets are billable"
+msgstr "Le schede attività sono fatturabili"
+
+msgid "Invoice"
+msgstr ""
+
+msgid "Time Account"
+msgid_plural "Time Accounts"
+msgstr[0] "Account di Tempo"
+msgstr[1] "Rendiconti Ore"
+msgstr[2] "Rendiconti Ore"
+
+msgid "Number"
+msgstr "Numero"
+
+msgid "Title"
+msgstr "Titolo"
+
+msgid "Description"
+msgstr "Descrizione"
+
+msgid "Select invoice"
+msgstr ""
+
+msgid "Update Timesheets?"
+msgstr ""
+
+msgid "Attention: There are timesheets that have not yet been accounted. If you continue, they will be set to accounted. This action cannot be undone. Continue anyway?"
+msgstr ""
+
+msgid "Timeaccount Favorites"
+msgstr ""
+
+#, python-brace-format
+msgid "Delete {0}"
+msgid_plural "Delete {0}"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Favorite"
+msgstr ""
+
+msgid "Bookmark Timeaccount"
+msgstr ""
+
+msgid "Close Timeaccount"
+msgstr ""
+
+msgid "Show closed"
+msgstr "Mostra completati"
+
+msgid "Responsible"
+msgstr ""
+
+msgid "without responsible"
+msgstr ""
+
+msgid "Time Account - Status"
+msgstr "Rendiconto Ore - Stato"
+
+msgid "End Time Change"
+msgstr ""
+
+msgid "End time was shortened as timesheet must not overlap day"
+msgstr ""
+
+msgid "Duration Change"
+msgstr ""
+
+msgid "Duration was shortened as timesheet must not overlap day"
+msgstr ""
+
+msgid "Timesheet"
+msgid_plural "Timesheets"
+msgstr[0] "Tabella del tempo"
+msgstr[1] "Schede attività"
+msgstr[2] "Schede attività"
+
+msgid "End must not before start."
+msgstr ""
+
+msgid "Accounting"
+msgstr ""
+
+msgid "Accounting time"
+msgstr ""
+
+msgid "Timeaccount"
+msgid_plural "Timeaccounts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Failed"
+msgstr "Fallita"
+
+#, python-brace-format
+msgid "Could not save {0}."
+msgstr "Impossibile salvare {0}."
+
+msgid "Booking deadline for this Timeaccount has been exceeded."
+msgstr "La scadenza di prenotazione per questo rendiconto ore è stata superata"
+
+msgid "Closed Timeaccount Warning!"
+msgstr ""
+
+msgid "The selected Time Account is already closed."
+msgstr ""
+
+msgid "The selected Time Account is already closed. Do you wish to continue anyway?"
+msgstr ""
+
+msgid "Workingtime:"
+msgstr ""
+
+msgid "Turnover:"
+msgstr ""
+
+msgid "Working Time Statistics"
+msgstr ""
+
+msgid "Turnover Statistics"
+msgstr ""
+
+msgid "timeframe"
+msgstr "instante di tempo"
+
+msgid "summary"
+msgstr "sommario"
+
+msgid "Total Timesheets"
+msgstr "Totale Schede attività"
+
+msgid "Billable Timesheets"
+msgstr "Schede attività fatturabili"
+
+msgid "Total Time"
+msgstr "Tempo Totale"
+
+msgid "Time of Billable Timesheets"
+msgstr "Tempo delle schede attività fatturabili"
+
+msgid "Detail"
+msgstr "Dettaglio"
+
+#, python-brace-format
+msgid "Assign '{0}' Tag"
+msgstr ""
+
+msgid "Export Timesheets"
+msgstr "Esporta Schede attività"
+
+msgid "Export as ODS"
+msgstr "Esporta come ODS"
+
+msgid "Export as CSV"
+msgstr "Esporta come CSV"
+
+msgid "Export as ..."
+msgstr "Esporta come ..."
+
+msgid "Read Own"
+msgstr ""
+
+msgid "The grant to read own time sheets in this time account."
+msgstr ""
+
+msgid "Request Own"
+msgstr ""
+
+msgid "The grant to add own time sheets request in this time account."
+msgstr ""
+
+msgid "Book Own"
+msgstr "Prenota il proprio"
+
+msgid "The grant to add Timesheets to this Timeaccount"
+msgstr "Il permesso di aggiungere delle Schede attività a questo Rendiconto ore"
+
+msgid "View All"
+msgstr "Visualizza Tutti"
+
+msgid "The grant to view Timesheets of other users"
+msgstr "Il permesso di visualizzare le schede attività degli altri utenti"
+
+msgid "Book All"
+msgstr "Prenota Tutti"
+
+msgid "The grant to add Timesheets for other users"
+msgstr "Il permesso di aggiungere delle schede attività per altri utenti"
+
+msgid "Manage Clearing"
+msgstr "Gestisci approvazioni"
+
+msgid "The grant to manage clearing of Timesheets"
+msgstr "Il permesso di gestire le approvazioni delle schede attività"
+
+msgid "Price"
+msgstr ""
+
+msgid "Project time billable"
+msgstr ""
+
+msgid "Project time cleared in"
+msgstr ""
+
+msgid "Project time billed"
+msgstr ""
+
+msgid "Booking deadline"
+msgstr "Scadenza prenotazione"
+
+msgid "Accounting time factor"
+msgstr ""
+
+msgid "Stream"
+msgstr ""
+
+msgid "hour"
+msgstr ""
+
+msgid "Account"
+msgstr "Account"
+
+msgid "Time Account (Number - Title)"
+msgstr "Rendiconto Ore (Numero - Titolo)"
+
+msgid "Project time billable (combined)"
+msgstr ""
+
+msgid "Billable"
+msgstr "Fatturabile"
+
+msgid "Project time Invoice"
+msgstr ""
+
+msgid "Project time is cleared"
+msgstr ""
+
+msgid "Cleared amount"
+msgstr ""
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Start time"
+msgstr "Data inizio"
+
+msgid "End time"
+msgstr ""
+
+msgid "Duration"
+msgstr "Durata"
+
+msgid "Need for Clarification"
+msgstr ""
+
+msgid "Projecttime Accounting factor"
+msgstr ""
+
+msgid "Accounting Projecttime"
+msgstr ""
+
+msgid "Workingtime is cleared"
+msgstr ""
+
+msgid "Workingtime cleared in"
+msgstr ""
+
+msgid "Process Status"
+msgstr ""
+
+msgid "Source"
+msgstr ""
+
+msgid "Timesheets ODS export configuration"
+msgstr "Configurazione esportazione schede attività ODS"
+
+msgid "Use this configuration for the timesheet ODS export."
+msgstr "Usa questa configurazione per l'esportazione delle schede attività ODS"
+
+msgid "A Tag which is available in context menu for fast assignment"
+msgstr ""
+
+msgid "Quick Tag allows to simply assign a predefined tag by the context menu."
+msgstr ""
+
+msgid "default"
+msgstr "default"
+
+msgid "Requested Timesheets"
+msgstr ""
+
+msgid "My Timesheets today"
+msgstr "La mia schede attività di oggi"
+
+msgid "My Timesheets this week"
+msgstr "La mia scheda attività di questa settimana"
+
+msgid "My Timesheets last week"
+msgstr "La mia scheda attività della scorsa settimana"
+
+msgid "My Timesheets this month"
+msgstr "La mia scheda attività di questo mese"
+
+msgid "My Timesheets last month"
+msgstr "La mia scheda attività dello scorso mese"
+
+msgid "Timeaccounts to bill"
+msgstr "Rendiconto ore da fatturare"
+
+msgid "Timeaccounts not yet billed"
+msgstr "Rendiconto ore non ancora fatturati"
+
+msgid "Timeaccounts already billed"
+msgstr "Rendiconto ore già fatturati"
+
+msgid "Timetracker"
+msgstr "Indicatore del tempo"

@@ -1,0 +1,516 @@
+#
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:49+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: English (Australia) (http://www.transifex.com/tine20/tine20/language/en_AU/)\n"
+"Language: en_AU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "manage shared lead folders"
+msgstr "manage shared lead folders"
+
+msgid "Create new shared lead folders"
+msgstr "Create new shared lead folders"
+
+msgid "manage shared leads favorites"
+msgstr "manage shared leads favorites"
+
+msgid "Create or update shared leads favorites"
+msgstr "Create or update shared leads favorites"
+
+msgid "controls sending notification of Leads"
+msgstr ""
+
+msgid "send notification)description"
+msgstr ""
+
+msgid "send notification to all access container"
+msgstr ""
+
+msgid "send notification to responsible"
+msgstr ""
+
+msgid "send notification to responsible)description"
+msgstr ""
+
+msgid "send notification to customer"
+msgstr ""
+
+msgid "send notification to partner"
+msgstr ""
+
+msgid "Lead States Available"
+msgstr ""
+
+msgid "Possible lead status, with their associated turnover probabilities. If a status is flagged, leads with this status are treated as closed."
+msgstr ""
+
+msgid "open"
+msgstr "open"
+
+msgid "contacted"
+msgstr "contacted"
+
+msgid "waiting for feedback"
+msgstr "waiting for feedback"
+
+msgid "quote sent"
+msgstr "quote sent"
+
+msgid "accepted"
+msgstr "accepted"
+
+msgid "lost"
+msgstr "lost"
+
+msgid "read-only"
+msgstr ""
+
+msgid "Lead Sources Available"
+msgstr ""
+
+msgid "Possible lead sources. If a source is flagged as archived, leads of this source are treated as closed."
+msgstr ""
+
+msgid "Lead Types Available"
+msgstr ""
+
+msgid "Possible lead types."
+msgstr ""
+
+msgid "Customer"
+msgstr "Customer"
+
+msgid "Partner"
+msgstr "Partner"
+
+msgid "Reseller"
+msgstr "Reseller"
+
+msgid "Enabled Features"
+msgstr ""
+
+msgid "Enabled Features in CRM Application."
+msgstr ""
+
+msgid "Lead Import"
+msgstr ""
+
+msgid "Lead Notification Confirmation"
+msgstr ""
+
+msgid "Add new task on lead import"
+msgstr ""
+
+msgid "Automatically creates a task for the responsible person if a new lead is imported."
+msgstr ""
+
+msgid "Send notification e-mail on lead import"
+msgstr ""
+
+msgid "Sends an e-mail to all responsible persons for the imported leads."
+msgstr ""
+
+msgid "Lead duplicate check fields"
+msgstr ""
+
+msgid "These fields are checked when a new lead is created. If a record with the same data in the fields is found, a duplicate exception is thrown."
+msgstr ""
+
+msgid "State"
+msgstr "State"
+
+msgid "Role"
+msgstr "Role"
+
+msgid "Source"
+msgstr "Source"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "Scheduled end"
+msgstr "Scheduled end"
+
+msgid "End"
+msgstr "End"
+
+msgid "Turnover"
+msgstr "Turnover"
+
+msgid "Probability"
+msgstr "Probability"
+
+msgid "Folder"
+msgstr "Folder"
+
+msgid "Updated by"
+msgstr "Updated by"
+
+msgid "Updated Fields:"
+msgstr "Updated Fields:"
+
+#, python-format
+msgid "'%s' changed from '%s' to '%s'."
+msgstr ""
+
+msgid "Tags"
+msgstr "Tags"
+
+#, python-format
+msgid "Lead %s has been changed"
+msgstr "Lead %s has been changed"
+
+#, python-format
+msgid "Lead %s has been deleted"
+msgstr ""
+
+#, python-format
+msgid "Lead %s has been created"
+msgstr "Lead %s has been created"
+
+msgid "This Lead state is set to read-only therefore updating this Lead is not possible."
+msgstr ""
+
+msgid "CSV all data"
+msgstr ""
+
+msgid "Lead Data"
+msgstr "Lead Data"
+
+msgid "Leadstate"
+msgstr "Leadstate"
+
+msgid "Leadtype"
+msgstr "Leadtype"
+
+msgid "Leadsource"
+msgstr "Leadsource"
+
+msgid "End Scheduled"
+msgstr "End Scheduled"
+
+msgid "Contacts"
+msgstr "Contacts"
+
+msgid "Address"
+msgstr "Address"
+
+msgid "Telephone"
+msgstr "Telephone"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Tasks"
+msgstr "Tasks"
+
+msgid "Due Date"
+msgstr "Due Date"
+
+msgid "Priority"
+msgstr "Priority"
+
+msgid "Products"
+msgstr "Products"
+
+msgid "low"
+msgstr "low"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "high"
+msgstr "high"
+
+msgid "urgent"
+msgstr "urgent"
+
+msgid "Edit new lead"
+msgstr ""
+
+#, python-format
+msgid "The following leads have just been imported into lead list %s"
+msgstr ""
+
+#, python-format
+msgid "%s new leads have been imported"
+msgstr ""
+
+msgid "Lead CSV import"
+msgstr ""
+
+msgid "Import list (###CURRENTDATE###)"
+msgstr ""
+
+msgid "Leads imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr ""
+
+msgid "Please choose the Lead to add the contacts to"
+msgstr "Please choose the Lead to add the contacts to"
+
+msgid "Please select the attenders' role"
+msgstr "Please select the attenders' role"
+
+msgid "Lead"
+msgid_plural "Leads"
+msgstr[0] "Lead"
+msgstr[1] "Leads"
+
+msgid "Select Lead"
+msgstr "Select Lead"
+
+msgid "Select Role"
+msgstr "Select Role"
+
+#, python-brace-format
+msgid "Adding {0} contacts to lead"
+msgstr ""
+
+msgid "Change type to Customer"
+msgstr "Change type to Customer"
+
+msgid "Responsible"
+msgstr "Responsible"
+
+msgid "Change type to Responsible"
+msgstr "Change type to Responsible"
+
+msgid "Change type to Partner"
+msgstr "Change type to Partner"
+
+msgid "Change contact type"
+msgstr "Change contact type"
+
+msgid "Search for Contacts to add ..."
+msgstr "Search for Contacts to add ..."
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Data"
+msgstr "Data"
+
+msgid "Phone"
+msgstr "Phone"
+
+msgid "Cellphone"
+msgstr "Cellphone"
+
+msgid "New Lead"
+msgstr "New Lead"
+
+msgid "Notifications are enabled"
+msgstr ""
+
+msgid "Notifications are disabled"
+msgstr ""
+
+msgid "Send Notification?"
+msgstr ""
+
+msgid "Changes to this lead might send notifications. Press the button \"Notifcation are enabled\" to switch to \"Notification are disabled\""
+msgstr ""
+
+msgid "You do not have the run right for the Tasks application or it is not activated."
+msgstr "You do not have the run right for the Tasks application or it is not activated."
+
+msgid "You do not have the run right for the Sales application or it is not activated."
+msgstr "You do not have the run right for the Sales application or it is not activated."
+
+msgid "Enter lead name"
+msgstr ""
+
+msgid "Expected turnover"
+msgstr "Expected turnover"
+
+msgid "Resubmission Date"
+msgstr ""
+
+msgid "Estimated end"
+msgstr "Estimated end"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Enter description"
+msgstr "Enter description"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "CRM Role"
+msgstr "CRM Role"
+
+msgid "Mobile"
+msgstr "Mobile"
+
+msgid "Fax"
+msgstr "Fax"
+
+msgid "E-Mail"
+msgstr "E-Mail"
+
+msgid "Web"
+msgstr "Web"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Lead name"
+msgstr "Lead name"
+
+msgid "Probable Turnover"
+msgstr "Probable Turnover"
+
+msgid "Import leads"
+msgstr ""
+
+#, python-brace-format
+msgid "Add new {0}"
+msgstr "Add new {0}"
+
+#, python-brace-format
+msgid "Unlink {0}"
+msgstr "Unlink {0}"
+
+#, python-brace-format
+msgid "Unlink selected {0}"
+msgstr "Unlink selected {0}"
+
+#, python-brace-format
+msgid "Edit {0}"
+msgstr "Edit {0}"
+
+#, python-brace-format
+msgid "Edit selected {0}"
+msgstr "Edit selected {0}"
+
+msgid "lead list"
+msgid_plural "lead lists"
+msgstr[0] "lead list"
+msgstr[1] "lead lists"
+
+msgid "lead lists"
+msgstr "lead lists"
+
+msgid "Quick Search"
+msgstr "Quick Search"
+
+msgid "Last Modified Time"
+msgstr ""
+
+msgid "Last Modified By"
+msgstr ""
+
+msgid "Creation Time"
+msgstr "Creation Time"
+
+msgid "Created By"
+msgstr ""
+
+msgid "X Lead"
+msgstr ""
+
+msgid "disabled"
+msgstr ""
+
+msgid "Archived"
+msgstr ""
+
+msgid "Product"
+msgstr "Product"
+
+msgid "Price"
+msgstr "Price"
+
+msgid "Quantity"
+msgstr "Quantity"
+
+msgid "Search for Products to add ..."
+msgstr "Search for Products to add ..."
+
+msgid "No Tasks to display"
+msgstr "No Tasks to display"
+
+msgid "Summary"
+msgstr "Summary"
+
+msgid "Add a task..."
+msgstr "Add a task..."
+
+msgid "Percent"
+msgstr "Percent"
+
+msgid "Organizer"
+msgstr ""
+
+msgid "GENDER_Lead"
+msgstr ""
+
+msgid "Show Closed"
+msgstr ""
+
+msgid "All leads"
+msgstr "All leads"
+
+msgid "Default Lead List"
+msgstr ""
+
+msgid "The default list for new leads"
+msgstr ""
+
+msgid "Get Notification E-mails"
+msgstr ""
+
+msgid "The level of actions you want to be notified about."
+msgstr "The level of actions you want to be notified about."
+
+msgid "Send Notifications e-mails for own actions"
+msgstr ""
+
+msgid "Get notifications e-mails for actions you did yourself"
+msgstr ""
+
+msgid "Default Favorite"
+msgstr "Default Favorite"
+
+msgid "The default favorite which is loaded on crm startup"
+msgstr "The default favorite which is loaded on crm startup"
+
+msgid "All leads I have read grants for"
+msgstr "All leads I have read grants for"
+
+msgid "Last modified by me"
+msgstr "Last modified by me"
+
+msgid "All leads that I have last modified"
+msgstr "All leads that I have last modified"
+
+msgid "My leads"
+msgstr "My leads"
+
+msgid "All leads that I am responsible for"
+msgstr "All leads that I am responsible for"
+
+msgid "Leads with overdue tasks"
+msgstr "Leads with overdue tasks"
+
+#~ msgid "Get Notification Emails"
+#~ msgstr "Get Notification Emails"
+
+#~ msgid "Send Notifications Emails for own actions"
+#~ msgstr "Send Notifications Emails for own actions"
+
+#~ msgid "Get notifications emails for actions you did yourself"
+#~ msgstr "Get notifications emails for actions you did yourself"

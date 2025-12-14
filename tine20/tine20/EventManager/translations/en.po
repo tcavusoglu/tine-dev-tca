@@ -1,0 +1,796 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0 - EventManager\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2008-07-29 21:14+0100\n"
+"Last-Translator: Cornelius Weiss <c.weiss@metaways.de>\n"
+"Language-Team: Tine 2.0 Translators\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Main Event"
+msgstr "Main Event"
+
+msgid "Workshop"
+msgstr "Workshop"
+
+msgid "Project Event"
+msgstr "Project Event"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Open"
+msgstr "Open"
+
+msgid "Closed"
+msgstr "Closed"
+
+msgid "Cancelled"
+msgstr "Cancelled"
+
+msgid "Planning"
+msgstr "Planning"
+
+msgid "Function"
+msgstr "Function"
+
+msgid "Attendee"
+msgstr "Attendee"
+
+msgid "Speaker"
+msgstr "Speaker"
+
+msgid "Moderator"
+msgstr "Moderator"
+
+msgid "Employee"
+msgstr "Employee"
+
+msgid "Source"
+msgstr "Source"
+
+msgid "Online"
+msgstr "Online"
+
+msgid "Manually"
+msgstr "Manually"
+
+msgid "Confirmed"
+msgstr "Confirmed"
+
+msgid "Waiting list"
+msgstr "Waiting list"
+
+msgid "Reason Waiting List"
+msgstr "Reason Waiting List"
+
+msgid "Capacity exceeded"
+msgstr "Capacity exceeded"
+
+msgid "Registration deadline passed"
+msgstr "Registration deadline passed"
+
+msgid "Other"
+msgstr "Other"
+
+msgid "Rescheduled"
+msgstr "Rescheduled"
+
+msgid "Level"
+msgstr "Level"
+
+msgid "Level 1"
+msgstr "Level 1"
+
+msgid "Level 2"
+msgstr "Level 2"
+
+msgid "Level 3"
+msgstr "Level 3"
+
+msgid "Level 4"
+msgstr "Level 4"
+
+msgid "Level 5"
+msgstr "Level 5"
+
+msgid "Level 6"
+msgstr "Level 6"
+
+msgid "Option Required Type"
+msgstr "Option Required Type"
+
+msgid "List of all option required type available"
+msgstr "List of all option required type available"
+
+msgid "Yes"
+msgstr "Yes"
+
+msgid "No"
+msgstr "No"
+
+msgid "If"
+msgstr "If"
+
+msgid "Display Type"
+msgstr "Display Type"
+
+msgid "List of all display type available"
+msgstr "List of all display type available"
+
+msgid "Always"
+msgstr "Always"
+
+msgid "Rule Type"
+msgstr "Rule Type"
+
+msgid "List of all rule type available"
+msgstr "List of all rule type available"
+
+msgid "One or more conditions are fulfilled"
+msgstr "One or more conditions are fulfilled"
+
+msgid "All conditions are fulfilled"
+msgstr "All conditions are fulfilled"
+
+msgid "Criteria Type"
+msgstr "Criteria Type"
+
+msgid "List of all criteria type available"
+msgstr "List of all criteria type available"
+
+msgid "is"
+msgstr "is"
+
+msgid "is not"
+msgstr "is not"
+
+msgid "greater or equal to"
+msgstr "greater or equal to"
+
+msgid "smaller than"
+msgstr "smaller than"
+
+msgid "Default Container for Contacts of an Event"
+msgstr "Default Container for Contacts of an Event"
+
+msgid "The container where new contacts are created."
+msgstr "The container where new contacts are created."
+
+msgid "Allowed file type"
+msgstr "Allowed file type"
+
+msgid "Event Folder FileManager Path"
+msgstr "Event Folder FileManager Path"
+
+msgid "EventManager registration secret string"
+msgstr "EventManager registration secret string"
+
+msgid "The EventManager JWT secret string"
+msgstr "The EventManager JWT secret string"
+
+msgid "Options"
+msgstr "Options"
+
+msgid "Registrations"
+msgstr "Registrations"
+
+msgid "Deregistered"
+msgstr "Deregistered"
+
+msgid "Event Manager | RSS"
+msgstr "Event Manager | RSS"
+
+msgid "All Events in Event Manager"
+msgstr "All Events in Event Manager"
+
+msgid "Sign Up"
+msgstr "Sign Up"
+
+msgid "Event Information"
+msgstr "Event Information"
+
+msgid "Registration"
+msgid_plural "Registrations"
+msgstr[0] "Registration"
+msgstr[1] "Registrations"
+
+msgid "The event should end after the start date"
+msgstr "The event should end after the start date"
+
+msgid "One should be able to register before the end date"
+msgstr "One should be able to register before the end date"
+
+msgid "Event Options"
+msgstr "Event Options"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Enter description"
+msgstr "Enter description"
+
+msgid "Multi-appointment"
+msgstr "Multi-appointment"
+
+msgid "Appointments"
+msgstr "Appointments"
+
+msgid "The session should take place before the end date. Please change the date or it would be change automatically"
+msgstr "The session should take place before the end date. Please change the date or it would be change automatically"
+
+msgid "The session should start on the same date or after the event started. Please change the date or it would be change automatically"
+msgstr "The session should start on the same date or after the event started. Please change the date or it would be change automatically"
+
+msgid "The session should end after it begun. Please change the end time, or it would be deleted"
+msgstr "The session should end after it begun. Please change the end time, or it would be deleted"
+
+msgid "Waiting List"
+msgstr "Waiting List"
+
+msgid "Since there are no more available places, this registration is on the waiting list."
+msgstr "Since there are no more available places, this registration is on the waiting list."
+
+msgid "Imprint"
+msgstr "Imprint"
+
+msgid "Privacy Notice"
+msgstr "Privacy Notice"
+
+msgid "Information of the event:"
+msgstr "Information of the event:"
+
+msgid "When:"
+msgstr "When:"
+
+msgid "Until:"
+msgstr "Until:"
+
+msgid "Appointments:"
+msgstr "Appointments:"
+
+msgid "Session"
+msgstr "Session"
+
+msgid "Address:"
+msgstr "Address:"
+
+msgid "Fee:"
+msgstr "Fee:"
+
+msgid "Registration possible until:"
+msgstr "Registration possible until:"
+
+msgid "Manage my registration"
+msgstr "Manage my registration"
+
+msgid "Register now"
+msgstr "Register now"
+
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid "Please enter a valid email address"
+msgstr "Please enter a valid email address"
+
+msgid "Email Address"
+msgstr "Email Address"
+
+msgid "Please enter your email address to continue:"
+msgstr "Please enter your email address to continue:"
+
+msgid "Enter your email address"
+msgstr "Enter your email address"
+
+msgid "Registration Request Sent"
+msgstr "Registration Request Sent"
+
+msgid "Please check your email and click the confirmation link to continue."
+msgstr "Please check your email and click the confirmation link to continue."
+
+msgid "Registration Error"
+msgstr "Registration Error"
+
+msgid "There was an error sending your registration request. Please try again later."
+msgstr "There was an error sending your registration request. Please try again later."
+
+msgid "Events"
+msgstr "Events"
+
+msgid "More Information"
+msgstr "More Information"
+
+msgid "Website"
+msgstr "Website"
+
+msgid "Welcome back! We’ve preloaded your saved information. Please confirm or update your details to keep your account current."
+msgstr "Welcome back! We’ve preloaded your saved information. Please confirm or update your details to keep your account current."
+
+msgid "You already sign for this event. If you want to register a new person under the same e-mail account click"
+msgstr "You already sign for this event. If you want to register a new person under the same e-mail account click"
+
+msgid "here"
+msgstr "here"
+
+msgid "characters"
+msgstr "characters"
+
+msgid "Download file"
+msgstr "Download file"
+
+msgid "I have read the document and accept the terms and conditions"
+msgstr "I have read the document and accept the terms and conditions"
+
+msgid "Uploaded file"
+msgstr "Uploaded file"
+
+msgid "Delete file"
+msgstr "Delete file"
+
+msgid "Update Registration"
+msgstr "Update Registration"
+
+msgid "Cancel Registration"
+msgstr "Cancel Registration"
+
+msgid "Register"
+msgstr "Register"
+
+msgid "Registration for"
+msgstr "Registration for"
+
+msgid "on the"
+msgstr "on the"
+
+msgid "Mr"
+msgstr "Mr"
+
+msgid "Ms"
+msgstr "Ms"
+
+msgid "Company"
+msgstr "Company"
+
+msgid "Person"
+msgstr "Person"
+
+msgid "Deutschland"
+msgstr "Deutschland"
+
+msgid "Do you really want to cancel your registration for"
+msgstr "Do you really want to cancel your registration for"
+
+msgid "Registration Cancelled"
+msgstr "Registration Cancelled"
+
+msgid "Your registration has been cancelled successfully."
+msgstr "Your registration has been cancelled successfully."
+
+msgid "Error"
+msgstr "Error"
+
+msgid "Could not cancel your registration. Please try again later."
+msgstr "Could not cancel your registration. Please try again later."
+
+msgid "The registration date for"
+msgstr "The registration date for"
+
+msgid "has expired. If you register you will be on our waiting list. Do you still want to register?"
+msgstr "has expired. If you register you will be on our waiting list. Do you still want to register?"
+
+msgid "The event"
+msgstr "The event"
+
+msgid "is full. If you register you will be on our waiting list. Do you still want to register?"
+msgstr "is full. If you register you will be on our waiting list. Do you still want to register?"
+
+msgid "Validation Error"
+msgstr "Validation Error"
+
+msgid "Please fill all required fields."
+msgstr "Please fill all required fields."
+
+msgid "Your registration was updated successfully."
+msgstr "Your registration was updated successfully."
+
+msgid "Success"
+msgstr "Success"
+
+msgid "Registration completed successfully! You will receive a confirmation e-mail."
+msgstr "Registration completed successfully! You will receive a confirmation e-mail."
+
+msgid "Registration failed. Please try again."
+msgstr "Registration failed. Please try again."
+
+msgid "File Acknowledgement"
+msgstr "File Acknowledgement"
+
+msgid "File Upload"
+msgstr "File Upload"
+
+msgid "Multiple files not allowed"
+msgstr "Multiple files not allowed"
+
+msgid "Please select only one file."
+msgstr "Please select only one file."
+
+msgid "File type not allowed: "
+msgstr "File type not allowed: "
+
+msgid "File type not allowed"
+msgstr "File type not allowed"
+
+msgid "The type of the file \""
+msgstr "The type of the file \""
+
+msgid "\" is not allowed. Please select another file."
+msgstr "\" is not allowed. Please select another file."
+
+msgid "File Configuration"
+msgstr "File Configuration"
+
+msgid "File Required"
+msgstr "File Required"
+
+msgid "Please upload a file or uncheck the file acknowledgement option before saving."
+msgstr "Please upload a file or uncheck the file acknowledgement option before saving."
+
+msgid "Files"
+msgstr "Files"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Size"
+msgstr "Size"
+
+msgid "Content type"
+msgstr "Content type"
+
+msgid "Folder"
+msgstr "Folder"
+
+msgid "Creation Time"
+msgstr "Creation Time"
+
+msgid "Last Modified Time"
+msgstr "Last Modified Time"
+
+msgid "Edit Rules"
+msgstr "Edit Rules"
+
+msgid "Option"
+msgid_plural "Options"
+msgstr[0] "Option"
+msgstr[1] "Options"
+
+msgid "Rules"
+msgstr "Rules"
+
+msgid "GENDER_Appointment"
+msgstr "GENDER_Appointment"
+
+msgid "Appointment"
+msgid_plural "Appointments"
+msgstr[0] "Appointment"
+msgstr[1] "Appointments"
+
+msgid "Session number"
+msgstr "Session number"
+
+msgid "Date"
+msgstr "Date"
+
+msgid "Start Time"
+msgstr "Start Time"
+
+msgid "End Time"
+msgstr "End Time"
+
+msgid "GENDER_Booked Option"
+msgstr "GENDER_Booked Option"
+
+msgid "Booked Option"
+msgid_plural "Booked Options"
+msgstr[0] "Booked Option"
+msgstr[1] "Booked Options"
+
+msgid "Event Option"
+msgstr "Event Option"
+
+msgid "Selection Config"
+msgstr "Selection Config"
+
+msgid "GENDER_Checkbox"
+msgstr "GENDER_Checkbox"
+
+msgid "Checkbox"
+msgid_plural "Checkboxes"
+msgstr[0] "Checkbox"
+msgstr[1] "Checkboxes"
+
+msgid "Price"
+msgstr "Price"
+
+msgid "Total places"
+msgstr "Total places"
+
+msgid "Booked places"
+msgstr "Booked places"
+
+msgid "Available places"
+msgstr "Available places"
+
+msgid "GENDER_Event"
+msgstr "GENDER_Event"
+
+msgid "Event"
+msgid_plural "Events"
+msgstr[0] "Event"
+msgstr[1] "Events"
+
+msgid "Event start"
+msgstr "Event start"
+
+msgid "Event end"
+msgstr "Event end"
+
+msgid "Registration possible until"
+msgstr "Registration possible until"
+
+msgid "Location"
+msgstr "Location"
+
+msgid "Fee"
+msgstr "Fee"
+
+msgid "Event Registrations"
+msgstr "Event Registrations"
+
+msgid "Event Appointments"
+msgstr "Event Appointments"
+
+msgid "Event is live"
+msgstr "Event is live"
+
+msgid "GENDER_File"
+msgstr "GENDER_File"
+
+msgid "File"
+msgid_plural "Files"
+msgstr[0] "File"
+msgstr[1] "Files"
+
+msgid "Only participant acknowledgement is necessary (no participant document upload)"
+msgstr "Only participant acknowledgement is necessary (no participant document upload)"
+
+msgid "Participant should upload a file"
+msgstr "Participant should upload a file"
+
+msgid "GENDER_Option"
+msgstr "GENDER_Option"
+
+msgid "Config"
+msgstr "Config"
+
+msgid "Group"
+msgstr "Group"
+
+msgid "If you want multiple options as a group so that only one option of the group can be chosen, give them the same group name, otherwise leave this field empty"
+msgstr "If you want multiple options as a group so that only one option of the group can be chosen, give them the same group name, otherwise leave this field empty"
+
+msgid "Display Sorting"
+msgstr "Display Sorting"
+
+msgid "Option required"
+msgstr "Option required"
+
+msgid "The participant must give an answer"
+msgstr "The participant must give an answer"
+
+msgid "Display on website"
+msgstr "Display on website"
+
+msgid "You can choose if and how this option is displayed on the website"
+msgstr "You can choose if and how this option is displayed on the website"
+
+msgid "Option rule"
+msgid_plural "Option rules"
+msgstr[0] "Option rule"
+msgstr[1] "Option rules"
+
+msgid "GENDER_Option rule"
+msgstr "GENDER_Option rule"
+
+msgid "Criteria"
+msgstr "Criteria"
+
+msgid "Value"
+msgstr "Value"
+
+msgid "GENDER_Registration"
+msgstr "GENDER_Registration"
+
+msgid "Participant"
+msgstr "Participant"
+
+msgid "Registrator"
+msgstr "Registrator"
+
+msgid "If the event is full it will not be possible to selected confirmed"
+msgstr "If the event is full it will not be possible to selected confirmed"
+
+msgid "Reason waiting list"
+msgstr "Reason waiting list"
+
+msgid "Booked options"
+msgstr "Booked options"
+
+msgid "GENDER_Selection"
+msgstr "GENDER_Selection"
+
+msgid "Selection"
+msgid_plural "Selections"
+msgstr[0] "Selection"
+msgstr[1] "Selections"
+
+msgid "Selection Config Class"
+msgstr "Selection Config Class"
+
+msgid "Booked"
+msgstr "Booked"
+
+msgid "GENDER_File selection"
+msgstr "GENDER_File selection"
+
+msgid "File selection"
+msgid_plural "File selections"
+msgstr[0] "File selection"
+msgstr[1] "File selections"
+
+msgid "Participant acknowledged the document"
+msgstr "Participant acknowledged the document"
+
+msgid "Participant uploaded a file"
+msgstr "Participant uploaded a file"
+
+msgid "GENDER_TextInput"
+msgstr "GENDER_TextInput"
+
+msgid "TextInput"
+msgid_plural "TextInputs"
+msgstr[0] "TextInput"
+msgstr[1] "TextInputs"
+
+msgid "Response"
+msgstr "Response"
+
+msgid "GENDER_Text Input"
+msgstr "GENDER_Text Input"
+
+msgid "Text Input"
+msgid_plural "Text Input"
+msgstr[0] "Text Input"
+msgstr[1] "Text Input"
+
+msgid "Text"
+msgstr "Text"
+
+msgid "Here you can ask the participant for relevant information for the event"
+msgstr "Here you can ask the participant for relevant information for the event"
+
+msgid "Reply can only be a number"
+msgstr "Reply can only be a number"
+
+msgid "Multiple lines reply allowed"
+msgstr "Multiple lines reply allowed"
+
+msgid "Maximal number of characters allowed"
+msgstr "Maximal number of characters allowed"
+
+msgid "GENDER_Text Output"
+msgstr "GENDER_Text Output"
+
+msgid "Text Output"
+msgid_plural "Text Outputs"
+msgstr[0] "Text Output"
+msgstr[1] "Text Outputs"
+
+msgid "EventManager"
+msgstr "EventManager"
+
+msgid "Salutation"
+msgstr "Salutation"
+
+msgid "Title"
+msgstr "Title"
+
+msgid "First Name"
+msgstr "First Name"
+
+msgid "Middle Name"
+msgstr "Middle Name"
+
+msgid "Last Name"
+msgstr "Last Name"
+
+msgid "Day of Birth"
+msgstr "Day of Birth"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid "Mobile"
+msgstr "Mobile"
+
+msgid "Telephone"
+msgstr "Telephone"
+
+msgid "Street"
+msgstr "Street"
+
+msgid "House Nr."
+msgstr "House Nr."
+
+msgid "Postal Code"
+msgstr "Postal Code"
+
+msgid "City"
+msgstr "City"
+
+msgid "Region"
+msgstr "Region"
+
+msgid "Country"
+msgstr "Country"
+
+msgid "Confirmation E-mail"
+msgstr "Confirmation E-mail"
+
+msgid "You are registered for %1$s."
+msgstr "You are registered for %1$s."
+
+msgid "To find other events or manage your registration, please follow the link below"
+msgstr "To find other events or manage your registration, please follow the link below"
+
+msgid "Deregistration E-mail"
+msgstr "Deregistration E-mail"
+
+msgid "Your registration for %1$s has been cancelled successfully."
+msgstr "Your registration for %1$s has been cancelled successfully."
+
+msgid "To find other events, please follow the link below"
+msgstr "To find other events, please follow the link below"
+
+msgid "More Events"
+msgstr "More Events"
+
+msgid "Confirm your E-mail"
+msgstr "Confirm your E-mail"
+
+msgid "You have received this email because you wish to register for an event or modify your existing registration."
+msgstr "You have received this email because you wish to register for an event or modify your existing registration."
+
+msgid "To continue please confirm your email address by clicking on the button below."
+msgstr "To continue please confirm your email address by clicking on the button below."
+
+msgid "Confirm E-Mail address"
+msgstr "Confirm E-Mail address"
+
+msgid "If you did not make this request yourself, you can simply ignore this message — no further action is required."
+msgstr "If you did not make this request yourself, you can simply ignore this message — no further action is required."
+
+msgid "Thank you for your interest!"
+msgstr "Thank you for your interest!"
+
+msgid "Unfortunately the event %1$s is currently full. We add you to our waiting list. If a space opens we will inform you."
+msgstr "Unfortunately the event %1$s is currently full. We add you to our waiting list. If a space opens we will inform you."

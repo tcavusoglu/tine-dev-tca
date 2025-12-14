@@ -1,0 +1,100 @@
+<?php declare(strict_types=1);
+/**
+ * Tine 2.0
+ *
+ * @package     Tinebase
+ * @subpackage  Auth
+ * @license     http://www.gnu.org/licenses/agpl.html AGPL Version 3
+ * @copyright   Copyright (c) 2021-2025 Metaways Infosystems GmbH (http://www.metaways.de)
+ * @author      Paul Mehrer <p.mehrer@metaways.de>
+ */
+
+use Tinebase_Auth_MFA_YubicoUtil as Yubico;
+
+/**
+ * Yubico OTP SecondFactor Auth Adapter
+ *
+ * @package     Tinebase
+ * @subpackage  Auth
+ */
+class Tinebase_Auth_MFA_YubicoOTPAdapter implements Tinebase_Auth_MFA_AdapterInterface
+{
+    protected $_mfaId;
+
+    public function __construct(Tinebase_Record_Interface $_config, string $id)
+    {
+        $this->_mfaId = $id;
+    }
+
+    public function getClientPasswordLength(): ?int
+    {
+        return null;
+    }
+
+    public function sendOut(Tinebase_Model_MFA_UserConfig $_userCfg, Tinebase_Model_FullUser $user): bool
+    {
+        return true;
+    }
+
+    public function validate($_data, Tinebase_Model_MFA_UserConfig $_userCfg): bool
+    {
+        if (!$_userCfg->{Tinebase_Model_MFA_UserConfig::FLD_CONFIG} instanceof Tinebase_Model_MFA_YubicoOTPUserConfig) {
+            return false;
+        }
+        /** @var Tinebase_Model_MFA_YubicoOTPUserConfig $yubicoOTPCfg */
+        $yubicoOTPCfg = $_userCfg->{Tinebase_Model_MFA_UserConfig::FLD_CONFIG};
+        if (empty($yubicoOTPCfg->{Tinebase_Model_MFA_YubicoOTPUserConfig::FLD_CC_ID})) {
+            return false;
+        }
+
+        $_data = strtolower((string) $_data);
+        if (!preg_match("/^([cbdefghijklnrtuv]{1,16})([cbdefghijklnrtuv]{32})$/", $_data, $matches)) {
+            return false;
+        }
+        $id = $matches[1];
+        $modhex_ciphertext = $matches[2];
+
+        if ($id !== $yubicoOTPCfg->{Tinebase_Model_MFA_YubicoOTPUserConfig::FLD_PUBLIC_ID}) {
+            return false;
+        }
+
+        /** @var Tinebase_Model_CredentialCache $cc */
+        $cc = Tinebase_Auth_CredentialCache::getInstance()->get(
+            $yubicoOTPCfg->{Tinebase_Model_MFA_YubicoOTPUserConfig::FLD_CC_ID});
+        $cc->key = Tinebase_Auth_CredentialCache_Adapter_Shared::getKey();
+        Tinebase_Auth_CredentialCache::getInstance()->getCachedCredentials($cc);
+
+        $ciphertext = Yubico::modhex2hex($modhex_ciphertext);
+        $plaintext = Yubico::aes128ecb_decrypt($cc->password, $ciphertext);
+
+        if (!Yubico::crc_is_good($plaintext)) {
+            return false;
+        }
+
+        if (substr((string) $plaintext, 0, 12) !== $cc->username) {
+            return false;
+        }
+        $counter = intval(substr((string) $plaintext, 14, 2) . substr((string) $plaintext, 12, 2), 16);
+        $session = intval(substr((string) $plaintext, 22, 2), 16);
+
+        if ($counter > intval($yubicoOTPCfg->{Tinebase_Model_MFA_YubicoOTPUserConfig::FLD_COUNTER}) || (
+                $counter === intval($yubicoOTPCfg->{Tinebase_Model_MFA_YubicoOTPUserConfig::FLD_COUNTER}) &&
+                $session > intval($yubicoOTPCfg->{Tinebase_Model_MFA_YubicoOTPUserConfig::FLD_SESSIONC}))) {
+
+            return Tinebase_Auth_MFA::getInstance($_userCfg->{Tinebase_Model_MFA_UserConfig::FLD_MFA_CONFIG_ID})
+                ->persistUserConfig($yubicoOTPCfg->{Tinebase_Model_MFA_HOTPUserConfig::FLD_ACCOUNT_ID},
+                    function(Tinebase_Model_FullUser $user) use($counter, $session, $_userCfg) {
+                        if (!($cfg = $user->mfa_configs->getById($_userCfg->getId()))) {
+                            return false;
+                        }
+                        $cfg->{Tinebase_Model_MFA_UserConfig::FLD_CONFIG}
+                            ->{Tinebase_Model_MFA_YubicoOTPUserConfig::FLD_COUNTER} = $counter;
+                        $cfg->{Tinebase_Model_MFA_UserConfig::FLD_CONFIG}
+                            ->{Tinebase_Model_MFA_YubicoOTPUserConfig::FLD_SESSIONC} = $session;
+                        return true;
+                    });
+        }
+
+        return false;
+    }
+}

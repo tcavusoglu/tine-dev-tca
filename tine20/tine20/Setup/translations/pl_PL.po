@@ -1,0 +1,624 @@
+#
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:59+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Polish (Poland) (http://www.transifex.com/tine20/tine20/language/pl_PL/)\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Maximum number of users reached. "
+msgstr ""
+
+msgid "Please contact Metaways Infosystems GmbH to buy a license that supports a "
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "Order"
+msgstr ""
+
+msgid "Installed Version"
+msgstr ""
+
+msgid "Available Version"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Depends on"
+msgstr ""
+
+msgid "Install application"
+msgstr ""
+
+msgid "Uninstall application"
+msgstr ""
+
+msgid "Update applications"
+msgstr ""
+
+#, python-brace-format
+msgid "Go to {0} login"
+msgstr ""
+
+msgid "uninstall"
+msgstr ""
+
+msgid "Do you really want to uninstall the application(s)?"
+msgstr ""
+
+msgid "This may take a while"
+msgstr ""
+
+msgid "Dependency Violation"
+msgstr ""
+
+msgid "CLI Required"
+msgstr ""
+
+msgid "Delete all existing users and groups"
+msgstr ""
+
+msgid "Switching from SQL to LDAP will delete all existing User Accounts, Groups and Roles. Do you really want to switch the accounts storage backend to LDAP ?"
+msgstr ""
+
+msgid "Backend"
+msgstr ""
+
+msgid "TLS client certificate"
+msgstr ""
+
+msgid "Initial Admin User"
+msgstr ""
+
+msgid "Initial admin login name"
+msgstr ""
+
+msgid "Initial admin Password"
+msgstr ""
+
+msgid "Password confirmation"
+msgstr ""
+
+msgid "Authentication provider"
+msgstr ""
+
+msgid "Try to split username"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Account canonical form"
+msgstr ""
+
+msgid "Account domain name"
+msgstr ""
+
+msgid "Account domain short name"
+msgstr ""
+
+msgid "Host"
+msgstr ""
+
+msgid "Login name"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Bind requires DN"
+msgstr ""
+
+msgid "Start TLS"
+msgstr ""
+
+msgid "SSL"
+msgstr ""
+
+msgid "Port"
+msgstr ""
+
+msgid "Base DN"
+msgstr ""
+
+msgid "Search filter"
+msgstr ""
+
+msgid "Hostname"
+msgstr ""
+
+msgid "Secure Connection"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "TLS"
+msgstr ""
+
+msgid "Append domain to login name"
+msgstr ""
+
+msgid "Certificate validation"
+msgstr ""
+
+msgid "CA file"
+msgstr ""
+
+msgid "CRL directory"
+msgstr ""
+
+msgid "Accounts storage"
+msgstr ""
+
+msgid "Default user group name"
+msgstr ""
+
+msgid "Default admin group name"
+msgstr ""
+
+msgid "Login panel"
+msgstr ""
+
+msgid "Reuse last username logged"
+msgstr ""
+
+msgid "Password Settings"
+msgstr ""
+
+msgid "User can change password"
+msgstr ""
+
+msgid "Enable password policy"
+msgstr ""
+
+msgid "Only ASCII"
+msgstr ""
+
+msgid "Minimum length"
+msgstr ""
+
+msgid "Minimum word chars"
+msgstr ""
+
+msgid "Minimum uppercase chars"
+msgstr ""
+
+msgid "Minimum special chars"
+msgstr ""
+
+msgid "Minimum numbers"
+msgstr ""
+
+msgid "Change password after ... days"
+msgstr ""
+
+msgid "Forbid part of username in password"
+msgstr ""
+
+msgid "Redirect Settings"
+msgstr ""
+
+msgid "Redirect Url (redirect to login screen if empty)"
+msgstr ""
+
+msgid "Redirect Always (if No, only redirect after logout)"
+msgstr ""
+
+msgid "Redirect to referring site, if exists"
+msgstr ""
+
+msgid "Password encoding"
+msgstr ""
+
+msgid "des"
+msgstr ""
+
+msgid "crypt"
+msgstr ""
+
+msgid "blowfish_crypt"
+msgstr ""
+
+msgid "md5_crypt"
+msgstr ""
+
+msgid "ext_crypt"
+msgstr ""
+
+msgid "md5"
+msgstr ""
+
+msgid "smd5"
+msgstr ""
+
+msgid "sha"
+msgstr ""
+
+msgid "ssha"
+msgstr ""
+
+msgid "ntpassword"
+msgstr ""
+
+msgid "plain"
+msgstr ""
+
+msgid "User DN"
+msgstr ""
+
+msgid "User Filter"
+msgstr ""
+
+msgid "E-Mail Attribute"
+msgstr ""
+
+msgid "Write Password to SQL backend"
+msgstr ""
+
+msgid "User Search Scope"
+msgstr ""
+
+msgid "Groups DN"
+msgstr ""
+
+msgid "Group Filter"
+msgstr ""
+
+msgid "Group Search Scope"
+msgstr ""
+
+msgid "Use Rfc 2307 bis"
+msgstr ""
+
+msgid "Maintain RFC 2307 attributes"
+msgstr ""
+
+msgid "Min User Id"
+msgstr ""
+
+msgid "Max User Id"
+msgstr ""
+
+msgid "Min Group Id"
+msgstr ""
+
+msgid "Max Group Id"
+msgstr ""
+
+msgid "Group UUID Attribute name"
+msgstr ""
+
+msgid "User UUID Attribute name"
+msgstr ""
+
+msgid "Readonly access"
+msgstr ""
+
+msgid "Save config and install"
+msgstr ""
+
+msgid "Save config"
+msgstr ""
+
+msgid "Passwords don't match"
+msgstr ""
+
+msgid "Should not be empty"
+msgstr ""
+
+msgid "File"
+msgstr ""
+
+msgid "Setup Authentication"
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "Database"
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "Prefix"
+msgstr ""
+
+msgid "Logging"
+msgstr ""
+
+msgid "Filename"
+msgstr ""
+
+msgid "Priority"
+msgstr ""
+
+msgid "Caching"
+msgstr ""
+
+msgid "Lifetime (seconds)"
+msgstr ""
+
+msgid "Path"
+msgstr ""
+
+msgid "Queue"
+msgstr ""
+
+msgid "Session"
+msgstr ""
+
+msgid "Temporary files"
+msgstr ""
+
+msgid "Temporary Files Path"
+msgstr ""
+
+msgid "Filestore directory"
+msgstr ""
+
+msgid "Filestore Path"
+msgstr ""
+
+msgid "Addressbook Map panel"
+msgstr ""
+
+msgid "Map panel"
+msgstr ""
+
+msgid "disabled"
+msgstr ""
+
+msgid "enabled"
+msgstr ""
+
+msgid "Config file is not writable"
+msgstr ""
+
+msgid "Download config file"
+msgstr ""
+
+#, python-brace-format
+msgid "This prefix is too long. Please choose a prefix no longer than {0} chars."
+msgstr ""
+
+msgid "Standard IMAP"
+msgstr ""
+
+msgid "Standard SMTP"
+msgstr ""
+
+msgid "Imap"
+msgstr ""
+
+msgid "Verify peer Certificate"
+msgstr ""
+
+msgid "Use system account"
+msgstr ""
+
+msgid "Use email address as login name"
+msgstr ""
+
+msgid "Cyrus Admin"
+msgstr ""
+
+msgid "Cyrus Admin Password"
+msgstr ""
+
+msgid "Use proxy auth"
+msgstr ""
+
+msgid "Smtp"
+msgstr ""
+
+msgid "Authentication"
+msgstr ""
+
+msgid "Login"
+msgstr ""
+
+msgid "Plain"
+msgstr ""
+
+msgid "Primary Domain"
+msgstr ""
+
+msgid "Secondary Domains (comma separated)"
+msgstr ""
+
+msgid "Aditional Domains (comma separated)"
+msgstr ""
+
+msgid "Notifications service address"
+msgstr ""
+
+msgid "Notification Username"
+msgstr ""
+
+msgid "Notification Password"
+msgstr ""
+
+msgid "Notifications local client (hostname or IP address)"
+msgstr ""
+
+msgid "SIEVE"
+msgstr ""
+
+msgid "MySql Hostname"
+msgstr ""
+
+msgid "MySql Database"
+msgstr ""
+
+msgid "MySql User"
+msgstr ""
+
+msgid "MySql Password"
+msgstr ""
+
+msgid "MySql Port"
+msgstr ""
+
+msgid "User or UID"
+msgstr ""
+
+msgid "Group or GID"
+msgstr ""
+
+msgid "Home Template"
+msgstr ""
+
+msgid "Password Scheme"
+msgstr ""
+
+msgid "PLAIN-MD5"
+msgstr ""
+
+msgid "MD5-CRYPT"
+msgstr ""
+
+msgid "SHA1"
+msgstr ""
+
+msgid "SHA256"
+msgstr ""
+
+msgid "SSHA256"
+msgstr ""
+
+msgid "SHA512"
+msgstr ""
+
+msgid "SSHA512"
+msgstr ""
+
+msgid "PLAIN"
+msgstr ""
+
+msgid "Performing Environment Checks..."
+msgstr ""
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria, view-options or the {1} you search in."
+msgstr ""
+
+msgid "Check"
+msgstr ""
+
+msgid "Result"
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "Run setup tests"
+msgstr ""
+
+msgid "Ignore setup tests"
+msgstr ""
+
+msgid "Setup"
+msgstr ""
+
+msgid "Delete current Subscription"
+msgstr ""
+
+msgid "Your Subscription is not valid."
+msgstr ""
+
+msgid "Subscription Configuration"
+msgstr ""
+
+msgid "Upload from disk"
+msgstr ""
+
+msgid "Select file containing your Subscription key"
+msgstr ""
+
+msgid "No valid Subscription"
+msgstr ""
+
+msgid "Contract ID"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "Activation Key"
+msgstr ""
+
+msgid "Maximum Users (0=unlimited)"
+msgstr ""
+
+msgid "Valid from"
+msgstr ""
+
+msgid "Valid to"
+msgstr ""
+
+msgid "Subscription Information"
+msgstr ""
+
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+msgid "I have read the license agreement and accept it"
+msgstr ""
+
+msgid "License Agreement"
+msgstr ""
+
+msgid "I have read the privacy agreement and accept it"
+msgstr ""
+
+msgid "Privacy Agreement"
+msgstr ""
+
+msgid "Accept Terms and Conditions"
+msgstr ""
+
+msgid "Terms and Conditions"
+msgstr ""
+
+msgid "Setup Checks"
+msgstr ""
+
+msgid "Config Manager"
+msgstr ""
+
+msgid "Authentication/Accounts"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Application Manager"
+msgstr ""
+
+msgid "Subscription"
+msgstr ""

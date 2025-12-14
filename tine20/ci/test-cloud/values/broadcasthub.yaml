@@ -1,0 +1,7 @@
+tine:
+  features:
+    broadcasthub:
+      active: true
+      redis:
+        host: broadcasthub-shared-redis.mws-hosting.net
+      url: wss://broadcasthub-shared.mws-hosting.net

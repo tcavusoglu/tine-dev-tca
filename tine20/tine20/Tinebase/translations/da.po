@@ -1,0 +1,4353 @@
+#
+# Translators:
+# Sylvester Nielsen <sn@cbox.dk>, 2012
+# Sylvester Nielsen <sn@cbox.dk>, 2012-2013
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-04-02 12:12+0000\n"
+"Last-Translator: Sylvester Nielsen <sn@cbox.dk>, 2012-2013\n"
+"Language-Team: Danish (http://app.transifex.com/tine/groupware/language/da/)\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "admin"
+msgstr "admin"
+
+msgid "admin right description"
+msgstr "admin rettigheds beskrivelse"
+
+msgid "run"
+msgstr "kør"
+
+msgid "run right description"
+msgstr "kør rettigheds beskrivelse"
+
+msgid "Use Mainscreen"
+msgstr ""
+
+msgid "App mainscreen is available in UI"
+msgstr ""
+
+msgid "Personal tags"
+msgstr ""
+
+msgid "Use and see personal tags"
+msgstr ""
+
+msgid "Report bugs"
+msgstr "Rapporter fejl"
+
+msgid "Report bugs to the software vendor directly when they occur."
+msgstr "Rapporter fejl til software leverandøren direkte når de opstår."
+
+msgid "Check version"
+msgstr "Check version"
+
+msgid "Check for new versions of this software."
+msgstr "Check for nye versioner af denne software"
+
+msgid "Manage bank accounts"
+msgstr ""
+
+msgid "The right to manage bank accounts."
+msgstr ""
+
+msgid "Manage own profile"
+msgstr "Administrer egen profil"
+
+msgid "The right to manage the own profile (selected contact data)."
+msgstr "Rettigheden til at administrere egen profil (valgte kontakt data) "
+
+msgid "Manage Numberables"
+msgstr ""
+
+msgid "The right to manage numberables."
+msgstr ""
+
+msgid "Manage own client state"
+msgstr "Administrer egen klient status"
+
+msgid "The right to manage the own client state."
+msgstr "Rettigheden til at administrere egen klient status."
+
+msgid "Manage evaluation dimensions"
+msgstr ""
+
+msgid "The right to manage evaluation dimensions."
+msgstr ""
+
+msgid "Maintenance"
+msgstr ""
+
+msgid "The right to use the installation in maintenance mode."
+msgstr ""
+
+msgid "Show License Info"
+msgstr ""
+
+msgid "The right to be able to see license information (expiry, ...)."
+msgstr ""
+
+msgid "Replication"
+msgstr ""
+
+msgid "The right to access the replication data of all applications."
+msgstr ""
+
+msgid "unknown"
+msgstr "ukendt"
+
+msgid "Invalid authentication"
+msgstr ""
+
+msgid "{{ code }} is your {{ app.branding.title }} security code."
+msgstr ""
+
+msgid "MFA send out failed, please try again or check with your system administrator"
+msgstr ""
+
+msgid "MFA validation failed, please try again or check with your system administrator"
+msgstr ""
+
+msgid "GENDER_Key Field Record"
+msgstr ""
+
+msgid "Key Field Record"
+msgid_plural "Key Field Records"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Value"
+msgstr ""
+
+msgid "Icon"
+msgstr ""
+
+msgid "Color"
+msgstr "Farve"
+
+msgid "System"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Accesslog rotation in days"
+msgstr ""
+
+msgid "Account Deletion Event"
+msgstr ""
+
+msgid "Configure what should happen to data of deleted users"
+msgstr ""
+
+msgid "Delete personal containers"
+msgstr ""
+
+msgid "Delete file folders and files"
+msgstr ""
+
+msgid "Delete Email accounts"
+msgstr ""
+
+msgid "Keep account as contact in the Addressbook"
+msgstr ""
+
+msgid "Keep accounts organizer events as external events in the Calendar"
+msgstr ""
+
+msgid "Keep accounts Calendar event attendee as external attendee"
+msgstr ""
+
+msgid "Additional text"
+msgstr ""
+
+msgid "Area Locks"
+msgstr ""
+
+msgid "Configured Area Locks"
+msgstr ""
+
+msgid "Database Configuration"
+msgstr ""
+
+msgid "Logger Configuration"
+msgstr ""
+
+msgid "MFA Bypass Netmasks"
+msgstr ""
+
+msgid "MFA"
+msgstr ""
+
+msgid "Configured MFAs"
+msgstr ""
+
+msgid "Available Languages"
+msgstr ""
+
+msgid "Whitelist available languages that can be chosen in the GUI"
+msgstr ""
+
+msgid "Encourage MFA at login"
+msgstr ""
+
+msgid "Encourage user at login to configure a mfa device"
+msgstr ""
+
+msgid "Build Type"
+msgstr ""
+
+msgid "One of: AUTODETECT, DEBUG, DEVELOPMENT, RELEASE"
+msgstr ""
+
+msgid "DB logger configuration"
+msgstr ""
+
+msgid "Default application"
+msgstr ""
+
+msgid "Default application for this installation."
+msgstr ""
+
+msgid "Default Locale"
+msgstr ""
+
+msgid "Default locale for this installation."
+msgstr ""
+
+msgid "Internet proxy config"
+msgstr ""
+
+msgid "System IMAP"
+msgstr "System IMAP"
+
+msgid "System IMAP server configuration."
+msgstr "System IMAP server konfiguration."
+
+msgid "System SMTP"
+msgstr "System SMTP"
+
+msgid "System SMTP server configuration."
+msgstr "System SMTP server konfiguration."
+
+msgid "System SIEVE"
+msgstr "System SIEVE"
+
+msgid "System SIEVE server configuration."
+msgstr "System SIEVE server konfiguration"
+
+msgid "Use record XPROPS to save email user id"
+msgstr ""
+
+msgid "Trusted Proxies"
+msgstr ""
+
+msgid "If this is set, the HTTP_X_FORWARDED_FOR header is used."
+msgstr ""
+
+msgid "Authentication Backend"
+msgstr "Authentication Backend"
+
+msgid "Backend adapter for user authentication."
+msgstr "Backend adapter for bruger autentifikation"
+
+msgid "Authentication Configuration"
+msgstr "Autentifikation Konfiguration"
+
+msgid "Authentication backend configuration."
+msgstr "Autentifikation Backend Konfiguration"
+
+msgid "Authentication by Email"
+msgstr ""
+
+msgid "Path for cached config file (defaults to tmpdir if empty)"
+msgstr ""
+
+msgid "Skip maximum license user check in setup"
+msgstr ""
+
+msgid "User Backend"
+msgstr "Bruger Backend"
+
+msgid "Backend adapter for user data."
+msgstr "Backend adapter for bruger data."
+
+msgid "Replication master configuration"
+msgstr ""
+
+msgid "Replication master configuration."
+msgstr ""
+
+msgid "Replication slave configuration"
+msgstr ""
+
+msgid "Replication slave configuration."
+msgstr ""
+
+msgid "Full text configuration"
+msgstr ""
+
+msgid "Full text configuration."
+msgstr ""
+
+msgid "Action queue configuration"
+msgstr ""
+
+msgid "Action queue configuration."
+msgstr ""
+
+msgid "User Configuration"
+msgstr "Bruger Konfiguration"
+
+msgid "User backend configuration."
+msgstr "Bruger Backend konfiguration."
+
+msgid "Sync contact data from sync backend"
+msgstr ""
+
+msgid "Sync user contact data from sync backend"
+msgstr ""
+
+msgid "Sync contact photo from sync backend"
+msgstr ""
+
+msgid "Sync user contact photo from sync backend"
+msgstr ""
+
+msgid "Sync deleted users from sync backend"
+msgstr ""
+
+msgid "Sync user account status from sync backend"
+msgstr ""
+
+msgid "Sync user accounts / groups disabled"
+msgstr ""
+
+msgid "Sync user accounts to sync backend if member of one of these groups"
+msgstr ""
+
+msgid "Sync deviated user accounts default group"
+msgstr ""
+
+msgid "Enabled Features"
+msgstr ""
+
+msgid "Show Advanced Search"
+msgstr ""
+
+msgid "Show toggle button to switch on or off the advanced search for the quickfilter"
+msgstr ""
+
+msgid "Remeber Popup Size"
+msgstr ""
+
+msgid "Save edit dialog size in state"
+msgstr ""
+
+msgid "Create File Previews"
+msgstr ""
+
+msgid "Create FullText Indices"
+msgstr ""
+
+msgid "Autodiscover"
+msgstr ""
+
+msgid "Autodiscover mail config"
+msgstr ""
+
+msgid "Municipality Key"
+msgid_plural "Municipality Keys"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Show the Municipality Key in the Coredata"
+msgstr ""
+
+msgid "Activate Sites"
+msgstr ""
+
+msgid "Sites are addressbook contacts matching the siteFilter config."
+msgstr ""
+
+msgid "Default Admin Role Name"
+msgstr ""
+
+msgid "Default User Role Name"
+msgstr ""
+
+msgid "Deleted Data Retention Time"
+msgstr ""
+
+msgid "Cronjob Disabled"
+msgstr ""
+
+msgid "triggerAsyncEvents does not do anything and monitoringCheckCron does not alert"
+msgstr ""
+
+msgid "Cronuser ID"
+msgstr "Cron bruger ID"
+
+msgid "User ID of the cron user."
+msgstr "Bruger ID for Cron bruger."
+
+msgid "Import/Export Default Container"
+msgstr ""
+
+msgid "Title Postfix"
+msgstr "Titel Postfix"
+
+msgid "Postfix string appended to the title of this installation."
+msgstr "Foranstillet streng for titlen på denne installation."
+
+msgid "Redirect URL"
+msgstr "Redirect URL"
+
+msgid "Redirect to this URL after logout."
+msgstr "Redirect til denne URL efter log ud."
+
+msgid "Redirect to Referrer"
+msgstr "Redirect til Henvisningssiden"
+
+msgid "Redirect to referrer after logout."
+msgstr "Redirect til Henvisningssiden efter log ud."
+
+msgid "Redirect Always"
+msgstr "Redirect altid"
+
+msgid "Redirect to configured redirect URL also for login."
+msgstr "Redirect også ved login til konfigureret redirect URL."
+
+msgid "Status Info"
+msgstr ""
+
+msgid "If this is enabled, Tine 2.0 provides status information on https://tine20.domain/Tinebase/_status"
+msgstr ""
+
+msgid "Allowed Origins"
+msgstr ""
+
+msgid "Allowed Origins for the JSON API."
+msgstr ""
+
+msgid "Allowed Health Check IPs"
+msgstr ""
+
+msgid "Hosts that are allowed to access the TINEURL/health API"
+msgstr ""
+
+msgid "Accepted Terms Version"
+msgstr "Accepter betingelser Version"
+
+msgid "Accepted version number of the terms and conditions document."
+msgstr "Accepteret versions nummer af Betingelser dokumentet"
+
+msgid "Use Nominatim Geocoding Services"
+msgstr ""
+
+msgid "Use of external Nominatim Geocoding service is allowed."
+msgstr ""
+
+msgid "Use map service"
+msgstr ""
+
+msgid "Nominatim Service URL"
+msgstr ""
+
+msgid "Map Service URL"
+msgstr ""
+
+msgid "Disable LDAP TLS Certificate Check"
+msgstr ""
+
+msgid "LDAP TLS Certificate should not be checked"
+msgstr ""
+
+msgid "Contact fields overwritten by LDAP"
+msgstr ""
+
+msgid "These fields are overwritten during LDAP sync if empty"
+msgstr ""
+
+msgid "Sales Tax Default"
+msgstr ""
+
+msgid "Sales tax that is used as default value in Tine 2.0 apps like Sales."
+msgstr ""
+
+msgid "Sentry service URI"
+msgstr ""
+
+msgid "URI of the sentry service in the following format: https://<key>:<secret>@mysentry.domain/<project>"
+msgstr ""
+
+msgid "Sentry Loglevel Bitmask"
+msgstr ""
+
+msgid "API key to access status URI"
+msgstr ""
+
+msgid "API key to access status metrics URI"
+msgstr ""
+
+msgid "Custom event handling hook"
+msgstr ""
+
+msgid "Configure PHP hook class for custom event handling"
+msgstr ""
+
+msgid "Configure hook class for user sync"
+msgstr ""
+
+msgid "Allows to change data after fetching user from sync backend"
+msgstr ""
+
+msgid "Removed users should be deleted after X months"
+msgstr ""
+
+msgid "Sync user: delete after X months)"
+msgstr ""
+
+msgid "IP Session Validator"
+msgstr "IP Session Validator"
+
+msgid "Destroy session if the users IP changes."
+msgstr "Slet session hvis brugeres IP ændres."
+
+msgid "UA Session Validator"
+msgstr "UA session Validator"
+
+msgid "Destroy session if the users user agent string changes."
+msgstr "Slet bruger session hvis brugerens browser agent streng ændres."
+
+msgid "Files Directory"
+msgstr "Fil bibliotek"
+
+msgid "Directory with web server write access for user files."
+msgstr "Mappe på webserveren med skriveadgang for bruger filer."
+
+msgid "Reuse last username logged"
+msgstr ""
+
+msgid "User may change password"
+msgstr "Bruger må ændre password"
+
+msgid "Browser password manager can be used"
+msgstr ""
+
+msgid "Support NTLM V2 authentication"
+msgstr ""
+
+msgid "Support NTLM V2 authentication and store account password as ntlm v2 hash"
+msgstr ""
+
+msgid "Update NTLM V2 password has on login"
+msgstr ""
+
+msgid "NTLM V2 password hash encryption key"
+msgstr ""
+
+msgid "Encryption key used to encrypt and decrypt the NTLM V2 password hash when stored in the database."
+msgstr ""
+
+msgid "User password policy"
+msgstr ""
+
+msgid "User password policy settings."
+msgstr ""
+
+msgid "Check password policies at login"
+msgstr ""
+
+msgid "A password must be set"
+msgstr ""
+
+msgid "Enable password policy"
+msgstr "Aktiver password politik"
+
+msgid "Only ASCII"
+msgstr "Kun ASCII"
+
+msgid "Only ASCII characters are allowed in passwords."
+msgstr "Kun ASCII tegn er tilladt i passwords."
+
+msgid "Minimum length"
+msgstr "Minimum længde"
+
+msgid "Minimum password length"
+msgstr "Minimum password længde"
+
+msgid "Minimum word chars"
+msgstr "Minimum antal bogstaver"
+
+msgid "Minimum word chars in password"
+msgstr "Minimum antal bogstaver i password"
+
+msgid "Minimum uppercase chars"
+msgstr "Minimum antal store bogstaver"
+
+msgid "Minimum uppercase chars in password"
+msgstr "Minimum antal store bogstaver i password"
+
+msgid "Minimum special chars"
+msgstr "Minimum antal specialekarakter "
+
+msgid "Minimum special chars in password"
+msgstr "Minimum antal specialekarakter i password"
+
+msgid "Minimum numbers"
+msgstr "Minimum antal tal"
+
+msgid "Minimum numbers in password"
+msgstr "Minimum antal tal i password"
+
+msgid "Forbid part of username"
+msgstr "Forbyd dele af brugernavnet"
+
+msgid "Forbid part of username in password"
+msgstr "Forbyd dele af brugernavnet i passwordet"
+
+msgid "Change Password After ... Days"
+msgstr ""
+
+msgid "Users need to change their passwords after defined number of days"
+msgstr ""
+
+msgid "Download password policy"
+msgstr ""
+
+msgid "Download password policy settings."
+msgstr ""
+
+msgid "Automatic bugreports"
+msgstr "Automatiske fejlrapporter"
+
+msgid "Always send bugreports, even on timeouts and other exceptions / failures."
+msgstr "Send altid fejlrapporter, selv ved timeouts og andre undtagelser / fejl."
+
+msgid "License Type"
+msgstr ""
+
+msgid "Last sessions cleanup run"
+msgstr "Sidste kørsel for session oprydning"
+
+msgid "Stores the timestamp of the last sessions cleanup task run."
+msgstr "Gemmer tidsstemplet på den sidste session ved oprydning."
+
+msgid "Warn after X login failures"
+msgstr ""
+
+msgid "Maximum allowed login failures before writing warn log messages"
+msgstr ""
+
+msgid "Disable Anyone Account"
+msgstr "Deaktiver All kontoen"
+
+msgid "Disallow anyone account in grant configurations"
+msgstr "Forbyd alle kontoen i at tildele konfigurationer"
+
+msgid "Alarms sent each job"
+msgstr ""
+
+msgid "Allows to configure the maximum number of alarm notifications in each run of sendPendingAlarms (0 = no limit)"
+msgstr ""
+
+msgid "Account deactivation notfication"
+msgstr ""
+
+msgid "Send E-Mail to user if the account is deactivated or the user tries to login with deactivated account"
+msgstr ""
+
+msgid "Role change allowed"
+msgstr ""
+
+msgid "Allows to configure which user is allowed to switch to another users account"
+msgstr ""
+
+msgid "Max username length"
+msgstr ""
+
+msgid "User PIN"
+msgstr ""
+
+msgid "Users can have a PIN"
+msgstr ""
+
+msgid "User PIN minimum length"
+msgstr ""
+
+msgid "conf.d folder name"
+msgstr ""
+
+msgid "Folder for additional config files (conf.d) - NOTE: this is only used if set in config.inc.php!"
+msgstr ""
+
+msgid "Maintenance mode enabled"
+msgstr ""
+
+msgid "Set Tine 2.0 maintenance mode. Possible values: \"off\", \"on\" (only users having the maintenance right can login) and \"all\""
+msgstr ""
+
+msgid "Version check enabled"
+msgstr ""
+
+msgid "Custom Javascript includes for Fat-Client"
+msgstr ""
+
+msgid "An array of javascript files to include for the fat client. This files might be stored outside the docroot of the webserver."
+msgstr ""
+
+msgid "custom title"
+msgstr ""
+
+msgid "Custom title for branding."
+msgstr ""
+
+msgid "custom logo path"
+msgstr ""
+
+msgid "Path to custom logo."
+msgstr ""
+
+msgid "custom description"
+msgstr ""
+
+msgid "Custom description for branding."
+msgstr ""
+
+msgid "custom weburl"
+msgstr ""
+
+msgid "Custom weburl for branding."
+msgstr ""
+
+msgid "custom help url"
+msgstr ""
+
+msgid "Custom url for help."
+msgstr ""
+
+msgid "custom shop url"
+msgstr ""
+
+msgid "Custom url for the shop."
+msgstr ""
+
+msgid "custom bugreport url"
+msgstr ""
+
+msgid "Custom bugreport url."
+msgstr ""
+
+msgid "custom favicon paths"
+msgstr ""
+
+msgid "Paths to custom favicons."
+msgstr ""
+
+msgid "custom svg favicon paths"
+msgstr ""
+
+msgid "Paths to custom svg favicon."
+msgstr ""
+
+msgid "Mask Icon Color"
+msgstr ""
+
+msgid "Background color of mask icon (safari pinned tab)."
+msgstr ""
+
+msgid "Installation logo"
+msgstr ""
+
+msgid "Path to custom installation logo."
+msgstr ""
+
+msgid "custom website url"
+msgstr ""
+
+msgid "Custom url used for logo on login page."
+msgstr ""
+
+msgid "Use login name instead of full name"
+msgstr ""
+
+msgid "Use login name instead of full name for webdav."
+msgstr ""
+
+msgid "List of WebDav agent strings that will be denied"
+msgstr ""
+
+msgid "List of WebDav agent strings that will be denied. Expects a list of regular expressions - like this: [\"/iPhone/\",\"/iOS/\",\"/Android/\"]"
+msgstr ""
+
+msgid "Enable SyncToken plugin"
+msgstr ""
+
+msgid "Enable the use of the SyncToken plugin."
+msgstr ""
+
+msgid "currency symbol"
+msgstr ""
+
+msgid "Path to custom favicon."
+msgstr ""
+
+msgid "Filesystem settings"
+msgstr ""
+
+msgid "Filesystem settings."
+msgstr ""
+
+msgid "FlySystems Local Adapter Base Paths"
+msgstr ""
+
+msgid "Filesystem history"
+msgstr ""
+
+msgid "Filesystem keeps history, default is false."
+msgstr ""
+
+msgid "Filesystem default grants"
+msgstr ""
+
+msgid "Filesystem number of revisions"
+msgstr ""
+
+msgid "Filesystem number of revisions being kept before they are automatically deleted."
+msgstr ""
+
+msgid "Filesystem months of revisions"
+msgstr ""
+
+msgid "Filesystem number of months revisions being kept before they are automatically deleted."
+msgstr ""
+
+msgid "Filesystem index content"
+msgstr ""
+
+msgid "Filesystem index content."
+msgstr ""
+
+msgid "Filesystem enable notifications"
+msgstr ""
+
+msgid "Filesystem enable notifications."
+msgstr ""
+
+msgid "Filesystem create previews"
+msgstr ""
+
+msgid "Filesystem create previews."
+msgstr ""
+
+msgid "URL of preview service"
+msgstr ""
+
+msgid "URL of preview service."
+msgstr ""
+
+msgid "Class for preview service"
+msgstr ""
+
+msgid "Class to use, to connect to preview service."
+msgstr ""
+
+msgid "Max file size for preview service"
+msgstr ""
+
+msgid "Max file size for preview service."
+msgstr ""
+
+msgid "Max per preview preview service error count, for trying to generate preview."
+msgstr ""
+
+msgid "X size of thumbnail images."
+msgstr ""
+
+msgid "Y size of thumbnail images."
+msgstr ""
+
+msgid "X size of preview images."
+msgstr ""
+
+msgid "Y size of preview images."
+msgstr ""
+
+msgid "Ignore Proxy config for preview service"
+msgstr ""
+
+msgid "Antivirus Scan Max File Size"
+msgstr ""
+
+msgid "Antivirus Scan Mode"
+msgstr ""
+
+msgid "Antivirus Scan URL"
+msgstr ""
+
+msgid "Antivirus Scan Notification Role"
+msgstr ""
+
+msgid "Filesystem show current usage"
+msgstr ""
+
+msgid "Show fileSystem nodes current usage in grid panel, it affects Admin and Filemanager. check Tinebase_Tree_Node for possible values."
+msgstr ""
+
+msgid "Filter sync token settings"
+msgstr ""
+
+msgid "Max age in days"
+msgstr ""
+
+msgid "Max amount in total"
+msgstr ""
+
+msgid "Max amount per filter"
+msgstr ""
+
+msgid "Enable Password Less Login"
+msgstr ""
+
+msgid "Quota settings"
+msgstr ""
+
+msgid "Show UI"
+msgstr ""
+
+msgid "Should the quota UI elements be rendered or not."
+msgstr ""
+
+msgid "Include revisions"
+msgstr ""
+
+msgid "Should all revisions be used to calculate total usage?"
+msgstr ""
+
+msgid "Total quota in MB"
+msgstr ""
+
+msgid "Total quota in MB (0 for unlimited)"
+msgstr ""
+
+msgid "Filesystem total quota in MB"
+msgstr ""
+
+msgid "Filesystem total quota in MB (0 for unlimited)"
+msgstr ""
+
+msgid "Total quota by user in MB"
+msgstr ""
+
+msgid "Total quota by user in MB (0 for unlimited)"
+msgstr ""
+
+msgid "Soft quota in %"
+msgstr ""
+
+msgid "Soft quota in % (0-100, 0 means off)"
+msgstr ""
+
+msgid "Soft quota notification role"
+msgstr ""
+
+msgid "Name of the role to notify if soft quota is exceeded"
+msgstr ""
+
+msgid "Skip Imap Quota Notfication"
+msgstr ""
+
+msgid "Quota notification addresses"
+msgstr ""
+
+msgid "Addresses for sending quota notification email"
+msgstr ""
+
+msgid "Quota Monitoring"
+msgstr ""
+
+msgid "Tine20 URL"
+msgstr ""
+
+msgid "The full URL including scheme, hostname, optional port and optional uri part under which tine20 is reachable."
+msgstr ""
+
+msgid "Tine20 URL Used For JS Client"
+msgstr ""
+
+msgid "see https://github.com/tine20/tine20/issues/7218"
+msgstr ""
+
+msgid "auth token default and maximum TTL in seconds"
+msgstr ""
+
+msgid "shared credential cache cryptographic key"
+msgstr ""
+
+msgid "Grad der Verstädterung"
+msgstr ""
+
+msgid "dicht besiedelt"
+msgstr ""
+
+msgid "mittlere Besiedlungsdichte"
+msgstr ""
+
+msgid "gering besiedelt"
+msgstr ""
+
+msgid "Municipality Key duplicate check fields"
+msgstr ""
+
+msgid "These fields are checked when a new Municipality Key is created. If a record with the same data in the fields is found, a duplicate exception is thrown."
+msgstr ""
+
+msgid "Note Type"
+msgstr ""
+
+msgid "Available Note types for modlog history"
+msgstr ""
+
+msgid "Note"
+msgid_plural "Notes"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Telephone"
+msgstr ""
+
+msgid "E-Mail"
+msgstr ""
+
+msgid "Created"
+msgstr ""
+
+msgid "Changed"
+msgstr ""
+
+msgid "Reveal password"
+msgstr ""
+
+msgid "SMS Config"
+msgstr ""
+
+msgid "SMS Adapter Configs"
+msgstr ""
+
+msgid "User type"
+msgstr ""
+
+msgid "System User"
+msgstr ""
+
+msgid "User"
+msgid_plural "Users"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Volunteer"
+msgstr ""
+
+msgid "Action log type"
+msgstr ""
+
+msgid "Add User Confirmation"
+msgstr ""
+
+msgid "Deletion"
+msgstr ""
+
+msgid "Email Notification"
+msgstr ""
+
+msgid "Support request"
+msgstr ""
+
+msgid "Site Filter"
+msgstr ""
+
+msgid "Filter configuration for site record pickers. Sites can be a special type of contacts/groups for example defined by this filter."
+msgstr ""
+
+msgid "Personal container"
+msgstr ""
+
+#, python-format
+msgid "%s's personal container"
+msgstr "%s's personlige kontainer"
+
+msgid "You are not allowed to delete your default container!"
+msgstr ""
+
+msgid "You are not allowed to remove all (admin) grants for this container."
+msgstr ""
+
+msgid "Personal containers can have only one owner!"
+msgstr ""
+
+msgid "You are not allowed to delete this Container. Please define another container as the default addressbook for internal contacts!"
+msgstr "Du har ikke tilladelse til at slette denne container. Definer en anden container som standard adressebog for interne kontakter først!"
+
+msgid "A container with this name already exists."
+msgstr ""
+
+msgid "renaming is currently only possible if no models are assigned"
+msgstr ""
+
+#, python-format
+msgid "%s's personal files"
+msgstr ""
+
+msgid "Maximum number of users reached."
+msgstr ""
+
+msgid "The new password must be different from the old one."
+msgstr ""
+
+msgid "Old pin is wrong."
+msgstr ""
+
+msgid "Bank Holiday Calendar"
+msgid_plural "Bank Holiday Calendars"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-brace-format
+msgid "A Message has been filed to this record. Subject: {0}"
+msgstr ""
+
+#, python-format
+msgid "Status %s is not valid."
+msgstr ""
+
+#, python-brace-format
+msgid "Email address {0} not in allowed domains [{1}] or invalid"
+msgstr ""
+
+msgid "Email account already exists"
+msgstr ""
+
+msgid "Area is locked"
+msgstr ""
+
+msgid "Area could not be unlocked"
+msgstr ""
+
+msgid "Confirmation is required"
+msgstr ""
+
+msgid "Invalid Relations"
+msgstr ""
+
+msgid "You tried to create a relation which is forbidden by the constraints config of one of the models."
+msgstr ""
+
+msgid "Wrong month format!"
+msgstr ""
+
+msgid "The month must have the format YYYY-MM!"
+msgstr ""
+
+msgid "Password Policy Violation"
+msgstr "Password politik ikke overholdt"
+
+#, python-brace-format
+msgid "Exception ({0})"
+msgstr ""
+
+msgid "Quota is exceeded"
+msgstr ""
+
+msgid "System Container"
+msgstr "System container"
+
+msgid "This is a system container which could not be deleted!"
+msgstr "Dette er en system container som ikke kunne slettes!"
+
+msgid "Generic System Exception"
+msgstr "Generel system fejl"
+
+msgid "Exporttime"
+msgstr ""
+
+msgid "Export only currently shown columns"
+msgstr ""
+
+msgid "Excel current columns"
+msgstr ""
+
+msgid "Excel all data"
+msgstr ""
+
+msgid "Tags"
+msgstr "Tags"
+
+msgid "Created by"
+msgstr "Oprettet af"
+
+msgid "Activities"
+msgstr "Aktiviteter"
+
+msgid "Total: "
+msgstr ""
+
+msgid "Data"
+msgstr "Data"
+
+msgid "The following files have changed:"
+msgstr ""
+
+msgid "File"
+msgid_plural "Files"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "has been created."
+msgstr ""
+
+msgid "has been changed."
+msgstr ""
+
+msgid "has been deleted."
+msgstr ""
+
+msgid "filemanager notification"
+msgstr ""
+
+msgid "email quota notification"
+msgstr ""
+
+msgid "email soft quota notification"
+msgstr ""
+
+msgid "email "
+msgstr ""
+
+msgid "filemanager quota notification"
+msgstr ""
+
+msgid "filemanager soft quota notification"
+msgstr ""
+
+msgid "Number of distinct users"
+msgstr ""
+
+msgid "Number of users"
+msgstr ""
+
+msgid "  User Accounts:\n"
+msgstr ""
+
+msgid "MFA password wrong"
+msgstr ""
+
+msgid "MFA send out triggered"
+msgstr ""
+
+msgid "Anyone"
+msgstr "Alle"
+
+#, python-format
+msgid "The following fields weren't imported: %s"
+msgstr "Det følgende fejl blev ikke importeret: %s"
+
+msgid "N/A"
+msgstr "N/A"
+
+msgid "Import Community identification Numbers"
+msgstr ""
+
+msgid "Municipality Key Import"
+msgstr ""
+
+#, python-brace-format
+msgid "About {0}"
+msgstr "Om {0}"
+
+#, python-brace-format
+msgid "Learn more about {0}"
+msgstr ""
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "Released under different"
+msgstr "Udgivet under forskellige"
+
+msgid "Open Source Licenses"
+msgstr "Open Source licenser"
+
+msgid "with the help of our"
+msgstr "med hjælp fra vores"
+
+msgid "Contributors"
+msgstr "Bidragere"
+
+msgid "Subscription"
+msgstr ""
+
+msgid "Filesystem Mounts"
+msgstr ""
+
+msgid "Profile Information"
+msgstr "Profil Information"
+
+msgid "Apply"
+msgstr "Anvend"
+
+msgid "Please Wait"
+msgstr "Vent venligst"
+
+msgid "Read"
+msgstr "Læs"
+
+msgid "The field is readable part of the profile"
+msgstr "Feltet er en læselig del af profilen"
+
+msgid "Edit"
+msgstr "Rediger"
+
+msgid "The field is editable part of the profile"
+msgstr "Feltet er en læselig del af profilen"
+
+msgid "Field Name"
+msgstr "Feltnavn"
+
+msgid "Not Supported"
+msgstr ""
+
+msgid "Your request is not supported by this version."
+msgstr ""
+
+msgid "Attachment"
+msgstr ""
+
+msgid "New "
+msgstr ""
+
+msgid "Missing Applications"
+msgstr "Manglende applikationer"
+
+msgid "There are no applications enabled for you. Please contact your administrator."
+msgstr "Der er ingen applikationer aktiveret for dig. Kontakt din administrator."
+
+msgid "Search for Application ..."
+msgstr ""
+
+msgid "Choose MFA Deivce"
+msgstr ""
+
+msgid "This area is locked. Which device should be used to unlock?"
+msgstr ""
+
+msgid "Unlocking ..."
+msgstr ""
+
+msgid "Click here to unlock this area."
+msgstr ""
+
+msgid "MFA device missing"
+msgstr ""
+
+msgid "No matching MFA device for this area found. Configure a matching device please."
+msgstr ""
+
+msgid "Try again?"
+msgstr ""
+
+msgid "Fraction of the day"
+msgstr ""
+
+msgid "One quarter of the day"
+msgstr ""
+
+msgid "One third of the day"
+msgstr ""
+
+msgid "Half of the day"
+msgstr ""
+
+msgid "Two third of the day"
+msgstr ""
+
+msgid "Three quarters of the day"
+msgstr ""
+
+msgid "Whole day"
+msgstr ""
+
+msgid "Add new Element..."
+msgstr ""
+
+msgid "Usage:&#160;"
+msgstr "Brug:&#160;"
+
+msgid "personal"
+msgstr "personlig"
+
+msgid "No Information"
+msgstr "Ingen information"
+
+msgid "No Access"
+msgstr ""
+
+#, python-brace-format
+msgid "{0} second"
+msgid_plural "{0} seconds"
+msgstr[0] "{0} sekund"
+msgstr[1] "{0} sekunder"
+
+msgid "Confirm"
+msgstr "Bekræft"
+
+msgid "Restart application to apply new configuration?"
+msgstr ""
+
+#, python-brace-format
+msgid "All {0}"
+msgstr "Alle"
+
+#, python-brace-format
+msgid "Shared {0}"
+msgstr "Delt"
+
+#, python-brace-format
+msgid "Other Users {0}"
+msgstr "Andre brugere {0}"
+
+#, python-brace-format
+msgid "My {0}"
+msgstr "Min {0}"
+
+msgid "Credits"
+msgstr "Credits"
+
+msgid "Translation not found"
+msgstr ""
+
+msgid "Task"
+msgid_plural "Tasks"
+msgstr[0] "Opgave"
+msgstr[1] "Opgaver"
+
+msgid "to do list"
+msgid_plural "to do lists"
+msgstr[0] "todo liste"
+msgstr[1] "todo lister"
+
+msgid "Abnormal End"
+msgstr "Unormal Afslutning"
+
+msgid "Cancel"
+msgstr "Anuller"
+
+msgid "Send Report"
+msgstr "Send rapport"
+
+msgid "An error occurred, the program ended abnormal."
+msgstr "En fejl opstod, programmet afsluttede uventet."
+
+msgid "The last action you made was potentially not performed correctly."
+msgstr "Den sidste handling du foretog blev muligvis ikke udført korrekt."
+
+msgid "Please help improving this software and notify the vendor. Include a brief description of what you where doing when the error occurred."
+msgstr "Hjælp os med at forbedre softwaren og kontakte udvikleren. Inkluder en kort beskrivelse af hvad du gjorde da fejlen opstod."
+
+msgid "Description"
+msgstr "Beskrivelse"
+
+msgid "Send Contact Information"
+msgstr "Send kontakt information"
+
+msgid "Details:"
+msgstr "Detaljer"
+
+msgid "Sending report..."
+msgstr "Send rapport.."
+
+msgid "Please wait a moment"
+msgstr "Vent venligst et øjeblik"
+
+msgid "Transmission Completed"
+msgstr "Afsendelse Komplet"
+
+msgid "Your report has been sent. Thanks for your contribution"
+msgstr "Din rapport blev sendt. Tak for dit bidrag."
+
+msgid "Please restart your browser now!"
+msgstr "Genstart venligst din browser nu!"
+
+msgid "Insufficient Rights"
+msgstr "Manglende rettigheder"
+
+msgid "Sorry, you are not permitted to perform this action"
+msgstr "Beklager, du har ikke tilladelse til denne handling"
+
+msgid "Not Found"
+msgstr "Ikke fundet"
+
+msgid "Sorry, your request could not be completed because the required data could not be found. In most cases this means that someone already deleted the data. Please refresh your current view."
+msgstr "beklager, din handling kan ikke gennemføres da de krævede data ikke blev fundet. I de fleste tilfælde skyldes det at nogen allerede har slettet dataene. Prøv at opdatere din visning."
+
+msgid "Concurrent Updates"
+msgstr "Samtidige opdateringer"
+
+msgid "Someone else saved this record while you where editing the data. You need to reload and make your changes again."
+msgstr "En anden gemte dette emne mens du redigere det. Du skal reloade og lave dine ændringer igen."
+
+msgid "Rate-Limit"
+msgstr ""
+
+msgid "This method is rate-limited and you sent too many requests."
+msgstr ""
+
+msgid "Service Unavailable"
+msgstr "Tjenesten er utilgængelig"
+
+msgid "The server is currently unable to handle the request due to a temporary overloading, maintenance or misconfiguration of the server. Please try again or contact your administrator."
+msgstr "Denne server er midlertidigt ikke i stand til at håndtere din forespørgsel pågrund af vedliogholdelse, fejlkonfiguration eller manglende ressourcer."
+
+msgid "Server Message:"
+msgstr "Server Besked:"
+
+msgid "Invalid Data"
+msgstr "Ugyldige Data"
+
+msgid "Your input data is not valid. Please provide valid data."
+msgstr "Dine indtastede data er ikke gyldige."
+
+msgid "Connection lost, please check your network!"
+msgstr "Forbindelsen er tabt, check dine netværks indstillinger!"
+
+msgid "Timeout"
+msgstr "Timeout"
+
+msgid "Sorry, some timeout occured while processing your request. Please reload your browser, try again or contact your administrator."
+msgstr "Beklager, der opstod timeout under behandlingen af din forespørgsel. Reload din browser og prøv igen eller kontakt din administrator."
+
+msgid "No Response"
+msgstr "Ingen svar"
+
+msgid "Sorry, the Server did not respond any data. Please reload your browser, try again or contact your administrator."
+msgstr "Beklager, serveren returnerede ingen data. Reload din browser og prøv igen eller kontakt din administrator."
+
+msgid "Out of Resources"
+msgstr "Mangler ressourcer."
+
+msgid "Sorry, the Server stated a \"memory exhausted\" condition. Please contact your administrator."
+msgstr "Beklager, serveren returnerede \"memory exhausted\". Kontakt din administrator."
+
+msgid "No Role Memberships"
+msgstr "Ingen Rolle Medlemskaber"
+
+msgid "Your user account has no role memberships. Please contact your administrator."
+msgstr "Din bruger konto har ingen rolle medlemskab. Kontakt din administrator."
+
+msgid "Method Not Found / Insufficent Permissions"
+msgstr ""
+
+msgid "You tried to access a function that is not available. Please reload your browser, try again or contact your administrator."
+msgstr ""
+
+msgid "Outdated Browser"
+msgstr ""
+
+msgid "You need a current Browser to use this program."
+msgstr ""
+
+msgid "License"
+msgstr "Licens"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Username"
+msgstr "Brugernavn"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Certificate detected. Please, press Login button to proceed."
+msgstr ""
+
+msgid "Login via OpenID Connect"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+#, python-brace-format
+msgid "{0} is made for you"
+msgstr ""
+
+#, python-brace-format
+msgid "{0} wants to make business collaboration easier and more enjoyable - for your needs! So you are warmly welcome to discuss with us, bring in ideas and get help."
+msgstr ""
+
+#, python-brace-format
+msgid "{0} Homepage"
+msgstr ""
+
+msgid "Translations"
+msgstr "Oversættelser"
+
+#, python-brace-format
+msgid "Translation state of {0}: {1}%."
+msgstr ""
+
+#, python-brace-format
+msgid "If the state of your language is not satisfying, or if you miss a language, please consider becoming a {0} translator."
+msgstr ""
+
+#, python-brace-format
+msgid "{0} Translation Howto"
+msgstr ""
+
+msgid "Detailed Language Statistics"
+msgstr ""
+
+#, python-brace-format
+msgid "Your {0} license expired."
+msgstr ""
+
+#, python-brace-format
+msgid "{0} trial"
+msgstr ""
+
+#, python-brace-format
+msgid "Your {0} license is expired! Users cannot login any more. Please contact Metaways Infosystems GmbH to buy a new license."
+msgstr ""
+
+msgid "Please contact Metaways Infosystems GmbH to buy a valid license."
+msgstr ""
+
+msgid "Powered by:"
+msgstr ""
+
+msgid "online open source groupware and crm"
+msgstr ""
+
+#, python-brace-format
+msgid "about {0} minutes"
+msgstr "omkring {0} minutter"
+
+msgid "Tine 2.0 needs your help"
+msgstr "Tine 2.0 har brug for din hjælp"
+
+msgid "We regularly need your feedback to make the next Tine 2.0 releases fit your needs even better. Help us and yourself by participating:"
+msgstr "Vi har jævnligt brug for feedback for at lave den næste version af Tine 2.0 så den matcher dine behov og bliver endnu bedre. Hjælp os og dig selv ved at deltage:"
+
+msgid "participate!"
+msgstr "Deltag!"
+
+msgid "Languages"
+msgstr "Sprog"
+
+msgid "Duration"
+msgstr "Varighed"
+
+msgid "Browser incompatible"
+msgstr "Browser er ikke kompatibel"
+
+msgid "Your browser is not supported by Tine 2.0."
+msgstr "Din browser er ikke supporteret af Tine 2.0"
+
+msgid "Browser incompatible?"
+msgstr "Browser ikke kompatibel?"
+
+msgid "You are using an unrecognized browser. This could result in unexpected behaviour."
+msgstr "Du bruger en ukendt browser. Dette kan resultere i utilsigtet opførsel."
+
+msgid "You might try one of these browsers:"
+msgstr "Du kan prøve en af disse browsere:"
+
+#, python-brace-format
+msgid "Login successful. Loading {0}..."
+msgstr "Login succesfuldt. Henter {0}"
+
+msgid "Please wait!"
+msgstr "Vent venligst!"
+
+msgid "There was an error verifying your certificate!"
+msgstr ""
+
+msgid "Your username and/or your password are wrong!"
+msgstr ""
+
+msgid "Login failure"
+msgstr "Login fejl"
+
+msgid "Logging you in..."
+msgstr "Logger dig ind..."
+
+msgid "Please wait"
+msgstr "Vent venligst."
+
+msgid "Errors"
+msgstr "Fejl"
+
+msgid "Please fix the errors noted."
+msgstr "Løs venligst fejlene."
+
+msgid "Redirecting to SSO Identity Provider"
+msgstr ""
+
+msgid "Please enter your login data"
+msgstr "Indtast dine login data"
+
+#, python-brace-format
+msgid "User: {0}"
+msgstr "Bruger: {0}"
+
+msgid "Return to original user account"
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+msgid "Debug Console (Ctrl + F11)"
+msgstr "Debug konsol (CTRL + F11)"
+
+msgid "Preferences"
+msgstr "Preferencer"
+
+msgid "Edit Profile"
+msgstr "Rediger profil"
+
+msgid "Change password"
+msgstr "Skift Password"
+
+msgid "Manage MFA Devices"
+msgstr ""
+
+msgid "Logout"
+msgstr "Log ud"
+
+#, python-brace-format
+msgid "Logout from {0}"
+msgstr "Log ud fra {0}"
+
+#, python-brace-format
+msgid "The license expires in {0} days"
+msgstr ""
+
+#, python-brace-format
+msgid "Please visit the shop at {0}"
+msgstr ""
+
+msgid "Allow desktop notifications"
+msgstr "Tillad skrivebords notifikationer"
+
+msgid "Request permissions for webkit desktop notifications."
+msgstr "Anmod om tilladelse for webkit skrivebords notifikationer."
+
+msgid "Reload the application"
+msgstr ""
+
+msgid "Reloads the application and clears caches."
+msgstr ""
+
+msgid "Are you sure you want to logout?"
+msgstr "Er du sikker på at du vil logge ud?"
+
+msgid "Logging you out..."
+msgstr "Logger dig ud..."
+
+msgid "You need to set a new password."
+msgstr ""
+
+msgid "Multi Factor Authentication"
+msgstr ""
+
+msgid "We strongly encourage you to enable Multi-Factor Authentication for added security."
+msgstr ""
+
+msgid "Multi-Factor Authentication adds an extra layer of protection to logins. Once enabled & configured, each time you sing in you will be asked to enter both your username & password as well as a second factor such as a security code."
+msgstr ""
+
+msgid "Multi Factor Authentication Device Configuration"
+msgstr ""
+
+msgid "Secret Key"
+msgstr ""
+
+msgid "Please note: After saving you can not view this autogenerated secret key again!"
+msgstr ""
+
+msgid "Generating secret key ..."
+msgstr ""
+
+msgid "Existing secret keys can't be viewed. You need to generate a new one if the old got lost."
+msgstr ""
+
+msgid "for"
+msgstr ""
+
+msgid "MFA secret required"
+msgstr ""
+
+#, python-brace-format
+msgid "This area is locked. To unlock it you need to provide the secret from your Multi factor authentication device {mfaDevice.device_name}."
+msgstr ""
+
+#, python-brace-format
+msgid "Secret from {mfaDevice.device_name}"
+msgstr ""
+
+msgid "Authenticator code required"
+msgstr ""
+
+#, python-brace-format
+msgid "This area is locked. To unlock it you need to provide the code from your authenticator app {mfaDevice.device_name}."
+msgstr ""
+
+#, python-brace-format
+msgid "Authenticator code from {mfaDevice.device_name}"
+msgstr ""
+
+msgid "PIN required"
+msgstr ""
+
+#, python-brace-format
+msgid "This area is locked. To unlock it you need to provide your {mfaDevice.device_name} secret."
+msgstr ""
+
+#, python-brace-format
+msgid "{mfaDevice.device_name} secret"
+msgstr ""
+
+msgid "SMS security code required"
+msgstr ""
+
+#, python-brace-format
+msgid "This area is locked. To unlock it we send a securitycode to via {mfaDevice.device_name}."
+msgstr ""
+
+#, python-brace-format
+msgid "Security code from {mfaDevice.device_name}"
+msgstr ""
+
+msgid "Token required"
+msgstr ""
+
+#, python-brace-format
+msgid "This area is locked. To unlock it you need to provide your token from your {mfaDevice.device_name}."
+msgstr ""
+
+#, python-brace-format
+msgid "Token from {mfaDevice.device_name}"
+msgstr ""
+
+msgid "Password required"
+msgstr ""
+
+msgid "This area is locked. To unlock it you need to provide your password."
+msgstr ""
+
+msgid "Error"
+msgstr "Fehl"
+
+msgid "FIDO2 WebAuthn authentication failed. Try again?"
+msgstr ""
+
+msgid "Yubico OTP required"
+msgstr ""
+
+msgid "This area is locked. To unlock it you need to provide your Yubico OTP."
+msgstr ""
+
+msgid "Yubico OTP"
+msgid_plural "Yubico OTPs"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Add new MFA Device"
+msgstr ""
+
+msgid "Click here to add note"
+msgstr ""
+
+msgid "FIDO2 WebAuthn Device"
+msgid_plural "FIDO2 WebAuthn Devices"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Please open the following URL in your Browser for more security key options"
+msgstr ""
+
+msgid "Configuring FIDO2 WebAuthn Device ..."
+msgstr ""
+
+msgid "FIDO2 WebAuthn Device is configured."
+msgstr ""
+
+msgid "This installation requires user verification for FIDO2 devices. Firefox does not support user verification. You need to use a different browser to use FIDO2."
+msgstr ""
+
+msgid "Unsupported Configuration"
+msgstr ""
+
+#, python-brace-format
+msgid "see {url} for details"
+msgstr ""
+
+#, python-brace-format
+msgid "This installation requires user verification for FIDO2 devices. Firefox for {OS} does not support user verification ({details}). You need to use a different browser to use FIDO2."
+msgstr ""
+
+msgid "FIDO2 WebAuthn registration failed. Try again?"
+msgstr ""
+
+msgid "Country"
+msgid_plural "Countries"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Grant"
+msgid_plural "Grants"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Tag"
+msgid_plural "Tags"
+msgstr[0] "Tag"
+msgstr[1] "Tags"
+
+msgid "Alarm"
+msgid_plural "Alarms"
+msgstr[0] "Alarm"
+msgstr[1] "Alarmer"
+
+msgid "Import"
+msgid_plural "Imports"
+msgstr[0] "Import"
+msgstr[1] "Imports"
+
+msgid "Export"
+msgid_plural "Export"
+msgstr[0] "Eksport"
+msgstr[1] "Eksport"
+
+msgid "Credentials"
+msgid_plural "Credentials"
+msgstr[0] "Legitimations oplysninger"
+msgstr[1] "Legitimations oplysninger"
+
+msgid "Relation"
+msgid_plural "Relations"
+msgstr[0] "Relation"
+msgstr[1] "Relationer"
+
+msgid "Department"
+msgid_plural "Departments"
+msgstr[0] "Afdeling"
+msgstr[1] "Afdelinger"
+
+msgid "Name"
+msgstr "Navn"
+
+msgid "Config"
+msgid_plural "Configs"
+msgstr[0] "Indstilling"
+msgstr[1] "Indstillinger"
+
+msgid "Configs"
+msgstr "Indstillinger"
+
+msgid "Query"
+msgstr ""
+
+msgid "Path"
+msgid_plural "Paths"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Search for Municipality Keys ..."
+msgstr ""
+
+msgid "PIN"
+msgid_plural "PINs"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-brace-format
+msgid "Change {0} For \"{1}\""
+msgstr ""
+
+#, python-brace-format
+msgid "Old {0}"
+msgstr ""
+
+#, python-brace-format
+msgid "New {0}"
+msgstr "Ny {0}"
+
+#, python-brace-format
+msgid "Repeat new {0}"
+msgstr ""
+
+#, python-brace-format
+msgid "Changing {0}"
+msgstr ""
+
+msgid "Success"
+msgstr "Success"
+
+#, python-brace-format
+msgid "Your {0} has been changed."
+msgstr ""
+
+msgid "Failure"
+msgstr "Fejl"
+
+#, python-brace-format
+msgid "{0} mismatch, please correct."
+msgstr ""
+
+msgid "Outdent Text"
+msgstr "Udryk tekst"
+
+msgid "Indent Text"
+msgstr "Indryk tekst"
+
+msgid "Remove Formatting"
+msgstr "Fjern formatering"
+
+msgid "Valid from"
+msgstr ""
+
+msgid "Valid to"
+msgstr ""
+
+msgid "Activation Key"
+msgstr ""
+
+msgid "Maximum Users (0=unlimited)"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "Activated Features"
+msgstr ""
+
+msgid "Your Subscription is unavailable"
+msgstr ""
+
+msgid "Your Subscription is not valid"
+msgstr ""
+
+msgid "Remove"
+msgstr "Slet"
+
+msgid "Follow System"
+msgstr ""
+
+msgid "Dark Mode"
+msgstr ""
+
+msgid "Light Mode"
+msgstr ""
+
+msgid "Create Contact"
+msgstr ""
+
+msgid "Copy to Clipboard"
+msgstr ""
+
+msgid "Compose Message To"
+msgstr ""
+
+msgid "Session Timed Out"
+msgstr ""
+
+msgid "You can close this window."
+msgstr ""
+
+msgid "Your Client is Outdated"
+msgstr ""
+
+msgid "A new client is available, press OK to get this version"
+msgstr ""
+
+msgid "tine needs to be updated or is not installed yet."
+msgstr ""
+
+msgid "Please wait or contact your administrator"
+msgstr "Vent venligst eller kontakt en administrator"
+
+msgid "Total    Uploads"
+msgstr ""
+
+msgid "Complete Uploads"
+msgstr ""
+
+msgid "Failed   Uploads"
+msgstr ""
+
+msgid "online"
+msgstr "online"
+
+msgid "offline"
+msgstr "offline"
+
+msgid "Upload progress"
+msgstr ""
+
+#, python-brace-format
+msgid "{0} available (total: {1})"
+msgstr ""
+
+#, python-brace-format
+msgid "Error while uploading \"{fileName}\". Please try again later."
+msgstr ""
+
+msgid "Upload Failed"
+msgstr "Upload fejlede"
+
+msgid "Uploads Monitor"
+msgstr ""
+
+msgid "Empty List"
+msgstr ""
+
+msgid "Not all uploads are finished yet. What would you to do?"
+msgstr ""
+
+msgid "Remove finished uploads from this list only"
+msgstr ""
+
+msgid "Cancel all unfinished uploads before"
+msgstr ""
+
+msgid "Removing files..."
+msgstr ""
+
+msgid "Total Uploads : "
+msgstr ""
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "No"
+msgstr "Nej"
+
+#, python-brace-format
+msgid "{0} is not a valid unit"
+msgstr ""
+
+#, python-brace-format
+msgid "choose other {0}..."
+msgstr "vælg anden {0}...."
+
+msgid "Not a valid time"
+msgstr ""
+
+msgid "Job Title"
+msgstr ""
+
+msgid "Select Image"
+msgstr ""
+
+msgid "Insert an image with the selected size"
+msgstr ""
+
+msgid "Convert to pure text"
+msgstr ""
+
+msgid "Loading"
+msgstr "Indlæser"
+
+msgid "Click to edit"
+msgstr "Tryk for at redigere"
+
+msgid "Image Failed"
+msgstr "Billede fejlede"
+
+msgid "Could not load image. Please notify your Administrator"
+msgstr "Kunne ikke indlæse billede. Kontakt din administrator."
+
+msgid "Not An Image"
+msgstr "Ikke et billede"
+
+msgid "Please select an image file (gif/png/jpeg)"
+msgstr "Vælg en billede fil (gif/png/jpg)"
+
+msgid "Could not upload image. Please notify your Administrator"
+msgstr "Kunne ikke uploade billede. Kontakt din administrator."
+
+msgid "Change Image"
+msgstr "Skift billede"
+
+msgid "Crop Image"
+msgstr "Beskær billede"
+
+msgid "Delete Image"
+msgstr "Slet billede"
+
+msgid "Show Original Image"
+msgstr "Vis originalt billede"
+
+msgid "When preference is locked, normal user can not edit the preference anymore."
+msgstr ""
+
+msgid "no decimals allowed"
+msgstr ""
+
+#, python-brace-format
+msgid "max decimals allowed: {0}"
+msgstr ""
+
+msgid "Day"
+msgstr ""
+
+msgid "Week"
+msgstr ""
+
+msgid "Month"
+msgstr ""
+
+msgid "Quarter"
+msgstr ""
+
+msgid "Year"
+msgstr ""
+
+msgid "Software Version"
+msgstr "Software Version."
+
+msgid "Select all"
+msgstr ""
+
+msgid "Deselect all"
+msgstr ""
+
+#, python-brace-format
+msgid "Please Sort by \"{0}\""
+msgstr ""
+
+#, python-brace-format
+msgid "To use manual sorting, you need to sort by column \"{0}\""
+msgstr ""
+
+msgid "Export Records from these Positions"
+msgstr ""
+
+#, python-brace-format
+msgid "{0} selected"
+msgstr "{0} valgte"
+
+msgid "Unselect all"
+msgstr "Fravælg alle"
+
+#, python-brace-format
+msgid "Select all pages ({0} records)"
+msgstr "Vælg alle sider ({0} emner)"
+
+msgid "Toggle selection"
+msgstr "Skift valg"
+
+msgid "This file might potentially harm your computer. Therefore it got quarantined and cannot be edited or downloaded."
+msgstr ""
+
+msgid "quarantined"
+msgstr ""
+
+msgid "(paused)"
+msgstr "(pauset)"
+
+msgid "Cannot open new window"
+msgstr ""
+
+#, python-brace-format
+msgid "An attempt to open a new window failed. When clicking OK, the opening procedure will be tried again. To avoid this message, please deactivate your browsers popup blocker for {0}"
+msgstr ""
+
+msgid "Window can be closed"
+msgstr ""
+
+#, python-brace-format
+msgid "This Window can be closed now. To avoid this message please deactivate your browsers popup blocker for {0}"
+msgstr ""
+
+msgid "The window you want to work with is backgrounded. Your browser doesn't support to foreground the window for you, so you need to use your operating systems window switching features. Please send complaints to your browser vendor!"
+msgstr "Vinduet du vil arbejde med er i baggrunden. Din browser supportere ikke at sende det frem for dig, så du er nødt til at benytte din computers system til at skifte mellem vinduerne. "
+
+msgid "Preparing print, please wait..."
+msgstr ""
+
+msgid "Printing Error"
+msgstr ""
+
+msgid "Related to"
+msgstr "Relateret til"
+
+msgid "enter searchfilter"
+msgstr "indtast søgefilter"
+
+msgid "Leave site?"
+msgstr ""
+
+msgid "Changes you made may not be saved."
+msgstr ""
+
+msgid "Change user account"
+msgstr ""
+
+msgid "Switch to another user's account"
+msgstr ""
+
+msgid "Switch to this user account:"
+msgstr ""
+
+msgid "Select Account"
+msgstr ""
+
+msgid "Changing user account ..."
+msgstr ""
+
+msgid "Search User"
+msgstr "Søg bruger"
+
+msgid "Search Group"
+msgstr "Søg gruppe"
+
+msgid "Search Role"
+msgstr ""
+
+msgid "Add Anyone"
+msgstr "Tilføj alle"
+
+msgid "Add Myself"
+msgstr ""
+
+msgid "Search for users ..."
+msgstr "Søg efter brugere..."
+
+msgid "Search for groups ..."
+msgstr "Søg efter grupper..."
+
+msgid "Search for roles ..."
+msgstr ""
+
+msgid "Notes"
+msgstr "Noter"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Created By"
+msgstr "Oprettet af"
+
+msgid "Creation time"
+msgstr ""
+
+#, python-brace-format
+msgid "Add {0}"
+msgstr "Tilføj {0}"
+
+#, python-brace-format
+msgid "Edit {0}"
+msgid_plural "Edit {0}"
+msgstr[0] "Rediger {0}"
+msgstr[1] "Rediger {0}"
+
+#, python-brace-format
+msgid "Remove {0}"
+msgstr ""
+
+msgid "Enter new note:"
+msgstr "Indtast ny note:"
+
+msgid "Add Note"
+msgstr "Tilføj note"
+
+msgid "Timestamp"
+msgstr "Tidspunkt"
+
+#, python-brace-format
+msgid "Displaying history records {0} - {1} of {2}"
+msgstr "Viser historiske emner {0} - {1} af {2}"
+
+msgid "No history to display"
+msgstr "Ingen historik at vise"
+
+msgid "History"
+msgstr "Historik"
+
+msgid "Quick Search"
+msgstr ""
+
+msgid "Time"
+msgstr "Tid"
+
+msgid "CalDAV URL"
+msgstr ""
+
+msgid "is personal of"
+msgstr "er personlig for"
+
+msgid "is equal to"
+msgstr "er lige med"
+
+#, python-brace-format
+msgid "Selected {0}"
+msgstr ""
+
+msgid "Folder"
+msgid_plural "Folders"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Updating Grants"
+msgstr "Opdatere rettighed"
+
+msgid "You are not allowed to remove all admins for this container!"
+msgstr "Du har ikke tilladelse til at flytte alle administratorer fra denne container!"
+
+msgid "The grant to read records of this container"
+msgstr "Rettigheden til at læse emner i denne container"
+
+msgid "Add"
+msgstr "Tilføj"
+
+msgid "The grant to add records to this container"
+msgstr "Rettigheden til at tilføje emner til denne container"
+
+msgid "The grant to edit records in this container"
+msgstr "Rettighedne til at redigere emner i denne container"
+
+msgid "Delete"
+msgstr "Slet"
+
+msgid "The grant to delete records in this container"
+msgstr "Rettigheden til at slette emner i denne container"
+
+msgid "The grant to export records from this container"
+msgstr "Rettigheden til at eksportere emner fra denne container"
+
+msgid "Sync"
+msgstr "Sync"
+
+msgid "The grant to synchronise records with this container"
+msgstr "Rettigheden til at synkronisere emner med denne container"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "The grant to administrate this container"
+msgstr "Tildel rettigheder til at administrere denne container"
+
+msgid "Properties"
+msgstr "Egenskaber"
+
+msgid "Hierarchy/Name"
+msgstr ""
+
+msgid "My Grants"
+msgstr "Mine rettigheder"
+
+#, python-brace-format
+msgid "Select a {0}"
+msgstr "Vælg en {0}"
+
+msgid "Container"
+msgid_plural "Containers"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-brace-format
+msgid "please select a {0}"
+msgstr "vælg en {0}"
+
+msgid "container"
+msgid_plural "containers"
+msgstr[0] "container"
+msgstr[1] "containere"
+
+#, python-brace-format
+msgid "You are not allowed to select the {0} '{1}':"
+msgstr "Du har ikke tilladelse til at vælge {0} '{1}':"
+
+#, python-brace-format
+msgid "{0} grant is required for desired action"
+msgstr "{0} rettighed er krævet for den valgt handling"
+
+msgid "Insufficient Grants"
+msgstr "Manglende rettigheder"
+
+msgid "Modules"
+msgstr ""
+
+msgid "Select a country..."
+msgstr "Vælg et land..."
+
+msgid "Custom Fields"
+msgstr "Brugerdefinerede felter"
+
+#, python-brace-format
+msgid "Change settings for application {0}"
+msgstr "Ændre indstillinger for applikationen {0}"
+
+msgid "Defaults"
+msgstr "Standard"
+
+msgid "Alarms"
+msgstr "Alarmer"
+
+msgid "0 minutes before"
+msgstr "0 minutter før"
+
+msgid "5 minutes before"
+msgstr "5 minutter før"
+
+msgid "15 minutes before"
+msgstr "15 minutter før"
+
+msgid "30 minutes before"
+msgstr "30 minutter før"
+
+msgid "1 hour before"
+msgstr "1 time før"
+
+msgid "2 hours before"
+msgstr "2 timer før"
+
+msgid "12 hours before"
+msgstr "12 timer før"
+
+msgid "1 day before"
+msgstr "1 dag før"
+
+msgid "2 days before"
+msgstr "2 dage før"
+
+msgid "Custom Datetime"
+msgstr "Brugerdefineret Dato/Tid"
+
+msgid "Alarm Time"
+msgstr "Alarm tid"
+
+#, python-brace-format
+msgid "{0} minutes before"
+msgstr "{0} minutter før"
+
+msgid "Attachments"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Content Type"
+msgstr ""
+
+msgid "Creation Time"
+msgstr "Oprettelsestid"
+
+msgid "Please enter your credentials"
+msgstr "Indtast dine legitimationsoplysninger"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Merging Records..."
+msgstr "Smelter emner sammen..."
+
+msgid "Merge Failed"
+msgstr "Sammensmeltning fejlet"
+
+#, python-brace-format
+msgid "The merge succeeded, but the duplicate {0} could not be deleted."
+msgstr "Sammenfletningen lykkedes, men duplikat {0} kunne ikke slettes."
+
+#, python-brace-format
+msgid "Merge {0}, prefer First"
+msgstr "Sammensmelt {0}, fortræk første"
+
+#, python-brace-format
+msgid "Merge {0}, prefer Second"
+msgstr "Sammensmelt {0}, fortræk anden"
+
+#, python-brace-format
+msgid "Merge {0}"
+msgstr "Sammensmelt {0}"
+
+#, python-brace-format
+msgid "First {0}"
+msgstr "Første {0}"
+
+#, python-brace-format
+msgid "Second {0}"
+msgstr "Anden {0}"
+
+#, python-brace-format
+msgid "Final {0}"
+msgstr "Endelig {0}"
+
+msgid "The record you try to add might already exist."
+msgstr "Emnet du prøver at tilføje eksistere allerede"
+
+msgid "Field Group"
+msgstr "Feltgruppe"
+
+msgid "My Value"
+msgstr "Mine værdier"
+
+msgid "Existing Value"
+msgstr "Eksisterende værdier"
+
+msgid "Final Value"
+msgstr "Endelige værdi"
+
+msgid "Keep both records"
+msgstr "Behold begge emner"
+
+msgid "Merge, keeping existing details"
+msgstr "Sammensmelt, behold eksisterende detaljer"
+
+msgid "Merge, keeping my details"
+msgstr "Sammensmelt, behold mine detaljer"
+
+msgid "Keep existing record and discard mine"
+msgstr "Behold eksisterende emner og smid mine væk"
+
+msgid "Action:"
+msgstr "Handling:"
+
+msgid "Enter description"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "delete"
+msgstr "slet"
+
+#, python-brace-format
+msgid "Print {0}"
+msgstr ""
+
+msgid "Saved in"
+msgstr "Gemt i"
+
+#, python-brace-format
+msgid "{0} (copy)"
+msgstr ""
+
+#, python-brace-format
+msgid "Copy {0}"
+msgstr "Kopier {0}"
+
+msgid "{gender, select, male {Add New {recordName}} female {Add New {recordName}} other {Add New {recordName}}}"
+msgstr ""
+
+#, python-brace-format
+msgid "Edit {0} \"{1}\""
+msgstr "Rediger {0} \"{1}\""
+
+msgid "Files are still uploading."
+msgstr ""
+
+msgid "Please review the fields marked red. They contain invalid values."
+msgstr ""
+
+#, python-brace-format
+msgid "Do you really want to delete this {0}?"
+msgstr "Vil du virkeligt slette denne {0}?"
+
+#, python-brace-format
+msgid "Deleting {0}"
+msgstr "Sletter {0}"
+
+msgid "Failed"
+msgstr "Fejlet"
+
+#, python-brace-format
+msgid "Could not delete {0}."
+msgstr "Kunne ikke slette {0}."
+
+#, python-brace-format
+msgid "Resolve Duplicate {0} Suspicion"
+msgstr "Løs duplikat {0} mistanke"
+
+msgid "Permissions"
+msgstr ""
+
+#, python-brace-format
+msgid "Transferring {0}..."
+msgstr "Overfører {0}..."
+
+#, python-brace-format
+msgid "{1} - Exception {0}"
+msgstr ""
+
+#, python-brace-format
+msgid "{0} - Unknown Exception"
+msgstr ""
+
+msgid "Select Export Definition ..."
+msgstr "Vælg eksport definition..."
+
+#, python-brace-format
+msgid "Export {0}"
+msgid_plural "Export {0}"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Download"
+msgstr "Download"
+
+msgid "Filemanager"
+msgstr ""
+
+msgid "Open"
+msgstr ""
+
+msgid "Choose Export Location"
+msgstr ""
+
+msgid "How would you like to save your export?"
+msgstr ""
+
+msgid "Exporting..."
+msgstr ""
+
+msgid "Export created successfully."
+msgstr ""
+
+msgid "Please check your computers downloads folder!"
+msgstr ""
+
+msgid "Export could not be created. Please try again later"
+msgstr ""
+
+msgid "What would you like to do?"
+msgstr "Hvad ønsker du at gøre?"
+
+msgid "You need to select an option!"
+msgstr "Du skal vælge en mulighed!"
+
+msgid "Following you find a list of all supported import formats and a sample file, how Tine 2.0 expects your file to look like."
+msgstr "Her kan du se en liste af supporterede formater og en eksempel fil som Tine 2.0 forventer din fil ser ud."
+
+msgid "Following you find a list of all supported import formats."
+msgstr ""
+
+msgid "Choose File and Format"
+msgstr "Vælg Fil og Format"
+
+msgid "Choose Import File"
+msgstr "Vælg import fil"
+
+msgid "Please choose the file that contains the records you want to add to Tine 2.0"
+msgstr "Vælg venlist filen som indeholder emnerne du vil tilføje til Tine 2.0"
+
+#, python-brace-format
+msgid "Select file containing your {0}"
+msgstr "Vælg fil som indeholder dine {0}"
+
+msgid "What should the file you upload look like?"
+msgstr "Hvordan skal filen du uploader se ud?"
+
+msgid "Tine 2.0 does not understand all kind of files you might want to upload. You will have to manually adjust your file so Tine 2.0 can handle it."
+msgstr "Tine 2.0 forstår ikke alle filer du måtte uploade. Det kan være nødvendigt at justere dine filer så Tine 2.0 kan håndtere dem."
+
+msgid "Please select the import format of the file you want to upload"
+msgstr "Vælg venligst den import fil du ønsker at uploade"
+
+msgid "Download example file"
+msgstr "Download eksempel fil"
+
+#, python-brace-format
+msgid "Select {0} to add you {1} to:"
+msgstr "Vælg {0} for at tilføje din {1} til:"
+
+msgid "Set Import Options"
+msgstr "Sæt import muligheder"
+
+msgid "Checking Import"
+msgstr "Checker import"
+
+msgid "Resolve Conflicts"
+msgstr "Løs konflikter"
+
+msgid "Conflict"
+msgstr "Konflikt"
+
+msgid "First Conflict"
+msgstr "Første konflikt"
+
+msgid "Previous Conflict"
+msgstr "Forrige konfklikt"
+
+msgid "Next Conflict"
+msgstr "Næste konfklikt"
+
+msgid "Last Conflict"
+msgstr "Sidste konfklikt"
+
+msgid "Resolve this conflict"
+msgstr ""
+
+msgid "Resolve all conflicts"
+msgstr "Løs alle konfkliter"
+
+msgid "Processing Conflict Data"
+msgstr "Behandler konflikt data"
+
+msgid "No conflict to resolve"
+msgstr "Ingen konflikter som skal løses"
+
+#, python-brace-format
+msgid "(This is record {0} in your import file)"
+msgstr "(Dette er emne {0} i din import fil)"
+
+msgid "No Detail Informations"
+msgstr "Ingen detalje informationer"
+
+msgid "Summary"
+msgstr "Oversigt"
+
+msgid "Index"
+msgstr "Index"
+
+msgid "Record"
+msgstr "Emne"
+
+#, python-brace-format
+msgid "Importing {0}"
+msgstr "Importere {0}"
+
+#, python-brace-format
+msgid "{0} records had failures and where discarded."
+msgstr "{0} remner havde fejl og blev afvist."
+
+#, python-brace-format
+msgid "In total we found {0} records in your import file."
+msgstr "Vi fandt totalt {0} emner i din import fil."
+
+#, python-brace-format
+msgid "{0} of them will be added as new records into: \"{1}\"."
+msgstr "{0} af dem til blive importeret som nye emner i: \"{1}\""
+
+#, python-brace-format
+msgid "{0} of them where identified as duplicates."
+msgstr "{0} af dem blev identificeret som duplikater."
+
+#, python-brace-format
+msgid "From the identified duplicates {0} will be merged into the existing records."
+msgstr "{0} af de identificerende duplikater vil blive smeltet sammen med eksisterende emner."
+
+#, python-brace-format
+msgid "From the identified duplicates {0} will be discarded."
+msgstr "{0} af de identificerende duplikater vil blive afvist."
+
+#, python-brace-format
+msgid "All records will be tagged with: \"{0}\" so you can find them easily."
+msgstr "Alle emner vil blive tagget med : {0} so du nemt kan finde dem."
+
+#, python-brace-format
+msgid "{0} records have failures and will be discarded."
+msgstr "{0} emner har fejl og bliver afvist."
+
+msgid "Delete value from all selected records"
+msgstr "Slet værdi fra alle valgte emner"
+
+msgid "Undo change for all selected records"
+msgstr "Fortryd ændringerne for alle slettede emner"
+
+#, python-brace-format
+msgid "Edit {0} {1}"
+msgstr "Rediger {0} {1}"
+
+msgid "Different Values"
+msgstr "Forskellige værdier"
+
+msgid "This field has different values. Editing this field will overwrite the old values."
+msgstr "Feltet har forskellige værdier. Redigering af dette felt overskriver gamle værdier."
+
+#, python-brace-format
+msgid "Add {0} Relation"
+msgstr ""
+
+#, python-brace-format
+msgid "Do you really want to change these {0} records?"
+msgstr "Vil du virkeligt ændre disse {0} emner?"
+
+msgid "Applying changes"
+msgstr "Anvend ændringer"
+
+#, python-brace-format
+msgid "You edited {0} {1}."
+msgstr "Du har redigeret {0} {1}."
+
+#, python-brace-format
+msgid "{0} {1} have been updated properly."
+msgstr "{0} {1} er blevet opdateret."
+
+#, python-brace-format
+msgid "{0} {1} has been updated properly."
+msgstr "{0} {1} har opdaterede egenskaber."
+
+#, python-brace-format
+msgid "{0} {1} have invalid data after updating. These {1} have not been changed."
+msgstr "{0} {1} har ugyldigt data efter opdatering. Disse {1} er ikke blevet ændret."
+
+#, python-brace-format
+msgid "{0} {1} has invalid data after updating. This {1} has not been changed."
+msgstr "{0} {1} har ugyldigt data efter opdatering. Denne {1} er ikke blevet ændret."
+
+msgid "Set password"
+msgstr ""
+
+msgid "Generate password"
+msgstr ""
+
+msgid "Admin Mode"
+msgstr "Admin tilstand"
+
+msgid "All Users"
+msgstr ""
+
+msgid "Applications"
+msgstr "Applikationer"
+
+msgid "Edit Preferences"
+msgstr "Rediger preferencer"
+
+msgid "Loading ..."
+msgstr "Indlæser ...."
+
+msgid "You need to correct the red marked fields before config could be saved"
+msgstr "Du skal rette de røde markerede felter før konfigurationen kan gemmes"
+
+msgid "Saving of preferences failed."
+msgstr "Opdatering af præferencer fejlede."
+
+msgid "There are no preferences for this application."
+msgstr "Der er ingen præferencer for denne applikation."
+
+msgid "All Settings"
+msgstr ""
+
+msgid "General Preferences"
+msgstr "Generelle præferencer"
+
+msgid "Application Settings"
+msgstr ""
+
+msgid "My Profile"
+msgstr "Min profil"
+
+msgid "Second Factor Password Required"
+msgstr ""
+
+msgid "Validating password..."
+msgstr ""
+
+msgid "Wrong Password"
+msgstr ""
+
+msgid "Invalid second factor password given"
+msgstr ""
+
+msgid "Back"
+msgstr "Tilbage"
+
+msgid "Next"
+msgstr "Næste"
+
+msgid "Finish"
+msgstr "Afslut"
+
+msgid "Create xprop"
+msgstr ""
+
+msgid "xprop Name"
+msgstr ""
+
+msgid "Please enter the name of the new xprop"
+msgstr ""
+
+msgid "Delete xprop"
+msgstr ""
+
+msgid "Export as ..."
+msgstr ""
+
+msgid "My Device"
+msgstr ""
+
+msgid "Download file and save on my local device."
+msgstr ""
+
+msgid "Select or drop file to upload"
+msgstr ""
+
+msgid "Select files"
+msgstr ""
+
+msgid "Select file"
+msgstr ""
+
+msgid "Select folders"
+msgstr ""
+
+msgid "Select folder"
+msgstr ""
+
+msgid "Select items"
+msgstr ""
+
+msgid "Select item"
+msgstr ""
+
+msgid "Places"
+msgstr ""
+
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Configuration Problem"
+msgstr "Konfigurations problem"
+
+msgid "Invalid configuration"
+msgstr "Ugyldig konfiguration"
+
+msgid "Transferring Configuration..."
+msgstr "Overfører konfigurationen..."
+
+msgid "Save config"
+msgstr "Gem konfiguration"
+
+msgid "Reload config"
+msgstr "Genindlæs konfiguration"
+
+msgid "Gets assigned automatically"
+msgstr ""
+
+msgid "Wrong File Type"
+msgstr "Forkert filtype"
+
+msgid "Please select a file with one of the following extensions:"
+msgstr "Vælg venligst en fil med en af de følgende endelser:"
+
+msgid "Some fields are  multilingual. Click here to select language to display."
+msgstr ""
+
+msgid "Search for Model..."
+msgstr ""
+
+msgid "GENDER_Model"
+msgstr ""
+
+msgid "Model"
+msgid_plural "Models"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Cleartext/Hidden"
+msgstr ""
+
+msgid "No record"
+msgstr ""
+
+msgid "Edit copy"
+msgstr ""
+
+#, python-brace-format
+msgid "Search for {0} ..."
+msgstr ""
+
+msgid "Searching..."
+msgstr "Søger.."
+
+msgid "You tried to link a record with itself. This is not allowed!"
+msgstr "Du prøvede at link et emne med sig selv. Det er ikke tilladt!"
+
+msgid "Search for records ..."
+msgstr "Søg efter emner..."
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria or view-options."
+msgstr ""
+
+msgid "Image"
+msgstr ""
+
+msgid "Could not upload file. Filesize could be too big. Please notify your Administrator. Max upload size:"
+msgstr ""
+
+msgid "Pause upload"
+msgstr "Pause uploade"
+
+msgid "Resume upload"
+msgstr "Genoptag upload"
+
+msgid "Send by E-Mail"
+msgstr ""
+
+msgid "name"
+msgstr "navn"
+
+msgid "size"
+msgstr "størrelse"
+
+msgid "type"
+msgstr "type"
+
+msgid "today"
+msgstr "i dag"
+
+msgid "yesterday"
+msgstr "i går"
+
+msgid "this week"
+msgstr "denne uge"
+
+msgid "last week"
+msgstr "sidste uge"
+
+msgid "the week before last"
+msgstr "forrige uge"
+
+msgid "this month"
+msgstr "denne måned"
+
+msgid "last month"
+msgstr "sidste måned"
+
+msgid "last three months"
+msgstr ""
+
+msgid "last six months"
+msgstr ""
+
+msgid "anytime"
+msgstr ""
+
+msgid "this quarter"
+msgstr "dette kvartal"
+
+msgid "last quarter"
+msgstr "sidste kvartal"
+
+msgid "this year"
+msgstr "dette år"
+
+msgid "last year"
+msgstr "sidste år"
+
+msgid "tomorrow"
+msgstr "i morgen"
+
+msgid "next week"
+msgstr "næste uge"
+
+msgid "next month"
+msgstr "næste måned"
+
+msgid "next quarter"
+msgstr "næste kvartal"
+
+msgid "next year"
+msgstr "næste år"
+
+msgid "contains"
+msgstr "indeholder"
+
+msgid "contains word starting with"
+msgstr ""
+
+msgid "contains not"
+msgstr ""
+
+msgid "reg. exp."
+msgstr "reg. exp."
+
+msgid "is equal to without (-, )"
+msgstr ""
+
+msgid "is greater than"
+msgstr "er større end"
+
+msgid "is less than"
+msgstr "er mindre end"
+
+msgid "is not"
+msgstr "er ikke"
+
+msgid "{gender, select, male {one of} female {one of} other {one of}}"
+msgstr ""
+
+msgid "{gender, select, male {all of} female {all of} other {all of}}"
+msgstr ""
+
+msgid "{gender, select, male {none of} female {none of} other {none of}}"
+msgstr ""
+
+msgid "is before"
+msgstr "er før "
+
+msgid "is after"
+msgstr "er efter"
+
+msgid "is within"
+msgstr "is inden for "
+
+msgid "is in week no."
+msgstr "er i ugenummer"
+
+msgid "starts with"
+msgstr "starter med"
+
+msgid "ends with"
+msgstr "slutter med"
+
+msgid "defined by"
+msgstr "defineret af"
+
+msgid "select a operator"
+msgstr "vælg en operator"
+
+msgid "Search Account ..."
+msgstr "Søg konto"
+
+msgid "Period ..."
+msgstr ""
+
+#, python-brace-format
+msgid "Selected  {0}"
+msgstr "Valgt  {0}"
+
+msgid "Show records that match to one of the following filters"
+msgstr "Vis emner som matcher en eller flere af de følgende filtre"
+
+msgid "or alternatively"
+msgstr "eller alternativt"
+
+msgid "Add alternative filter"
+msgstr "Tilføj alterbativt filter"
+
+msgid "Remove Filter"
+msgstr "Fjern filter"
+
+msgid "Show"
+msgstr "Vis"
+
+msgid "and"
+msgstr ""
+
+msgid "or"
+msgstr ""
+
+msgid "add new filter"
+msgstr "tilføj nyt filter"
+
+msgid "reset all filters"
+msgstr "nulstil alle filtre"
+
+msgid "start search"
+msgstr "start søgning"
+
+msgid "save as favorite"
+msgstr "gem som favorit"
+
+msgid "Load a favorite"
+msgstr "Hent en favorit"
+
+msgid "select a field"
+msgstr "vælg et felt"
+
+msgid "Delete this filter"
+msgstr "Slet dette filter"
+
+msgid "show details"
+msgstr "vis detaljer"
+
+msgid "Always show advanced filters"
+msgstr "Vi altid avancerede filtre"
+
+msgid "hide details"
+msgstr ""
+
+msgid "show"
+msgstr ""
+
+#, python-brace-format
+msgid "Your view is limited by {0} criteria:"
+msgid_plural "Your view is limited by {0} criteria:"
+msgstr[0] "Din visning er begrænset af {0} kriterie:"
+msgstr[1] "Din visnign er begrænset af {0} kriterier:"
+
+msgid "Edit definition"
+msgstr "Rediger definition"
+
+msgid "Start definition"
+msgstr "Start definition"
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria, view-options or the {1} you search in."
+msgstr "Der blev ikke fundet nogen {0}. Prøv at ændre dine filter kritere, visning eller {1} du søger i."
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria, view-options or change the module you search in."
+msgstr ""
+
+msgid "Move Details Panel To"
+msgstr ""
+
+msgid "Bottom"
+msgstr ""
+
+msgid "Right"
+msgstr ""
+
+msgid "Print Page"
+msgstr "Print side"
+
+#, python-brace-format
+msgid "Move {0}"
+msgid_plural "Move {0}"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-brace-format
+msgid "Export as {0}"
+msgstr ""
+
+msgid "Import items"
+msgstr ""
+
+#, python-brace-format
+msgid "Delete {0}"
+msgid_plural "Delete {0}"
+msgstr[0] "Slet {0}"
+msgstr[1] "Slet {0}"
+
+msgid "No data to display"
+msgstr ""
+
+#, python-brace-format
+msgid "Displaying records {0} - {1} of {2}"
+msgstr "Vis emner {0} - {1} af {2}"
+
+#, python-brace-format
+msgid "No {0} to display"
+msgstr "Ingen {0} at vise"
+
+msgid "{recordGender, select, male {{recordCount, plural, one {# {recordName} selected} other {# {recordsName} selected}}} female {{recordCount, plural, one {# {recordName} selected} other {# {recordsName} selected}}} other {{recordCount, plural, one {# {recordName} selected} other {# {recordsName} selected}}}}"
+msgstr ""
+
+msgid "Records"
+msgstr ""
+
+msgid "New..."
+msgstr "Ny..."
+
+msgid "Add to..."
+msgstr "Tilføj til..."
+
+msgid "Last Modified Time"
+msgstr "Sidst ændret den"
+
+msgid "Last Modified By"
+msgstr "Sidst ændret af"
+
+msgid "Grid Panel Key Bindings"
+msgstr ""
+
+#, python-brace-format
+msgid "Moving {0}"
+msgstr ""
+
+msgid "Not Allowed"
+msgstr "Ikke tilladt"
+
+msgid "You are not allowed to delete all pages at once"
+msgstr "Du har ikke tilladelse til at slette alle sider samtidigt"
+
+#, python-brace-format
+msgid "Do you really want to delete the selected record ({0})?"
+msgid_plural "Do you really want to delete the selected records ({0})?"
+msgstr[0] "Vil du virkeligt slette det valgte emne ({0})?"
+msgstr[1] "Vil du virkeligt slette de valgte emner ({0})?"
+
+msgid "... This may take a long time!"
+msgstr ""
+
+msgid "via"
+msgstr ""
+
+#, python-brace-format
+msgid "Create {0}"
+msgstr ""
+
+#, python-brace-format
+msgid "Loading {0} ..."
+msgstr ""
+
+msgid "Quota usage"
+msgstr ""
+
+msgid "has notes"
+msgstr "har noter"
+
+msgid "This is a multilingual field:"
+msgstr ""
+
+#, python-brace-format
+msgid "Transition from {current} to {target} is not allowed."
+msgstr ""
+
+msgid "Key Field Records"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "ID"
+msgstr ""
+
+msgid "Add a New ID..."
+msgstr ""
+
+msgid "Add a New Value..."
+msgstr ""
+
+msgid "ID already exists"
+msgstr ""
+
+msgid "ID needs to follow the syntax PARENTID:ID"
+msgstr ""
+
+msgid "Language"
+msgstr "Sprog"
+
+msgid "Setting new language..."
+msgstr ""
+
+msgid "Save current view as favorite"
+msgstr "Gem nuværende visning som favorit"
+
+msgid "containers"
+msgstr "containere"
+
+msgid "Favorites"
+msgstr "Favoritter"
+
+msgid "Favorite not saved"
+msgstr ""
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Shared Favorite (visible by other users)"
+msgstr ""
+
+msgid "The grant to see and use this filter"
+msgstr ""
+
+msgid "The grant to edit this filter"
+msgstr ""
+
+msgid "The grant to delete this filter"
+msgstr ""
+
+msgid "My favorites"
+msgstr "Mine favoritter"
+
+msgid "Delete Favorite"
+msgstr "Slet favorit"
+
+msgid "Edit Favorite"
+msgstr "Rediger favorit"
+
+msgid "Overwrite Favorite"
+msgstr "Overskriv favorit"
+
+#, python-brace-format
+msgid "Do you really want to delete the favorite \"{0}\"?"
+msgstr "Vil du virkeligt slette favoritter \"{0}\"?"
+
+#, python-brace-format
+msgid "Deleting Favorite \"{0}\""
+msgstr "Slet favorit \"{0}\""
+
+msgid "Overwrite?"
+msgstr "Overskriv?"
+
+#, python-brace-format
+msgid "Do you want to overwrite the favorite \"{0}\"?"
+msgstr "Vil du virkeligt overskrive favoritten \"{0}\"?"
+
+#, python-brace-format
+msgid "Overwriting Favorite \"{0}\""
+msgstr "Overskriv favorit \"{0}\""
+
+msgid "Could not save Favorite"
+msgstr "Kunne ikke gemme Favorit"
+
+msgid "Your current view does not support favorites"
+msgstr "Din nuværende visning supportere ikke favoritter"
+
+msgid "Create Favorite"
+msgstr "Opret favorit"
+
+#, python-brace-format
+msgid "Saving Favorite \"{0}\""
+msgstr "Gemmer favorit {0}"
+
+msgid "(shared)"
+msgstr "(delt)"
+
+msgid "Defined by ..."
+msgstr "Defineret af ..."
+
+msgid "Define ..."
+msgstr "Definer"
+
+msgid "Edit record"
+msgstr "Rediger emne"
+
+msgid "Sibling"
+msgstr "Søskende"
+
+msgid "Parent"
+msgstr "Forældre"
+
+msgid "Child"
+msgstr "Barn"
+
+#, python-brace-format
+msgid "The maximum number of {0} with the type \"{1}\" is reached. Please change the type of this relation"
+msgstr ""
+
+#, python-brace-format
+msgid "The maximum number of {0}s with the type \"{1}\" is reached at the {2} you added. Please change the type of this relation or edit the {2}"
+msgstr ""
+
+msgid "Contents of Related Folder"
+msgstr ""
+
+msgid "No Dialog"
+msgstr ""
+
+msgid "The Record can't be opened. There doesn't exist any dialog for editing this Record!"
+msgstr ""
+
+msgid "Attachments: Anyone who has access to the record can see the data"
+msgstr ""
+
+msgid "Links: Rights of the respective application are respected"
+msgstr ""
+
+msgid "Remark"
+msgstr "Bemærkning"
+
+msgid "Dependency"
+msgstr "Afhængighed"
+
+#, python-brace-format
+msgid "No access to {0}"
+msgstr ""
+
+msgid "The record you tried to link is already linked. Please edit the existing link."
+msgstr "Det emne, som du forsøgte at linke er allerede tilknyttet. Rediger den nuværende forbindelse."
+
+#, python-brace-format
+msgid "The {1} \"{2}\" is already used in the Field \"{0}\" and can be linked only once!"
+msgstr "{1} \"{2}\" er allerede brugt i feltet \"{0}\" og kan ikke linkes igen!"
+
+msgid "Delete { ownRecordName }?"
+msgstr ""
+
+msgid "What do you want to delete?"
+msgstr ""
+
+msgid "Delete { ownRecordName }"
+msgstr ""
+
+msgid "Remove { ownRecordName } relation to this { relatedRecordName } only"
+msgstr ""
+
+msgid "Site"
+msgstr ""
+
+msgid "no site association"
+msgstr ""
+
+msgid "tag name"
+msgstr "tag navn"
+
+msgid "Add Tags"
+msgstr ""
+
+msgid "Select Tags"
+msgstr ""
+
+msgid "Attaching Tag"
+msgstr "Tilføjer tag"
+
+msgid "Detach tag(s)"
+msgstr "Fjern tag(s)"
+
+msgid "Select Tag(s) to detach"
+msgstr "Vælg Tag(s) "
+
+msgid "Add a new personal tag"
+msgstr "Tilføj et nyt personligt tag"
+
+msgid "Add New Personal Tag"
+msgstr "Tilføj nyt personligt tag"
+
+msgid "Please note: You create a personal tag. Only you can see it!"
+msgstr "Bemærk: Du opretter et peronligt tag. Kun du kan se det!"
+
+msgid "Enter tag name:"
+msgstr "Indtast tag navn:"
+
+msgid "No Tags to display"
+msgstr "Ingen tags at vise"
+
+msgid "Detach tag"
+msgid_plural "Detach tags"
+msgstr[0] "Fjern tag"
+msgstr[1] "Fjarn tags"
+
+msgid "Edit tag"
+msgstr "Rediger tag"
+
+msgid "Rename Tag"
+msgstr "Omdøb tag"
+
+msgid "Please enter a new name:"
+msgstr "Indtast et nyt navn:"
+
+msgid "Edit Description"
+msgstr "Rediger beskrivelse"
+
+msgid "Description for tag"
+msgstr "Beskrivelse for tag"
+
+msgid "Please enter new description:"
+msgstr "Indtast en ny beskrivelse:"
+
+msgid "Change Color"
+msgstr "Skift farve"
+
+msgid "Delete Tag"
+msgid_plural "Delete Tags"
+msgstr[0] "Slet tag"
+msgstr[1] "Slet tags"
+
+msgid "Really delete selected tag?"
+msgid_plural "Really delete selected tags?"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "The selected tag will be deleted and disappear for all entries"
+msgid_plural "The selected tags will be removed and disappear for all entries"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Please wait a moment..."
+msgstr "Vent et øjeblik..."
+
+msgid "Deleting Tag"
+msgid_plural "Deleting Tags"
+msgstr[0] "Slet tag"
+msgstr[1] "Slet tags"
+
+msgid "Could not delete Tag(s)."
+msgstr "Kunne ikke slette tag(s)."
+
+msgid "Notice"
+msgstr "Bemærk"
+
+msgid "The minimum tag length is three."
+msgstr "Minimum længden på et tag er 3."
+
+msgid "Could not create tag."
+msgstr "Kunne ikke oprette tag."
+
+msgid "Could not update tag."
+msgstr "Kunne ikke opdatere tag."
+
+msgid "Detach Tags"
+msgstr "Fjern tag"
+
+msgid "Attach Tags"
+msgstr "Tilføj tag"
+
+msgid "No Tags to detach found in the selected records"
+msgstr "Ingen tags at fjern på det valgt emne"
+
+msgid "Please Wait..."
+msgstr "Vent venligst..."
+
+msgid "Detaching Tags"
+msgstr "Fjerner tags"
+
+msgid "Timezone"
+msgstr "Tidszone"
+
+msgid "Setting new timezone..."
+msgstr ""
+
+#, python-brace-format
+msgid "Rename {0}"
+msgstr "Omdøb {0}"
+
+#, python-brace-format
+msgid "Manage {0} Permissions"
+msgstr "Administrer {0} Tilladelser"
+
+#, python-brace-format
+msgid "{0} Properties"
+msgstr "{0} Egenskaber"
+
+#, python-brace-format
+msgid "Set {0} color"
+msgstr "Sæt {0} farve"
+
+#, python-brace-format
+msgid "Reload {0}"
+msgstr "Genindlæs {0}"
+
+msgid "Publish"
+msgstr ""
+
+msgid "{gender, select, male {New {containerName}} female {New {containerName}} other {New {containerName}}}"
+msgstr ""
+
+msgid "{gender, select, male {Please enter the name for the new {containerName}:} female {Please enter the name for the new {containerName}:} other {Please enter the name for the new {containerName}:}}"
+msgstr ""
+
+#, python-brace-format
+msgid "No {0} added"
+msgstr "Ingen {0} at tilføje"
+
+#, python-brace-format
+msgid "You have to supply a {0} name!"
+msgstr "Du skal indtaste et {0} navn!"
+
+msgid "{gender, select, male {No {containerName} added} female {No {containerName} added} other {No {containerName} added}}"
+msgstr ""
+
+msgid "{gender, select, male {You have to supply a {containerName} name!} female {You have to supply a {containerName} name!} other {You have to supply a {containerName} name!}}"
+msgstr ""
+
+#, python-brace-format
+msgid "Creating {0}..."
+msgstr "Opretter {0}...."
+
+msgid "{gender, select, male {Rename {containerName}} female {Rename {containerName}} other {Rename {containerName}}}"
+msgstr ""
+
+msgid "{gender, select, male {Please enter the new name for the {containerName}:} female {Please enter the new name for the {containerName}:} other {Please enter the new name for the {containerName}:}}"
+msgstr ""
+
+#, python-brace-format
+msgid "Not renamed {0}"
+msgstr "Ikke omdøbt {0}"
+
+#, python-brace-format
+msgid "Do you really want to delete the {0} \"{1}\"?"
+msgstr "Vil du virkeligt slette {0} \"{1}\"?"
+
+#, python-brace-format
+msgid "Manage Permissions for {0} \"{1}\""
+msgstr "Adfministrer tilladelser for {0} {1}"
+
+#, python-brace-format
+msgid "Properties for {0} \"{1}\""
+msgstr "Egenskaber for {0} \"{1}\""
+
+msgid "New version of tine available"
+msgstr ""
+
+#, python-brace-format
+msgid "Version \"{0}\" of tine is available."
+msgstr ""
+
+msgid "It's a critical update and must be installed as soon as possible!"
+msgstr "Det er en kritisk opdatering og skal installerede hurtigst muligt!"
+
+msgid "Please consider updating!"
+msgstr "Overvej af opdatere!"
+
+msgid "ActionLog"
+msgid_plural "ActionLogs"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Action type"
+msgstr ""
+
+msgid "Datetime"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Order"
+msgstr ""
+
+msgid "Area Lock Configuration"
+msgid_plural "Area Lock Configurations"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Area name"
+msgstr ""
+
+msgid "Areas"
+msgstr ""
+
+msgid "MFAs"
+msgstr ""
+
+msgid "Validity"
+msgstr ""
+
+msgid "Lifetime in Minutes"
+msgstr ""
+
+msgid "Policy"
+msgstr ""
+
+msgid "Area Lock State"
+msgid_plural "Area Lock States"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Area"
+msgstr ""
+
+msgid "Expires"
+msgstr ""
+
+msgid "Bank Account"
+msgid_plural "Bank Accounts"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "IBAN"
+msgstr ""
+
+msgid "BIC"
+msgstr ""
+
+msgid "GENDER_Bank Holiday Calendar"
+msgstr ""
+
+msgid "Bank Holidays"
+msgstr ""
+
+msgid "Data Source Url"
+msgstr ""
+
+msgid "Target Calendar"
+msgstr ""
+
+msgid "GENDER_Bank Holiday"
+msgstr ""
+
+msgid "Bank Holiday"
+msgid_plural "Bank Holidays"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Fraction"
+msgstr ""
+
+msgid "Record Name"
+msgid_plural "Records Name"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Group"
+msgstr ""
+
+msgid "New Car"
+msgstr ""
+
+msgid "Hierarchy"
+msgstr ""
+
+msgid "Owner"
+msgstr ""
+
+msgid "UUID"
+msgstr ""
+
+msgid "GENDER_Item"
+msgstr ""
+
+msgid "Item"
+msgid_plural "Items"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Number"
+msgstr ""
+
+msgid "GENDER_Evaluation Dimension"
+msgstr ""
+
+msgid "Evaluation Dimension"
+msgid_plural "Evaluation Dimensions"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Dimension Items"
+msgstr ""
+
+msgid "Configured Models"
+msgstr ""
+
+msgid "Depends on"
+msgstr ""
+
+msgid "Sorting"
+msgstr ""
+
+msgid "Area lock configurations"
+msgstr ""
+
+msgid "Your password expired."
+msgstr ""
+
+msgid "GENDER_Grant"
+msgstr ""
+
+msgid "ImportExportDefinition"
+msgid_plural "ImportExportDefinitions"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Label"
+msgstr ""
+
+msgid "Favorite"
+msgstr ""
+
+msgid "Icon Class"
+msgstr ""
+
+msgid "Plugin"
+msgstr ""
+
+msgid "Scope"
+msgstr ""
+
+msgid "Plugin Options"
+msgstr ""
+
+msgid "Plugin Options Definition"
+msgstr ""
+
+msgid "Format"
+msgstr ""
+
+msgid "Filename"
+msgstr ""
+
+msgid "Filter"
+msgstr ""
+
+msgid "Skip Upstream Updates"
+msgstr ""
+
+msgid "LogEntry"
+msgid_plural "LogEntries"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "LogEntries"
+msgstr ""
+
+msgid "Client Requestid"
+msgstr ""
+
+msgid "Server Requestid"
+msgstr ""
+
+msgid "Logtime"
+msgstr ""
+
+msgid "Difftime"
+msgstr ""
+
+msgid "Loglevel"
+msgstr ""
+
+msgid "GENDER_Counter based OTP (HOTP)"
+msgstr ""
+
+msgid "Counter based OTP (HOTP)"
+msgid_plural "Counter based OTPs (HOTP)"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Counter based OTP (HOTP) is configured"
+msgstr ""
+
+msgid "GENDER_PIN"
+msgstr ""
+
+msgid "{% true %}Static PIN for user: ●●●●●●"
+msgstr ""
+
+msgid "New PIN"
+msgstr ""
+
+msgid "GENDER_SMS"
+msgstr ""
+
+msgid "SMS"
+msgid_plural "SMSs"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Security codes are send to: {{ cellphonenumber }}."
+msgstr ""
+
+msgid "Cell Phone Number"
+msgstr ""
+
+msgid "GENDER_Time based OTP (TOTP)"
+msgstr ""
+
+msgid "Time based OTP (TOTP)"
+msgid_plural "Time based OTPs (TOTP)"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Time based OTP (TOPT) is configured"
+msgstr ""
+
+msgid "MFA Device Config"
+msgid_plural "MFA Device Configs"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "MFA Device Type"
+msgstr ""
+
+msgid "GENDER_FIDO2 WebAuthn Device"
+msgstr ""
+
+msgid "Yubico OTP public id"
+msgstr ""
+
+msgid "Yubico OTP privat id"
+msgstr ""
+
+msgid "Yubico privat key"
+msgstr ""
+
+msgid "GENDER_Municipality Key"
+msgstr ""
+
+msgid "Amtlicher Regionalschlüssel"
+msgstr ""
+
+msgid "Gemeindename"
+msgstr ""
+
+msgid "Fläche"
+msgstr ""
+
+msgid "Bevölkerung insgesamt"
+msgstr ""
+
+msgid "Bevölkerung männlich"
+msgstr ""
+
+msgid "Bevölkerung weiblich"
+msgstr ""
+
+msgid "Bevölkerung je quadrat km"
+msgstr ""
+
+msgid "plz"
+msgstr ""
+
+msgid "Längengrad"
+msgstr ""
+
+msgid "Breitengrad"
+msgstr ""
+
+msgid "Reisegebiet"
+msgstr ""
+
+msgid "Gebietsstand"
+msgstr ""
+
+msgid "Bevölkerungsstand"
+msgstr ""
+
+msgid "GENDER_Numbering Range"
+msgstr ""
+
+msgid "Numbering Range"
+msgid_plural "Numbering Ranges"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Property"
+msgstr ""
+
+msgid "Additional Key"
+msgstr ""
+
+msgid "Numbering Range Start"
+msgstr ""
+
+msgid "Number of Zerofill"
+msgstr ""
+
+msgid "Prefix"
+msgstr ""
+
+msgid "Number is Editable"
+msgstr ""
+
+msgid "RoleMember"
+msgid_plural "RoleMembers"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "role_id"
+msgstr ""
+
+msgid "account_type"
+msgstr ""
+
+msgid "account_id"
+msgstr ""
+
+msgid "Role"
+msgid_plural "Roles"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Rights"
+msgstr ""
+
+msgid "Members"
+msgstr ""
+
+msgid "RoleRight"
+msgid_plural "RoleRights"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Scheduler task"
+msgid_plural "Scheduler tasks"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Configuration"
+msgstr ""
+
+msgid "Last run"
+msgstr ""
+
+msgid "Last run duration"
+msgstr ""
+
+msgid "Lock id"
+msgstr ""
+
+msgid "Next run"
+msgstr ""
+
+msgid "Last failure"
+msgstr ""
+
+msgid "Failure count"
+msgstr ""
+
+msgid "SMS Adapter Type"
+msgstr ""
+
+msgid "SMS Adapter Config"
+msgstr ""
+
+msgid "Local Filesystem"
+msgid_plural "Local Filesystems"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "WebDAV Mount"
+msgid_plural "WebDAV Mounts"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Flysystem Mount"
+msgid_plural "Flysystem Mounts"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "File Contents"
+msgstr ""
+
+msgid "Indexed"
+msgstr ""
+
+msgid "Content type"
+msgstr ""
+
+msgid "MD5 Hash"
+msgstr ""
+
+msgid "Revision Size"
+msgstr ""
+
+msgid "by"
+msgstr "af"
+
+msgid "Changed fields:"
+msgstr "Ændrede felter:"
+
+msgid "- The last filter I used -"
+msgstr ""
+
+msgid "Personal default"
+msgstr ""
+
+msgid "default"
+msgstr "standard"
+
+msgid "Page size"
+msgstr ""
+
+msgid "Page size in grids"
+msgstr ""
+
+msgid "Grid stripe rows"
+msgstr ""
+
+msgid "Stripe rows in grids"
+msgstr ""
+
+msgid "Grid load mask"
+msgstr ""
+
+msgid "Show load mask in grids"
+msgstr ""
+
+msgid "Grid resizing strategy"
+msgstr ""
+
+msgid "How to resize grid columns"
+msgstr ""
+
+msgid "Auto search on filter change"
+msgstr ""
+
+msgid "Perform auto search when filter is changed"
+msgstr ""
+
+msgid "The timezone in which dates are shown in Tine 2.0."
+msgstr "Tidszonen som datoer vises i, i Tine 2.0."
+
+msgid "The language of the Tine 2.0 GUI."
+msgstr "Sproget for Tine 2.0 GUI."
+
+msgid "Default Application"
+msgstr "Standard applikation"
+
+msgid "The default application to show after login."
+msgstr "Applikationen som skal vises efter login."
+
+msgid "Window Type"
+msgstr "Vindues type"
+
+msgid "You can choose between modal windows or normal browser popup windows."
+msgstr "Du kan vælge mellem ExtJs stilen eller normal browser popup vinduer."
+
+msgid "Confirm Logout"
+msgstr "Bekræft log ud"
+
+msgid "Show confirmation dialog on logout."
+msgstr "Vis bekræftelses dialog ved log ud."
+
+msgid "Enable advanced search"
+msgstr ""
+
+msgid "If enabled quickfilter searches through relations as well."
+msgstr ""
+
+msgid "File double-clicking action"
+msgstr ""
+
+msgid "Which action should be executed by default when a file is double-clicked."
+msgstr ""
+
+msgid "GENDER_Text"
+msgstr ""
+
+msgid "Text"
+msgid_plural "Texts"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "added"
+msgstr ""
+
+msgid "removed"
+msgstr ""
+
+msgid "modified"
+msgstr ""
+
+msgid "Scheduler task failed"
+msgstr ""
+
+#, python-format
+msgid "Your scheduler task %s has failed %d times."
+msgstr ""
+
+msgid "node name must not contain the character /"
+msgstr ""
+
+msgid "Password failed to match the following policy requirements: "
+msgstr ""
+
+msgid "MFA configs are not valid:"
+msgstr ""
+
+msgid "Your Tine 2.0 account has been deactivated"
+msgstr ""
+
+msgid "Your user account has been deactivated"
+msgstr ""
+
+msgid "Deactivation date"
+msgstr ""
+
+msgid "Tine 2.0 URL"
+msgstr ""
+
+msgid "Shared folders"
+msgstr ""

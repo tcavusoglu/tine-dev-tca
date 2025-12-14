@@ -1,0 +1,447 @@
+#
+# Translators:
+# Miguel Gutierrez <>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-04-02 13:32+0000\n"
+"Last-Translator: Miguel Gutierrez <>, 2012\n"
+"Language-Team: Spanish (Mexico) (http://app.transifex.com/tine/groupware/language/es_MX/)\n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Manage timeaccounts"
+msgstr "Administrar Cuentas de Trabajo"
+
+msgid "Add, edit and delete timeaccounts (includes all timesheet grants)"
+msgstr "Agregar, editar y eliminar Cuentas de Trabajo (incluye toda asignación de Hojas de Asistencia)"
+
+msgid "Add timeaccounts"
+msgstr "Agregar Cuentas de Trabajo"
+
+msgid "Manage shared timeaccount favorites"
+msgstr ""
+
+msgid "Create or update shared timeaccount favorites"
+msgstr ""
+
+msgid "Manage shared timesheet favorites"
+msgstr ""
+
+msgid "Create or update shared timesheet favorites"
+msgstr ""
+
+msgid "Enabled Features"
+msgstr ""
+
+msgid "Enabled Features in Timetracker Application."
+msgstr ""
+
+msgid "Timeaccount Bookmarks"
+msgstr ""
+
+msgid "none"
+msgstr "ninguno"
+
+msgid "last week"
+msgstr "semana pasada"
+
+msgid "not yet billed"
+msgstr "sin facturar aún"
+
+msgid "status to bill"
+msgstr ""
+
+msgid "billed"
+msgstr "facturado"
+
+msgid "Requested"
+msgstr ""
+
+msgid "Accepted"
+msgstr ""
+
+msgid "Declined"
+msgstr ""
+
+msgid "Add timeaccounts as favorite to speedup timesheet creation.)"
+msgstr ""
+
+msgid "Timeaccounts are still in use! Are you sure you want to delete them?"
+msgstr ""
+
+msgid "The Invoice you tried to edit is cleared already, change date will rebill the invoice, do you still want to execute this action?"
+msgstr ""
+
+msgid "Add Timesheet"
+msgstr ""
+
+msgid "Timesheets of this Task:"
+msgstr ""
+
+msgid "Time Account - Billed"
+msgstr ""
+
+msgid "to bill"
+msgstr "por facturar"
+
+msgid "Contract"
+msgstr ""
+
+msgid "without contract"
+msgstr ""
+
+msgid "Unit"
+msgstr "Unidad"
+
+msgid "Unit Price"
+msgstr "Precio por Unidad"
+
+msgid "Factor"
+msgstr ""
+
+msgid "Budget in hours"
+msgstr ""
+
+msgid "Status"
+msgstr "Estado"
+
+msgid "closed"
+msgstr "cerrado"
+
+msgid "open"
+msgstr "abierto"
+
+msgid "Cleared at"
+msgstr ""
+
+msgid "Responsible Person"
+msgstr ""
+
+msgid "Timesheets are billable"
+msgstr "Hojas de Asistencia son facturables"
+
+msgid "Invoice"
+msgstr ""
+
+msgid "Time Account"
+msgid_plural "Time Accounts"
+msgstr[0] "Cuenta de Trabajo"
+msgstr[1] "Cuentas de Trabajo"
+msgstr[2] "Cuentas de Trabajo"
+
+msgid "Number"
+msgstr "Número"
+
+msgid "Title"
+msgstr "Título"
+
+msgid "Description"
+msgstr "Descripción"
+
+msgid "Select invoice"
+msgstr ""
+
+msgid "Update Timesheets?"
+msgstr ""
+
+msgid "Attention: There are timesheets that have not yet been accounted. If you continue, they will be set to accounted. This action cannot be undone. Continue anyway?"
+msgstr ""
+
+msgid "Timeaccount Favorites"
+msgstr ""
+
+#, python-brace-format
+msgid "Delete {0}"
+msgid_plural "Delete {0}"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Favorite"
+msgstr ""
+
+msgid "Bookmark Timeaccount"
+msgstr ""
+
+msgid "Close Timeaccount"
+msgstr ""
+
+msgid "Show closed"
+msgstr "Mostrar cerrada"
+
+msgid "Responsible"
+msgstr ""
+
+msgid "without responsible"
+msgstr ""
+
+msgid "Time Account - Status"
+msgstr "Cuenta de Trabajo - Estado"
+
+msgid "End Time Change"
+msgstr ""
+
+msgid "End time was shortened as timesheet must not overlap day"
+msgstr ""
+
+msgid "Duration Change"
+msgstr ""
+
+msgid "Duration was shortened as timesheet must not overlap day"
+msgstr ""
+
+msgid "Timesheet"
+msgid_plural "Timesheets"
+msgstr[0] "Hoja de Asistencia"
+msgstr[1] "Hojas de Asistencia"
+msgstr[2] "Hojas de Asistencia"
+
+msgid "End must not before start."
+msgstr ""
+
+msgid "Accounting"
+msgstr ""
+
+msgid "Accounting time"
+msgstr ""
+
+msgid "Timeaccount"
+msgid_plural "Timeaccounts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Failed"
+msgstr "Falló"
+
+#, python-brace-format
+msgid "Could not save {0}."
+msgstr "No se pudo grabar {0}."
+
+msgid "Booking deadline for this Timeaccount has been exceeded."
+msgstr "Fecha limite de reservación para esta Cuenta de Trabajo  a sido excedida."
+
+msgid "Closed Timeaccount Warning!"
+msgstr ""
+
+msgid "The selected Time Account is already closed."
+msgstr ""
+
+msgid "The selected Time Account is already closed. Do you wish to continue anyway?"
+msgstr ""
+
+msgid "Workingtime:"
+msgstr ""
+
+msgid "Turnover:"
+msgstr ""
+
+msgid "Working Time Statistics"
+msgstr ""
+
+msgid "Turnover Statistics"
+msgstr ""
+
+msgid "timeframe"
+msgstr "periodo"
+
+msgid "summary"
+msgstr "resumen"
+
+msgid "Total Timesheets"
+msgstr "Total de Hojas de Asistencia"
+
+msgid "Billable Timesheets"
+msgstr "Hojas de Asistencia Facturables"
+
+msgid "Total Time"
+msgstr "Tiempo Total"
+
+msgid "Time of Billable Timesheets"
+msgstr "Tiempo de Hojas de Asistencia Facturables"
+
+msgid "Detail"
+msgstr "Detalle"
+
+#, python-brace-format
+msgid "Assign '{0}' Tag"
+msgstr ""
+
+msgid "Export Timesheets"
+msgstr "Exportar Hojas de Asistencia"
+
+msgid "Export as ODS"
+msgstr "Exportar como ODS"
+
+msgid "Export as CSV"
+msgstr "Exportar como CVS"
+
+msgid "Export as ..."
+msgstr "Exportar como..."
+
+msgid "Read Own"
+msgstr ""
+
+msgid "The grant to read own time sheets in this time account."
+msgstr ""
+
+msgid "Request Own"
+msgstr ""
+
+msgid "The grant to add own time sheets request in this time account."
+msgstr ""
+
+msgid "Book Own"
+msgstr "Reservar Propia"
+
+msgid "The grant to add Timesheets to this Timeaccount"
+msgstr "El permiso para agregar Hojas de Asistencia a esta Cuenta de Trabajo"
+
+msgid "View All"
+msgstr "Ver Todos"
+
+msgid "The grant to view Timesheets of other users"
+msgstr "El permiso para visualizar Hojas de Asistencia de otros usuarios"
+
+msgid "Book All"
+msgstr "Reservar Todas"
+
+msgid "The grant to add Timesheets for other users"
+msgstr "El permiso para agregar Hojas de Asistencia a otros usuarios"
+
+msgid "Manage Clearing"
+msgstr "Administrar Autorizaciones"
+
+msgid "The grant to manage clearing of Timesheets"
+msgstr "El permiso para administrar Autorizaciones de Hojas de Asistencia"
+
+msgid "Price"
+msgstr ""
+
+msgid "Project time billable"
+msgstr ""
+
+msgid "Project time cleared in"
+msgstr ""
+
+msgid "Project time billed"
+msgstr ""
+
+msgid "Booking deadline"
+msgstr "Plazo de Reserva"
+
+msgid "Accounting time factor"
+msgstr ""
+
+msgid "Stream"
+msgstr ""
+
+msgid "hour"
+msgstr ""
+
+msgid "Account"
+msgstr "Cuenta"
+
+msgid "Time Account (Number - Title)"
+msgstr ""
+
+msgid "Project time billable (combined)"
+msgstr ""
+
+msgid "Billable"
+msgstr "Facturable"
+
+msgid "Project time Invoice"
+msgstr ""
+
+msgid "Project time is cleared"
+msgstr ""
+
+msgid "Cleared amount"
+msgstr ""
+
+msgid "Date"
+msgstr "Fecha"
+
+msgid "Start time"
+msgstr "Hora de inicio"
+
+msgid "End time"
+msgstr ""
+
+msgid "Duration"
+msgstr "Duración"
+
+msgid "Need for Clarification"
+msgstr ""
+
+msgid "Projecttime Accounting factor"
+msgstr ""
+
+msgid "Accounting Projecttime"
+msgstr ""
+
+msgid "Workingtime is cleared"
+msgstr ""
+
+msgid "Workingtime cleared in"
+msgstr ""
+
+msgid "Process Status"
+msgstr ""
+
+msgid "Source"
+msgstr ""
+
+msgid "Timesheets ODS export configuration"
+msgstr "Configuración de Exportación ODS de Hojas de Asistencia"
+
+msgid "Use this configuration for the timesheet ODS export."
+msgstr "Utiliza esta configuración para exportación ODS de Hojas de Asistencia"
+
+msgid "A Tag which is available in context menu for fast assignment"
+msgstr ""
+
+msgid "Quick Tag allows to simply assign a predefined tag by the context menu."
+msgstr ""
+
+msgid "default"
+msgstr "predefinido"
+
+msgid "Requested Timesheets"
+msgstr ""
+
+msgid "My Timesheets today"
+msgstr "Mis Hojas de Asistencia hoy"
+
+msgid "My Timesheets this week"
+msgstr "Mis Hojas de Asistencia esta semana"
+
+msgid "My Timesheets last week"
+msgstr "Mis Hojas de Asistencia semana pasada"
+
+msgid "My Timesheets this month"
+msgstr "Mis Hojas de Asistencia este mes"
+
+msgid "My Timesheets last month"
+msgstr "Mis Hojas de Asistencia mes pasado"
+
+msgid "Timeaccounts to bill"
+msgstr "Cuentas de Trabajo por Facturar"
+
+msgid "Timeaccounts not yet billed"
+msgstr "Cuentas de Trabajo aún no facturadas"
+
+msgid "Timeaccounts already billed"
+msgstr "Cuentas de Trabajo Facturadas"
+
+msgid "Timetracker"
+msgstr "Rastreador de Tiempo"

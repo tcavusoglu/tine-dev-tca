@@ -1,0 +1,509 @@
+#
+# Translators:
+# Tommi Turkia <sahkari@saunalahti.fi>, 2012
+# Tommi Turkia <sahkari@saunalahti.fi>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:49+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Finnish (http://www.transifex.com/tine20/tine20/language/fi/)\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "manage shared lead folders"
+msgstr "hallitse jaettujen johtajien kansioita"
+
+msgid "Create new shared lead folders"
+msgstr "Luo uusi jaettu johtajan kansio"
+
+msgid "manage shared leads favorites"
+msgstr "hallitse jaettujen kansioiden suosikeita"
+
+msgid "Create or update shared leads favorites"
+msgstr "Luo tai päivitä jaettujen johtajien suosikkeja"
+
+msgid "controls sending notification of Leads"
+msgstr ""
+
+msgid "send notification)description"
+msgstr ""
+
+msgid "send notification to all access container"
+msgstr ""
+
+msgid "send notification to responsible"
+msgstr ""
+
+msgid "send notification to responsible)description"
+msgstr ""
+
+msgid "send notification to customer"
+msgstr ""
+
+msgid "send notification to partner"
+msgstr ""
+
+msgid "Lead States Available"
+msgstr ""
+
+msgid "Possible lead status, with their associated turnover probabilities. If a status is flagged, leads with this status are treated as closed."
+msgstr ""
+
+msgid "open"
+msgstr ""
+
+msgid "contacted"
+msgstr ""
+
+msgid "waiting for feedback"
+msgstr "Odottaa yhteydenotto"
+
+msgid "quote sent"
+msgstr ""
+
+msgid "accepted"
+msgstr "Hyväksytty"
+
+msgid "lost"
+msgstr "menetetty"
+
+msgid "read-only"
+msgstr ""
+
+msgid "Lead Sources Available"
+msgstr ""
+
+msgid "Possible lead sources. If a source is flagged as archived, leads of this source are treated as closed."
+msgstr ""
+
+msgid "Lead Types Available"
+msgstr ""
+
+msgid "Possible lead types."
+msgstr ""
+
+msgid "Customer"
+msgstr "Asiakas"
+
+msgid "Partner"
+msgstr "Partneri"
+
+msgid "Reseller"
+msgstr "Jälleenmyyjä"
+
+msgid "Enabled Features"
+msgstr ""
+
+msgid "Enabled Features in CRM Application."
+msgstr ""
+
+msgid "Lead Import"
+msgstr ""
+
+msgid "Lead Notification Confirmation"
+msgstr ""
+
+msgid "Add new task on lead import"
+msgstr ""
+
+msgid "Automatically creates a task for the responsible person if a new lead is imported."
+msgstr ""
+
+msgid "Send notification e-mail on lead import"
+msgstr ""
+
+msgid "Sends an e-mail to all responsible persons for the imported leads."
+msgstr ""
+
+msgid "Lead duplicate check fields"
+msgstr ""
+
+msgid "These fields are checked when a new lead is created. If a record with the same data in the fields is found, a duplicate exception is thrown."
+msgstr ""
+
+msgid "State"
+msgstr ""
+
+msgid "Role"
+msgstr ""
+
+msgid "Source"
+msgstr "Lähde"
+
+msgid "Start"
+msgstr "Alku"
+
+msgid "Scheduled end"
+msgstr "Arvioitu päättyminen"
+
+msgid "End"
+msgstr "Loppu"
+
+msgid "Turnover"
+msgstr ""
+
+msgid "Probability"
+msgstr ""
+
+msgid "Folder"
+msgstr "Kansio"
+
+msgid "Updated by"
+msgstr "Päivitetty"
+
+msgid "Updated Fields:"
+msgstr "Päivitetyt kentät:"
+
+#, python-format
+msgid "'%s' changed from '%s' to '%s'."
+msgstr ""
+
+msgid "Tags"
+msgstr ""
+
+#, python-format
+msgid "Lead %s has been changed"
+msgstr "Johtaja %s on vaihdettu"
+
+#, python-format
+msgid "Lead %s has been deleted"
+msgstr ""
+
+#, python-format
+msgid "Lead %s has been created"
+msgstr "Johtaja %s on luotu"
+
+msgid "This Lead state is set to read-only therefore updating this Lead is not possible."
+msgstr ""
+
+msgid "CSV all data"
+msgstr ""
+
+msgid "Lead Data"
+msgstr ""
+
+msgid "Leadstate"
+msgstr ""
+
+msgid "Leadtype"
+msgstr ""
+
+msgid "Leadsource"
+msgstr ""
+
+msgid "End Scheduled"
+msgstr ""
+
+msgid "Contacts"
+msgstr "Yhteystiedot"
+
+msgid "Address"
+msgstr "Osoite"
+
+msgid "Telephone"
+msgstr "Puhelin"
+
+msgid "Email"
+msgstr "Sähköposti"
+
+msgid "Tasks"
+msgstr ""
+
+msgid "Due Date"
+msgstr ""
+
+msgid "Priority"
+msgstr ""
+
+msgid "Products"
+msgstr "Tuotteet"
+
+msgid "low"
+msgstr "alhainen"
+
+msgid "normal"
+msgstr "normaali"
+
+msgid "high"
+msgstr "korkea"
+
+msgid "urgent"
+msgstr "tärkeä"
+
+msgid "Edit new lead"
+msgstr ""
+
+#, python-format
+msgid "The following leads have just been imported into lead list %s"
+msgstr ""
+
+#, python-format
+msgid "%s new leads have been imported"
+msgstr ""
+
+msgid "Lead CSV import"
+msgstr ""
+
+msgid "Import list (###CURRENTDATE###)"
+msgstr ""
+
+msgid "Leads imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr ""
+
+msgid "Please choose the Lead to add the contacts to"
+msgstr ""
+
+msgid "Please select the attenders' role"
+msgstr ""
+
+msgid "Lead"
+msgid_plural "Leads"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Select Lead"
+msgstr ""
+
+msgid "Select Role"
+msgstr ""
+
+#, python-brace-format
+msgid "Adding {0} contacts to lead"
+msgstr ""
+
+msgid "Change type to Customer"
+msgstr ""
+
+msgid "Responsible"
+msgstr ""
+
+msgid "Change type to Responsible"
+msgstr ""
+
+msgid "Change type to Partner"
+msgstr ""
+
+msgid "Change contact type"
+msgstr ""
+
+msgid "Search for Contacts to add ..."
+msgstr ""
+
+msgid "Name"
+msgstr "Nimi"
+
+msgid "Data"
+msgstr "Tiedot"
+
+msgid "Phone"
+msgstr "Puhelin"
+
+msgid "Cellphone"
+msgstr "Matkapuhelin"
+
+msgid "New Lead"
+msgstr ""
+
+msgid "Notifications are enabled"
+msgstr ""
+
+msgid "Notifications are disabled"
+msgstr ""
+
+msgid "Send Notification?"
+msgstr ""
+
+msgid "Changes to this lead might send notifications. Press the button \"Notifcation are enabled\" to switch to \"Notification are disabled\""
+msgstr ""
+
+msgid "You do not have the run right for the Tasks application or it is not activated."
+msgstr ""
+
+msgid "You do not have the run right for the Sales application or it is not activated."
+msgstr ""
+
+msgid "Enter lead name"
+msgstr ""
+
+msgid "Expected turnover"
+msgstr ""
+
+msgid "Resubmission Date"
+msgstr ""
+
+msgid "Estimated end"
+msgstr ""
+
+msgid "Description"
+msgstr "Kuvaus"
+
+msgid "Enter description"
+msgstr ""
+
+msgid "Contact"
+msgstr ""
+
+msgid "CRM Role"
+msgstr ""
+
+msgid "Mobile"
+msgstr "Matkapuhelin"
+
+msgid "Fax"
+msgstr "Fax"
+
+msgid "E-Mail"
+msgstr "Sähköposti"
+
+msgid "Web"
+msgstr ""
+
+msgid "Status"
+msgstr "Tila"
+
+msgid "Lead name"
+msgstr ""
+
+msgid "Probable Turnover"
+msgstr ""
+
+msgid "Import leads"
+msgstr ""
+
+#, python-brace-format
+msgid "Add new {0}"
+msgstr ""
+
+#, python-brace-format
+msgid "Unlink {0}"
+msgstr ""
+
+#, python-brace-format
+msgid "Unlink selected {0}"
+msgstr ""
+
+#, python-brace-format
+msgid "Edit {0}"
+msgstr "Muokkaa {0}"
+
+#, python-brace-format
+msgid "Edit selected {0}"
+msgstr "Muokkaa valittuja {0}"
+
+msgid "lead list"
+msgid_plural "lead lists"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "lead lists"
+msgstr ""
+
+msgid "Quick Search"
+msgstr ""
+
+msgid "Last Modified Time"
+msgstr "Muokattu viimeksi"
+
+msgid "Last Modified By"
+msgstr "Muokkasi viimeksi"
+
+msgid "Creation Time"
+msgstr "Luontiaika"
+
+msgid "Created By"
+msgstr "Luonut"
+
+msgid "X Lead"
+msgstr ""
+
+msgid "disabled"
+msgstr ""
+
+msgid "Archived"
+msgstr ""
+
+msgid "Product"
+msgstr "Tuote"
+
+msgid "Price"
+msgstr "Hinta"
+
+msgid "Quantity"
+msgstr "Määrä"
+
+msgid "Search for Products to add ..."
+msgstr ""
+
+msgid "No Tasks to display"
+msgstr ""
+
+msgid "Summary"
+msgstr "Yhteenveto"
+
+msgid "Add a task..."
+msgstr ""
+
+msgid "Percent"
+msgstr "Prosenttia"
+
+msgid "Organizer"
+msgstr ""
+
+msgid "GENDER_Lead"
+msgstr ""
+
+msgid "Show Closed"
+msgstr ""
+
+msgid "All leads"
+msgstr ""
+
+msgid "Default Lead List"
+msgstr ""
+
+msgid "The default list for new leads"
+msgstr ""
+
+msgid "Get Notification E-mails"
+msgstr ""
+
+msgid "The level of actions you want to be notified about."
+msgstr ""
+
+msgid "Send Notifications e-mails for own actions"
+msgstr ""
+
+msgid "Get notifications e-mails for actions you did yourself"
+msgstr ""
+
+msgid "Default Favorite"
+msgstr "Oletus suosikki"
+
+msgid "The default favorite which is loaded on crm startup"
+msgstr ""
+
+msgid "All leads I have read grants for"
+msgstr ""
+
+msgid "Last modified by me"
+msgstr ""
+
+msgid "All leads that I have last modified"
+msgstr ""
+
+msgid "My leads"
+msgstr ""
+
+msgid "All leads that I am responsible for"
+msgstr ""
+
+msgid "Leads with overdue tasks"
+msgstr ""

@@ -1,0 +1,90 @@
+.action_settings {
+    background-image:url(../../images/icon-set/icon_settings.svg) !important;
+}
+
+.action_permissions {
+    background-image:url(../../images/icon-set/Icon_key.svg) !important;
+}
+
+.action_addGroup {
+    background-image:url(../../images/icon-set/Icon_add.svg) !important;
+}
+
+.action_password {
+    background-image:url(../../images/icon-set/Icon_key.svg) !important;
+}
+
+.action_mfa {
+    background-image:url(../../images/icon-set/icon_key_groups.svg) !important;
+}
+
+.AdminIconCls {
+    background-image:url(../../images/icon-set/icon_settings.svg) !important;
+}
+
+.admin-node {
+    background-image:url(../../images/icon-set/icon_calendar_list.svg) !important;
+}
+.admin-node-accesslog {
+    background-image:url(../../images/icon-set/icon_log_file.svg) !important;
+}
+
+.admin-node-computers {
+    background-image:url(../../images/icon-set/icon_server.svg) !important;
+}
+
+.admin-node-server-info {
+    background-image:url(../../images/icon-set/icon_server_information.svg) !important;
+}
+
+.admin-node-applications {
+    background-image:url(../../images/icon-set/icon_app.svg) !important;
+}
+
+.admin-node-containers {
+    background-image:url(../../images/icon-set/icon_folder.svg) !important;
+}
+
+.admin-action-add-container {
+    background-image:url(../../images/icon-set/icon_filemanager_plus.svg) !important;
+}
+
+.admin-node-customfields {
+    background-image:url(../../images/icon-set/icon_customfield.svg) !important;
+}
+
+.admin-action-add-customfield {
+    background-image:url(../../images/icon-set/Icon_add.svg) !important;
+}
+
+.admin-node-customfields-store {
+    background-image:url(../../images/icon-set/icon_coreData.svg) !important;
+}
+
+.admin-node-quota-usage {
+    background-image:url(../../images/icon-set/icon_quota.svg) !important;
+}
+
+.admin-node-scheduler {
+    background-image:url(../../images/icon-set/icon_time.svg) !important;
+}
+
+.admin-node-templates {
+    background-image:url(../../images/icon-set/icon_template.svg) !important;
+}
+
+.x-tree-node-collapsed .x-tree-node-icon.x-tree-node-leaf-checkbox, 
+.x-tree-node-expanded .x-tree-node-icon.x-tree-node-leaf-checkbox, 
+.x-tree-node-leaf .x-tree-node-icon.x-tree-node-leaf-checkbox ,
+.x-tree-node-leaf-checkbox {
+    width: 0px;
+}
+
+.admin-checkbox{
+    top: 9px;
+    height: 30px;
+}
+
+.admin-checkbox-box{
+    margin-bottom: 3px !important;
+}

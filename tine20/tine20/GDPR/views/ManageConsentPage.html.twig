@@ -1,0 +1,27 @@
+{#
+available parameters:
+    link
+    app.branding.title
+    contact
+    localizeString(dip.name, app.user.locale)
+    localizeString(dip.description, app.user.locale)
+#}
+
+{#
+file: tine20/GDPR/js/ConsentClient/src/ManageConsent.vue
+url: GDPR/view/manageConsent/contactId
+#}
+
+{% block manageConsentPageExplainText %}
+    {% if contact != '' %}
+        <h1>{{ _('Consent from') }}: <span>{{ contact.email }}</span></h1>
+        <div class="my-4">
+            {% if contact.n_fileas != '' %}<a>{{ _('Name') }} : {{ contact.n_fileas }}</a><br>{% endif %}
+            {% if contact.org_name != '' %}<a>{{ _('Organization') }} : {{ contact.org_name }}</a>{% endif %}
+        </div>
+    {% endif %}
+        <div class="my-4">
+            <a><b>{{ _('Welcome to your consent management.') }}</b></a><br>
+            <a>{{ _('Here you can decide for which purposes we may contact you.') }}</a>
+        </div>
+{% endblock %}

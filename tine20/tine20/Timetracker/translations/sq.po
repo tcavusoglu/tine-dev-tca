@@ -1,0 +1,443 @@
+#
+# Translators:
+# Enri Mullai <enri_mullai@albnet.net>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-04-02 13:32+0000\n"
+"Last-Translator: Enri Mullai <enri_mullai@albnet.net>, 2013\n"
+"Language-Team: Albanian (http://app.transifex.com/tine/groupware/language/sq/)\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Manage timeaccounts"
+msgstr "Menaxho llogaritë kohore"
+
+msgid "Add, edit and delete timeaccounts (includes all timesheet grants)"
+msgstr "Shto, modifiko dhe fshij llogaritë kohore (përfshirë të gjithë E drejta e tabelës kohore)"
+
+msgid "Add timeaccounts"
+msgstr "Shto llogari kohore"
+
+msgid "Manage shared timeaccount favorites"
+msgstr "Menaxho preferencialet e llogarive kohore të ndara"
+
+msgid "Create or update shared timeaccount favorites"
+msgstr "Krijo ose përditëso llogari kohore preferenciale të ndara"
+
+msgid "Manage shared timesheet favorites"
+msgstr "Menaxho preferenciale tabelash kohore të ndara"
+
+msgid "Create or update shared timesheet favorites"
+msgstr "Krijo ose përditëso preferencialet e tabelave kohore të ndara"
+
+msgid "Enabled Features"
+msgstr ""
+
+msgid "Enabled Features in Timetracker Application."
+msgstr ""
+
+msgid "Timeaccount Bookmarks"
+msgstr ""
+
+msgid "none"
+msgstr "askush"
+
+msgid "last week"
+msgstr "javën e shkuar"
+
+msgid "not yet billed"
+msgstr "e pafaturuar akoma"
+
+msgid "status to bill"
+msgstr ""
+
+msgid "billed"
+msgstr "faturuar"
+
+msgid "Requested"
+msgstr ""
+
+msgid "Accepted"
+msgstr ""
+
+msgid "Declined"
+msgstr ""
+
+msgid "Add timeaccounts as favorite to speedup timesheet creation.)"
+msgstr ""
+
+msgid "Timeaccounts are still in use! Are you sure you want to delete them?"
+msgstr ""
+
+msgid "The Invoice you tried to edit is cleared already, change date will rebill the invoice, do you still want to execute this action?"
+msgstr ""
+
+msgid "Add Timesheet"
+msgstr ""
+
+msgid "Timesheets of this Task:"
+msgstr ""
+
+msgid "Time Account - Billed"
+msgstr "Llogari kohore - Faturuar"
+
+msgid "to bill"
+msgstr "për tu faturuar"
+
+msgid "Contract"
+msgstr "Marrëveshje"
+
+msgid "without contract"
+msgstr "pa marrëveshje"
+
+msgid "Unit"
+msgstr "Njësi"
+
+msgid "Unit Price"
+msgstr "Çmim njësie"
+
+msgid "Factor"
+msgstr ""
+
+msgid "Budget in hours"
+msgstr ""
+
+msgid "Status"
+msgstr "Staus"
+
+msgid "closed"
+msgstr "mbyllur"
+
+msgid "open"
+msgstr "hapur"
+
+msgid "Cleared at"
+msgstr "Pastruar në"
+
+msgid "Responsible Person"
+msgstr ""
+
+msgid "Timesheets are billable"
+msgstr "Tabelat kohore janë të faturueshme"
+
+msgid "Invoice"
+msgstr ""
+
+msgid "Time Account"
+msgid_plural "Time Accounts"
+msgstr[0] "Llogaria kohore"
+msgstr[1] "Llogaritë kohore"
+
+msgid "Number"
+msgstr "Numër"
+
+msgid "Title"
+msgstr "Titull"
+
+msgid "Description"
+msgstr "Përshkrim"
+
+msgid "Select invoice"
+msgstr ""
+
+msgid "Update Timesheets?"
+msgstr ""
+
+msgid "Attention: There are timesheets that have not yet been accounted. If you continue, they will be set to accounted. This action cannot be undone. Continue anyway?"
+msgstr ""
+
+msgid "Timeaccount Favorites"
+msgstr ""
+
+#, python-brace-format
+msgid "Delete {0}"
+msgid_plural "Delete {0}"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Favorite"
+msgstr ""
+
+msgid "Bookmark Timeaccount"
+msgstr ""
+
+msgid "Close Timeaccount"
+msgstr ""
+
+msgid "Show closed"
+msgstr "Trego të mbyllurat"
+
+msgid "Responsible"
+msgstr ""
+
+msgid "without responsible"
+msgstr ""
+
+msgid "Time Account - Status"
+msgstr "Llogari kohore - Status"
+
+msgid "End Time Change"
+msgstr ""
+
+msgid "End time was shortened as timesheet must not overlap day"
+msgstr ""
+
+msgid "Duration Change"
+msgstr ""
+
+msgid "Duration was shortened as timesheet must not overlap day"
+msgstr ""
+
+msgid "Timesheet"
+msgid_plural "Timesheets"
+msgstr[0] "Tabelë kohore"
+msgstr[1] "Tabela Kohore"
+
+msgid "End must not before start."
+msgstr ""
+
+msgid "Accounting"
+msgstr ""
+
+msgid "Accounting time"
+msgstr ""
+
+msgid "Timeaccount"
+msgid_plural "Timeaccounts"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Failed"
+msgstr "Dështoi"
+
+#, python-brace-format
+msgid "Could not save {0}."
+msgstr "Nuk mund të ruhej {0}."
+
+msgid "Booking deadline for this Timeaccount has been exceeded."
+msgstr "Afati i rezervimit për këtë Llogari kohore është tejkaluar"
+
+msgid "Closed Timeaccount Warning!"
+msgstr ""
+
+msgid "The selected Time Account is already closed."
+msgstr ""
+
+msgid "The selected Time Account is already closed. Do you wish to continue anyway?"
+msgstr ""
+
+msgid "Workingtime:"
+msgstr ""
+
+msgid "Turnover:"
+msgstr ""
+
+msgid "Working Time Statistics"
+msgstr ""
+
+msgid "Turnover Statistics"
+msgstr ""
+
+msgid "timeframe"
+msgstr "korniza kohore"
+
+msgid "summary"
+msgstr "përmbledhje"
+
+msgid "Total Timesheets"
+msgstr "Totali Tabelave kohore"
+
+msgid "Billable Timesheets"
+msgstr "Tabela kohore të faturueshme"
+
+msgid "Total Time"
+msgstr "Koha totale"
+
+msgid "Time of Billable Timesheets"
+msgstr "Koha e tabelave kohore të faturueshme"
+
+msgid "Detail"
+msgstr "Detaj"
+
+#, python-brace-format
+msgid "Assign '{0}' Tag"
+msgstr ""
+
+msgid "Export Timesheets"
+msgstr "Eksporto Tabelat kohore"
+
+msgid "Export as ODS"
+msgstr "Eksporto si ODS"
+
+msgid "Export as CSV"
+msgstr "Eksporto si CSV"
+
+msgid "Export as ..."
+msgstr "Eksporto si..."
+
+msgid "Read Own"
+msgstr ""
+
+msgid "The grant to read own time sheets in this time account."
+msgstr ""
+
+msgid "Request Own"
+msgstr ""
+
+msgid "The grant to add own time sheets request in this time account."
+msgstr ""
+
+msgid "Book Own"
+msgstr "Rezervo tënden"
+
+msgid "The grant to add Timesheets to this Timeaccount"
+msgstr "E drejta për të shtuar Tabela Kohore tek kjo Llogari kohore "
+
+msgid "View All"
+msgstr "Shiko të gjitha"
+
+msgid "The grant to view Timesheets of other users"
+msgstr "E drejta për të parë Tabelat Kohore të përdoruesve të tjerë"
+
+msgid "Book All"
+msgstr "Rezervo të gjitha"
+
+msgid "The grant to add Timesheets for other users"
+msgstr "E drejta për të shtuar Tabela Kohore për përdoruesit e tjerë"
+
+msgid "Manage Clearing"
+msgstr "Menaxho Pastrimin"
+
+msgid "The grant to manage clearing of Timesheets"
+msgstr "E drejta për të menaxhuar pastrimin e Tabelave Kohore"
+
+msgid "Price"
+msgstr ""
+
+msgid "Project time billable"
+msgstr ""
+
+msgid "Project time cleared in"
+msgstr ""
+
+msgid "Project time billed"
+msgstr ""
+
+msgid "Booking deadline"
+msgstr "Afati i fundit i rezervimit"
+
+msgid "Accounting time factor"
+msgstr ""
+
+msgid "Stream"
+msgstr ""
+
+msgid "hour"
+msgstr ""
+
+msgid "Account"
+msgstr "Llogari"
+
+msgid "Time Account (Number - Title)"
+msgstr "Llogari Kohore (Numër - Titull)"
+
+msgid "Project time billable (combined)"
+msgstr ""
+
+msgid "Billable"
+msgstr "E faturueshme"
+
+msgid "Project time Invoice"
+msgstr ""
+
+msgid "Project time is cleared"
+msgstr ""
+
+msgid "Cleared amount"
+msgstr ""
+
+msgid "Date"
+msgstr "Datë"
+
+msgid "Start time"
+msgstr "Koha e fillimit"
+
+msgid "End time"
+msgstr ""
+
+msgid "Duration"
+msgstr "Kohëzgjatja"
+
+msgid "Need for Clarification"
+msgstr ""
+
+msgid "Projecttime Accounting factor"
+msgstr ""
+
+msgid "Accounting Projecttime"
+msgstr ""
+
+msgid "Workingtime is cleared"
+msgstr ""
+
+msgid "Workingtime cleared in"
+msgstr ""
+
+msgid "Process Status"
+msgstr ""
+
+msgid "Source"
+msgstr ""
+
+msgid "Timesheets ODS export configuration"
+msgstr "Konfigurimi i eksportimit ODS të Tabelave kohore "
+
+msgid "Use this configuration for the timesheet ODS export."
+msgstr "Përdor këtë konfigurim për eksportin ODS të tabelave kohore"
+
+msgid "A Tag which is available in context menu for fast assignment"
+msgstr ""
+
+msgid "Quick Tag allows to simply assign a predefined tag by the context menu."
+msgstr ""
+
+msgid "default"
+msgstr "paracaktuar"
+
+msgid "Requested Timesheets"
+msgstr ""
+
+msgid "My Timesheets today"
+msgstr "Tabelat e mia kohore sot"
+
+msgid "My Timesheets this week"
+msgstr "Tabelat e mia kohore këtë javë"
+
+msgid "My Timesheets last week"
+msgstr "Tabelat e mia kohore të javës së shkuar"
+
+msgid "My Timesheets this month"
+msgstr "Tabelat e mia kohore këtë muaj"
+
+msgid "My Timesheets last month"
+msgstr "Tabelat e mia kohore të muajit të shkuar"
+
+msgid "Timeaccounts to bill"
+msgstr "Llogari kohore për tu faturuar"
+
+msgid "Timeaccounts not yet billed"
+msgstr "Llogari kohore akoma të pa faturuara"
+
+msgid "Timeaccounts already billed"
+msgstr "Llogari kohore të faturuara "
+
+msgid "Timetracker"
+msgstr "Matësi kohor"

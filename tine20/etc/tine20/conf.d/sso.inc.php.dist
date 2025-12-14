@@ -1,0 +1,14 @@
+<?php
+
+return [
+    'SSO' => [
+        'pwdLessLogin' => 'both',
+        'oauth2' => [
+            'enabled' => true,
+        ],
+        'saml2' => [
+            'enabled' => true,
+            'tineLogout' => true,
+        ],
+    ],
+];

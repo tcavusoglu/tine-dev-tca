@@ -1,0 +1,97 @@
+<?php
+/**
+ * Tine 2.0
+ *
+ * @package     Tinebase
+ * @subpackage  Lock
+ * @license     http://www.gnu.org/licenses/agpl.html AGPL Version 3
+ * @copyright   Copyright (c) 2018-2025 Metaways Infosystems GmbH (http://www.metaways.de)
+ * @author      Paul Mehrer <p.mehrer@metaways.de>
+ */
+
+/**
+ * Mysql lock implementation
+ * the lock only persists during a connection session
+ * no need to use __destruct to release the lock, it goes away automatically
+ *
+ * @package     Tinebase
+ * @subpackage  Lock
+ */
+class Tinebase_Lock_Mysql extends Tinebase_Lock_Abstract
+{
+    public function keepAlive(): void
+    {
+        if ($this->_isLocked) {
+            $db = Tinebase_Core::getDb();
+            if (!($stmt = $db->query('SELECT IS_USED_LOCK("' . $this->_lockId . '") = CONNECTION_ID(), CONNECTION_ID()')) ||
+                    !$stmt->setFetchMode(Zend_Db::FETCH_NUM) ||
+                    !($row = $stmt->fetch()) ||
+                    $row[0] != 1) {
+                throw new Tinebase_Exception_Backend('lock is not held by us anymore');
+            }
+            if (Tinebase_Core::isLogLevel(Zend_Log::DEBUG)) Tinebase_Core::getLogger()->debug(__METHOD__ . '::' . __LINE__
+                    . ' connection id: ' . $row[1]);
+        } else {
+            throw new Tinebase_Exception_Backend('lock is not locked');
+        }
+    }
+
+    /**
+     * blocks indefinetly by default, set timeout to 0 to only try non-blocking
+     */
+    public function tryAcquire(int $timeout = -1): bool
+    {
+        if ($this->_isLocked) {
+            throw new Tinebase_Exception_Backend('trying to acquire a lock on a locked lock');
+        }
+        $db = Tinebase_Core::getDb();
+        // first check if the lock is free, that means, not yet acquired possible by our own session
+        // belows get_lock would allow to acquire the lock inside our own mysql session multiple times
+        if (($stmt = $db->query('SELECT IS_FREE_LOCK("' . $this->_lockId . '")')) &&
+            $stmt->setFetchMode(Zend_Db::FETCH_NUM) &&
+            ($row = $stmt->fetch()) &&
+            $row[0] != 1) {
+            return false;
+        }
+        $stmt->closeCursor();
+        if (-1 === $timeout && Setup_Backend_Factory::factory()->supports('mariadb >= 10')) {
+            $timeout = 0xffffff;
+        }
+        if (($stmt = $db->query('SELECT GET_LOCK("' . $this->_lockId . '", ' . $timeout . ')')) &&
+                $stmt->setFetchMode(Zend_Db::FETCH_NUM) &&
+                ($row = $stmt->fetch()) &&
+                $row[0] == 1) {
+            $stmt->closeCursor();
+            $this->_isLocked = true;
+            if (Tinebase_Core::isLogLevel(Zend_Log::DEBUG)) Tinebase_Core::getLogger()->debug(__METHOD__ . '::' . __LINE__
+                .' Aquired lock: ' . $this->_lockId);
+            return true;
+        }
+        if ($stmt) {
+            $stmt->closeCursor();
+        }
+        // TODO we could also log the lock user - "select is_used_lock($this->_lockId);"
+        if (Tinebase_Core::isLogLevel(Zend_Log::NOTICE)) Tinebase_Core::getLogger()->notice(__METHOD__ . '::' . __LINE__
+            .' Could not get_lock: ' . $this->_lockId . ' ' . (isset($row) ? print_r($row, true) : 'get_lock failed'));
+        return false;
+    }
+
+    public function release(): bool
+    {
+        if (!$this->_isLocked) {
+            throw new Tinebase_Exception_Backend('trying to release an unlocked lock');
+        }
+
+        $db = Tinebase_Core::getDb();
+
+        // ATTENTION use $stmt->closeCursor if you want to add logging (db logger......) below
+        if (($stmt = $db->query('SELECT RELEASE_LOCK("' . $this->_lockId . '")')) &&
+                $stmt->setFetchMode(Zend_Db::FETCH_NUM) &&
+                ($row = $stmt->fetch()) &&
+                $row[0] == 1) {
+            $this->_isLocked = false;
+            return true;
+        }
+        return false;
+    }
+}

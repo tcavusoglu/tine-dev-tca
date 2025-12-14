@@ -1,0 +1,143 @@
+#
+# Translators:
+# Daniele Gobbetti <daniele@gobbetti.name>, 2013
+# Vincenzo Anzisi <v.anzisi@gurusys.it>, 2012
+# Vincenzo Anzisi <v.anzisi@gurusys.it>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-04-02 13:32+0000\n"
+"Last-Translator: Vincenzo Anzisi <v.anzisi@gurusys.it>, 2012\n"
+"Language-Team: Italian (http://app.transifex.com/tine/groupware/language/it/)\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Draft"
+msgstr "Bozza"
+
+msgid "released"
+msgstr "rilasciata"
+
+msgid "obsolete"
+msgstr "obsoleta"
+
+msgid "Internal"
+msgstr "Interna"
+
+msgid "Public"
+msgstr "Pubblica"
+
+msgid "FAQ Status"
+msgid_plural "FAQ Status"
+msgstr[0] "Stato FAQ"
+msgstr[1] "Stato FAQ"
+msgstr[2] "Stato FAQ"
+
+msgid "FAQ Type"
+msgid_plural "FAQ Types"
+msgstr[0] "Tipo FAQ"
+msgstr[1] "Tipi FAQ"
+msgstr[2] "Tipi FAQ"
+
+msgid "Defaults"
+msgstr "Predefiniti"
+
+msgid "Question"
+msgstr "Domanada"
+
+msgid "Enter a question..."
+msgstr "Inserisci una domanda ..."
+
+msgid "Answer"
+msgstr "Risposta"
+
+msgid "Enter a answer..."
+msgstr "Inserisci una risposta ..."
+
+msgid "Type"
+msgstr "Tipo"
+
+msgid "Status"
+msgstr "Stato"
+
+msgid "FAQ Infos"
+msgstr "Info FAQ"
+
+msgid "Tags"
+msgstr "Tag"
+
+msgid "Creation Time"
+msgstr "Data di Creazione"
+
+msgid "Created By"
+msgstr "Creata da"
+
+msgid "No answer yet"
+msgstr "Non è stata fornita ancora alcuna risposta"
+
+msgid "FAQ id"
+msgstr "ID FAQ"
+
+msgid "Add a new FAQ Status..."
+msgstr "Aggiungi un nuovo Stato della FAQ"
+
+msgid "Add a new FAQ Type..."
+msgstr "Aggiungi un nuovo Tipo di FAQ"
+
+msgid "FAQ"
+msgid_plural "FAQs"
+msgstr[0] "FAQ"
+msgstr[1] "FAQ"
+msgstr[2] "FAQ"
+
+msgid "FAQ List"
+msgid_plural "FAQ Lists"
+msgstr[0] "Lista FAQ"
+msgstr[1] "Liste FAQ"
+msgstr[2] "Liste FAQ"
+
+msgid "FAQ Lists"
+msgstr "Liste FAQ"
+
+msgid "Quick Search"
+msgstr "Ricerca veloce"
+
+msgid "Search FAQ"
+msgstr ""
+
+msgid "Find Question"
+msgstr "Trova domanda"
+
+msgid "Search question"
+msgstr "Cerca domanda"
+
+msgid "All my FAQs"
+msgstr "Tutte le mie FAQ"
+
+msgid "Default Favorite"
+msgstr "Preferiti predefiniti"
+
+msgid "The default favorite which is loaded on FAQ startup"
+msgstr "Il preferito di default che sarà caricato all'avvio delle FAQ"
+
+msgid "Default FAQ List"
+msgstr "Lista FAQ predefinita"
+
+msgid "The default FAQ list to create new FAQ in."
+msgstr "Lista predefinita di FAQ in cui crearne una nuova."
+
+msgid "All FAQs of my FAQ Lists"
+msgstr "Tutte le FAQ delle mie liste"
+
+msgid "Last modified by me"
+msgstr "Ultima modificata da me"
+
+msgid "All FAQs that I have last modified"
+msgstr "Tutte le FAQ che sono state modificate per ultimo da me"

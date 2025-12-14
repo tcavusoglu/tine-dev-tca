@@ -1,0 +1,170 @@
+#
+# Translators:
+# Samuel Barbera <samuel.barbera@email.it>, 2013
+# Vincenzo Anzisi <v.anzisi@gurusys.it>, 2012
+# Vincenzo Anzisi <v.anzisi@gurusys.it>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-10-04 15:23+0000\n"
+"Last-Translator: Vincenzo Anzisi <v.anzisi@gurusys.it>, 2012\n"
+"Language-Team: Italian (http://app.transifex.com/tine/groupware/language/it/)\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Inventory Status Available"
+msgstr "Stato Inventario Disponibile"
+
+msgid "Possible status."
+msgstr "Stati possibili."
+
+msgid "Ordered"
+msgstr ""
+
+msgid "Available"
+msgstr ""
+
+msgid "Defect"
+msgstr ""
+
+msgid "Missing"
+msgstr ""
+
+msgid "Removed"
+msgstr "Rimosso"
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Stored"
+msgstr ""
+
+msgid "Sold"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Types"
+msgstr ""
+
+msgid "Tine 2.0 inventory CSV import"
+msgstr ""
+
+msgid "Import CSV formated contacts from Tine 2.0 Inventory (Export Format)"
+msgstr ""
+
+msgid "Import list (###CURRENTDATE###)"
+msgstr "Importa elenco (###CURRENTDATE###)"
+
+msgid "Inventory Items imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr ""
+
+msgid "Inventory CSV import"
+msgstr "Importa inventario via CSV"
+
+msgid "Items imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr "Articoli importati da ###USERFULLNAME### - ###CURRENTTIME### ###CURRENTDATE###"
+
+msgid "The active number must be less than or equal total number."
+msgstr "Il numero attivo deve essere minore o uguale al numero totale"
+
+msgid "Purchase Invoice"
+msgstr ""
+
+msgid "General"
+msgstr "Generale"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Serial Number"
+msgstr ""
+
+msgid "Inventory Type"
+msgstr ""
+
+msgid "Employee"
+msgstr ""
+
+msgid "Description"
+msgstr "Descrizione"
+
+msgid "Enter description"
+msgstr "Inserisci descrizione"
+
+msgid "Location"
+msgstr "Luogo"
+
+msgid "Added"
+msgstr "Aggiunto"
+
+msgid "Warranty"
+msgstr "Garanzia"
+
+msgid "Total number"
+msgstr "Numero totale"
+
+msgid "Available number"
+msgstr "Numero disponibile"
+
+msgid "Status"
+msgstr "Stato"
+
+msgid "Accounting"
+msgstr "Contabilità"
+
+msgid "Price"
+msgstr "Prezzo"
+
+msgid "Invoice date"
+msgstr "Data fattura"
+
+msgid "Depreciate"
+msgstr "Svalutato"
+
+msgid "Inventory item"
+msgid_plural "Inventory items"
+msgstr[0] "Voce inventario"
+msgstr[1] "Voci inventario"
+msgstr[2] "Voci inventario"
+
+msgid "Inventory item list"
+msgid_plural "Inventory item lists"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Inventory ID"
+msgstr "ID Inventario"
+
+msgid "Depreciated"
+msgstr ""
+
+msgid "Inventory type"
+msgid_plural "Inventory types"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Default Inventory Item Container"
+msgstr "Contenitore voci inventario predefinito"
+
+msgid "The default container for new items"
+msgstr "Contenitore predefinito per nuove voci"
+
+msgid "All Inventory Items"
+msgstr "Tutte le Voci di inventario"
+
+msgid "All existing Inventory Items"
+msgstr "Tutte le voci di Inventario esistenti"
+
+msgid "Inventory"
+msgstr "Inventario"

@@ -1,0 +1,79 @@
+site_name: tine groupware docs
+site_url: https://www.tine-groupware.de
+repo_url: https://github.com/tine-groupware/tine
+
+theme:
+  name: material
+  logo: images/logo.svg
+  favicon: images/favicon.png
+  palette:
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - content.code.copy
+
+#nav:
+#  - 'User Guide': 'user-guide.md'
+#  - 'tine Admins': 'user-guide.md'
+#  - 'sys Admins': '/docker/*'
+#  - 'Developers': '/bugs/'
+
+markdown_extensions:
+  - pymdownx.highlight:
+      extend_pygments_lang:
+        - name: php-inline
+          lang: php
+          options:
+            startinline: true
+        - name: pycon3
+          lang: pycon
+          options:
+            python3: true
+      linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite:
+      custom_inline:
+        - name: math
+          class: arithmatex
+          format: "!!python/object/apply:pymdownx.arithmatex.arithmatex_inline_format {kwds: {mode: generic}}"
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/tine-groupware/tine
+      name: tine groupware on Github
+    - icon: fontawesome/solid/globe
+      link: https://transifex.com/tine
+      name: translations on transifex
+
+plugins:
+  - search
+  - awesome-pages
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      languages:
+        - build: true
+          default: true
+          locale: en
+          name: English
+        - build: true
+          default: false
+          locale: de
+          name: Deutsch
+      reconfigure_material: true
+      reconfigure_search: true

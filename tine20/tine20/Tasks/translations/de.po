@@ -1,0 +1,401 @@
+#
+# Translators:
+# Ettore Atalan <atalanttore@googlemail.com>, 2016
+# pschuele <p.schuele@metaways.de>, 2013
+# pschuele <p.schuele@metaways.de>, 2012
+# pschuele <p.schuele@metaways.de>, 2012-2013
+# sstamer <s.stamer@metaways.de>, 2014-2015
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-04-02 13:32+0000\n"
+"Last-Translator: pschuele <p.schuele@metaways.de>, 2012-2013\n"
+"Language-Team: German (http://app.transifex.com/tine/groupware/language/de/)\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "manage shared task lists"
+msgstr "Gemeinsame Aufgabenlisten verwalten"
+
+msgid "Create new shared task lists"
+msgstr "Neue gemeinsame Aufgabenliste anlegen"
+
+msgid "manage shared task favorites"
+msgstr "Gemeinsame Aufgaben-Favoriten verwalten"
+
+msgid "Create or update shared task favorites"
+msgstr "Gemeinsame Aufgaben-Favoriten erstellen oder bearbeiten"
+
+msgid "Available task statuses"
+msgstr "Verfügbare Taskstatus"
+
+msgid "Possible task status. Please note that additional attendee status might impact other Tasks systems on export or synchronization."
+msgstr "Mögliche Aufgaben Status. Bitte beachten sie, dass zusätzliche Aufgaben Status andere System bei Export und Synchronisation betreffen."
+
+msgid "No response"
+msgstr "Keine Antwort"
+
+msgid "Completed"
+msgstr "Abgeschlossen"
+
+msgid "Cancelled"
+msgstr "Abgebrochen"
+
+msgid "In process"
+msgstr "Laufend"
+
+msgid "Available task priorities"
+msgstr "Verfügbare Aufgabenprioritäten"
+
+msgid "Possible task priorities. Please note that additional priorities might impact other task systems on export or synchronization."
+msgstr "Verfügbare Aufgabenprioritäten. Bitte beachten sie, dass zusätzliche Mitarbeiter*innen Status andere System bei Export und Synchronisation betreffen."
+
+msgid "low"
+msgstr "niedrig"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "high"
+msgstr "hoch"
+
+msgid "urgent"
+msgstr "dringend"
+
+msgid "Available collaborator statuses"
+msgstr "Verfügbare Mitarbeiter*innen Status"
+
+msgid "Possible task collaborator statuses. Please note that additional collaborator statuses might impact other task systems on export or synchronization."
+msgstr "Verfügbare Mitarbeiter*innen Status. Bitte beachten Sie, dass zusätzliche Status beim Export oder bei der Synchronisation andere Aufgabensysteme beeinflussen können."
+
+msgid "Accepted"
+msgstr "Akzeptiert"
+
+msgid "Declined"
+msgstr "Abgelehnt"
+
+msgid "Tentative"
+msgstr "Vorläufig"
+
+msgid "Delegated"
+msgstr "Delegiert"
+
+msgid "Tasks Template Container"
+msgstr "Vorlagen Ordner für Aufgaben"
+
+msgid "Container for task templates"
+msgstr "Ordner für Aufgaben Vorlagen"
+
+#, python-format, php-format
+msgid "%s's personal tasks"
+msgstr "%ss persönliche Aufgaben"
+
+#, php-format
+msgid "Notification for Task %1$s"
+msgstr "Benachrichtigung für Aufgabe %1$s"
+
+msgid "Excel all data"
+msgstr "Excel Alle Daten"
+
+msgid "Create from Template"
+msgstr "Von Vorlage erstellen"
+
+msgid "Use the show all button below to search for all tasks"
+msgstr "Den „Alle anzeigen“ Knopf benutzen um in allen Aufgaben zu suchen"
+
+msgid "Show all"
+msgstr "Alle anzeigen"
+
+msgid "Invalid selection"
+msgstr "Ungültige Auswahl"
+
+msgid "A task cannot depend on itself"
+msgstr "Eine Aufgabe kann nicht von sich selbst abhängen"
+
+msgid "Summary"
+msgstr "Zusammenfassung"
+
+msgid "Add a task..."
+msgstr "Aufgabe hinzufügen..."
+
+msgid "Due Date"
+msgstr "Fällig am"
+
+msgid "Priority"
+msgstr "Priorität"
+
+msgid "Depends on"
+msgstr "Hängt ab von"
+
+msgid "Percent"
+msgstr "Prozent"
+
+#, fuzzy
+msgid "Status"
+msgid_plural "Statuses"
+msgstr[0] "Status"
+msgstr[1] "Status"
+
+msgid "Responsible"
+msgstr "Verantwortlich"
+
+msgid "My open tasks"
+msgstr "Offene Aufgaben für mich"
+
+msgid "Add New Task"
+msgstr "Neue Aufgabe hinzufügen"
+
+msgid "This Task is part of:"
+msgstr "Die Aufgabe ist teil von:"
+
+msgid "You have to supply a due date, because an alarm is set!"
+msgstr "Sie müssen ein Fälligkeitsdatum angeben, da ein Alarm gesetzt wurde!"
+
+msgid "Due date"
+msgstr "Fälligkeitsdatum"
+
+msgid "Organizer / Responsible"
+msgstr "Organisator*in / Verantwortlich"
+
+msgid "Add Responsible..."
+msgstr "Verantwortlichen hinzufügen..."
+
+msgid "Notes"
+msgstr "Anmerkungen"
+
+msgid "Enter description..."
+msgstr "Beschreibung eingeben..."
+
+msgid "Percentage"
+msgstr "Prozent"
+
+msgid "Attention: This due date is in the past!"
+msgstr "Achtung: Das Fälligkeitsdatum liegt in der Vergangenheit!"
+
+msgid "Do you really want to delete the selected task?"
+msgid_plural "Do you really want to delete the selected tasks?"
+msgstr[0] "Wollen Sie die ausgewählte Aufgabe wirklich löschen?"
+msgstr[1] "Wollen Sie die ausgewählten Aufgaben wirklich löschen?"
+
+msgid "Tags"
+msgstr "Tags"
+
+msgid "Filter: To be done for"
+msgstr "Filter: Zu erledigen für"
+
+msgid "Show all tasks matching all the following criteria:"
+msgstr "Zeigt alle Aufgaben, die den folgenden Kriterien entsprechen:"
+
+msgid "Task has an open status."
+msgstr "Die Aufgabe ist in einem offenen Status."
+
+msgid "Filtered person is either:"
+msgstr "Die gefilterte Person ist entweder:"
+
+msgid "Organizer and no coworker with open status is assigned."
+msgstr "Organisator*in und es sind keine Mitarbeitende mit offenen Status zugewiesen."
+
+msgid "Organizer and the task is over due date, regardless of assigned coworkers."
+msgstr "Organisator*in und das Fälligkeitsdatum ist verstrichen, unabhängig der zugewiesenen Mitarbeitenden."
+
+msgid "Coworker with an open status assigned."
+msgstr "Mitarbeitend mit einem offenen Status."
+
+msgid "Please note: Tasks are hidden if the filtered person is the organizer, the due date has not yet passed, and a coworker with an open status is assigned."
+msgstr "Bitte beachten: Aufgaben werden nicht angezeigt, wenn die gefilterte Person zwar Organisator*in ist, aber das Fälligkeitsdatum noch nicht verstrichen ist so lange es Mitarbeitende mit offenen Status gibt."
+
+msgid "New Task"
+msgstr "Neue Aufgabe"
+
+msgid "GENDER_Collaborator"
+msgstr "female"
+
+msgid "Collaborator"
+msgid_plural "Collaborators"
+msgstr[0] "Mitarbeiter*in"
+msgstr[1] "Mitarbeiter*innen"
+
+msgid "Task"
+msgid_plural "Tasks"
+msgstr[0] "Aufgabe"
+msgstr[1] "Aufgaben"
+
+msgid "GENDER_Task Dependency"
+msgstr "female"
+
+msgid "Task Dependency"
+msgid_plural "Task Dependencies"
+msgstr[0] "Abhängigkeit"
+msgstr[1] "Abhängigkeiten"
+
+msgid "Depends on Task"
+msgstr "Abhängig von der Aufgabe"
+
+msgid "GENDER_Task"
+msgstr "female"
+
+msgid "To be done for"
+msgstr "Zu erledigen für"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "Due"
+msgstr "Fälligkeit"
+
+msgid "Class"
+msgstr "Klassifizierung"
+
+msgid "Geo"
+msgstr ""
+
+msgid "Location"
+msgstr "Ort"
+
+msgid "Source"
+msgstr "Quelle"
+
+msgid "Dependent Tasks"
+msgstr "Abhängige Aufgaben"
+
+msgid "Collaborators"
+msgstr "Mitarbeitende"
+
+msgid "Estimated Duration"
+msgstr "Geschätzte Dauer"
+
+msgid "Organizer"
+msgstr "Organisator*in"
+
+msgid "Lead"
+msgstr "Lead"
+
+msgid "Telephone"
+msgstr "Telefon"
+
+msgid "Email"
+msgstr "E-Mail"
+
+msgid "All my tasks"
+msgstr "Alle meine Aufgaben"
+
+msgid "Default Favorite"
+msgstr "Standard Favorit"
+
+msgid "The default favorite which is loaded on Tasks startup"
+msgstr "Der Standardfavorit, der beim Öffnen der Aufgabenlisten geladen wird"
+
+msgid "Default Task List"
+msgstr "Standard-Aufgabenliste"
+
+msgid "The default task list in which to create new tasks."
+msgstr "Die Standard-Aufgabenliste, in der neue Aufgaben angelegt werden."
+
+msgid "Enable Standard Alarm"
+msgstr "Standardalarm"
+
+msgid "New tasks get a standard alarm, as defined below."
+msgstr "Neue Aufgaben bekommen einen Standardalarm wie unten definiert"
+
+msgid "Standard Alarm Time"
+msgstr "Standardalarmzeit"
+
+msgid "Minutes before the task ends"
+msgstr "Minuten bevor die Aufgabe endet"
+
+msgid "Task Title Template"
+msgstr "Aufgaben Titel Template"
+
+msgid "How to build task titles."
+msgstr "Wie Aufgabentitel angezeigt werden."
+
+msgid "All tasks in my task lists"
+msgstr "Alle Aufgaben auf meinen Aufgabenlisten"
+
+msgid "My responsibility"
+msgstr "Meine Verantwortung"
+
+msgid "All tasks that I am responsible for"
+msgstr "Alle Aufgaben, für die ich verantwortlich bin"
+
+msgid "All tasks for me"
+msgstr "Alle Aufgaben für mich"
+
+msgid "To be done for me this week"
+msgstr "Diese Woche zu erledigen für mich"
+
+msgid "Last modified by me"
+msgstr "Zuletzt von mir bearbeitet"
+
+msgid "All tasks that I have last modified"
+msgstr "Alle Aufgaben, die ich zuletzt bearbeitet habe"
+
+msgid "Tasks without responsible"
+msgstr "Aufgaben ohne Verantwortlichen"
+
+msgid "Tasks"
+msgstr "Aufgaben"
+
+msgid "(source): Summary"
+msgstr "Neue Aufgabe anlegen"
+
+#~ msgid "Create new shared tasks lists"
+#~ msgstr "Neue gemeinse Aufgabenliste anlegen"
+
+#~ msgid "manage shared tasks favorites"
+#~ msgstr "Gemeinsame Aufgaben-Favoriten verwalten"
+
+#~ msgid "Create or update shared tasks favorites"
+#~ msgstr "Gemeinsame Aufgaben-Favoriten erstellen oder bearbeiten"
+
+#~ msgid "Tasks status available"
+#~ msgstr "Verfügbare Taskstatus"
+
+#~ msgid "Possible task statuses. Please note that additional attendee statuses might impact other task systems during export or synchronisation."
+#~ msgstr "Mögliche Aufgaben Status. Bitte beachten sie, dass zusätzliche Aufgaben Status andere System bei Export und Synchronisation betreffen."
+
+#~ msgid "Task priorities available"
+#~ msgstr "Verfügbare Aufgabenprioritäten"
+
+#~ msgid "Possible task priorities. Please note that additional priorities might impact other Tasks systems on export or syncronisation."
+#~ msgstr "Verfügbare Aufgabenprioritäten. Bitte beachten sie, dass zusätzliche Mitarbeiter*innen Status andere System bei Export und Synchronisation betreffen."
+
+#~ msgid "Collaborator Status Available"
+#~ msgstr "Verfügbare Mitarbeiter*innen Status"
+
+#~ msgid "Possible task collaborator status. Please note that additional collaborator status might impact other task systems on export or synchronisation."
+#~ msgstr "Verfügbare Mitarbeiter*innen Status. Please note that additional attendee status might impact other Tasks systems on export or syncronisation."
+
+#~ msgid "Use show all button bellow to search for all tasks"
+#~ msgstr "Den „Alle anzeigen“ Knopf benutzen um in allen Aufgaben zu suchen"
+
+#~ msgid "You have to supply a due date, because an alarm ist set!"
+#~ msgstr "Sie müssen ein Fälligkeitsdatum angeben, da ein Alarm gesetzt wurde!"
+
+#~ msgid "Add Responsible ..."
+#~ msgstr "Verantwortliche*n hinzufügen ..."
+
+#~ msgid "Tasks has an open status."
+#~ msgstr "Die Aufgabe ist in einem offenen Status."
+
+#~ msgid "Please note: Tasks are not shown if filtered person is organizer but due date has not yet passed and a coworker with an open state is assigned."
+#~ msgstr "Bitte beachten: Aufgaben werden nicht angezeigt wenn die gefilterte Person zwar Organisator ist, aber das Fälligkeitsdatum noch nicht verstrichen ist so lange es Mitarbeitende mit offenen Status gibt."
+
+#~ msgid "The default task list to create new tasks in."
+#~ msgstr "Die Standard-Aufgabenliste, in der neue Aufgaben angelegt werden."
+
+#~ msgid "New task get a standard alarm as defined below"
+#~ msgstr "Neue Aufgaben bekommen einen Standardalarm wie unten definiert"
+
+#~ msgid "All tasks of my taskslists"
+#~ msgstr "Alle Aufgaben auf meinen Aufgabenlisten"
+
+#~ msgid "Create New Task"
+#~ msgstr "Neue Aufgabe anlegen"

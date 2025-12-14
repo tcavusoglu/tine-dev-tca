@@ -1,0 +1,614 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0 - Filemanager\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2008-07-29 21:14+0100\n"
+"Last-Translator: Cornelius Weiss <c.weiss@metaways.de>\n"
+"Language-Team: Tine 2.0 Translators\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Manage shared folders"
+msgstr "Manage shared folders"
+
+msgid "Allow creating and moving new subfolders under the shared root folder. Deleting and renaming actions require admin permissions on the respective node."
+msgstr "Allow creating and moving new subfolders under the shared root folder. Deleting and renaming actions require admin permissions on the respective node."
+
+msgid "Manage anonymous download links"
+msgstr "Manage anonymous download links"
+
+msgid "Allow viewing, adding and deleting download links"
+msgstr "Allow viewing, adding and deleting download links"
+
+msgid "Manage shared filemanager favorites"
+msgstr "Manage shared filemanager favorites"
+
+msgid "Create or update shared filemanager favorites"
+msgstr "Create or update shared filemanager favorites"
+
+msgid "Public Download URL"
+msgstr "Public Download URL"
+
+msgid "Deliver anonymous downloads from another URL. Make sure the rewrite rules are adjusted accordingly."
+msgstr "Deliver anonymous downloads from another URL. Make sure the rewrite rules are adjusted accordingly."
+
+msgid "Public Download Default Validity"
+msgstr "Public Download Default Validity"
+
+msgid "Public download default validity period (in days)"
+msgstr "Public download default validity period (in days)"
+
+msgid "You cannot remove your own admin grant."
+msgstr "You cannot remove your own admin grant."
+
+msgid "My folders"
+msgstr "My folders"
+
+msgid "Shared folders"
+msgstr "Shared folders"
+
+msgid "Folders of other users"
+msgstr "Folders of other users"
+
+msgid "Received"
+msgstr "Received"
+
+msgid "To"
+msgstr "To"
+
+msgid "Cc"
+msgstr "Cc"
+
+msgid "Bcc"
+msgstr "Bcc"
+
+msgid "From (Email)"
+msgstr "From (Email)"
+
+msgid "From (Name)"
+msgstr "From (Name)"
+
+msgid "Body"
+msgstr "Body"
+
+msgid "Attachments"
+msgstr "Attachments"
+
+msgid "Destination is a Subfolder"
+msgstr "Destination is a Subfolder"
+
+msgid "The destination is a subfolder. Copying or moving a folder into one of its subfolders is not allowed."
+msgstr "The destination is a subfolder. Copying or moving a folder into one of its subfolders is not allowed."
+
+msgid "Destination has the same Path"
+msgstr "Destination has the same Path"
+
+msgid "The destination has the same path as the source. No action has been performed."
+msgstr "The destination has the same path as the source. No action has been performed."
+
+msgid "Quarantined File"
+msgstr "Quarantined File"
+
+msgid "Loading"
+msgstr "Loading"
+
+msgid "Sorry, Tine 2.0 would have liked to show you the contents of the file."
+msgstr "Sorry, Tine 2.0 would have liked to show you the contents of the file."
+
+msgid "This is possible for .doc, .jpg, .pdf and other file formats."
+msgstr "This is possible for .doc, .jpg, .pdf and other file formats."
+
+msgid "Interested? Then let us know!"
+msgstr "Interested? Then let us know!"
+
+msgid "We would be happy to make you a non-binding offer."
+msgstr "We would be happy to make you a non-binding offer."
+
+msgid "This file has no content. The upload has either failed or is not yet complete."
+msgstr "This file has no content. The upload has either failed or is not yet complete."
+
+msgid "No preview available."
+msgstr "No preview available."
+
+msgid "No preview available yet - Please try again in a few minutes."
+msgstr "No preview available yet - Please try again in a few minutes."
+
+msgid "Node Download Links"
+msgstr "Node Download Links"
+
+msgid "Copy Public Link"
+msgstr "Copy Public Link"
+
+msgid "Remove record"
+msgstr "Remove record"
+
+msgid "Deleting Download Links..."
+msgstr "Deleting Download Links..."
+
+msgid "Deleting Download Link..."
+msgstr "Deleting Download Link..."
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Created By"
+msgstr "Created By"
+
+msgid "Creation Time"
+msgstr "Creation Time"
+
+msgid "Valid Until"
+msgstr "Valid Until"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Access Count"
+msgstr "Access Count"
+
+msgid "Last Modified Time"
+msgstr "Last Modified Time"
+
+msgid "Last Modified By"
+msgstr "Last Modified By"
+
+#, python-brace-format
+msgid "File named {0} already exists in this location. Do you want to replace it with the current one?"
+msgstr "File named {0} already exists in this location. Do you want to replace it with the current one?"
+
+msgid "Apply to All"
+msgstr "Apply to All"
+
+msgid "Skip"
+msgstr "Skip"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "Replace"
+msgstr "Replace"
+
+msgid "Overwrite Existing File?"
+msgstr "Overwrite Existing File?"
+
+msgid "Service Unavailable"
+msgstr "Service Unavailable"
+
+#, python-brace-format
+msgid "The Filemanager is not configured correctly. Please refer to the {0}Tine 2.0 Admin FAQ{1} for configuration advice or contact your administrator."
+msgstr "The Filemanager is not configured correctly. Please refer to the {0}Tine 2.0 Admin FAQ{1} for configuration advice or contact your administrator."
+
+msgid "File(s) already exists"
+msgstr "File(s) already exists"
+
+msgid "Do you want to replace the following file(s)?"
+msgstr "Do you want to replace the following file(s)?"
+
+msgid "An error occurred while creating this folder"
+msgstr "An error occurred while creating this folder"
+
+msgid "An item with this name already exists!"
+msgstr "An item with this name already exists!"
+
+msgid "Filemanager"
+msgstr "Filemanager"
+
+msgid "Show in Filemanager"
+msgstr "Show in Filemanager"
+
+msgid "Save locally"
+msgstr "Save locally"
+
+msgid "Select a file"
+msgstr "Select a file"
+
+msgid "Select files"
+msgstr "Select files"
+
+msgid "Select a folder"
+msgstr "Select a folder"
+
+msgid "Select folders"
+msgstr "Select folders"
+
+msgid "Select an item"
+msgstr "Select an item"
+
+msgid "Select items"
+msgstr "Select items"
+
+msgid "New Folder"
+msgstr "New Folder"
+
+msgid "Please enter the name of the new folder:"
+msgstr "Please enter the name of the new folder:"
+
+#, python-brace-format
+msgid "No {0} added"
+msgstr "No {0} added"
+
+#, python-brace-format
+msgid "You must enter a {0} name!"
+msgstr "You must enter a {0} name!"
+
+msgid "Illegal characters: "
+msgstr "Illegal characters: "
+
+#, python-brace-format
+msgid "A folder named {0} already exists!"
+msgstr "A folder named {0} already exists!"
+
+msgid "Show Filters"
+msgstr "Show Filters"
+
+msgid "Hide Filters"
+msgstr "Hide Filters"
+
+msgid "Checking..."
+msgstr "Checking..."
+
+msgid "{attachmentCount, plural, one {Do you really want to overwrite the existing file?} other {Do you really want to overwrite the existing files?}}"
+msgstr "{attachmentCount, plural, one {Do you really want to overwrite the existing file?} other {Do you really want to overwrite the existing files?}}"
+
+msgid "Overwrite?"
+msgstr "Overwrite?"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Size"
+msgstr "Size"
+
+msgid "Content type"
+msgstr "Content type"
+
+msgid "Folder"
+msgstr "Folder"
+
+msgid "Send as email"
+msgstr "Send as email"
+
+msgid "Close"
+msgstr "Close"
+
+msgid "Download"
+msgstr "Download"
+
+msgid "Use this link to share the entry with other system users"
+msgstr "Use this link to share the entry with other system users"
+
+msgid "Grants"
+msgstr "Grants"
+
+msgid "This folder has its own permissions"
+msgstr "This folder has its own permissions"
+
+msgid "Permissions of a folder also apply recursively to all subfolders unless they have their own permissions."
+msgstr "Permissions of a folder also apply recursively to all subfolders unless they have their own permissions."
+
+msgid "This folder is part of the data vault"
+msgstr "This folder is part of the data vault"
+
+msgid "If the data vault is activated, this folder and its contents can only be accessed while the vault is unlocked."
+msgstr "If the data vault is activated, this folder and its contents can only be accessed while the vault is unlocked."
+
+#, python-brace-format
+msgid "Permissions are inherited from {locationsHtml} as follows"
+msgstr "Permissions are inherited from {locationsHtml} as follows"
+
+msgid "Errors"
+msgstr "Errors"
+
+msgid "Failed to download this file!"
+msgstr "Failed to download this file!"
+
+msgid "Permission to download files"
+msgstr "Permission to download files"
+
+msgid "Publish"
+msgstr "Publish"
+
+msgid "Permission to create anonymous download links for files"
+msgstr "Permission to create anonymous download links for files"
+
+msgid "Revision"
+msgstr "Revision"
+
+#, python-brace-format
+msgid "Copying data .. {0}"
+msgstr "Copying data .. {0}"
+
+#, python-brace-format
+msgid "Moving data .. {0}"
+msgstr "Moving data .. {0}"
+
+msgid "Confirm Changing of Folder Permissions"
+msgstr "Confirm Changing of Folder Permissions"
+
+msgid "You are about to move a folder that has its own permissions. These permissions will be lost, and the folder will inherit permissions from its new parent folder."
+msgstr "You are about to move a folder that has its own permissions. These permissions will be lost, and the folder will inherit permissions from its new parent folder."
+
+msgid "Please wait"
+msgstr "Please wait"
+
+msgid "Download Link"
+msgid_plural "Download Links"
+msgstr[0] "Download Link"
+msgstr[1] "Download Links"
+
+msgid "Reload"
+msgstr "Reload"
+
+msgid "Create Folder"
+msgstr "Create Folder"
+
+#, python-brace-format
+msgid "Not renamed {0}"
+msgstr "Not renamed {0}"
+
+msgid "Edit Properties"
+msgstr "Edit Properties"
+
+msgid "Rename"
+msgstr "Rename"
+
+#, python-brace-format
+msgid "Rename {0}"
+msgstr "Rename {0}"
+
+#, python-brace-format
+msgid "Please enter the new name of the {0}:"
+msgstr "Please enter the new name of the {0}:"
+
+msgid "System Link"
+msgstr "System Link"
+
+msgid "Delete"
+msgstr "Delete"
+
+msgid "Do you really want to delete the following files?"
+msgstr "Do you really want to delete the following files?"
+
+msgid "Copy"
+msgstr "Copy"
+
+msgid "Copy Items"
+msgstr "Copy Items"
+
+msgid "Move"
+msgstr "Move"
+
+msgid "Move Items"
+msgstr "Move Items"
+
+msgid "Preview"
+msgstr "Preview"
+
+msgid "Download links can be protected with a password. Without a password, anyone with the link can access the selected files."
+msgstr "Download links can be protected with a password. Without a password, anyone with the link can access the selected files."
+
+msgid "Folder has been published successfully"
+msgstr "Folder has been published successfully"
+
+msgid "File has been published successfully"
+msgstr "File has been published successfully"
+
+msgid "Edit folder"
+msgstr "Edit folder"
+
+msgid "Edit file"
+msgstr "Edit file"
+
+msgid "File"
+msgstr "File"
+
+msgid "Public Links"
+msgstr "Public Links"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Indexed"
+msgstr "Indexed"
+
+msgid "Not yet indexed"
+msgstr "Not yet indexed"
+
+msgid "Modified By"
+msgstr "Modified By"
+
+msgid "Last Modified"
+msgstr "Last Modified"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Enter description"
+msgstr "Enter description"
+
+msgid "You have unfinished uploads. Please check the upload monitor and restart any failed uploads."
+msgstr "You have unfinished uploads. Please check the upload monitor and restart any failed uploads."
+
+msgid "Do you want to restart the failed uploads?"
+msgstr "Do you want to restart the failed uploads?"
+
+msgid "Processing files..."
+msgstr "Processing files..."
+
+msgid "Total size of all available revisions"
+msgstr "Total size of all available revisions"
+
+msgid "File contents are part of the search index"
+msgstr "File contents are part of the search index"
+
+msgid "Upload Folder"
+msgstr "Upload Folder"
+
+msgid "Upload File"
+msgstr "Upload File"
+
+msgid "Open the Data Safe"
+msgstr "Open the Data Safe"
+
+msgid "Folder Up"
+msgstr "Folder Up"
+
+msgid "Locking the data safe..."
+msgstr "Locking the data safe..."
+
+msgid "Unlocking the data safe..."
+msgstr "Unlocking the data safe..."
+
+msgid "Close the Data Safe"
+msgstr "Close the Data Safe"
+
+msgid "Upload Failed"
+msgstr "Upload Failed"
+
+msgid "It is not permitted to store files in this folder!"
+msgstr "It is not permitted to store files in this folder!"
+
+msgid "Notification"
+msgstr "Notification"
+
+msgid "Notification active"
+msgstr "Notification active"
+
+msgid "Summary"
+msgstr "Summary"
+
+#, python-brace-format
+msgid "Once a Day"
+msgid_plural "Every {0} Days"
+msgstr[0] "Once a Day"
+msgstr[1] "Every {0} Days"
+
+msgid "No"
+msgstr "No"
+
+msgid "Don't summarize"
+msgstr "Don't summarize"
+
+msgid "Once a day"
+msgstr "Once a day"
+
+msgid "Every 3 days"
+msgstr "Every 3 days"
+
+msgid "Once a week"
+msgstr "Once a week"
+
+msgid "Once a month"
+msgstr "Once a month"
+
+msgid "Once a year"
+msgstr "Once a year"
+
+msgid "Search for users..."
+msgstr "Search for users..."
+
+msgid "No permission"
+msgstr "No permission"
+
+msgid "all"
+msgstr "all"
+
+msgid "Search for groups..."
+msgstr "Search for groups..."
+
+msgid "Notifications"
+msgstr "Notifications"
+
+msgid "This folder has its own notification settings"
+msgstr "This folder has its own notification settings"
+
+msgid "path"
+msgstr "path"
+
+msgid "Whole Filemanager"
+msgstr "Whole Filemanager"
+
+msgid "This Folder"
+msgstr "This Folder"
+
+msgid "Search"
+msgstr "Search"
+
+msgid "This folder has its own revision settings"
+msgstr "This folder has its own revision settings"
+
+msgid "Revision active"
+msgstr "Revision active"
+
+msgid "Limit number of revisions to"
+msgstr "Limit number of revisions to"
+
+msgid "Hold-back in months"
+msgstr "Hold-back in months"
+
+msgid "Usage"
+msgstr "Usage"
+
+msgid "This folder has its own quota"
+msgstr "This folder has its own quota"
+
+msgid "Quota"
+msgstr "Quota"
+
+msgid "No quota set (examples: 10 GB, 900 MB)"
+msgstr "No quota set (examples: 10 GB, 900 MB)"
+
+msgid "Current Usage"
+msgstr "Current Usage"
+
+msgid "The quota applies recursively to files and subfolders. Please note, the effective quota can differ if a parent folder has set a lower quota."
+msgstr "The quota applies recursively to files and subfolders. Please note, the effective quota can differ if a parent folder has set a lower quota."
+
+msgid "Revision Size"
+msgstr "Revision Size"
+
+msgid "File Type"
+msgstr "File Type"
+
+msgid "Usage by File Type"
+msgstr "Usage by File Type"
+
+msgid "User"
+msgstr "User"
+
+msgid "Usage by User"
+msgstr "Usage by User"
+
+msgid "unknown"
+msgstr "unknown"
+
+msgid "File Location"
+msgid_plural "File Locations"
+msgstr[0] "File Location"
+msgstr[1] "File Locations"
+
+msgid "GENDER_File Location"
+msgstr "GENDER_File Location"
+
+msgid "Action"
+msgstr "Action"
+
+msgid "No Files Found"
+msgstr "No Files Found"
+
+msgid "This folder appears to be empty."
+msgstr "This folder appears to be empty."
+
+msgid "File not found!"
+msgstr "File not found!"
+
+msgid "Password required for download"
+msgstr "Password required for download"
+
+msgid "Submit"
+msgstr "Submit"

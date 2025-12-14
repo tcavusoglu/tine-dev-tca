@@ -1,0 +1,627 @@
+#
+# Translators:
+# sao sang <saosangmo@yahoo.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:59+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Vietnamese (http://www.transifex.com/tine20/tine20/language/vi/)\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Maximum number of users reached. "
+msgstr ""
+
+msgid "Please contact Metaways Infosystems GmbH to buy a license that supports a "
+msgstr ""
+
+msgid "Name"
+msgstr "Tên"
+
+msgid "Enabled"
+msgstr "Đã mở"
+
+msgid "Order"
+msgstr "Sắp xếp"
+
+msgid "Installed Version"
+msgstr "Phiên bản đã cài"
+
+msgid "Available Version"
+msgstr "Phiên bản sẵn sàng"
+
+msgid "Status"
+msgstr "Trạng thái"
+
+msgid "Depends on"
+msgstr "Phụ thuộc vào"
+
+msgid "Install application"
+msgstr "Cài đặt ứng dụng"
+
+msgid "Uninstall application"
+msgstr "Gỡ ứng dụng"
+
+msgid "Update applications"
+msgstr ""
+
+#, python-brace-format
+msgid "Go to {0} login"
+msgstr "Tới đăng nhập {0}"
+
+msgid "uninstall"
+msgstr "gỡ bỏ"
+
+msgid "Do you really want to uninstall the application(s)?"
+msgstr "Bạn có muốn gỡ bỏ ứng dụng?"
+
+msgid "This may take a while"
+msgstr "Có thể bạn phải đợi lâu"
+
+msgid "Dependency Violation"
+msgstr "Xung đột các thành phần "
+
+msgid "CLI Required"
+msgstr ""
+
+msgid "Delete all existing users and groups"
+msgstr "Xóa mọi người dùng và nhóm người dùng"
+
+msgid "Switching from SQL to LDAP will delete all existing User Accounts, Groups and Roles. Do you really want to switch the accounts storage backend to LDAP ?"
+msgstr "Chuyển từ SQL sang LDAP sẽ xóa mọi người dùng, nhóm, và vai trò hiện tại. Bạn có thật sự muốn chuyển chế độ lưu trữ tài khoản sang LDAP?"
+
+msgid "Backend"
+msgstr "Nền tảng"
+
+msgid "TLS client certificate"
+msgstr ""
+
+msgid "Initial Admin User"
+msgstr "Người Quản trị chính"
+
+msgid "Initial admin login name"
+msgstr "Tên đăng nhập Quản trị chính"
+
+msgid "Initial admin Password"
+msgstr "Mật khẩu Quản trị chính"
+
+msgid "Password confirmation"
+msgstr "Xác nhận mật khẩu"
+
+msgid "Authentication provider"
+msgstr "Nguồn xác thực"
+
+msgid "Try to split username"
+msgstr "Thử tách tên đăng nhập"
+
+msgid "Yes"
+msgstr "Có"
+
+msgid "No"
+msgstr "Không"
+
+msgid "Account canonical form"
+msgstr "Form đăng nhập duy nhất"
+
+msgid "Account domain name"
+msgstr ""
+
+msgid "Account domain short name"
+msgstr "Tên ngắn của domain"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Login name"
+msgstr "Tên đăng nhập"
+
+msgid "Password"
+msgstr "Mật khẩu"
+
+msgid "Bind requires DN"
+msgstr "Bind requires DN"
+
+msgid "Start TLS"
+msgstr ""
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "Port"
+msgstr "Cổng"
+
+msgid "Base DN"
+msgstr "Base DN"
+
+msgid "Search filter"
+msgstr "Bộ lọc tìm kiếm"
+
+msgid "Hostname"
+msgstr "Hostname"
+
+msgid "Secure Connection"
+msgstr "Kết nối bảo mật"
+
+msgid "None"
+msgstr "Không"
+
+msgid "TLS"
+msgstr "TLS"
+
+msgid "Append domain to login name"
+msgstr "Ghép domain vào tên đăng nhập"
+
+msgid "Certificate validation"
+msgstr ""
+
+msgid "CA file"
+msgstr ""
+
+msgid "CRL directory"
+msgstr ""
+
+msgid "Accounts storage"
+msgstr "Lưu trữ tài khoản"
+
+msgid "Default user group name"
+msgstr "Tên nhóm nguwowfi dùng mặc định"
+
+msgid "Default admin group name"
+msgstr "Tên nhóm quản trị mặc định"
+
+msgid "Login panel"
+msgstr "Màn hình đăng nhập"
+
+msgid "Reuse last username logged"
+msgstr ""
+
+msgid "Password Settings"
+msgstr "Thiết lập mật khẩu"
+
+msgid "User can change password"
+msgstr "Người dùng có thể đổi mật khẩu"
+
+msgid "Enable password policy"
+msgstr "Bật chính sách mật khẩu"
+
+msgid "Only ASCII"
+msgstr "Chỉ ASCII"
+
+msgid "Minimum length"
+msgstr "Độ dài tối thiểu"
+
+msgid "Minimum word chars"
+msgstr "Ký tự chữ cái tối tiểu"
+
+msgid "Minimum uppercase chars"
+msgstr "Ký tự in hoa tối thiểu"
+
+msgid "Minimum special chars"
+msgstr "Ký tự đặc biệt tối thiểu"
+
+msgid "Minimum numbers"
+msgstr "Số tối thiểu"
+
+msgid "Change password after ... days"
+msgstr ""
+
+msgid "Forbid part of username in password"
+msgstr "Cấm sử dụng 1 phần tên đăng nhập trong mật khẩu"
+
+msgid "Redirect Settings"
+msgstr "Thiết lập chuyển hướng"
+
+msgid "Redirect Url (redirect to login screen if empty)"
+msgstr "URL chuyển hướng (chuyển hướng tới màn hình đăng nhập rỗng)"
+
+msgid "Redirect Always (if No, only redirect after logout)"
+msgstr "Luôn chuyển hướng (Nếu không, chỉ chuyển hướng sau khi thoát)"
+
+msgid "Redirect to referring site, if exists"
+msgstr "Chuyển hướng tới trang trước đó, nếu có"
+
+msgid "Password encoding"
+msgstr "Mã hóa mật khaaru"
+
+msgid "des"
+msgstr ""
+
+msgid "crypt"
+msgstr ""
+
+msgid "blowfish_crypt"
+msgstr ""
+
+msgid "md5_crypt"
+msgstr ""
+
+msgid "ext_crypt"
+msgstr ""
+
+msgid "md5"
+msgstr ""
+
+msgid "smd5"
+msgstr ""
+
+msgid "sha"
+msgstr ""
+
+msgid "ssha"
+msgstr ""
+
+msgid "ntpassword"
+msgstr ""
+
+msgid "plain"
+msgstr ""
+
+msgid "User DN"
+msgstr "User DN"
+
+msgid "User Filter"
+msgstr "User Filter"
+
+msgid "E-Mail Attribute"
+msgstr ""
+
+msgid "Write Password to SQL backend"
+msgstr ""
+
+msgid "User Search Scope"
+msgstr "User Search Scope"
+
+msgid "Groups DN"
+msgstr "Groups DN"
+
+msgid "Group Filter"
+msgstr "Lọc nhóm"
+
+msgid "Group Search Scope"
+msgstr "Phạm vi tìm nhóm"
+
+msgid "Use Rfc 2307 bis"
+msgstr "Sử dụng Rfc 2307 bis"
+
+msgid "Maintain RFC 2307 attributes"
+msgstr ""
+
+msgid "Min User Id"
+msgstr "Độ dài người dùng ngắn nhất"
+
+msgid "Max User Id"
+msgstr "Độ dài người dùng dài nhất"
+
+msgid "Min Group Id"
+msgstr "Độ dài nhóm người dùng ngắn nhất"
+
+msgid "Max Group Id"
+msgstr "Độ dài nhóm người dùng dài nhất"
+
+msgid "Group UUID Attribute name"
+msgstr "Tên thuộc tính UUID nhóm"
+
+msgid "User UUID Attribute name"
+msgstr "Tên thuộc tính UUID người dùng"
+
+msgid "Readonly access"
+msgstr "Truy cập chỉ đọc"
+
+msgid "Save config and install"
+msgstr "Lưu cấu hình và cài đặt"
+
+msgid "Save config"
+msgstr "Lưu cấu hình"
+
+msgid "Passwords don't match"
+msgstr "Mật khẩu không trùng nhau"
+
+msgid "Should not be empty"
+msgstr "Không thể rỗng"
+
+msgid "File"
+msgstr "File"
+
+msgid "Setup Authentication"
+msgstr "Cài đặt xác thực"
+
+msgid "Username"
+msgstr "Tên đăng nhập"
+
+msgid "Database"
+msgstr "Cơ sở dữ liệu"
+
+msgid "User"
+msgstr "Người dùng"
+
+msgid "Prefix"
+msgstr "Tiền tố"
+
+msgid "Logging"
+msgstr "Ghi lỗi"
+
+msgid "Filename"
+msgstr "Tên file"
+
+msgid "Priority"
+msgstr "Độ quan trọng"
+
+msgid "Caching"
+msgstr "Đệm"
+
+msgid "Lifetime (seconds)"
+msgstr "Lifetime (seconds)"
+
+msgid "Path"
+msgstr "Đường dẫn"
+
+msgid "Queue"
+msgstr "Hàng đợi"
+
+msgid "Session"
+msgstr "Session"
+
+msgid "Temporary files"
+msgstr "Temporary files"
+
+msgid "Temporary Files Path"
+msgstr "Temporary Files Path"
+
+msgid "Filestore directory"
+msgstr "Filestore directory"
+
+msgid "Filestore Path"
+msgstr "Filestore Path"
+
+msgid "Addressbook Map panel"
+msgstr "Addressbook Map panel"
+
+msgid "Map panel"
+msgstr "Map panel"
+
+msgid "disabled"
+msgstr "tắt"
+
+msgid "enabled"
+msgstr "mở"
+
+msgid "Config file is not writable"
+msgstr "File cấu hình không thể lưu lại"
+
+msgid "Download config file"
+msgstr "Download file cấu hình"
+
+#, python-brace-format
+msgid "This prefix is too long. Please choose a prefix no longer than {0} chars."
+msgstr ""
+
+msgid "Standard IMAP"
+msgstr "Standard IMAP"
+
+msgid "Standard SMTP"
+msgstr "Standard SMTP"
+
+msgid "Imap"
+msgstr "Imap"
+
+msgid "Verify peer Certificate"
+msgstr ""
+
+msgid "Use system account"
+msgstr "Sử dụng tài khoản hệ thống"
+
+msgid "Use email address as login name"
+msgstr ""
+
+msgid "Cyrus Admin"
+msgstr "Cyrus Admin"
+
+msgid "Cyrus Admin Password"
+msgstr "Cyrus Admin Password"
+
+msgid "Use proxy auth"
+msgstr ""
+
+msgid "Smtp"
+msgstr "Smtp"
+
+msgid "Authentication"
+msgstr "Authentication"
+
+msgid "Login"
+msgstr "Đăng nhập"
+
+msgid "Plain"
+msgstr "Thuần text"
+
+msgid "Primary Domain"
+msgstr "Domain chính"
+
+msgid "Secondary Domains (comma separated)"
+msgstr "Domain phụ (cách nhau bằng dấu phẩy)"
+
+msgid "Aditional Domains (comma separated)"
+msgstr ""
+
+msgid "Notifications service address"
+msgstr "Địa chỉ thông báo dịch vụ"
+
+msgid "Notification Username"
+msgstr "Người dùng thông báo"
+
+msgid "Notification Password"
+msgstr "Mật khẩu thông báo"
+
+msgid "Notifications local client (hostname or IP address)"
+msgstr "Notifications local client (hostname or IP address)"
+
+msgid "SIEVE"
+msgstr "SIEVE"
+
+msgid "MySql Hostname"
+msgstr "MySql Hostname"
+
+msgid "MySql Database"
+msgstr "MySql Database"
+
+msgid "MySql User"
+msgstr "MySql User"
+
+msgid "MySql Password"
+msgstr "MySql Password"
+
+msgid "MySql Port"
+msgstr "MySql Port"
+
+msgid "User or UID"
+msgstr "User or UID"
+
+msgid "Group or GID"
+msgstr "Group or GID"
+
+msgid "Home Template"
+msgstr "Home Template"
+
+msgid "Password Scheme"
+msgstr "Password Scheme"
+
+msgid "PLAIN-MD5"
+msgstr "PLAIN-MD5"
+
+msgid "MD5-CRYPT"
+msgstr "MD5-CRYPT"
+
+msgid "SHA1"
+msgstr "SHA1"
+
+msgid "SHA256"
+msgstr "SHA256"
+
+msgid "SSHA256"
+msgstr "SSHA256"
+
+msgid "SHA512"
+msgstr "SHA512"
+
+msgid "SSHA512"
+msgstr "SSHA512"
+
+msgid "PLAIN"
+msgstr "PLAIN"
+
+msgid "Performing Environment Checks..."
+msgstr "Đang thực hiện kiểm tra môi trường ..."
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria, view-options or the {1} you search in."
+msgstr "Không có gì được tìm thấy {0}. Xin thay đổi điều kiện tìm kiếm của bạn, tùy chọn xem hoặc {1} bạn tìm kiếm trong đó."
+
+msgid "Check"
+msgstr "Kiểm tra"
+
+msgid "Result"
+msgstr "Kết quả"
+
+msgid "Message"
+msgstr ""
+
+msgid "Run setup tests"
+msgstr "Chạy kiếm tra cài đặt"
+
+msgid "Ignore setup tests"
+msgstr "Bỏ qua kiểm tra cài đặt"
+
+msgid "Setup"
+msgstr ""
+
+msgid "Delete current Subscription"
+msgstr ""
+
+msgid "Your Subscription is not valid."
+msgstr ""
+
+msgid "Subscription Configuration"
+msgstr ""
+
+msgid "Upload from disk"
+msgstr ""
+
+msgid "Select file containing your Subscription key"
+msgstr ""
+
+msgid "No valid Subscription"
+msgstr ""
+
+msgid "Contract ID"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "Activation Key"
+msgstr ""
+
+msgid "Maximum Users (0=unlimited)"
+msgstr ""
+
+msgid "Valid from"
+msgstr ""
+
+msgid "Valid to"
+msgstr ""
+
+msgid "Subscription Information"
+msgstr ""
+
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] ""
+"one: Ứng dụng\n"
+"other: Ứng dụng"
+
+msgid "I have read the license agreement and accept it"
+msgstr "Tôi đã đọc thỏa thuận về giấy phép sử dụng và chấp nhận nó."
+
+msgid "License Agreement"
+msgstr "Thỏa thuận giấy phép sử dụng"
+
+msgid "I have read the privacy agreement and accept it"
+msgstr "Tôi đã đọc chính sách riêng tư và chấp nhận nó"
+
+msgid "Privacy Agreement"
+msgstr "Thỏa thuận chính sách"
+
+msgid "Accept Terms and Conditions"
+msgstr "Điều khoản sử dụng"
+
+msgid "Terms and Conditions"
+msgstr "Điều khỏa sử dụng"
+
+msgid "Setup Checks"
+msgstr "Kiểm tra cài đặt"
+
+msgid "Config Manager"
+msgstr "Quản lý cấu hình"
+
+msgid "Authentication/Accounts"
+msgstr "Xác thực/ Tài khoản"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Application Manager"
+msgstr "Quản lý ứng dụng"
+
+msgid "Subscription"
+msgstr ""
+
+#~ msgid "Update application"
+#~ msgstr "Cập nhật ứng dụng"

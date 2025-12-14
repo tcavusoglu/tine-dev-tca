@@ -1,0 +1,114 @@
+.x-html-editor-tb .x-btn-icon .x-btn-text {
+    background-image: none;
+}
+
+.x-btn-icon .x-btn-small .x-btn-image {
+    background-size: 18px 18px !important;
+}
+
+.x-form-item .x-btn-icon .x-btn-small .x-btn-image {
+    background-size: cover !important
+}
+
+.x-html-editor-tb .x-edit-bold, .x-menu-item img.x-edit-bold {
+    background: url(../../../../images/icon-set/icon_email_bold.svg) !important;
+}
+
+.x-html-editor-tb .x-edit-italic, .x-menu-item img.x-edit-italic {
+    background: url(../../../../images/icon-set/icon_email_italic.svg) !important;
+}
+
+.x-html-editor-tb .x-edit-underline, .x-menu-item img.x-edit-underline {
+    background: url(../../../../images/icon-set/icon_email_underline.svg) !important;
+}
+
+.x-html-editor-tb .x-edit-increasefontsize, .x-menu-item img.x-edit-increasefontsize {
+    background: url(../../../../images/icon-set/icon_email_size_up.svg) !important;
+}
+
+.x-html-editor-tb .x-edit-decreasefontsize, .x-menu-item img.x-edit-decreasefontsize {
+    background: url(../../../../images/icon-set/icon_email_size_down.svg) !important;
+}
+
+.x-html-editor-tb .x-edit-forecolor, .x-menu-item img.x-edit-forecolor {
+    background: url(../../../../images/icon-set/icon_email_text_color_02.svg) !important;
+}
+
+.x-html-editor-tb .x-edit-backcolor, .x-menu-item img.x-edit-backcolor {
+    background: url(../../../../images/icon-set/icon_email_bg_color.svg) !important;
+}
+
+.x-html-editor-tb .x-edit-justifyleft, .x-menu-item img.x-edit-justifyleft {
+    background: url(../../../../images/icon-set/icon_email_text_left.svg) !important;
+}
+
+.x-html-editor-tb .x-edit-justifycenter, .x-menu-item img.x-edit-justifycenter {
+    background: url(../../../../images/icon-set/icon_email_text_center.svg) !important;
+}
+
+.x-html-editor-tb .x-edit-justifyright, .x-menu-item img.x-edit-justifyright {
+    background: url(../../../../images/icon-set/icon_email_text_right.svg) !important;
+}
+
+.x-html-editor-tb .x-edit-createlink, .x-menu-item img.x-edit-createlink {
+    background: url(../../../../images/icon-set/icon_globe.svg) !important;
+}
+
+.x-html-editor-tb .x-edit-insertorderedlist, .x-menu-item img.x-edit-insertorderedlist {
+    background: url(../../../../images/icon-set/icon_email_list_ordered.svg) !important;
+}
+
+.x-html-editor-tb .x-edit-insertunorderedlist, .x-menu-item img.x-edit-insertunorderedlist {
+    background: url(../../../../images/icon-set/icon_email_list_unordered.svg) !important;
+}
+
+.x-html-editor-tb .x-edit-sourceedit, .x-menu-item img.x-edit-sourceedit {
+    background: url(../../../../images/icon-set/icon_email_edit_code.svg) !important;
+}
+
+/*
+    html editor plugin button icons
+*/
+.x-edit-indent {background: url(../../../../images/icon-set/icon_email_text_jump_right.svg) 0 0 no-repeat !important;}
+.x-edit-outdent {background: url(../../../../images/icon-set/icon_email_text_jump_left.svg) 0 0 no-repeat !important;}
+.x-edit-removeFormat {background: url(../../../../images/icon-set/icon_email_eraser.svg) 0 0 no-repeat !important;}
+.x-edit-toggleFormat {background: url(../../../../images/icon-set/icon_email_t.svg) 0 0 no-repeat !important;}
+.x-edit-strikeThrough {background: url(../../../../images/icon-set/icon_email_strike_through.svg) 0 0 no-repeat !important;}
+.x-edit-formatblockPre {background: url(../../../../images/icon-set/icon_debug.svg) 0 0 no-repeat !important;}
+.x-edit-selectImage {background: url(../../../../images/icon-set/icon_file_image.svg) 0 0 no-repeat !important;}
+
+/*
+    These are examples of styles for the button icons
+
+.x-edit-wordpaste {background: url(../images/document-word-text.png) 0 0 no-repeat !important;}
+.x-edit-table {background: url(../images/table.png) 0 0 no-repeat !important;}
+.x-edit-hr {background: url(../images/edit-rule.png) 0 0 no-repeat !important;}
+.x-edit-char {background: url(../images/edit-char.png) 0 0 no-repeat !important;}
+.x-edit-subscript {background: url(../images/text_sub.png) 0 0 no-repeat !important;}
+.x-edit-superscript {background: url(../images/text_super.png) 0 0 no-repeat !important;}
+*/
+
+/*
+    These styles are used for the character map
+*/
+.char-item {
+    float: left; 
+    border: 1px solid #99BBE8; 
+    margin: 3px; 
+    text-align: center; 
+    vertical-align: middle; 
+    width: 20px; 
+    height: 20px; 
+    font-size: 14px;
+    color: #15428B;
+    cursor: pointer;
+}
+
+.char-item.x-view-selected {
+    background-color: #777;
+}
+
+.char-over {
+    border: 1px solid #15428B;
+    background-color:#d0def0;
+}

@@ -1,0 +1,174 @@
+#
+# Translators:
+# Michael Spahn <michael@spahn.me>, 2012-2013
+# Michael Spahn <michael@spahn.me>, 2013
+# Michael Spahn <michael@spahn.me>, 2012
+# pschuele <p.schuele@metaways.de>, 2013
+# pschuele <p.schuele@metaways.de>, 2013
+# sstamer <s.stamer@metaways.de>, 2015-2016
+# sstamer <s.stamer@metaways.de>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-10-04 15:23+0000\n"
+"Last-Translator: sstamer <s.stamer@metaways.de>, 2015\n"
+"Language-Team: German (http://app.transifex.com/tine/groupware/language/de/)\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Inventory Status Available"
+msgstr "Inventar Status verfügbar"
+
+msgid "Possible status."
+msgstr "Möglicher Status"
+
+msgid "Ordered"
+msgstr "Bestellt"
+
+msgid "Available"
+msgstr "Verfügbar"
+
+msgid "Defect"
+msgstr "Defekt"
+
+msgid "Missing"
+msgstr "Vermisst"
+
+msgid "Removed"
+msgstr "Entfernt"
+
+msgid "Unknown"
+msgstr "Unbekannt"
+
+msgid "Stored"
+msgstr "Eingelagert"
+
+msgid "Sold"
+msgstr "Verkauft"
+
+msgid "Destroyed"
+msgstr "Vernichtet"
+
+msgid "Types"
+msgstr ""
+
+msgid "Tine 2.0 inventory CSV import"
+msgstr "CSV-Import aus Tine 2.0-Inventar"
+
+msgid "Import CSV formatted contacts from Tine 2.0 Inventory (Export Format)"
+msgstr "CSV-formatierte Kontakte aus dem Tine 2.0-Inventar importieren (Exportformat)"
+
+msgid "Import list (###CURRENTDATE###)"
+msgstr "Importierte Liste (###CURRENTDATE###)"
+
+msgid "Inventory Items imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr "Inventarartikel am ###CURRENTDATE### um ###CURRENTTIME### von ###USERFULLNAME### importiert"
+
+msgid "Inventory CSV import"
+msgstr "Inventar CSV Import"
+
+msgid "Items imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr "Gegenstände importiert am ###CURRENTDATE### um ###CURRENTTIME### von ###USERFULLNAME###"
+
+msgid "The active number must be less than or equal to total number."
+msgstr "Die verwendbare Anzahl muss geringer oder gleich wie die Anzahl sein."
+
+msgid "Purchase Invoice"
+msgstr "Eingangsrechnung"
+
+msgid "Employee"
+msgstr "Mitarbeitende"
+
+msgid "General"
+msgstr "Allgemein"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Serial Number"
+msgstr "Seriennummer"
+
+msgid "Inventory Type"
+msgstr "Inventartyp"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "Enter description"
+msgstr "Beschreibung eingeben"
+
+msgid "Location"
+msgstr "Standort"
+
+msgid "Added"
+msgstr "Hinzugefügt"
+
+msgid "Warranty"
+msgstr "Garantie"
+
+msgid "Total number"
+msgstr "Totale Anzahl"
+
+msgid "Available number"
+msgstr "Verfügbare Anzahl"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Accounting"
+msgstr "Buchhaltung"
+
+msgid "Price"
+msgstr "Preis"
+
+msgid "Invoice date"
+msgstr "Rechnungsdatum"
+
+msgid "Depreciate"
+msgstr "Abschreibung"
+
+msgid "Inventory item"
+msgid_plural "Inventory items"
+msgstr[0] "Inventargegenstand"
+msgstr[1] "Inventargegenstände"
+
+msgid "Inventory item list"
+msgid_plural "Inventory item lists"
+msgstr[0] "Inventarliste"
+msgstr[1] "Inventarlisten"
+
+msgid "Inventory ID"
+msgstr "Inventar ID"
+
+msgid "Depreciated"
+msgstr ""
+
+msgid "Inventory type"
+msgid_plural "Inventory types"
+msgstr[0] "Inventartyp"
+msgstr[1] "Inventartypen"
+
+msgid "Default Inventory Item Container"
+msgstr "Standardinventarliste"
+
+msgid "The default container for new items"
+msgstr "Der standard Container für neue Gegenstände"
+
+msgid "All Inventory Items"
+msgstr "Alle Inventargegenstände"
+
+msgid "All existing Inventory Items"
+msgstr "Alle existierenden Inventargegenstände"
+
+msgid "Inventory"
+msgstr "Inventarisierung"

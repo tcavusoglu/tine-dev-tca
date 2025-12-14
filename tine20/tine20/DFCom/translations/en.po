@@ -1,0 +1,192 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0 - DFCom\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2008-07-29 21:14+0100\n"
+"Last-Translator: Cornelius Weiss <c.weiss@metaways.de>\n"
+"Language-Team: Tine 2.0 Translators\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Device List Status"
+msgstr "Device List Status"
+
+msgid "Possible list statuses based on device list feedback records"
+msgstr "Possible list statuses based on device list feedback records"
+
+msgid "List was sent to device"
+msgstr "List was sent to device"
+
+msgid "List has been accepted"
+msgstr "List has been accepted"
+
+msgid "Generic error"
+msgstr "Generic error"
+
+msgid "Invalid label"
+msgstr "Invalid label"
+
+msgid "Unknown list"
+msgstr "Unknown list"
+
+msgid "Parameter missing"
+msgstr "Parameter missing"
+
+msgid "Error in list row"
+msgstr "Error in list row"
+
+msgid "List is ignored"
+msgstr "List is ignored"
+
+msgid "Duplicate list definition"
+msgstr "Duplicate list definition"
+
+msgid "Another list upgrade is in progress"
+msgstr "Another list upgrade is in progress"
+
+msgid "Device List Percentage"
+msgstr "Device List Percentage"
+
+msgid "Device list containing percentage entries."
+msgstr "Device list containing percentage entries."
+
+msgid "Initial AuthKey for Device Setup"
+msgstr "Initial AuthKey for Device Setup"
+
+msgid "Must be set as the default value for the global variable authKey (max 20 chars) in DataFox Studio for device setup."
+msgstr "Must be set as the default value for the global variable authKey (max 20 chars) in DataFox Studio for device setup."
+
+msgid "Default Container for Devices"
+msgstr "Default Container for Devices"
+
+msgid "The container where new devices are created."
+msgstr "The container where new devices are created."
+
+msgid "Default Device Lists"
+msgstr "Default Device Lists"
+
+msgid "List export definition names that are loaded into devices by default."
+msgstr "List export definition names that are loaded into devices by default."
+
+msgid "Device Record Handlers"
+msgstr "Device Record Handlers"
+
+msgid "Handler class for a given device record."
+msgstr "Handler class for a given device record."
+
+msgid "New Device"
+msgstr "New Device"
+
+msgid "Device List for Absence Reasons"
+msgstr "Device List for Absence Reasons"
+
+msgid "Device List for Employee"
+msgstr "Device List for Employee"
+
+msgid "Device list"
+msgid_plural "Device lists"
+msgstr[0] "Device list"
+msgstr[1] "Device lists"
+
+msgid "Device"
+msgid_plural "Devices"
+msgstr[0] "Device"
+msgstr[1] "Devices"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Export Definition"
+msgstr "Export Definition"
+
+msgid "Active list version"
+msgstr "Active list version"
+
+msgid "List status"
+msgstr "List status"
+
+msgid "Control Commands Based on List Feedback"
+msgstr "Control Commands Based on List Feedback"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Serial number"
+msgstr "Serial number"
+
+msgid "Auth key"
+msgstr "Auth key"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Location"
+msgstr "Location"
+
+msgid "Timezone"
+msgstr "Timezone"
+
+msgid "Firmware"
+msgstr "Firmware"
+
+msgid "Setup Version"
+msgstr "Setup Version"
+
+msgid "Setup Status"
+msgstr "Setup Status"
+
+msgid "Last seen"
+msgstr "Last seen"
+
+msgid "Cellular data"
+msgstr "Cellular data"
+
+msgid "GPRS alive counter"
+msgstr "GPRS alive counter"
+
+msgid "GPRS data"
+msgstr "GPRS data"
+
+msgid "Digital status"
+msgstr "Digital status"
+
+msgid "Lists"
+msgstr "Lists"
+
+msgid "Control Commands"
+msgstr "Control Commands"
+
+msgid "Device Record"
+msgid_plural "Device Records"
+msgstr[0] "Device Record"
+msgstr[1] "Device Records"
+
+msgid "Device Records Container"
+msgid_plural "Device Records Containers"
+msgstr[0] "Device Records Container"
+msgstr[1] "Device Records Containers"
+
+msgid "Device Table"
+msgstr "Device Table"
+
+msgid "Data"
+msgstr "Data"
+
+msgid "Processed by"
+msgstr "Processed by"
+
+#, php-format
+msgid "Clock in: %1$s"
+msgstr "Clock in: %1$s"
+
+#, php-format
+msgid "Clock out: %1$s"
+msgstr "Clock out: %1$s"
+
+msgid "Transponder Id"
+msgstr "Transponder Id"

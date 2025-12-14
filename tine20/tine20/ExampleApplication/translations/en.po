@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0 - ExampleApplication\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2008-07-29 21:14+0100\n"
+"Last-Translator: Cornelius Weiss <c.weiss@metaways.de>\n"
+"Language-Team: Tine 2.0 Translators\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Status Available"
+msgstr "Status Available"
+
+msgid "Possible Statuses. Please note that additional statuses may affect other ExampleApplication systems during export or synchronization."
+msgstr "Possible Statuses. Please note that additional statuses may affect other ExampleApplication systems during export or synchronization."
+
+msgid "Completed"
+msgstr "Completed"
+
+msgid "Cancelled"
+msgstr "Cancelled"
+
+msgid "In progress"
+msgstr "In progress"
+
+msgid "Reasons Available"
+msgstr "Reasons Available"
+
+msgid "Possible status reasons."
+msgstr "Possible status reasons."
+
+msgid "Change"
+msgstr "Change"
+
+msgid "Documentation"
+msgstr "Documentation"
+
+msgid "Requirement Changed"
+msgstr "Requirement Changed"
+
+msgid "Not Possible"
+msgstr "Not Possible"
+
+msgid "Implementation"
+msgstr "Implementation"
+
+msgid "Review"
+msgstr "Review"
+
+msgid "Integration"
+msgstr "Integration"
+
+msgid "Enabled Features"
+msgstr "Enabled Features"
+
+msgid "Enabled Features in Example Application."
+msgstr "Enabled Features in Example Application."
+
+msgid "Invoices Module"
+msgstr "Invoices Module"
+
+msgid "Example String"
+msgstr "Example String"
+
+msgid "Just an example string for testing purposes."
+msgstr "Just an example string for testing purposes."
+
+msgid "Total Example Records"
+msgstr "Total Example Records"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "New Example"
+msgstr "New Example"
+
+msgid "ExampleRecord"
+msgstr "ExampleRecord"
+
+msgid "Reason"
+msgstr "Reason"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "example record"
+msgid_plural "example records"
+msgstr[0] "example record"
+msgstr[1] "example records"
+
+msgid "example records"
+msgstr "example records"
+
+msgid "example record list"
+msgstr "example record list"
+
+msgid "example record lists"
+msgstr "example record lists"
+
+msgid "Number"
+msgstr "Number"
+
+msgid "datetime"
+msgstr "datetime"
+
+msgid "Default Example Record Container"
+msgstr "Default Example Record Container"
+
+msgid "The default container for new records"
+msgstr "The default container for new records"
+
+msgid "ExampleApplication"
+msgstr "ExampleApplication"

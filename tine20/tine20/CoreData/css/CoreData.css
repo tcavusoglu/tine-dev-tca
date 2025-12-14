@@ -1,0 +1,13 @@
+/**
+ * Tine 2.0
+ * 
+ * @package     CoreData
+ * @license     http://www.gnu.org/licenses/agpl.html AGPL Version 3
+ * @author      Philipp Schüle <p.schuele@metaways.de>
+ * @copyright   Copyright (c) 2016 Metaways Infosystems GmbH (http://www.metaways.de)
+ *
+ */
+ 
+.CoreDataIconCls {
+    background-image:url(../../images/icon-set/icon_coreData.svg) !important;
+}

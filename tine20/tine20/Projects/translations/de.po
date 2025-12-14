@@ -1,0 +1,182 @@
+#
+# Translators:
+# Björn Balazs <transifex@lazs.de>, 2013
+# Ettore Atalan <atalanttore@googlemail.com>, 2016
+# pschuele <p.schuele@metaways.de>, 2013
+# pschuele <p.schuele@metaways.de>, 2012
+# pschuele <p.schuele@metaways.de>, 2012-2013
+# sstamer <s.stamer@metaways.de>, 2014
+# sstamer <s.stamer@metaways.de>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-04-02 13:31+0000\n"
+"Last-Translator: sstamer <s.stamer@metaways.de>, 2014\n"
+"Language-Team: German (http://app.transifex.com/tine/groupware/language/de/)\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Manage shared project favorites"
+msgstr "Gemeinsame Projekt-Favoriten verwalten"
+
+msgid "Create new shared project favorites"
+msgstr "Neuen gemeinsamen Projekt-Favoriten anlegen"
+
+msgid "Available Project Attendee Role"
+msgstr "Verfügbare Teilnehmendenrollen"
+
+msgid "Possible Project attendee roles. Please note that additional project attendee roles might impact other Projects systems during export or synchronization."
+msgstr "Mögliche Rollen von Projektteilnehmenden. Bitte beachten Sie, dass zusätzliche Rollen von Projektteilnehmenden andere Projektsysteme beim Export oder bei der Synchronisation beeinflussen können."
+
+msgid "Coworker"
+msgstr "Mitarbeitende"
+
+msgid "Responsible"
+msgstr "Projektleitende"
+
+msgid "Available Project Scopes"
+msgstr "Verfügbare Projekt Arten"
+
+msgid "Internal"
+msgstr "Intern"
+
+msgid "External"
+msgstr "Extern"
+
+msgid "Available Project Status"
+msgstr "Verfügbare Projektstatus"
+
+msgid "Possible Project statuses. Please note that additional project statuses might impact other Projects systems during export or synchronization."
+msgstr ""
+
+msgid "On hold"
+msgstr "Wartend"
+
+msgid "Completed"
+msgstr "Abgeschlossen"
+
+msgid "Cancelled"
+msgstr "Abgebrochen"
+
+msgid "In process"
+msgstr "In Bearbeitung"
+
+msgid "Available Project Types"
+msgstr "Verfügbare Projekt Typen"
+
+msgid "Campaign"
+msgstr "Kampagne"
+
+msgid "Activity"
+msgstr "Aktivität"
+
+msgid "Contract"
+msgstr "Auftrag"
+
+msgid "Project"
+msgid_plural "Projects"
+msgstr[0] "Projekt"
+msgstr[1] "Projekte"
+
+msgid "Excel current columns"
+msgstr "Excel angezeigte Spalten"
+
+msgid "Excel all data"
+msgstr "Excel Alle Daten"
+
+msgid "Please choose the Project to add the contacts to"
+msgstr "Bitte wählen Sie ein Projekt, zu dem die Kontakte hinzugefügt werden sollen"
+
+msgid "Please select the attendee's role"
+msgstr "Bitte wählen Sie die Rolle des Teilnehmenden"
+
+msgid "Select Project"
+msgstr "Projekt auswählen"
+
+msgid "Role"
+msgstr "Rolle"
+
+msgid "Select Role"
+msgstr "Rolle auswählen"
+
+#, python-brace-format
+msgid "Adding {0} Participants to project"
+msgstr "Füge {0} Teilnehmenden zum Projekt hinzu"
+
+msgid "Attendee"
+msgstr "Teilnehmende"
+
+msgid "Attendee Role"
+msgstr "Teilnehmendenrolle"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Number"
+msgstr "Projektnummer"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "End"
+msgstr "Ende"
+
+msgid "Scope"
+msgstr "Projekt-Art"
+
+msgid "Type"
+msgstr "Projekt-Typ"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "Enter description"
+msgstr "Beschreibung eingeben"
+
+msgid "Project list"
+msgid_plural "Project lists"
+msgstr[0] "Projektliste"
+msgstr[1] "Projektlisten"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Tasks"
+msgstr "Aufgaben"
+
+msgid "All my projects"
+msgstr "Alle meine Projekte"
+
+msgid "Default Favorite"
+msgstr "Standard Favorit"
+
+msgid "The default favorite that is loaded on Projects startup"
+msgstr "Standard Favorit, der beim starten von Projekten geladen wird"
+
+msgid "All my open projects"
+msgstr "Alle meine offenen Projekte"
+
+msgid "My projects that I'm responsible for"
+msgstr "Alle Projekte für die ich verantwortlich bin"
+
+msgid "All my open projects that I am responsible for"
+msgstr "Alle offenen Projekte für die ich verantwortlich bin"
+
+msgid "My waiting projects"
+msgstr "Meine wartenden Projekte"
+
+msgid "My projects that are on hold"
+msgstr "Meine pausierten Projekte"
+
+msgid "Projects"
+msgstr "Projekte"

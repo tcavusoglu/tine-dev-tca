@@ -1,0 +1,11 @@
+.ActiveSyncIconCls {
+    background-image:url(../../images/icon-set/icon_settings.svg) !important;
+}
+
+.activesync-device-standard {
+    background-image:url(../../images/icon-set/icon_mobile.svg) !important;
+}
+
+.action_wipeDevice {
+    background-image:url(../../images/icon-set/icon_trash.svg) !important;
+}

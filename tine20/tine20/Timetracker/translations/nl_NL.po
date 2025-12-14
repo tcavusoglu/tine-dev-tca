@@ -1,0 +1,444 @@
+#
+# Translators:
+# c70f8c46e4689d9d880065a20d84dee4_7815c19 <1d5c09a050ed4f04980223c8925f0e37_333207>, 2015
+# Whatsek <Whatsek@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-04-02 13:32+0000\n"
+"Last-Translator: Whatsek <Whatsek@gmail.com>, 2015\n"
+"Language-Team: Dutch (Netherlands) (http://app.transifex.com/tine/groupware/language/nl_NL/)\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Manage timeaccounts"
+msgstr "Beheer tijdaccounts"
+
+msgid "Add, edit and delete timeaccounts (includes all timesheet grants)"
+msgstr "Voeg toe, bewerk of verwijder urenstaten (inclusief alle rechten)"
+
+msgid "Add timeaccounts"
+msgstr "Urenstaat toevoegen"
+
+msgid "Manage shared timeaccount favorites"
+msgstr "Beheer gedeelde favoriete urenaccounts"
+
+msgid "Create or update shared timeaccount favorites"
+msgstr "Maak of update gedeelde favoriete urenaccounts"
+
+msgid "Manage shared timesheet favorites"
+msgstr "Beheer gedeelde favoriete urenstaten"
+
+msgid "Create or update shared timesheet favorites"
+msgstr "Maak of update gedeelde favoriete urenstaten"
+
+msgid "Enabled Features"
+msgstr ""
+
+msgid "Enabled Features in Timetracker Application."
+msgstr ""
+
+msgid "Timeaccount Bookmarks"
+msgstr ""
+
+msgid "none"
+msgstr "Geen"
+
+msgid "last week"
+msgstr "vorige week"
+
+msgid "not yet billed"
+msgstr "Nog niet gefactureerd"
+
+msgid "status to bill"
+msgstr ""
+
+msgid "billed"
+msgstr "Gefactureerd"
+
+msgid "Requested"
+msgstr ""
+
+msgid "Accepted"
+msgstr ""
+
+msgid "Declined"
+msgstr ""
+
+msgid "Add timeaccounts as favorite to speedup timesheet creation.)"
+msgstr ""
+
+msgid "Timeaccounts are still in use! Are you sure you want to delete them?"
+msgstr ""
+
+msgid "The Invoice you tried to edit is cleared already, change date will rebill the invoice, do you still want to execute this action?"
+msgstr ""
+
+msgid "Add Timesheet"
+msgstr ""
+
+msgid "Timesheets of this Task:"
+msgstr ""
+
+msgid "Time Account - Billed"
+msgstr "Urenaccount - Gefactureerd"
+
+msgid "to bill"
+msgstr "Factureren"
+
+msgid "Contract"
+msgstr "Contract"
+
+msgid "without contract"
+msgstr "zonder contract"
+
+msgid "Unit"
+msgstr "Eenheid"
+
+msgid "Unit Price"
+msgstr "Eenheidsprijs"
+
+msgid "Factor"
+msgstr ""
+
+msgid "Budget in hours"
+msgstr ""
+
+msgid "Status"
+msgstr "Status"
+
+msgid "closed"
+msgstr "gesloten"
+
+msgid "open"
+msgstr "open"
+
+msgid "Cleared at"
+msgstr "Afgemaakt op"
+
+msgid "Responsible Person"
+msgstr "Verantwoordelijke persoon"
+
+msgid "Timesheets are billable"
+msgstr "Urenstaten zijn facturabel"
+
+msgid "Invoice"
+msgstr "Factuur"
+
+msgid "Time Account"
+msgid_plural "Time Accounts"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Number"
+msgstr "Nummer"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Description"
+msgstr "Beschrijving"
+
+msgid "Select invoice"
+msgstr ""
+
+msgid "Update Timesheets?"
+msgstr ""
+
+msgid "Attention: There are timesheets that have not yet been accounted. If you continue, they will be set to accounted. This action cannot be undone. Continue anyway?"
+msgstr ""
+
+msgid "Timeaccount Favorites"
+msgstr ""
+
+#, python-brace-format
+msgid "Delete {0}"
+msgid_plural "Delete {0}"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Favorite"
+msgstr ""
+
+msgid "Bookmark Timeaccount"
+msgstr ""
+
+msgid "Close Timeaccount"
+msgstr ""
+
+msgid "Show closed"
+msgstr "Zet gesloten"
+
+msgid "Responsible"
+msgstr ""
+
+msgid "without responsible"
+msgstr ""
+
+msgid "Time Account - Status"
+msgstr "Urenaccount - Status"
+
+msgid "End Time Change"
+msgstr ""
+
+msgid "End time was shortened as timesheet must not overlap day"
+msgstr ""
+
+msgid "Duration Change"
+msgstr ""
+
+msgid "Duration was shortened as timesheet must not overlap day"
+msgstr ""
+
+msgid "Timesheet"
+msgid_plural "Timesheets"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "End must not before start."
+msgstr ""
+
+msgid "Accounting"
+msgstr ""
+
+msgid "Accounting time"
+msgstr ""
+
+msgid "Timeaccount"
+msgid_plural "Timeaccounts"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Failed"
+msgstr "Niet gelukt"
+
+#, python-brace-format
+msgid "Could not save {0}."
+msgstr "Opslaan mislukt {0}."
+
+msgid "Booking deadline for this Timeaccount has been exceeded."
+msgstr "Booking deadline voor dit tijdaccount is verlopen."
+
+msgid "Closed Timeaccount Warning!"
+msgstr ""
+
+msgid "The selected Time Account is already closed."
+msgstr ""
+
+msgid "The selected Time Account is already closed. Do you wish to continue anyway?"
+msgstr ""
+
+msgid "Workingtime:"
+msgstr ""
+
+msgid "Turnover:"
+msgstr ""
+
+msgid "Working Time Statistics"
+msgstr ""
+
+msgid "Turnover Statistics"
+msgstr ""
+
+msgid "timeframe"
+msgstr "Tijdframe"
+
+msgid "summary"
+msgstr "samenvatting"
+
+msgid "Total Timesheets"
+msgstr "Alle urenstaten"
+
+msgid "Billable Timesheets"
+msgstr "Facturabele urenstaten"
+
+msgid "Total Time"
+msgstr "Totale tijd"
+
+msgid "Time of Billable Timesheets"
+msgstr "Tijd van facturabele urenstaten"
+
+msgid "Detail"
+msgstr "Details"
+
+#, python-brace-format
+msgid "Assign '{0}' Tag"
+msgstr ""
+
+msgid "Export Timesheets"
+msgstr "Exporteer urenstaten"
+
+msgid "Export as ODS"
+msgstr "Exporteer als ODS"
+
+msgid "Export as CSV"
+msgstr "Exporteer als CSV"
+
+msgid "Export as ..."
+msgstr "Exporteer als ..."
+
+msgid "Read Own"
+msgstr ""
+
+msgid "The grant to read own time sheets in this time account."
+msgstr ""
+
+msgid "Request Own"
+msgstr ""
+
+msgid "The grant to add own time sheets request in this time account."
+msgstr ""
+
+msgid "Book Own"
+msgstr "Boek eigen"
+
+msgid "The grant to add Timesheets to this Timeaccount"
+msgstr "Het recht om urenstaten aan dit Urenaccount toe te voegen"
+
+msgid "View All"
+msgstr "Bekijk alle"
+
+msgid "The grant to view Timesheets of other users"
+msgstr "Het recht om urenstaten van andere gebruikers in te zien"
+
+msgid "Book All"
+msgstr "Boek alle"
+
+msgid "The grant to add Timesheets for other users"
+msgstr "Het recht om urenstaten voor andere gebruikers toe te voegen"
+
+msgid "Manage Clearing"
+msgstr "Beheer opschonen"
+
+msgid "The grant to manage clearing of Timesheets"
+msgstr "Het recht om urenstaten op te schonen"
+
+msgid "Price"
+msgstr ""
+
+msgid "Project time billable"
+msgstr ""
+
+msgid "Project time cleared in"
+msgstr ""
+
+msgid "Project time billed"
+msgstr ""
+
+msgid "Booking deadline"
+msgstr "Reserverings deadline"
+
+msgid "Accounting time factor"
+msgstr ""
+
+msgid "Stream"
+msgstr ""
+
+msgid "hour"
+msgstr "uur"
+
+msgid "Account"
+msgstr "Account"
+
+msgid "Time Account (Number - Title)"
+msgstr "Tijd Account (Nummer - Titel)"
+
+msgid "Project time billable (combined)"
+msgstr ""
+
+msgid "Billable"
+msgstr "Facturabel"
+
+msgid "Project time Invoice"
+msgstr ""
+
+msgid "Project time is cleared"
+msgstr ""
+
+msgid "Cleared amount"
+msgstr ""
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Start time"
+msgstr "Start tijd"
+
+msgid "End time"
+msgstr ""
+
+msgid "Duration"
+msgstr "Duur"
+
+msgid "Need for Clarification"
+msgstr ""
+
+msgid "Projecttime Accounting factor"
+msgstr ""
+
+msgid "Accounting Projecttime"
+msgstr ""
+
+msgid "Workingtime is cleared"
+msgstr ""
+
+msgid "Workingtime cleared in"
+msgstr ""
+
+msgid "Process Status"
+msgstr ""
+
+msgid "Source"
+msgstr ""
+
+msgid "Timesheets ODS export configuration"
+msgstr "Urenstaten export in ODS configureren "
+
+msgid "Use this configuration for the timesheet ODS export."
+msgstr "Gebruik deze configuratie voor de export naar ODS"
+
+msgid "A Tag which is available in context menu for fast assignment"
+msgstr ""
+
+msgid "Quick Tag allows to simply assign a predefined tag by the context menu."
+msgstr ""
+
+msgid "default"
+msgstr "standaard"
+
+msgid "Requested Timesheets"
+msgstr ""
+
+msgid "My Timesheets today"
+msgstr "Mijn urenstaten van vandaag"
+
+msgid "My Timesheets this week"
+msgstr "Mijn urenstaten van deze week"
+
+msgid "My Timesheets last week"
+msgstr "Mijn urenstaten van vorige week"
+
+msgid "My Timesheets this month"
+msgstr "Mijn urenstaten van deze maand"
+
+msgid "My Timesheets last month"
+msgstr "Mijn urenstaten van vorige maand"
+
+msgid "Timeaccounts to bill"
+msgstr "Te factureren tijdaccounts"
+
+msgid "Timeaccounts not yet billed"
+msgstr "Tijdaccounts nog niet gefactureerd"
+
+msgid "Timeaccounts already billed"
+msgstr "Tijdaccounts al gefactureerd"
+
+msgid "Timetracker"
+msgstr "Tijdregistratie"

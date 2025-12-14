@@ -1,0 +1,198 @@
+#
+# Translators:
+# Pascal Zittema <p_zittema@hotmail.com>, 2013
+# Whatsek <Whatsek@gmail.com>, 2015
+# Whatsek <Whatsek@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2018-11-28 11:09+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Dutch (Netherlands) (http://www.transifex.com/tine20/tine20/language/nl_NL/)\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Add new user"
+msgstr "Voeg nieuwe gebruiker toe"
+
+msgid "Add new user as member to a course"
+msgstr "Voeg gebruiker al lid van de cursus toe"
+
+msgid "Add existing user"
+msgstr "Voeg bestaande gebruiker toe"
+
+msgid "Add existing user as member to a course"
+msgstr "Voeg bestaande gebruiker toe als lid van de cursus"
+
+msgid "Manage shared courses favorites"
+msgstr "Beheer gedeelde favoriete cursussen"
+
+msgid "Create or update shared courses favorites"
+msgstr "Maak of update favoriete gedeelde cursussen"
+
+msgid "Set additional memberships"
+msgstr ""
+
+msgid "Set additional course member group memberships"
+msgstr ""
+
+msgid "Additional Group Memberships"
+msgstr ""
+
+msgid "Array of IDs of Groups students can be members of"
+msgstr ""
+
+msgid "Internet Access"
+msgstr "Internet toegang"
+
+msgid "Internet access options."
+msgstr "Internet toegang opties"
+
+msgid "On"
+msgstr "Aan"
+
+msgid "Off"
+msgstr "Uit"
+
+msgid "Filtered"
+msgstr "Gefilterd"
+
+msgid "Internet Access Group (ON)"
+msgstr "Internet toegang groep (aan)"
+
+msgid "Internet Access Group (FILTERED)"
+msgstr "Internet toegang groep (gefilterd)"
+
+msgid "Students Group"
+msgstr "Studenten groep"
+
+msgid "Students Import Definition"
+msgstr "Student importeer waarde"
+
+msgid "Students login name prefix"
+msgstr "Variable studenten loginnaam"
+
+msgid "Students password suffix"
+msgstr ""
+
+msgid "Teacher password"
+msgstr ""
+
+msgid "Student username schema"
+msgstr "Student gebruikersnaam schema"
+
+msgid "Student username schema (0 = only lastname (10 chars), 1 = lastname + 2 chars of firstname"
+msgstr "Student gebruikersnaam schema (0 = alleen achternaam (10 karakters), 1 = achternaam + 2 karakters van voornaam"
+
+msgid "Samba user settings"
+msgstr "Samba gebruikersopties"
+
+msgid "Default department"
+msgstr "Standaard afdeling"
+
+msgid "The default department for new Courses"
+msgstr "De standaard afdeling voor nieuwe cursussen"
+
+msgid "Course -> Department Mapping"
+msgstr ""
+
+msgid "Course"
+msgid_plural "Courses"
+msgstr[0] "Cursus"
+msgstr[1] "Cursussen"
+
+msgid "Teacher"
+msgstr "Docent"
+
+msgid "Teacher Account"
+msgstr "Docent account"
+
+msgid "My course"
+msgstr "Mijn cursus"
+
+msgid "First Name"
+msgstr "Voornaam"
+
+msgid "Last Name"
+msgstr "Achternaam"
+
+msgid "Add new member to course"
+msgstr "Voeg nieuw lid toe aan cursus"
+
+msgid "Errors"
+msgstr "Fouten"
+
+msgid "Please fix the errors noted."
+msgstr "Verhelp de genoemde fouten."
+
+msgid "Import course members"
+msgstr "Importeer cursus leden"
+
+msgid "Add new member"
+msgstr "Voeg nieuwe gebruiker toe"
+
+msgid "Course Name"
+msgstr "Cursus naam"
+
+msgid "Course / School Type"
+msgstr "Cursus / School soort"
+
+msgid "Description"
+msgstr "Omschrijving"
+
+msgid "Members"
+msgstr "Leden"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "unknown"
+msgstr "Onbekend"
+
+msgid "Reset Password"
+msgstr "Reset wachtwoord"
+
+msgid "Please enter the new Password."
+msgstr ""
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "Type"
+msgstr "soort"
+
+msgid "Failed"
+msgstr "Mislukt"
+
+msgid "Some error occured while trying to update the courses."
+msgstr "Foutmelding tijdens poging van het updaten van de cursussen"
+
+msgid "Quick Search"
+msgstr "Snel zoeken"
+
+msgid "Course Type"
+msgid_plural "Course Types"
+msgstr[0] "Cursus soort"
+msgstr[1] "Cursus soorten"
+
+msgid "All courses"
+msgstr "Alle cursussen"
+
+msgid "The default favorite which is loaded on Classes startup"
+msgstr "De standaard favoriet die bij het opstarten van Klassen wordt geladen"
+
+msgid "School"
+msgstr "School"
+
+msgid "Defaul school for Courses application"
+msgstr "Standaard school voor Cursussen applicatie "
+
+msgid "Courses"
+msgstr "Cursussen"

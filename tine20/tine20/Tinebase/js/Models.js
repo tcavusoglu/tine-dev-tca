@@ -1,0 +1,530 @@
+/*
+ * Tine 2.0
+ * 
+ * @license     http://www.gnu.org/licenses/agpl.html AGPL Version 3
+ * @author      Cornelius Weiss <c.weiss@metaways.de>
+ * @copyright   Copyright (c) 2007-2013 Metaways Infosystems GmbH (http://www.metaways.de)
+ */
+
+import Record from 'data/Record'
+
+Ext.ns('Tine.Tinebase.Model');
+
+Tine.Tinebase.Model.modlogFields = Record.modlogFields
+Tine.Tinebase.Model.genericFields = Record.genericFields
+
+/**
+ * Model of a country
+ */
+Tine.Tinebase.Model.Country = Record.create([
+    { name: 'shortName' },
+    { name: 'translatedName' }
+], {
+    appName: 'Tinebase',
+    modelName: 'Country',
+    idProperty: 'shortName',
+    titleProperty: 'translatedName',
+    // ngettext('Country', 'Countries', n); gettext('Country');
+    recordName: 'Country',
+    recordsName: 'Countries'
+});
+
+/**
+ * Model of a country
+ */
+Tine.Tinebase.Model.Currency = Tine.Tinebase.data.Record.create([
+    { name: 'shortName' },
+    { name: 'translatedName' },
+    { name: 'symbol' }
+], {
+    appName: 'Tinebase',
+    modelName: 'Currency',
+    idProperty: 'shortName',
+    titleProperty: 'symbol',
+    // ngettext('Currency', 'Currencies', n); gettext('Currency');
+    recordName: 'Currency',
+    recordsName: 'Currencies'
+});
+
+/**
+ * Model of a language
+ */
+Tine.Tinebase.Model.Language = Ext.data.Record.create([
+    { name: 'locale' },
+    { name: 'language' },
+    { name: 'region' }
+]);
+
+/**
+ * Model of a timezone
+ */
+Tine.Tinebase.Model.Timezone = Ext.data.Record.create([
+    { name: 'timezone' },
+    { name: 'timezoneTranslation' }
+]);
+
+/**
+ * Model of a role
+ */
+Tine.Tinebase.Model.Role = Record.create([
+    {name: 'id'},
+    {name: 'name'},
+    {name: 'description'}
+], {
+    appName: 'Tinebase',
+    modelName: 'Role',
+    idProperty: 'id',
+    titleProperty: 'name',
+    recordName: 'Role',
+    recordsName: 'Roles'
+});
+
+/**
+ * Model of a generalised account (user or group)
+ */
+Tine.Tinebase.Model.Account = Record.create([
+    {name: 'id'},
+    {name: 'type'},
+    {name: 'name'},
+    {name: 'data'} // todo: throw away data
+], {
+    appName: 'Tinebase',
+    modelName: 'Account',
+    idProperty: 'id',
+    titleProperty: 'name'
+});
+
+/**
+ * Model of a container
+ */
+Tine.Tinebase.Model.Container = Record.create(Record.modlogFields.concat([
+    {name: 'id'},
+    {name: 'name'},
+    {name: 'hierarchy'},
+    {name: 'type'},
+    {name: 'backend'},
+    {name: 'order'},
+    {name: 'color'},
+    {name: 'application_id'},
+    {name: 'owner_id'},
+    {name: 'model'},
+    {name: 'uuid'},
+    {name: 'content_seq'},
+    {name: 'account_grants'},
+    {name: 'path'},
+    {name: 'xprops'},
+    // virtual
+    {name: 'ownerContact'},
+    {name: 'is_container_node', type: 'boolean'},
+    {name: 'dtselect', type: 'number'},
+]), {
+    appName: 'Tinebase',
+    modelName: 'Container',
+    idProperty: 'id',
+    titleProperty: 'name'
+});
+
+/**
+ * Model of a grant
+ */
+Tine.Tinebase.Model.Grant = Record.create([
+    {name: 'id'},
+    {name: 'record_id'},
+    {name: 'account_id'},
+    {name: 'account_type'},
+    {name: 'account_name', sortType: Tine.Tinebase.common.accountSortType},
+    {name: 'freebusyGrant',type: 'boolean'},
+    {name: 'readGrant',    type: 'boolean'},
+    {name: 'addGrant',     type: 'boolean'},
+    {name: 'editGrant',    type: 'boolean'},
+    {name: 'deleteGrant',  type: 'boolean'},
+    {name: 'privateGrant', type: 'boolean'},
+    // TODO app specific (ADB) grant definition is currently needed here - make it work without
+    {name: 'privateDataGrant', type: 'boolean'},
+    {name: 'exportGrant',  type: 'boolean'},
+    {name: 'syncGrant',    type: 'boolean'},
+    {name: 'downloadGrant',type: 'boolean'},
+    {name: 'publishGrant', type: 'boolean'},
+    {name: 'adminGrant',   type: 'boolean'}
+], {
+    appName: 'Tinebase',
+    modelName: 'Grant',
+    idProperty: 'id',
+    titleProperty: 'account_name',
+    // ngettext('Grant', 'Grants', n); gettext('Grant');
+    recordName: 'Grant',
+    recordsName: 'Grants'
+});
+
+/**
+ * Model of a tag
+ * 
+ * @constructor {Record}
+ */
+Tine.Tinebase.Model.Tag = Record.create(Record.modlogFields.concat([
+    {name: 'id'         },
+    {name: 'app'        },
+    {name: 'owner'      },
+    {name: 'name'       },
+    {name: 'type'       },
+    {name: 'description'},
+    {name: 'color'      },
+    {name: 'system_tag' },
+    {name: 'occurrence' },
+    {name: 'rights'     },
+    {name: 'contexts'   },
+    {name: 'selection_occurrence', type: 'number'}
+]), {
+    appName: 'Tinebase',
+    modelName: 'Tag',
+    idProperty: 'id',
+    titleProperty: 'name',
+    // ngettext('Tag', 'Tags', n); gettext('Tag');
+    recordName: 'Tag',
+    recordsName: 'Tags'
+});
+
+/**
+ * replace template fields with data
+ * @static
+ */
+Tine.Tinebase.Model.Tag.replaceTemplateField = function(tagData) {
+    if (Ext.isArray(tagData)) {
+        return Ext.each(tagData, Tine.Tinebase.Model.Tag.replaceTemplateField);
+    }
+    
+    if (Ext.isFunction(tagData.beginEdit)) {
+        tagData = tagData.data;
+    }
+    
+    var replace = {
+        'CURRENTDATE': Tine.Tinebase.common.dateRenderer(new Date()),
+        'CURRENTTIME': Tine.Tinebase.common.timeRenderer(new Date()),
+        'USERFULLNAME': Tine.Tinebase.registry.get('currentAccount').accountDisplayName
+    };
+    
+    Ext.each(['name', 'description'], function(field) {
+        for(var token in replace) {
+            if (replace.hasOwnProperty(token) && Ext.isString(tagData[field])) {
+                tagData[field] = tagData[field].replace(new RegExp('###' + token + '###', 'g'), replace[token]);
+            }
+        }
+    }, this);
+    
+};
+
+/**
+ * Model of a PickerRecord
+ * 
+ * @constructor {Ext.data.Record}
+ * 
+ * @deprecated
+ */
+Tine.Tinebase.PickerRecord = Ext.data.Record.create([
+    {name: 'id'}, 
+    {name: 'name'}, 
+    {name: 'data'}
+]);
+
+/**
+ * Model of a note
+ * 
+ * @constructor {Ext.data.Record}
+ */
+Tine.Tinebase.Model.Note = Ext.data.Record.create([
+    {name: 'id'             },
+    {name: 'note_type_id'   },
+    {name: 'restricted_to'  },
+    {name: 'note'           },
+    {name: 'creation_time', type: 'date', dateFormat: Date.patterns.ISO8601Long },
+    {name: 'created_by'     }
+]);
+
+/**
+ * Model of a customfield definition
+ */
+Tine.Tinebase.Model.Customfield = Ext.data.Record.create([
+    { name: 'id'             },
+    { name: 'application_id' },
+    { name: 'model'          },
+    { name: 'name'           },
+    { name: 'definition'     },
+    { name: 'account_grants' },
+    { name: 'grants' }
+]);
+
+/**
+ * Model of a customfield value
+ */
+Tine.Tinebase.Model.CustomfieldValue = Ext.data.Record.create([
+    { name: 'record_id'      },
+    { name: 'customfield_id' },
+    { name: 'value'          }
+]);
+
+/**
+ * Model of a preference
+ * 
+ * @constructor {Ext.data.Record}
+ */
+Tine.Tinebase.Model.Preference = Ext.data.Record.create([
+    {name: 'id'             },
+    {name: 'name'           },
+    {name: 'value'          },
+    {name: 'type'           },
+    {name: 'label'          },
+    {name: 'description'    },
+    {name: 'personal_only',         type: 'boolean' },
+    {name: 'locked',                type: 'boolean' },
+    {name: 'uiconfig'       },
+    {name: 'options'        }
+]);
+
+/**
+ * Model of an alarm
+ * 
+ * @constructor {Ext.data.Record}
+ */
+Tine.Tinebase.Model.Alarm = Record.create([
+    {name: 'id'             },
+    {name: 'record_id'      },
+    {name: 'model'          },
+    {name: 'alarm_time',      type: 'date', dateFormat: Date.patterns.ISO8601Long },
+    {name: 'minutes_before',  sortType: Ext.data.SortTypes.asInt},
+    {name: 'sent_time',       type: 'date', dateFormat: Date.patterns.ISO8601Long },
+    {name: 'sent_status'    },
+    {name: 'sent_message'   },
+    {name: 'options'        }
+], {
+    appName: 'Tinebase',
+    modelName: 'Alarm',
+    idProperty: 'id',
+    titleProperty: 'minutes_before',
+    // ngettext('Alarm', 'Alarms', n); gettext('Alarm');
+    recordName: 'Alarm',
+    recordsName: 'Alarms',
+    getOption: function(name) {
+        var encodedOptions = this.get('options'),
+            options = encodedOptions ? Ext.decode(encodedOptions) : {};
+        
+        return options[name];
+    },
+    setOption: function(name, value) {
+        var encodedOptions = this.get('options'),
+            options = encodedOptions ? Ext.decode(encodedOptions) : {};
+        
+        options[name] = value;
+        this.set('options', Ext.encode(options));
+    }
+});
+
+/**
+ * @namespace Tine.Tinebase.Model
+ * @class     Tine.Tinebase.Model.ImportJob
+ * @extends   Record
+ * 
+ * Model of an import job
+ */
+Tine.Tinebase.Model.ImportJob = Record.create([
+    {name: 'files'                  },
+    {name: 'import_definition_id'   },
+    {name: 'model'                  },
+    {name: 'import_function'        },
+    {name: 'container_id'           },
+    {name: 'dry_run'                },
+    {name: 'options'                }
+], {
+    appName: 'Tinebase',
+    modelName: 'Import',
+    idProperty: 'id',
+    titleProperty: 'model',
+    // ngettext('Import', 'Imports', n); gettext('Import');
+    recordName: 'Import',
+    recordsName: 'Imports'
+});
+
+/**
+ * @namespace Tine.Tinebase.Model
+ * @class     Tine.Tinebase.Model.ExportJob
+ * @extends   Record
+ * 
+ * Model of an export job
+ */
+Tine.Tinebase.Model.ExportJob = Record.create([
+    {name: 'scope'                  },
+    {name: 'filter'                 },
+    {name: 'definitionId'   },
+    {name: 'format'                 },
+    {name: 'exportFunction'         },
+    {name: 'recordsName'            },
+    {name: 'model'                  },
+    {name: 'returnFileLocation'     },
+    {name: 'count', type: 'int'     },
+    {name: 'options'                }
+], {
+    appName: 'Tinebase',
+    modelName: 'Export',
+    idProperty: 'id',
+    titleProperty: 'model',
+    // ngettext('Export', 'Export', n); gettext('Export');
+    recordName: 'Export',
+    recordsName: 'Exports'
+});
+
+/**
+ * @namespace Tine.Tinebase.Model
+ * @class     Tine.Tinebase.Model.Credentials
+ * @extends   Record
+ * 
+ * Model of user credentials
+ */
+Tine.Tinebase.Model.Credentials = Record.create([
+    {name: 'id'},
+    {name: 'username'},
+    {name: 'password'}
+], {
+    appName: 'Tinebase',
+    modelName: 'Credentials',
+    idProperty: 'id',
+    titleProperty: 'username',
+    // ngettext('Credentials', 'Credentials', n); gettext('Credentials');
+    recordName: 'Credentials',
+    recordsName: 'Credentials'
+});
+
+/**
+ * @namespace Tine.Tinebase.Model
+ * @class     Tine.Tinebase.Model.Relation
+ * @extends   Record
+ * 
+ * Model of a Relation
+ */
+Tine.Tinebase.Model.Relation = Record.create([
+    {name: 'id'},
+    {name: 'own_model'},
+    {name: 'own_id'},
+    {name: 'related_model'},
+    {name: 'related_id'},
+    {name: 'type'},
+    {name: 'remark'},
+    {name: 'related_record', sortType: Tine.Tinebase.common.recordSortType},
+    {name: 'creation_time'}
+], {
+    appName: 'Tinebase',
+    modelName: 'Relation',
+    idProperty: 'id',
+    titleProperty: 'related_model',
+    // ngettext('Relation', 'Relations', n); gettext('Relation');
+    recordName: 'Relation',
+    recordsName: 'Relations'
+});
+
+/**
+ * find duplicate relation in store
+ *
+ * @param store
+ * @param record
+ * @return int index in store
+ */
+Tine.Tinebase.Model.Relation.findDuplicate = function(store, record) {
+    return store.findBy(function(r) {
+        return r.get('related_model') == record.get('related_model') &&
+            r.get('related_id') == record.get('related_id') &&
+            r.get('type') == record.get('type');
+    }, this);
+};
+
+/**
+ * @namespace Tine.Tinebase.Model
+ * @class     Tine.Tinebase.Model.Department
+ * @extends   Record
+ * 
+ * Model of a Department
+ */
+Tine.Tinebase.Model.Department = Record.create([
+    {name: 'id'},
+    {name: 'name'},
+    {name: 'description'}
+], {
+    appName: 'Tinebase',
+    modelName: 'Department',
+    idProperty: 'id',
+    titleProperty: 'name',
+    // ngettext('Department', 'Departments', n); gettext('Department');
+    recordName: 'Department',
+    recordsName: 'Departments'
+});
+
+Tine.Tinebase.Model.Department.getFilterModel = function() {
+    return [
+        {label: i18n._('Name'),          field: 'name',       operators: ['contains']}
+    ];
+};
+
+/**
+ * @namespace Tine.Tinebase.Model
+ * @class     Tine.Tinebase.Model.Config
+ * @extends   Record
+ * 
+ * Model of a application config settings
+ */
+Tine.Tinebase.Model.Config = Record.create([
+    {name: 'id'},
+    {name: 'application_id'},
+    {name: 'name'},
+    {name: 'value'},
+    {name: 'label'},
+    {name: 'description'},
+    {name: 'type'},
+    {name: 'clientRegistryInclude'},
+    {name: 'setByAdminModule'},
+    {name: 'setBySetupModule'},
+    {name: 'default'},
+    {name: 'source'}
+    //{name: 'settings'}
+], {
+    appName: 'Tinebase',
+    modelName: 'Config',
+    idProperty: 'id',
+    titleProperty: 'name',
+    // ngettext('Config', 'Configs', n); gettext('Configs');
+    recordName: 'Config',
+    recordsName: 'Configs'
+});
+
+Tine.widgets.grid.RendererManager.register('Tinebase', 'Tree_Node', 'size', Tine.Tinebase.common.byteRenderer);
+Tine.widgets.grid.RendererManager.register('Tinebase', 'Tree_Node', 'revision_size', Tine.Tinebase.common.byteRenderer);
+
+Tine.Tinebase.Model.KeyFieldRecord = Record.create([
+    { name: 'id' },
+    { name: 'value' },
+    { name: 'i18nValue' },
+    { name: 'icon' },
+    { name: 'color' },
+    { name: 'system' }
+], {
+    appName: 'Tinebase',
+    modelName: 'KeyFieldRecord',
+    idProperty: 'id',
+    titleProperty: 'value'
+});
+
+Tine.Tinebase.Model.Path = Record.create([
+    { name: 'id' },
+    { name: 'path' },
+    { name: 'shadow_path' },
+    { name: 'creation_time' }
+], {
+    appName: 'Tinebase',
+    modelName: 'Path',
+    idProperty: 'id',
+    titleProperty: 'path',
+    // defaultFilter: 'path'
+});
+
+Tine.Tinebase.Model.Path.getFilterModel = function() {
+    return [
+        {label: i18n._('Query'),         field: 'query',       operators: ['contains']},
+        {label: i18n._('Path'),          field: 'path',       operators: ['contains']}
+    ];
+};

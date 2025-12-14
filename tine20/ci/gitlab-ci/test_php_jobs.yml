@@ -1,0 +1,474 @@
+.php-unit-all-tests-source:
+  extends: .abstract_jobs.php_unit_cache
+  variables:
+    ARG_IMAGE: test-source
+    ARG_COPY_SOURCE: "true"
+  stage: test
+  timeout: 2h
+  interruptible: true
+  rules:
+    - if: $RUN_NO_TESTS == "true"
+      when: never
+    - if: $PHP_UNIT_ALL_TESTS_SOURCE == "false"
+      when: never
+    - if: $PHP_UNIT_ALL_TESTS_SOURCE == "true"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $PHP_UNIT_ALL_TESTS_SOURCE_MERGE_REQUEST != "false"
+      changes:
+        paths:
+          - "**/*.php"
+          - "tine20/composer.*"
+          - "**/*.xslx"
+          - "**/*.docx"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /php-unit-all-tests-source/
+    - if: $PIPELINE_TYPE =~ /default-tests/
+    - if: $PIPELINE_TYPE =~ /mr-tests/
+    - if: $CI_COMMIT_TAG
+php-unit-all-tests-source-sequential:
+  extends: .php-unit-all-tests-source
+  variables:
+    NODE_TOTAL: 1
+    NODE_INDEX: 1
+  after_script:
+    - |
+      if [ "${CI_COMMIT_REF_NAME}" == "${MAJOR_COMMIT_REF_NAME}" ]; then
+        s3cmd --access_key=${SCREENSHOTS_S3_ACCESS_KEY} --secret_key=${SCREENSHOTS_S3_SECRET_KEY} --host ${SCREENSHOTS_S3_HOST} --host-bucket "%(bucket)s.${SCREENSHOTS_S3_HOST}" --acl-public --delete-removed --no-mime-magic sync ${CI_PROJECT_DIR}/coverage/ s3://tine-phpunit-coverage/${CI_COMMIT_REF_NAME}/
+      fi
+  needs: []
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /php-unit-all-tests-source-sequential/
+    - if: $PHP_UNIT_ALL_TESTS_SOURCE_TYPE != "sequential"
+      when: never
+    - !reference [.php-unit-all-tests-source, rules]
+php-unit-all-tests-source-parallel:
+  extends: .php-unit-all-tests-source
+  timeout: 45m
+  parallel: 5
+  needs: []
+  rules:
+    - if: $PHP_UNIT_ALL_TESTS_SOURCE_TYPE != "parallel"
+      when: never
+    - !reference [.php-unit-all-tests-source, rules]
+php-unit-all-tests-source-matrix:
+  extends: .php-unit-all-tests-source
+  variables:
+    NODE_TOTAL: 1
+    NODE_INDEX: 1
+    ARG_EXCLUDE_GROUP: longrunning,needsbuild,nogitlabci,ServerTests
+  parallel:
+    matrix:
+      - DATABASE_IMAGE:
+          - "dockerregistry.metaways.net/tine20/tine20/mysql:8.0.21"
+          - "mariadb:12.2-rc"
+          - "mariadb:11.8"
+          - "mariadb:10.11"
+#          - "mariadb:10.6" # tine cloud version
+          - "mariadb:10.2"
+        PHP_VERSION:
+          - "8.1"
+          - "8.3"
+  rules:
+    - if: $PIPELINE_TYPE =~ /matrix-tests/
+    - if: $PHP_UNIT_ALL_TESTS_SOURCE_TYPE != "matrix" && $JS_E2E_TESTS_SOURCE_TYPE != "matrix"
+      when: never
+    - !reference [.php-unit-all-tests-source, rules]
+
+.php-unit-all-tests-source-postfixmultiinstance:
+  extends: .php-unit-all-tests-source
+  variables:
+    ARG_POSTFIX_INIT_SQL_PATH: /config/sql/postfixmultiinstance_tables.sql
+    TINE20_EMAIL_SMTP: "active:true,backend:postfixmultiinstance,hostname:postfix,port:25,ssl:none,auth:none,name:postfix,primarydomain:mail.test,instanceName:tine.test,postfixmultiinstance_host:db,postfixmultiinstance_dbname:postfix,postfixmultiinstance_username:tine20,postfixmultiinstance_password:tine20pw"
+  rules:
+    - if: $RUN_NO_TESTS == "true"
+      when: never
+    - if: $PHP_UNIT_ALL_TESTS_SOURCE_POSTFIXMULTIINSTANCE  == "false"
+      when: never
+    - if: $PHP_UNIT_ALL_TESTS_SOURCE_POSTFIXMULTIINSTANCE  == "true"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $PHP_UNIT_ALL_TESTS_SOURCE_POSTFIXMULTIINSTANCE_MERGE_REQUEST == "true"
+      changes:
+        paths:
+          - "**/*.php"
+          - "tine20/composer.*"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /php-unit-all-tests-source-postfixmultiinstance/
+    - if: $PIPELINE_TYPE =~ /default-tests/
+php-unit-all-tests-source-postfixmultiinstance-sequential:
+  extends: .php-unit-all-tests-source-postfixmultiinstance
+  variables:
+    NODE_TOTAL: 1
+    NODE_INDEX: 1
+  rules:
+    - if: $PHP_UNIT_ALL_TESTS_SOURCE_POSTFIXMULTIINSTANCE_TYPE != "sequential"
+      when: never
+    - !reference [.php-unit-all-tests-source-postfixmultiinstance, rules]
+php-unit-all-tests-source-postfixmultiinstance-parallel:
+  extends: .php-unit-all-tests-source-postfixmultiinstance
+  timeout: 45m
+  parallel: 5
+  rules:
+    - if: $PHP_ALL_UNIT_TESTS_SOURCE_POSTFIXMULTIINSTANCE_TYPE != "parallel"
+      when: never
+    - !reference [.php-unit-all-tests-source-postfixmultiinstance, rules]
+
+
+php-unit-setup-tests-source:
+  extends: .php-unit-all-tests-source
+  variables:
+    ARG_TEST_PATH_FROM_TINE20ROOT: tests/setup/
+  timeout: 90m
+  rules:
+    - if: $RUN_NO_TESTS == "true"
+      when: never
+    - if: $PHP_UNIT_SETUP_TESTS_SOURCE == "false"
+      when: never
+    - if: $PHP_UNIT_SETUP_TESTS_SOURCE == "true"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $PHP_UNIT_SETUP_TESTS_SOURCE_MERGE_REQUEST == "true"
+      changes:
+        paths:
+          - "**/*.php"
+          - "tine20/composer.*"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /php-unit-setup-tests-source/
+    - if: $PIPELINE_TYPE =~ /default-tests/
+
+
+php-unit-servertests-source:
+  extends: .php-unit-all-tests-source
+  variables:
+    ARG_TEST: AllServerTests.php
+  timeout: 30m
+  rules:
+    - if: $RUN_NO_TESTS == "true"
+      when: never
+    - if: $PHP_UNIT_SERVERTESTS_SOURCE == "false"
+      when: never
+    - if: $PHP_UNIT_SERVERTESTS_SOURCE == "true"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $PHP_UNIT_SERVERTESTS_SOURCE_MERGE_REQUEST != "false"
+      changes:
+        paths:
+          - "**/*.php"
+          - "tine20/composer.*"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /php-unit-servertests-source/
+    - if: $PIPELINE_TYPE =~ /default-tests/
+    - if: $PIPELINE_TYPE =~ /mr-tests/
+
+
+.php-unit-all-tests-ldap-source:
+  extends: .abstract_jobs.php_unit_ldap
+  variables:
+    ARG_IMAGE: test-source
+    ARG_COPY_SOURCE: "true"
+  needs: []
+  timeout: 2h
+  interruptible: true
+  rules:
+    - if: $RUN_NO_TESTS == "true"
+      when: never
+    - if: $PHP_UNIT_ALL_TESTS_LDAP_SOURCE == "false"
+      when: never
+    - if: $PHP_UNIT_ALL_TESTS_LDAP_SOURCE== "true"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $PHP_UNIT_ALL_TESTS_LDAP_SOURCE_MERGE_REQUEST != "false"
+      changes:
+        paths:
+          - "tests/tine20/Tinebase/UserTest.php"
+          - "tests/tine20/Tinebase/User/*.php"
+          - "tests/tine20/Tinebase/Group/*.php"
+          - "tests/tine20/Admin/Import/UserTest.php"
+          - "tests/tine20/Admin/Import/GroupTest.php"
+          - "tine20/Tinebase/User.php"
+          - "tine20/Tinebase/User/*.php"
+          - "tine20/Tinebase/User/LdapPlugin/*.php"
+          - "tine20/Tinebase/Group.php"
+          - "tine20/Tinebase/Group/*.php"
+          - "tine20/Tinebase/Group/LdapPlugin/*.php"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /php-unit-all-tests-ldap-source/
+    - if: $PIPELINE_TYPE =~ /default-tests/
+    - if: $PIPELINE_TYPE =~ /mr-tests/
+phpunit-all-tests-ldap-source-sequential:
+  extends: .php-unit-all-tests-ldap-source
+  variables:
+    NODE_TOTAL: 1
+    NODE_INDEX: 1
+  rules:
+    - if: $PHP_UNIT_ALL_TESTS_LDAP_SOURCE_TYPE != "sequential"
+      when: never
+    - !reference [.php-unit-all-tests-ldap-source, rules]
+php-unit-all-tests-ldap-source-parallel:
+  extends: .php-unit-all-tests-ldap-source
+  timeout: 45m
+  parallel: 5
+  rules:
+    - if: $PHP_UNIT_ALL_TESTS_LDAP_SOURCE_TYPE != "parallel"
+      when: never
+    - !reference [.php-unit-all-tests-ldap-source, rules]
+
+.php-unit-all-tests-ad-source:
+  extends: .abstract_jobs.php_unit_cache
+  variables:
+    SAMBA_DOMAIN: SAMBA
+    SAMBA_REALM: SAMBA.TEST
+    ROOT_PASSWORD: sambaPassword!
+    SAMBA_ADMIN_PASSWORD: sambaPassword!
+    LDAP_ALLOW_INSECURE: "true"
+    OMIT_EXPORT_KEY_TAB: "true"
+    TINE20_ACCOUNTS: "backend:ActiveDirectory,host:samba,useStartTls:1,username:cn=Administrator\\,cn=Users\\,dc=samba\\,dc=test,password:sambaPassword!,userDn:cn=Users\\,dc=samba\\,dc=test,userFilter:objectClass=user,groupsDn:cn=Users\\,dc=samba\\,dc=test,groupFilter:objectclass=group,defaultUserGroupName:Domain Users,defaultAdminGroupName:Domain Admins"
+    TINE20_AUTHENTICATION: "bindRequiresDn:1,backend:ldap,host:samba,port:389,useStartTls:1,username:cn=Administrator\\,cn=Users\\,dc=samba\\,dc=test,password:sambaPassword!,baseDn:cn=Users\\,dc=samba\\,dc=test,accountFilterFormat:(&(objectClass=user)(sAMAccountName=%s)),accountCanonicalForm:2"
+    ARG_IMAGE: test-source
+    ARG_COPY_SOURCE: "true"
+    ARG_EXCLUDE_GROUP: longrunning,needsbuild,nogitlabci,nogitlabciad
+  services:
+    - !reference [.lib-services, db_service]
+    - !reference [.lib-services, redis_service]
+    - !reference [.lib-services, mail_service]
+    - !reference [.lib-services, samba_service]
+  timeout: 2h
+  interruptible: true
+  before_script:
+    - cp ${CI_BUILDS_DIR}/${CI_PROJECT_NAMESPACE}/tine20/etc/tine20/dev.samba.inc.php /etc/tine20/conf.d/samba.inc.php
+    # samba needs more time to start
+    - sleep 60
+    - !reference [.abstract_jobs.php_unit_cache, before_script]
+  rules:
+    - if: $RUN_NO_TESTS == "true"
+      when: never
+    - if: $PHP_UNIT_ALL_TESTS_AS_SOURCE == "false"
+      when: never
+    - if: $PHP_UNIT_ALL_TESTS_AS_SOURCE== "true"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $PHP_UNIT_ALL_TESTS_AD_SOURCE_MERGE_REQUEST == "true"
+      changes:
+        paths:
+          - "tests/tine20/Tinebase/UserTest.php"
+          - "tests/tine20/Tinebase/User/*.php"
+          - "tests/tine20/Tinebase/Group/*.php"
+          - "tests/tine20/Admin/Import/UserTest.php"
+          - "tests/tine20/Admin/Import/GroupTest.php"
+          - "tine20/Tinebase/User.php"
+          - "tine20/Tinebase/User/*.php"
+          - "tine20/Tinebase/User/LdapPlugin/*.php"
+          - "tine20/Tinebase/Group.php"
+          - "tine20/Tinebase/Group/*.php"
+          - "tine20/Tinebase/Group/LdapPlugin/*.php"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /php-unit-all-tests-ad-source/
+    - if: $PIPELINE_TYPE =~ /ad-tests/
+phpunit-all-tests-ad-source-sequential:
+  extends: .php-unit-all-tests-ad-source
+  variables:
+    NODE_TOTAL: 1
+    NODE_INDEX: 1
+  rules:
+    - if: $PHP_UNIT_ALL_TESTS_AD_SOURCE_TYPE != "sequential"
+      when: never
+    - !reference [.php-unit-all-tests-ad-source, rules]
+php-unit-all-tests-ad-source-parallel:
+  extends: .php-unit-all-tests-ad-source
+  timeout: 45m
+  parallel: 5
+  rules:
+    - if: $PHP_UNIT_ALL_TESTS_AD_SOURCE_TYPE != "parallel"
+      when: never
+    - !reference [.php-unit-all-tests-ad-source, rules]
+
+php-unit-all-tests-saas-source-parallel:
+  extends: .abstract_jobs.php_unit_cache
+  variables:
+    TINE20_APPLICATION_TO_INSTALL: all,SaasInstance
+  needs: []
+  timeout: 45m
+  parallel: 5
+  interruptible: true
+  rules:
+    - if: $RUN_NO_TESTS == "true"
+      when: never
+    - if: $PHP_UNIT_ALL_TESTS_SAAS_SOURCE == "false"
+      when: never
+    - if: $PHP_UNIT_ALL_TESTS_SAAS_SOURCE== "true"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $PHP_UNIT_ALL_TESTS_SAAS_SOURCE_MERGE_REQUEST != "false"
+      changes:
+        paths:
+          - "tests/tine20/SaasInstance/**/*"
+          - "tine20/SaasInstance/**/*"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /php-unit-all-tests-saas-source/
+
+
+.php-unit-all-tests-built:
+  extends: .abstract_jobs.php_unit
+  variables:
+    ARG_IMAGE: test-built
+    ARG_COPY_SOURCE: "true"
+    TINE20_LICENSE_PATH: "/usr/share/tests/tine20/Tinebase/License/license_contract_MW-TEST-3.0.0.pem"
+  needs:
+    - docker_build_built
+  rules:
+    - if: $PHP_UNIT_ALL_TESTS_BUILT == "true"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $PHP_UNIT_ALL_TESTS_BUILT_MERGE_REQUEST == "true"
+      changes:
+        paths:
+          - "**/*.php"
+          - "tine20/composer.*"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /php-unit-all-tests-built/
+    - if: $PIPELINE_TYPE =~ /default-tests/
+php-unit-all-tests-built-sequential:
+  extends: .php-unit-all-tests-built
+  variables:
+    NODE_TOTAL: 1
+    NODE_INDEX: 1
+  rules:
+    - if: $RUN_NO_TESTS == "true"
+      when: never
+    - if: $PHP_UNIT_ALL_TESTS_BUILT == "false"
+      when: never
+    - if: $PHP_UNIT_ALL_TESTS_BUILT_TYPE != "sequential"
+      when: never
+    - !reference [.php-unit-all-tests-built, rules]
+php-unit-all-tests-built-parallel:
+  extends: .php-unit-all-tests-built
+  timeout: 45m
+  parallel: 5
+  rules:
+    - if: $RUN_NO_TESTS == "true"
+      when: never
+    - if: $PHP_UNIT_ALL_TESTS_BUILT == "false"
+      when: never
+    - if: $PHP_UNIT_ALL_TESTS_BUILT_TYPE != "parallel"
+      when: never
+    - !reference [.php-unit-all-tests-built, rules]
+
+.php-unit-tinebase-tests-built:
+  extends: .php-unit-all-tests-source
+  variables:
+    NODE_TOTAL: 1
+    NODE_INDEX: 1
+    ARG_IMAGE: test-built
+    ARG_TEST: Tinebase/AllTests.php
+  needs:
+    - docker_build_built
+  rules:
+    - if: $PHP_UNIT_TINEBASE_TESTS_BUILT == "true"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $PHP_UNIT_TINEBASE_TESTS_BUILT_MERGE_REQUEST == "true"
+      changes:
+        paths:
+          - "**/*.php"
+          - "tine20/composer.*"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /php-unit-tinebase-tests-built/
+    - if: $PIPELINE_TYPE =~ /default-tests/
+php-unit-tinebase-tests-built:
+  extends: .php-unit-tinebase-tests-built
+  rules:
+    - if: $RUN_NO_TESTS == "true"
+      when: never
+    - if: $PHP_UNIT_TINEBASE_TESTS_BUILT == "false"
+      when: never
+    - !reference [.php-unit-tinebase-tests-built, rules]
+
+
+.php-unit-nogitlabci-tests-built:
+  extends: .php-unit-all-tests-built
+  variables:
+    ARG_EXCLUDE_GROUP: ""
+    ARG_GROUP: "nogitlabci"
+  rules:
+    - if: $PHP_UNIT_NOGITLABCI_TESTS_BUILT == "false"
+      when: never
+    - if: $PHP_UNIT_NOGITLABCI_TESTS_BUILT == "true"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $PHP_UNIT_NOGITLABCI_TESTS_BUILT_MERGE_REQUEST == "true"
+      changes:
+        paths:
+          - "**/*.php"
+          - "tine20/composer.*"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /php-unit-nogitlabci-tests-built/
+  allow_failure: true
+php-unit-nogitlabci-tests-built-sequential:
+  extends: .php-unit-nogitlabci-tests-built
+  variables:
+    NODE_TOTAL: 1
+    NODE_INDEX: 1
+  rules:
+    - if: $RUN_NO_TESTS == "true"
+      when: never
+    - if: $PHP_UNIT_NOGITLABCI_TESTS_BUILT_TYPE != "sequential"
+      when: never
+    - !reference [.php-unit-nogitlabci-tests-built, rules]
+php-unit-nogitlabci-tests-built-parallel:
+  extends: .php-unit-nogitlabci-tests-built
+  timeout: 30m
+  parallel: 5
+  rules:
+    - if: $RUN_NO_TESTS == "true"
+      when: never
+    - if: $PHP_UNIT_NOGITLABCI_TESTS_BUILT_TYPE != "parallel"
+      when: never
+    - !reference [.php-unit-nogitlabci-tests-built, rules]
+
+
+.php-unit-update-tests:
+  extends: .abstract_jobs.php_unit_cache
+  variables:
+    NODE_TOTAL: 1
+    NODE_INDEX: 1
+    ARG_TEST: AllTests.php
+    ARG_EXCLUDE_GROUP: longrunning,needsbuild,nogitlabci,ServerTests,nodockerci,noupdate
+  needs: []
+  stage: test
+  timeout: 2h
+  interruptible: true
+  before_script:
+    - !reference [.lib, script]
+    - test_prepare_working_dir
+    - test_prepare_global_configs
+    - tine20_await_db
+    - test_prepare_mail_db
+    - /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
+  script:
+    - !reference [.lib, script]
+    - |
+      git fetch --unshallow || true
+      cd tine20
+    - |
+      log "installing ${TINE_VERSION_LTS}"
+      git checkout ${TINE_VERSION_LTS}
+      test_composer_install
+      log install
+      tine20_install
+    - |
+      log "updating to ${TINE_VERSION_BE}"
+      git checkout ${TINE_VERSION_BE}
+      test_composer_install
+      test_update_tine
+      su tine20 -c "php setup.php --config=/etc/tine20 --install EventManager"
+      su tine20 -c "php setup.php --config=/etc/tine20 --install CrewScheduling"
+    - |
+      if [ "${TINE_VERSION_BETA}" != "" ] && [ "${TINE_VERSION_BETA}" != "main" ] ;then
+        log "updating to ${TINE_VERSION_BETA}"
+        git checkout ${TINE_VERSION_BETA}
+        test_composer_install
+        test_update_tine
+
+      else
+        log skipping update to TINE_VERSION_BETA: ${TINE_VERSION_BETA}
+      fi
+    - |
+      log "updating to ${TINE_VERSION_NEXT}"
+      git checkout ${TINE_VERSION_NEXT}
+      test_composer_install
+      test_update_tine
+    - |
+      log "testing"
+      test_phpunit
+
+
+php-unit-update-tests:
+  variables:
+    PHP_VERSION: "8.1"
+    DATABASE_IMAGE: "${UTIL_REGISTRY}/mariadb:10.9.8"
+  extends: .php-unit-update-tests
+  rules:
+    - if: $PHP_UNIT_UPDATE_TESTS == "false"
+      when: never
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /php-unit-update-tests/
+    # update test should only be stated on the ls branch
+    - if: $CI_COMMIT_BRANCH != $TINE_VERSION_LTS
+      when: never
+    - if: $PHP_UNIT_UPDATE_TESTS == "true"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $PHP_UNIT_UPDATE_TESTS_MERGE_REQUEST == "true"
+      changes:
+        paths:
+          - "**/*.php"
+          - "tine20/composer.*"
+    - if: $PIPELINE_TYPE =~ /update-tests/

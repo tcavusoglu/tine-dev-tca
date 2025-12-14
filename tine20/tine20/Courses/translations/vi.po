@@ -1,0 +1,198 @@
+#
+# Translators:
+# sao sang <saosangmo@yahoo.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2018-11-28 11:09+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Vietnamese (http://www.transifex.com/tine20/tine20/language/vi/)\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Add new user"
+msgstr "Thêm người dùng mới"
+
+msgid "Add new user as member to a course"
+msgstr "Thêm người dùng mới như là thành viên của 1 khóa học"
+
+msgid "Add existing user"
+msgstr "Thêm người dùng đã tồn tại"
+
+msgid "Add existing user as member to a course"
+msgstr "Thêm người dùng đã tồn tại là thành viên của khóa học"
+
+msgid "Manage shared courses favorites"
+msgstr ""
+
+msgid "Create or update shared courses favorites"
+msgstr ""
+
+msgid "Set additional memberships"
+msgstr ""
+
+msgid "Set additional course member group memberships"
+msgstr ""
+
+msgid "Additional Group Memberships"
+msgstr ""
+
+msgid "Array of IDs of Groups students can be members of"
+msgstr ""
+
+msgid "Internet Access"
+msgstr "Truy cập internet"
+
+msgid "Internet access options."
+msgstr "Tùy chọn truy cập internet"
+
+msgid "On"
+msgstr "Mở"
+
+msgid "Off"
+msgstr "Tắt"
+
+msgid "Filtered"
+msgstr "Đã lọc"
+
+msgid "Internet Access Group (ON)"
+msgstr "Nhóm truy cập internet (MỞ)"
+
+msgid "Internet Access Group (FILTERED)"
+msgstr "Nhóm truy cập internet (BỊ LỌC)"
+
+msgid "Students Group"
+msgstr "Nhóm sinh viên"
+
+msgid "Students Import Definition"
+msgstr "Nhập định nghĩa sinh viên"
+
+msgid "Students login name prefix"
+msgstr "Tiền tố tên đăng nhập của sinh viên"
+
+msgid "Students password suffix"
+msgstr ""
+
+msgid "Teacher password"
+msgstr ""
+
+msgid "Student username schema"
+msgstr ""
+
+msgid "Student username schema (0 = only lastname (10 chars), 1 = lastname + 2 chars of firstname"
+msgstr ""
+
+msgid "Samba user settings"
+msgstr "Thiết lập người dùng Samba"
+
+msgid "Default department"
+msgstr ""
+
+msgid "The default department for new Courses"
+msgstr ""
+
+msgid "Course -> Department Mapping"
+msgstr ""
+
+msgid "Course"
+msgid_plural "Courses"
+msgstr[0] ""
+"one:Khóa học\n"
+"other:Khóa học"
+
+msgid "Teacher"
+msgstr "Giáo viên"
+
+msgid "Teacher Account"
+msgstr "Tài khoản giáo viên"
+
+msgid "My course"
+msgstr "Khóa học của tôi"
+
+msgid "First Name"
+msgstr "Họ và đệm"
+
+msgid "Last Name"
+msgstr "Tên"
+
+msgid "Add new member to course"
+msgstr "Thêm mới thành viên cho khóa học"
+
+msgid "Errors"
+msgstr "Lỗi"
+
+msgid "Please fix the errors noted."
+msgstr "Xin hãy sửa lỗi đã được ghi chú"
+
+msgid "Import course members"
+msgstr "Nhập học viên"
+
+msgid "Add new member"
+msgstr "Thêm thành viên mới"
+
+msgid "Course Name"
+msgstr "Tên khóa học"
+
+msgid "Course / School Type"
+msgstr "Loại khóa/ trường"
+
+msgid "Description"
+msgstr "Mô tả"
+
+msgid "Members"
+msgstr "Thành viên"
+
+msgid "Login"
+msgstr "Đăng nhập"
+
+msgid "unknown"
+msgstr "không rõ"
+
+msgid "Reset Password"
+msgstr "Khởi tạo mật khẩu"
+
+msgid "Please enter the new Password."
+msgstr ""
+
+msgid "Name"
+msgstr "Tên"
+
+msgid "Type"
+msgstr "Loại"
+
+msgid "Failed"
+msgstr "Lỗi"
+
+msgid "Some error occured while trying to update the courses."
+msgstr "Có lỗi xảy ra khi cập nhật khóa học"
+
+msgid "Quick Search"
+msgstr "Tìm nhanh"
+
+msgid "Course Type"
+msgid_plural "Course Types"
+msgstr[0] ""
+"one:Loại khóa học\n"
+"others:Loại khóa học"
+
+msgid "All courses"
+msgstr "Tất cả khóa học"
+
+msgid "The default favorite which is loaded on Classes startup"
+msgstr "Lối tắt mặc định được nạp khi lớp học bắt đầu"
+
+msgid "School"
+msgstr ""
+
+msgid "Defaul school for Courses application"
+msgstr ""
+
+msgid "Courses"
+msgstr "Khóa học"

@@ -1,0 +1,632 @@
+#
+# Translators:
+# fvisic <visicfilip@gmail.com>, 2012
+# ihorvat <ivana.horvat@globalnet.hr>, 2012
+# ihorvat <ivana.horvat@globalnet.hr>, 2012
+# onebeat <onebeat.hr@gmail.com>, 2013
+# onebeat <onebeat.hr@gmail.com>, 2013
+# fvisic <visicfilip@gmail.com>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:59+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Croatian (Croatia) (http://www.transifex.com/tine20/tine20/language/hr_HR/)\n"
+"Language: hr_HR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Maximum number of users reached. "
+msgstr ""
+
+msgid "Please contact Metaways Infosystems GmbH to buy a license that supports a "
+msgstr ""
+
+msgid "Name"
+msgstr "Ime"
+
+msgid "Enabled"
+msgstr "Omogućeno"
+
+msgid "Order"
+msgstr "Poredak"
+
+msgid "Installed Version"
+msgstr "Instalirana verzija"
+
+msgid "Available Version"
+msgstr "Dostupna verzija"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Depends on"
+msgstr "Ovisi o"
+
+msgid "Install application"
+msgstr "Instaliraj aplikaciju"
+
+msgid "Uninstall application"
+msgstr "Ukloni aplikaciju"
+
+msgid "Update applications"
+msgstr ""
+
+#, python-brace-format
+msgid "Go to {0} login"
+msgstr "Idi na {0} prijavu"
+
+msgid "uninstall"
+msgstr "ukloni"
+
+msgid "Do you really want to uninstall the application(s)?"
+msgstr "Želite li stvarno ukloniti aplikaciju(e)?"
+
+msgid "This may take a while"
+msgstr "Ovo bi moglo potrajati"
+
+msgid "Dependency Violation"
+msgstr "Kršenje ovisnosti"
+
+msgid "CLI Required"
+msgstr ""
+
+msgid "Delete all existing users and groups"
+msgstr "Izbriši sve postojeće korisnike i grupe"
+
+msgid "Switching from SQL to LDAP will delete all existing User Accounts, Groups and Roles. Do you really want to switch the accounts storage backend to LDAP ?"
+msgstr "Prijelaz sa SQL na  LDAP će izbrisati sve postojeće korisničke račune, grupe i uloge. Želite li stvarno zamjeniti pozadinu pohrane računa na LDAP? "
+
+msgid "Backend"
+msgstr "Pozadina"
+
+msgid "TLS client certificate"
+msgstr ""
+
+msgid "Initial Admin User"
+msgstr "Inicijalni admin korisnik"
+
+msgid "Initial admin login name"
+msgstr "Inicijalno ime za prijavu admin korisnika"
+
+msgid "Initial admin Password"
+msgstr "Inicijalna admin zaporka"
+
+msgid "Password confirmation"
+msgstr "Potvrda zaporke"
+
+msgid "Authentication provider"
+msgstr "Pružatelj autentikacije"
+
+msgid "Try to split username"
+msgstr "Pokušajte razdvojiti korisničko ime"
+
+msgid "Yes"
+msgstr "Da"
+
+msgid "No"
+msgstr "Ne"
+
+msgid "Account canonical form"
+msgstr "Kanonski oblik računa"
+
+msgid "Account domain name"
+msgstr ""
+
+msgid "Account domain short name"
+msgstr "Skraćeno domensko ime računa"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Login name"
+msgstr "Ime za prijavu"
+
+msgid "Password"
+msgstr "Zaporka"
+
+msgid "Bind requires DN"
+msgstr "Zahtjev vezanja DN"
+
+msgid "Start TLS"
+msgstr ""
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Base DN"
+msgstr "Baza DN"
+
+msgid "Search filter"
+msgstr "Filter pretraživanja"
+
+msgid "Hostname"
+msgstr "Poslužitelj"
+
+msgid "Secure Connection"
+msgstr "Sigurna konekcija"
+
+msgid "None"
+msgstr "Ništa"
+
+msgid "TLS"
+msgstr "TLS"
+
+msgid "Append domain to login name"
+msgstr "Dodaj domenu imenu za prijavu"
+
+msgid "Certificate validation"
+msgstr ""
+
+msgid "CA file"
+msgstr ""
+
+msgid "CRL directory"
+msgstr ""
+
+msgid "Accounts storage"
+msgstr "Pohrana računa"
+
+msgid "Default user group name"
+msgstr "Zadano ime korisničke grupe"
+
+msgid "Default admin group name"
+msgstr "Zadano ime admin grupe"
+
+msgid "Login panel"
+msgstr ""
+
+msgid "Reuse last username logged"
+msgstr ""
+
+msgid "Password Settings"
+msgstr "Postavke Lozinki"
+
+msgid "User can change password"
+msgstr "Korisnik može promijeniti zaporku"
+
+msgid "Enable password policy"
+msgstr "Omogući politiku lozinki"
+
+msgid "Only ASCII"
+msgstr "Samo ASCII"
+
+msgid "Minimum length"
+msgstr "Minimalna duljina"
+
+msgid "Minimum word chars"
+msgstr "Minimalan broj znakova u riječi"
+
+msgid "Minimum uppercase chars"
+msgstr "Minimalan broj velikih slova"
+
+msgid "Minimum special chars"
+msgstr "Minimalan broj spedijalnih znakova"
+
+msgid "Minimum numbers"
+msgstr "Minimalan broj znamenki"
+
+msgid "Change password after ... days"
+msgstr ""
+
+msgid "Forbid part of username in password"
+msgstr "Zabranjen dio u imena u lozinci"
+
+msgid "Redirect Settings"
+msgstr "Preusmjeravanje postavki"
+
+msgid "Redirect Url (redirect to login screen if empty)"
+msgstr "Preusmjeravanje Url (preusmjeriti na zaslon prijave ukoliko je prazan)"
+
+msgid "Redirect Always (if No, only redirect after logout)"
+msgstr "Preusmjeri uvijek (ako ne, preusmjeri samo nakon odjave)"
+
+msgid "Redirect to referring site, if exists"
+msgstr "Preusmjeravanje na web-lokaciju s koje dolazi, ako postoji"
+
+msgid "Password encoding"
+msgstr "Kodiranje zaporke"
+
+msgid "des"
+msgstr ""
+
+msgid "crypt"
+msgstr ""
+
+msgid "blowfish_crypt"
+msgstr ""
+
+msgid "md5_crypt"
+msgstr ""
+
+msgid "ext_crypt"
+msgstr ""
+
+msgid "md5"
+msgstr ""
+
+msgid "smd5"
+msgstr ""
+
+msgid "sha"
+msgstr ""
+
+msgid "ssha"
+msgstr ""
+
+msgid "ntpassword"
+msgstr ""
+
+msgid "plain"
+msgstr ""
+
+msgid "User DN"
+msgstr "Korisnik DN"
+
+msgid "User Filter"
+msgstr "Korisnički filter"
+
+msgid "E-Mail Attribute"
+msgstr ""
+
+msgid "Write Password to SQL backend"
+msgstr ""
+
+msgid "User Search Scope"
+msgstr "Područje traženja korisnika"
+
+msgid "Groups DN"
+msgstr "Grupa DN"
+
+msgid "Group Filter"
+msgstr "Filter grupe"
+
+msgid "Group Search Scope"
+msgstr "Područje traženja grupe"
+
+msgid "Use Rfc 2307 bis"
+msgstr "Koristi Rfc 2307 bis"
+
+msgid "Maintain RFC 2307 attributes"
+msgstr ""
+
+msgid "Min User Id"
+msgstr "Minimalan korisnički ID"
+
+msgid "Max User Id"
+msgstr "Maksimalan korisnički ID"
+
+msgid "Min Group Id"
+msgstr "Minimalan ID grupe"
+
+msgid "Max Group Id"
+msgstr "Maksimalan ID grupe"
+
+msgid "Group UUID Attribute name"
+msgstr "Naziv atributa za UUID grupe"
+
+msgid "User UUID Attribute name"
+msgstr "Naziv atributa za UUID korisnika"
+
+msgid "Readonly access"
+msgstr "Pristup samo za čitanja"
+
+msgid "Save config and install"
+msgstr "Spremi i instaliraj konfiguraciju"
+
+msgid "Save config"
+msgstr "Spremi konfiguraciju"
+
+msgid "Passwords don't match"
+msgstr "Zaporke nisu jednake"
+
+msgid "Should not be empty"
+msgstr "Ne bi trebalo biti prazno"
+
+msgid "File"
+msgstr "Datoteka"
+
+msgid "Setup Authentication"
+msgstr "Podešavanje autentikacije"
+
+msgid "Username"
+msgstr "Korisničko ime"
+
+msgid "Database"
+msgstr "Baza podataka"
+
+msgid "User"
+msgstr "Korisnik"
+
+msgid "Prefix"
+msgstr "Prefiks"
+
+msgid "Logging"
+msgstr "Logiranje"
+
+msgid "Filename"
+msgstr "Ime datoteke"
+
+msgid "Priority"
+msgstr "Prioritet"
+
+msgid "Caching"
+msgstr "Keširanje"
+
+msgid "Lifetime (seconds)"
+msgstr "Životni vijek (sekunde)"
+
+msgid "Path"
+msgstr "Putanja"
+
+msgid "Queue"
+msgstr "U redu"
+
+msgid "Session"
+msgstr "Sesija"
+
+msgid "Temporary files"
+msgstr "Privremene datoteke"
+
+msgid "Temporary Files Path"
+msgstr "Putanja privremenih datoteka"
+
+msgid "Filestore directory"
+msgstr "Direktorij za spremanje datoteka"
+
+msgid "Filestore Path"
+msgstr "Putanja do direktorija za spremanje datoteka"
+
+msgid "Addressbook Map panel"
+msgstr "Mapa imenika"
+
+msgid "Map panel"
+msgstr "Mapa"
+
+msgid "disabled"
+msgstr "isključeno"
+
+msgid "enabled"
+msgstr "uključeno"
+
+msgid "Config file is not writable"
+msgstr "Upis u konfiguracijsku datoteku nije moguć"
+
+msgid "Download config file"
+msgstr "Preuzmi konfiguracijsku datoteku"
+
+#, python-brace-format
+msgid "This prefix is too long. Please choose a prefix no longer than {0} chars."
+msgstr ""
+
+msgid "Standard IMAP"
+msgstr "Standardni IMAP"
+
+msgid "Standard SMTP"
+msgstr "Standardni SMTP"
+
+msgid "Imap"
+msgstr "Imap"
+
+msgid "Verify peer Certificate"
+msgstr ""
+
+msgid "Use system account"
+msgstr "Koristi sistemski račun"
+
+msgid "Use email address as login name"
+msgstr ""
+
+msgid "Cyrus Admin"
+msgstr "Cyrus administator"
+
+msgid "Cyrus Admin Password"
+msgstr "Cyrus lozinka administratora"
+
+msgid "Use proxy auth"
+msgstr ""
+
+msgid "Smtp"
+msgstr "Smtp"
+
+msgid "Authentication"
+msgstr "Autentikacija"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Plain"
+msgstr "Jednostavno"
+
+msgid "Primary Domain"
+msgstr "Primarna domena"
+
+msgid "Secondary Domains (comma separated)"
+msgstr "Sekundarna domena (odvojena zarezom)"
+
+msgid "Aditional Domains (comma separated)"
+msgstr ""
+
+msgid "Notifications service address"
+msgstr "Servisna adresa notifikacija"
+
+msgid "Notification Username"
+msgstr "Korisničko ime notifikacija"
+
+msgid "Notification Password"
+msgstr "Zaporka notifikacija"
+
+msgid "Notifications local client (hostname or IP address)"
+msgstr "Obavijesti lokalno klijenta (poslužitelj ili IP adresa)"
+
+msgid "SIEVE"
+msgstr "SIEVE"
+
+msgid "MySql Hostname"
+msgstr "MySql Hostname"
+
+msgid "MySql Database"
+msgstr "MySql Database"
+
+msgid "MySql User"
+msgstr "MySql User"
+
+msgid "MySql Password"
+msgstr "MySql Password"
+
+msgid "MySql Port"
+msgstr "MySql Port"
+
+msgid "User or UID"
+msgstr "Korisnik ili UID"
+
+msgid "Group or GID"
+msgstr "Grupa ili GID"
+
+msgid "Home Template"
+msgstr "Početni predložak"
+
+msgid "Password Scheme"
+msgstr "Shema lozinke"
+
+msgid "PLAIN-MD5"
+msgstr "PLAIN-MD5"
+
+msgid "MD5-CRYPT"
+msgstr "MD5-CRYPT"
+
+msgid "SHA1"
+msgstr "SHA1"
+
+msgid "SHA256"
+msgstr "SHA256"
+
+msgid "SSHA256"
+msgstr "SSHA256"
+
+msgid "SHA512"
+msgstr "SHA512"
+
+msgid "SSHA512"
+msgstr "SSHA512"
+
+msgid "PLAIN"
+msgstr "PLAIN"
+
+msgid "Performing Environment Checks..."
+msgstr "Izvršavam provjere okruženja..."
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria, view-options or the {1} you search in."
+msgstr "{0} ne može biti pronađeno. Pokušajte promijeniti svoje filter-kriterije, opcije pregleda ili što traži u {1}. "
+
+msgid "Check"
+msgstr "Provjeri"
+
+msgid "Result"
+msgstr "Rezultat"
+
+msgid "Message"
+msgstr ""
+
+msgid "Run setup tests"
+msgstr "Pokreni testove podešavanja"
+
+msgid "Ignore setup tests"
+msgstr "Ignoriraj testove podešavanja"
+
+msgid "Setup"
+msgstr ""
+
+msgid "Delete current Subscription"
+msgstr ""
+
+msgid "Your Subscription is not valid."
+msgstr ""
+
+msgid "Subscription Configuration"
+msgstr ""
+
+msgid "Upload from disk"
+msgstr ""
+
+msgid "Select file containing your Subscription key"
+msgstr ""
+
+msgid "No valid Subscription"
+msgstr ""
+
+msgid "Contract ID"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "Activation Key"
+msgstr ""
+
+msgid "Maximum Users (0=unlimited)"
+msgstr ""
+
+msgid "Valid from"
+msgstr ""
+
+msgid "Valid to"
+msgstr ""
+
+msgid "Subscription Information"
+msgstr ""
+
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] "Aplikacija"
+msgstr[1] "Aplikacije"
+msgstr[2] "Aplikacija"
+
+msgid "I have read the license agreement and accept it"
+msgstr "Pročitao sam ugovor o korištenju i prihvaćam ga"
+
+msgid "License Agreement"
+msgstr "Ugovor o korištenju"
+
+msgid "I have read the privacy agreement and accept it"
+msgstr "Pročitao sam ugovor o privatnosti i prihvaćam ga"
+
+msgid "Privacy Agreement"
+msgstr "Ugovor o privatnosti"
+
+msgid "Accept Terms and Conditions"
+msgstr "Prihvaćam uvjete korištenja"
+
+msgid "Terms and Conditions"
+msgstr "Uvjeti i odredbe"
+
+msgid "Setup Checks"
+msgstr "Provjere postavki"
+
+msgid "Config Manager"
+msgstr "Uređivač konfiguracije"
+
+msgid "Authentication/Accounts"
+msgstr "Autentikacija/Računi"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Application Manager"
+msgstr "Uređivač aplikacija"
+
+msgid "Subscription"
+msgstr ""
+
+#~ msgid "Update application"
+#~ msgstr "Ažuriraj aplikaciju"

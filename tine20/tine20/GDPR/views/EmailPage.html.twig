@@ -1,0 +1,34 @@
+{#
+available parameters:
+    link
+    app.branding.title
+    contact
+    localizeString(dip.name, app.user.locale)
+    localizeString(dip.description, app.user.locale)
+#}
+
+{#
+    file: tine20/GDPR/js/ConsentClient/src/EmailPage.vue
+    url: /register/for[/{dipId}]
+#}
+
+{% block emailPageWelcomeTextTemplate %}
+    <h1>{{ _('Registration') }}</h1>
+    <div class="my-4">
+        {% if dip != '' %}
+            <p>{{ _('Sign up and we will send you news and information about our services in the future.') }}</p>
+            <div class="my-1">
+                <p><b>{{ localizeString(dip.name, browserLocale|default(app.user.locale)) }}</b></p>
+                <p>{{ _('We use your data exclusively for the stated purpose; you can request the deletion of your data at any time.') }}</p>
+            </div>
+        {% else -%}
+            <p>{{ _('Enter your E-mail address to register.') }}</p>
+        {% endif %}
+    </div>
+{% endblock %}
+{% block afterSendEmailTemplate %}
+    <h1>{{ '' }}</h1>
+    <div class="my-4">
+        <p>{{ _("We have sent you a confirmation link to the E-mail address you provided. Please check your inbox.") }}</p>
+    </div>
+{% endblock %}

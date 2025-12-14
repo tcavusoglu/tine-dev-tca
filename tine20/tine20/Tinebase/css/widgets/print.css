@@ -1,0 +1,105 @@
+#csscheck {
+    display: none;
+}
+
+div.page
+{
+    page-break-after: always;
+    page-break-inside: avoid;
+}
+
+.rp-print-title {
+    text-align: center;
+    font-size: 20px;
+}
+/* ------------ single record ------------ */
+
+.rp-print-single-details-row:nth-of-type(odd) {
+    background: #e0e0e0;
+}
+
+.customfield-rendered-label,
+.rp-print-single-label{
+    font-style: italic;
+    display: inline-block;
+    width: 6cm;
+}
+
+.rp-print-single-block-heading {
+    font-weight: bold;
+}
+
+.rp-print-single-block {
+    margin-left: 0.5cm;
+}
+
+.rp-print-single-value {
+
+}
+
+.rp-print-single-summary {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.rp-print-single {
+    margin-left: 1cm;
+    margin-right: 1cm;
+}
+
+.rp-print-single-logo {
+    text-align: right;
+    margin-bottom: 1cm;
+}
+.rp-print-single-logo img {
+    max-width: 400px;
+    max-height: 80px;
+}
+
+.rp-print-single-image {
+    text-align: left;
+}
+
+.rp-print-single .gridpanelrenderer_header_title,
+.rp-print-single .gridpanelrenderer_header_logo {
+    display: none;
+}
+
+.rp-print-single-tags {
+    margin-top: 2px;
+}
+
+.x-widget-tag-tagitem {
+    margin: 1px 2px 1px 1px;
+    background-color: #FFF8E0;
+    height: 16px;
+    border: 1px solid gray;
+    float: left;
+    color: gray;
+}
+
+.x-widget-tag-tagitem-color {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    float: left;
+    background-color: #FFFFFF;
+    border-right: 1px solid gray;
+    width: 4px;
+    height: 16px;
+}
+
+.x-widget-tag-tagitem-text {
+    padding: 0 5px 0 5px;
+    margin: 0 0 0 0;
+    line-height: 16px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.x-clear {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+}

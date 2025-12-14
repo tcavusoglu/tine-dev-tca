@@ -1,0 +1,627 @@
+#
+# Translators:
+# Enri Mullai <enri_mullai@albnet.net>, 2013-2014
+# Enri Mullai <enri_mullai@albnet.net>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:59+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Albanian (http://www.transifex.com/tine20/tine20/language/sq/)\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Maximum number of users reached. "
+msgstr ""
+
+msgid "Please contact Metaways Infosystems GmbH to buy a license that supports a "
+msgstr ""
+
+msgid "Name"
+msgstr "Emër"
+
+msgid "Enabled"
+msgstr "Aktivizuar"
+
+msgid "Order"
+msgstr "Porosi"
+
+msgid "Installed Version"
+msgstr "Versioni i Instaluar"
+
+msgid "Available Version"
+msgstr "Version i disponueshëm"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Depends on"
+msgstr "Varet nga"
+
+msgid "Install application"
+msgstr "Instalo aplikacionin"
+
+msgid "Uninstall application"
+msgstr "Ç'instalo aplikacionin"
+
+msgid "Update applications"
+msgstr ""
+
+#, python-brace-format
+msgid "Go to {0} login"
+msgstr "Shko tek hyrja {0}"
+
+msgid "uninstall"
+msgstr "Ç'instalo"
+
+msgid "Do you really want to uninstall the application(s)?"
+msgstr "Doni vërtet të ç'instaloni aplikacionin(et)?"
+
+msgid "This may take a while"
+msgstr "Kjo mund të dojë pak kohë"
+
+msgid "Dependency Violation"
+msgstr "Shkelje të Varësive"
+
+msgid "CLI Required"
+msgstr ""
+
+msgid "Delete all existing users and groups"
+msgstr "Fshij të gjithë Grupet dhe Përdoruesit"
+
+msgid "Switching from SQL to LDAP will delete all existing User Accounts, Groups and Roles. Do you really want to switch the accounts storage backend to LDAP ?"
+msgstr "Ndryshimi nga SQL në LDAP do të fshijë të gjitha Logaritë e Përdoruesëve, Grupet, dhe RoletDoni vërtetë të ndryshoni arkivën fundore të përdoruesve në LDAP?"
+
+msgid "Backend"
+msgstr "Fundori"
+
+msgid "TLS client certificate"
+msgstr "Certifikata TSL e klientit"
+
+msgid "Initial Admin User"
+msgstr "Administratori Fillestar"
+
+msgid "Initial admin login name"
+msgstr "Emri fillestar hyrës i administratorit"
+
+msgid "Initial admin Password"
+msgstr "Fjalëkalimi fillestar i administratorit"
+
+msgid "Password confirmation"
+msgstr "Konfirmim i fjalëkalimit"
+
+msgid "Authentication provider"
+msgstr "Dhënësi i autentifikimit"
+
+msgid "Try to split username"
+msgstr "Mundohu të ndash Emrin e përdoruesit"
+
+msgid "Yes"
+msgstr "Po"
+
+msgid "No"
+msgstr "Jo"
+
+msgid "Account canonical form"
+msgstr "Llogari e autorizuar nga"
+
+msgid "Account domain name"
+msgstr ""
+
+msgid "Account domain short name"
+msgstr "Emri i shkurtër i llogarisë domain"
+
+msgid "Host"
+msgstr "Pritësi(Host)"
+
+msgid "Login name"
+msgstr "Emri i Hyrjes"
+
+msgid "Password"
+msgstr "Fjalëkalimi"
+
+msgid "Bind requires DN"
+msgstr "Bind kërkon DN"
+
+msgid "Start TLS"
+msgstr "Nis TSL"
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "Port"
+msgstr "Porta"
+
+msgid "Base DN"
+msgstr "DN bazë"
+
+msgid "Search filter"
+msgstr "Filtri i kërkimit"
+
+msgid "Hostname"
+msgstr "Emri i Pritësit(Host)"
+
+msgid "Secure Connection"
+msgstr "Lidhje e sigurtë"
+
+msgid "None"
+msgstr "Asnjë"
+
+msgid "TLS"
+msgstr "TLS"
+
+msgid "Append domain to login name"
+msgstr "Bashkangjit domain me emrin e hyrjes"
+
+msgid "Certificate validation"
+msgstr "Vertetimi i certifikates"
+
+msgid "CA file"
+msgstr "Skedari CA"
+
+msgid "CRL directory"
+msgstr "Dosja e CRL"
+
+msgid "Accounts storage"
+msgstr "Vëndruajtja e Llogarive"
+
+msgid "Default user group name"
+msgstr "Emri i paracaktuar i grupit të përdoruesve"
+
+msgid "Default admin group name"
+msgstr "Emri i paracaktuar i grupit të administratorëve"
+
+msgid "Login panel"
+msgstr "Paneli Hyrjes"
+
+msgid "Reuse last username logged"
+msgstr "Ri-përdor emrin e përdoruesit të fundit "
+
+msgid "Password Settings"
+msgstr "Konfigurimet e Fjalëkalimit"
+
+msgid "User can change password"
+msgstr "Përdoruesi mund të ndryshojë fjalëkalimin"
+
+msgid "Enable password policy"
+msgstr "Aktivizo politikën e fjalëkalimit"
+
+msgid "Only ASCII"
+msgstr "Vetëm ASCII"
+
+msgid "Minimum length"
+msgstr "Gjatësia minimale"
+
+msgid "Minimum word chars"
+msgstr "minimumi i karaktereve në fjalë"
+
+msgid "Minimum uppercase chars"
+msgstr "Minimumi i karaktereve të mëdha"
+
+msgid "Minimum special chars"
+msgstr "Minimumi i karaktereve të vecanta"
+
+msgid "Minimum numbers"
+msgstr "Minimumi i numrave"
+
+msgid "Change password after ... days"
+msgstr ""
+
+msgid "Forbid part of username in password"
+msgstr "Mos lejo një pjesë të emirt të përdoruesit në fjalëkalim"
+
+msgid "Redirect Settings"
+msgstr "Ridrejto konfigurimet"
+
+msgid "Redirect Url (redirect to login screen if empty)"
+msgstr "Ridrejto URL(ridrejto tek pamja e hyrjes nëse është bosh)"
+
+msgid "Redirect Always (if No, only redirect after logout)"
+msgstr "Ridrejto gjithmonë (nëse Jo, ridrejto pas daljes)"
+
+msgid "Redirect to referring site, if exists"
+msgstr "Ridrejto tek faqja referuese, nëse ekziton"
+
+msgid "Password encoding"
+msgstr "Kodim i Fjalëkalimit"
+
+msgid "des"
+msgstr "des"
+
+msgid "crypt"
+msgstr ""
+
+msgid "blowfish_crypt"
+msgstr "blowfish_crypt"
+
+msgid "md5_crypt"
+msgstr "md5_crypt"
+
+msgid "ext_crypt"
+msgstr "ext_crypt"
+
+msgid "md5"
+msgstr "md5"
+
+msgid "smd5"
+msgstr "smd5"
+
+msgid "sha"
+msgstr "sha"
+
+msgid "ssha"
+msgstr "ssha"
+
+msgid "ntpassword"
+msgstr "ntpassword"
+
+msgid "plain"
+msgstr "i thjeshtë"
+
+msgid "User DN"
+msgstr "DN e Përdoruesit"
+
+msgid "User Filter"
+msgstr "Filtri i Përdoruesit"
+
+msgid "E-Mail Attribute"
+msgstr ""
+
+msgid "Write Password to SQL backend"
+msgstr ""
+
+msgid "User Search Scope"
+msgstr "Qëllimi i kërkimit të përdoruesit"
+
+msgid "Groups DN"
+msgstr "DN e Grupeve"
+
+msgid "Group Filter"
+msgstr "Filtri i Grupeve"
+
+msgid "Group Search Scope"
+msgstr "Qëllimi i Kerkimit të Grupeve"
+
+msgid "Use Rfc 2307 bis"
+msgstr "Përdor Rfc 2307 bis"
+
+msgid "Maintain RFC 2307 attributes"
+msgstr "Ruaj atributet RFC 2307"
+
+msgid "Min User Id"
+msgstr "ID minimale e Përdoruesit"
+
+msgid "Max User Id"
+msgstr "ID maksimale e Përdoruesit"
+
+msgid "Min Group Id"
+msgstr "ID minimale e Grupit"
+
+msgid "Max Group Id"
+msgstr "ID maksimale e Grupit"
+
+msgid "Group UUID Attribute name"
+msgstr "Emiri i atributit UUID të Grupit"
+
+msgid "User UUID Attribute name"
+msgstr "Emri i atrubutit UUID të përdoruesit"
+
+msgid "Readonly access"
+msgstr "E drejtë vetëm për të lexuar"
+
+msgid "Save config and install"
+msgstr "Ruaj konfigurimin dhe instalo"
+
+msgid "Save config"
+msgstr "Ruaj konfigurimin"
+
+msgid "Passwords don't match"
+msgstr "Fajlëkalimet nuk përkojnë"
+
+msgid "Should not be empty"
+msgstr "Nuk duhet të jetë bosh"
+
+msgid "File"
+msgstr "Skedar"
+
+msgid "Setup Authentication"
+msgstr "Autentifikimi i Konfigurimit"
+
+msgid "Username"
+msgstr "Emri Përdoruesit"
+
+msgid "Database"
+msgstr "Databaza"
+
+msgid "User"
+msgstr "Përdorues"
+
+msgid "Prefix"
+msgstr "Prefiks"
+
+msgid "Logging"
+msgstr "Hyrje"
+
+msgid "Filename"
+msgstr "Emri i Skedarit"
+
+msgid "Priority"
+msgstr "Prioriteti"
+
+msgid "Caching"
+msgstr "Duke Fshehur(caching)"
+
+msgid "Lifetime (seconds)"
+msgstr "Kohzgjatja (seconda)"
+
+msgid "Path"
+msgstr "Rruga"
+
+msgid "Queue"
+msgstr "Rradhë"
+
+msgid "Session"
+msgstr "Seksion"
+
+msgid "Temporary files"
+msgstr "Skedarë të përkohshëm"
+
+msgid "Temporary Files Path"
+msgstr "Rrugë e përkohshme e skedarëve"
+
+msgid "Filestore directory"
+msgstr "Vendruajtja e skedarëve"
+
+msgid "Filestore Path"
+msgstr "Rruga e vendruajtjes së skedarëve"
+
+msgid "Addressbook Map panel"
+msgstr "Paneli i hartës së Bllokut të adresave"
+
+msgid "Map panel"
+msgstr "Paneli hartës"
+
+msgid "disabled"
+msgstr "ç'aktivizuar"
+
+msgid "enabled"
+msgstr "aktivizuar"
+
+msgid "Config file is not writable"
+msgstr "Skedari i konfigurimit nuk është i shkruajtshëm "
+
+msgid "Download config file"
+msgstr "Shkarko skedarin e konfigurimit"
+
+#, python-brace-format
+msgid "This prefix is too long. Please choose a prefix no longer than {0} chars."
+msgstr ""
+
+msgid "Standard IMAP"
+msgstr "IMAP standart"
+
+msgid "Standard SMTP"
+msgstr "SMPT standarte"
+
+msgid "Imap"
+msgstr "Imap"
+
+msgid "Verify peer Certificate"
+msgstr ""
+
+msgid "Use system account"
+msgstr "Përdor llogarinë e sistemit"
+
+msgid "Use email address as login name"
+msgstr ""
+
+msgid "Cyrus Admin"
+msgstr "Administrator Cyrus"
+
+msgid "Cyrus Admin Password"
+msgstr "Fjalëkalimi i administratorit Cyrus"
+
+msgid "Use proxy auth"
+msgstr "Përdor autentifikim proxy"
+
+msgid "Smtp"
+msgstr "Smtp"
+
+msgid "Authentication"
+msgstr "Autentifikim"
+
+msgid "Login"
+msgstr "Hyrje"
+
+msgid "Plain"
+msgstr "E thjeshtë"
+
+msgid "Primary Domain"
+msgstr "Domain parësor"
+
+msgid "Secondary Domains (comma separated)"
+msgstr "Domain dytësor (e ndare me presje)"
+
+msgid "Aditional Domains (comma separated)"
+msgstr ""
+
+msgid "Notifications service address"
+msgstr "Adresa e shërbimit të njoftimeve"
+
+msgid "Notification Username"
+msgstr "Emër përdoruesi i njoftuesit"
+
+msgid "Notification Password"
+msgstr "Fjalëkalimi i njoftuesit"
+
+msgid "Notifications local client (hostname or IP address)"
+msgstr "Klienti lokal i njoftimeve ( emri pritesit(host) ose adresa IP)"
+
+msgid "SIEVE"
+msgstr "SIEVE"
+
+msgid "MySql Hostname"
+msgstr "Emri Pritësit(host) MySql"
+
+msgid "MySql Database"
+msgstr "Databaza MySql"
+
+msgid "MySql User"
+msgstr "Përdoruesi MySql"
+
+msgid "MySql Password"
+msgstr "Fjalëkalimi MySql"
+
+msgid "MySql Port"
+msgstr "Porta MySql"
+
+msgid "User or UID"
+msgstr "Përdorues ose UID"
+
+msgid "Group or GID"
+msgstr "Grup ose GID"
+
+msgid "Home Template"
+msgstr "Shablloni kryesor"
+
+msgid "Password Scheme"
+msgstr "Skema e Fjalëkalimit"
+
+msgid "PLAIN-MD5"
+msgstr "PLAIN-MD5"
+
+msgid "MD5-CRYPT"
+msgstr "MD5-CRYPT"
+
+msgid "SHA1"
+msgstr "SHA1"
+
+msgid "SHA256"
+msgstr "SHA256"
+
+msgid "SSHA256"
+msgstr "SSHA256"
+
+msgid "SHA512"
+msgstr "SHA512"
+
+msgid "SSHA512"
+msgstr "SSHA512"
+
+msgid "PLAIN"
+msgstr "PLAIN"
+
+msgid "Performing Environment Checks..."
+msgstr "Duke kryer kontrollet e ambientit..."
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria, view-options or the {1} you search in."
+msgstr "Nuk u gjet ndonje {0}. Ju lutem provoni të ndryshoni kërkesat e fitrave tuaj, mundësite e shfaqesose {1} ku kërkoni"
+
+msgid "Check"
+msgstr "Kontrollo"
+
+msgid "Result"
+msgstr "Rezultati"
+
+msgid "Message"
+msgstr ""
+
+msgid "Run setup tests"
+msgstr "Kryej teste konfigurimi"
+
+msgid "Ignore setup tests"
+msgstr "Injoro testet e konfigurimit"
+
+msgid "Setup"
+msgstr ""
+
+msgid "Delete current Subscription"
+msgstr ""
+
+msgid "Your Subscription is not valid."
+msgstr ""
+
+msgid "Subscription Configuration"
+msgstr ""
+
+msgid "Upload from disk"
+msgstr ""
+
+msgid "Select file containing your Subscription key"
+msgstr ""
+
+msgid "No valid Subscription"
+msgstr ""
+
+msgid "Contract ID"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "Activation Key"
+msgstr ""
+
+msgid "Maximum Users (0=unlimited)"
+msgstr ""
+
+msgid "Valid from"
+msgstr ""
+
+msgid "Valid to"
+msgstr ""
+
+msgid "Subscription Information"
+msgstr ""
+
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] "Aplikacion"
+msgstr[1] "Aplikacione"
+
+msgid "I have read the license agreement and accept it"
+msgstr "Unë e kam lexuar marrveshjen e licensave dhe e kam pranuar atë"
+
+msgid "License Agreement"
+msgstr "Marveshje Licensash"
+
+msgid "I have read the privacy agreement and accept it"
+msgstr "Unë e kam lexuar marrveshjen e fshehtësive dhe e kam pranuar atë"
+
+msgid "Privacy Agreement"
+msgstr "Marrveshje e Fshehtësive"
+
+msgid "Accept Terms and Conditions"
+msgstr "Prano Kushtet dhe Konditat"
+
+msgid "Terms and Conditions"
+msgstr "Kushtet dhe Konditat"
+
+msgid "Setup Checks"
+msgstr "Kontrolle Konfigurimi"
+
+msgid "Config Manager"
+msgstr "Menaxhuesi i Konfigurimeve"
+
+msgid "Authentication/Accounts"
+msgstr "Autentifikimi/Llogaritë"
+
+msgid "Email"
+msgstr "E-Postë"
+
+msgid "Application Manager"
+msgstr "Menaxheri i Aplikacioneve"
+
+msgid "Subscription"
+msgstr ""
+
+#~ msgid "Update application"
+#~ msgstr "Përditëso aplikacionin"

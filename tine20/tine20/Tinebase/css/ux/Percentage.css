@@ -1,0 +1,81 @@
+/*
+ * @license     http://www.gnu.org/licenses/agpl.html AGPL Version 3
+ * @author      Cornelius Weiss <c.weiss@metaways.de>
+ * @copyright   Copyright (c) 2007-2008 Metaways Infosystems GmbH (http://www.metaways.de)
+ * @version     $Id$
+ */
+
+.PercentRenderer {
+    height: 12px;
+    position: relative;
+}
+
+.x-toolbar .PercentRendererText div,
+.PercentRendererText {
+    color:#000000;
+    font-size:9px;
+    font-weight:bold;
+    left:0pt;
+    padding:0px 5px;
+    position:absolute;
+    text-align:center;
+    white-space: nowrap;
+}
+
+.PercentBar-unlimited {
+    border-top-color:#d1e4fd;
+    border-bottom-color:#7fa9e4;
+    border-right-color:#7fa9e4;
+}
+
+.PercentBar-below {
+    border-right: none;
+    background-color: #c6e8ae;
+    background-image: none;
+    /*background-color:#9cbfee;*/
+    /*background-image:url(../../../images/progress/progress-bgGreen.gif) !important;*/
+    border-top-color:#c6e8ae !important;
+    border-bottom-color:#7fa9e4;
+    border-right-color:#7fa9e4;
+}
+
+.PercentBar-over {
+    border-right: none;
+    background-color: #fff5b8;
+    background-image: none;
+    /*background-color:#9cbfee;*/
+    /*background-image:url(../../../images/progress/progress-bgYellow.gif) !important;*/
+    border-top-color:#fff5b8 !important;
+    border-bottom-color:#7fa9e4;
+    border-right-color:#7fa9e4;
+}
+
+.PercentBar-limit {
+    border-right: none;
+    background-color: #f7bfbf;
+    background-image: none;
+    /*background-color:#9cbfee;*/
+    /*background-image:url(../../../images/progress/progress-bgRed.gif) !important;*/
+    border-top-color:#f7bfbf !important;
+    border-bottom-color:#7fa9e4;
+    border-right-color:#7fa9e4;
+}
+
+/* some progress bar colors */
+/* @see 0008254: Allow colors in Tasks progressbar */
+.PercentRenderer-progress-bar10 { background-color: #f36 !important; background-image: none !important; }
+.PercentRenderer-progress-bar20 { background-color: #e69 !important; background-image: none !important; }
+.PercentRenderer-progress-bar30 { background-color: #d8a !important; background-image: none !important; }
+.PercentRenderer-progress-bar40 { background-color: #c9a !important; background-image: none !important; }
+.PercentRenderer-progress-bar50 { background-color: #baa !important; background-image: none !important; }
+.PercentRenderer-progress-bar60 { background-color: #aa9 !important; background-image: none !important; }
+.PercentRenderer-progress-bar70 { background-color: #aa8 !important; background-image: none !important; }
+.PercentRenderer-progress-bar80 { background-color: #ab8 !important; background-image: none !important; }
+.PercentRenderer-progress-bar90 { background-color: #9b8 !important; background-image: none !important; }
+.PercentRenderer-progress-bar100 { background-color: #8c7 !important; background-image: none !important; }
+
+.PercentRenderer-progress-barBelow { background-color: #8c7 !important; background-image: none !important; }
+.PercentRenderer-progress-barOver { background-color: #fed35d !important; background-image: none !important; }
+.PercentRenderer-progress-barLimit { background-color: #f77a4d !important; background-image: none !important; }
+
+.QuotaRenderer-unlimited {background-color: transparent !important; background-image: none !important; border: none; padding-top:1px; position: relative}

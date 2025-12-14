@@ -1,0 +1,171 @@
+#
+# Translators:
+# corneliusweiss <mail@corneliusweiss.de>, 2024
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0 - EFile\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2024-11-25 16:56+0000\n"
+"Last-Translator: corneliusweiss <mail@corneliusweiss.de>, 2024\n"
+"Language-Team: German (https://app.transifex.com/tine/teams/16133/de/)\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Base paths"
+msgstr "Basispfade"
+
+msgid "Retention Periods"
+msgstr "Aufbewahrungsfristen"
+
+msgid "Available retention periods"
+msgstr "Verfügbare Aufbewahrungsfristen"
+
+msgid "6 Years"
+msgstr "6 Jahre"
+
+msgid "10 Years"
+msgstr "10 Jahre"
+
+msgid "Eternally"
+msgstr "Ewig"
+
+msgid "Disposal Type"
+msgstr "Aussonderungsart"
+
+msgid "Available disposal types"
+msgstr "Verfügbare Aussonderungs-Arten"
+
+msgid "Quashed"
+msgstr "Kassiert (Vernichtet)"
+
+msgid "Archived"
+msgstr "Archiviert"
+
+msgid "eFile Tier Reference Number Prefix"
+msgstr "eAkten Ebenen-Nummer Präfix"
+
+msgid "eFile Token Template"
+msgstr "eAkten Ebenen-Nummer Vorlage"
+
+msgid "eFile Tier Type"
+msgstr "eAkten Ebenen-Typ"
+
+msgid "Case"
+msgstr "Vorgang"
+
+msgid "Document"
+msgstr "Dokument"
+
+msgid "Document Directory"
+msgstr "Dokumentenordner"
+
+msgid "File"
+msgstr "Akte"
+
+msgid "File Group"
+msgstr "Aktengruppe"
+
+msgid "Master Plan"
+msgstr "Rahmenaktenplan"
+
+msgid "Sub File"
+msgstr "Teilakte"
+
+msgid "eFile node names may not contain:"
+msgstr "eAkten-Knotennamen dürfen nicht enthalten:"
+
+msgid "Electronic File"
+msgstr "eAkte"
+
+#, python-brace-format
+msgid "Create new {0} Folder"
+msgstr "Neuen {0} Ordner anlegen"
+
+#, python-brace-format
+msgid "Name of the new {0} folder:"
+msgstr "Name des neuen {0} Ordners:"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Note: A number prefix will be automatically assigned when creating this folder."
+msgstr "Hinweis: Beim Anlegen des Ordners wird wird automatisch eine Ebenen-Nummer vorangestellt."
+
+msgid "eFile"
+msgstr "eAkte"
+
+msgid "Enter contents"
+msgstr "Inhalt hinzufügen"
+
+msgid "Contents"
+msgstr "Inhalt"
+
+msgid "Jump to File"
+msgstr "Zur Akte springen"
+
+msgid "Metadata entered here is automatically inherited by newly created eFiles."
+msgstr "Hier erfasste Metadaten vererben sich automatisch in neu angelegte eAkten."
+
+msgid "Duration Start"
+msgstr "Laufzeit von"
+
+msgid "Duration End"
+msgstr "Laufzeit bis"
+
+msgid "Commissioned Office"
+msgstr "Aktenführende Stelle"
+
+msgid "This file is Hybrid (a corresponding paper file exists)"
+msgstr "Hybridakte (Es gibt eine korrespondierende Papierakte)"
+
+msgid "Location of Paper File"
+msgstr "Standort der Papierakte"
+
+msgid "This file is Closed"
+msgstr "Die Akte ist geschlossen"
+
+msgid "Final Decree"
+msgstr "Schlussverfügung"
+
+msgid "Final Decree Date"
+msgstr "Datum Schlussverfügung"
+
+msgid "Final Decree by"
+msgstr "Schlussverfügung durch"
+
+msgid "Retention Period"
+msgstr "Aufbewahrungsfrist"
+
+msgid "Retention Period End Date"
+msgstr "Ende der Aufbewahrungsfrist"
+
+msgid "File is Disposed"
+msgstr "Die Akte ist ausgesondert"
+
+msgid "Disposal"
+msgstr "Aussonderung"
+
+msgid "Disposal Date"
+msgstr "Aussonderungsdatum"
+
+msgid "Archive Name"
+msgstr "Archivname"
+
+msgid "eFile File Metadata"
+msgstr "eAkten Metadaten"
+
+msgid "eFile Tier Token"
+msgstr "eAkten Ebenen-Nummer"
+
+msgid "eFile Tier Reference Number"
+msgstr "Aktenzeichen"
+
+msgid "eFile Tier Counter"
+msgstr "eAkten Ebenen-Zähler"

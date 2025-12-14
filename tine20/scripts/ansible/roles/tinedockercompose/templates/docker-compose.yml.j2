@@ -1,0 +1,243 @@
+services:
+{% if tinedockercompose_db_service is defined and tinedockercompose_db_service|bool %}
+  db:
+    image: {{ tinedockercompose_db_image }}
+    command: {{ tinedockercompose_db_command }}
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: &MYSQL_DATABASE {{ tinedockercompose_db_name }}
+      MYSQL_USER: &MYSQL_USER {{ tinedockercompose_db_user }}
+      MYSQL_PASSWORD: &MYSQL_PASSWORD {{ tinedockercompose_db_password }}
+      MARIADB_AUTO_UPGRADE: 1
+    ### use volume for persistent DB
+    volumes:
+      - "{{ tinedockercompose_db_path }}:/var/lib/mysql"
+    networks:
+      - internal_network
+
+{% endif %}
+  web:
+    image: {{ tinedockercompose_tine_image }}
+    restart: always
+{% if tinedockercompose_redis_service|bool or tinedockercompose_redis_service|bool %}
+    depends_on:
+{% if tinedockercompose_redis_service|bool %}
+      - cache
+{% endif %}
+{% if tinedockercompose_db_service|bool %}
+      - db
+{% endif %}
+{% endif %}
+    environment:
+      TINE20_DATABASE_HOST: {{ tinedockercompose_db_host }}
+{% if tinedockercompose_db_service is defined and tinedockercompose_db_service|bool %}
+      TINE20_DATABASE_DBNAME: *MYSQL_DATABASE
+      TINE20_DATABASE_USERNAME: *MYSQL_USER
+      TINE20_DATABASE_PASSWORD: *MYSQL_PASSWORD
+{% else %}
+      TINE20_DATABASE_DBNAME: {{ tinedockercompose_db_name }}
+      TINE20_DATABASE_USERNAME: {{ tinedockercompose_db_user }}
+      TINE20_DATABASE_PASSWORD: "{{ tinedockercompose_db_password }}"
+{% endif %}
+      TINE20_DATABASE_TABLEPREFIX: {{ tinedockercompose_db_prefix }}
+      TINE20_CACHING_BACKEND: Redis
+      TINE20_SESSION_BACKEND: Redis
+      TINE20_CACHING_REDIS_HOST: {{ tinedockercompose_redis_hostname }}
+      TINE20_ACTIONQUEUE_HOST: {{ tinedockercompose_redis_hostname }}
+      TINE20_SESSION_HOST: {{ tinedockercompose_redis_hostname }}
+      TINE20_CREDENTIALCACHESHAREDKEY: "{{ tinedockercompose_tinesharedkey }}"
+      TINE20_SETUPUSER_USERNAME: {{ tinedockercompose_tinesetupuser }}
+      TINE20_SETUPUSER_PASSWORD: "{{ tinedockercompose_tinesetuppw }}"
+      TINE20_SETUP_HTPASSWD: "{{ tinedockercompose_tinesetuphtpasswd }}"
+      TINE20_LOGGER_PRIORITY: "{{ tinedockercompose_tineloggerprio }}"
+{% if tinedockercompose_tine_licensepath is defined %}
+      TINE20_LICENSE_PATH: "{{ tinedockercompose_tine_licensepath }}"
+{% endif %}
+{% if tinedockercompose_tineurl is defined %}
+      TINE20_URL: {{ tinedockercompose_tineurl }}
+{% endif %}
+{% if tinedockercompose_broadcasthub is defined and tinedockercompose_broadcasthub|bool %}
+      BROADCASTHUB_URL: http://broadcasthub
+{% endif %}
+{% if tinedockercompose_auto_installupdate is defined and tinedockercompose_auto_installupdate|bool %}
+      ### install+update tine automatically
+      TINE20_INSTALL: "true"
+{% endif %}
+{% if tinedockercompose_additional_web_env is defined %}
+{% for envvar in tinedockercompose_additional_web_env %}
+      {{ envvar }}
+{% endfor %}
+{% endif %}
+    volumes:
+      - "{{ tinedockercompose_confd_path }}:/etc/tine20/conf.d"
+      - "{{ tinedockercompose_files_path }}:/var/lib/tine20/files"
+      - "{{ tinedockercompose_backup_path }}:/var/lib/tine20/backup"
+{% if tinedockercompose_file_log is defined %}
+      - "{{ tinedockercompose_file_log_dir }}:/var/log/tine20"
+{% endif %}
+{% if tinedockercompose_additional_mounts is defined %}
+{% for mount in tinedockercompose_additional_mounts %}
+      - "{{ mount }}"
+{% endfor %}
+{% endif %}
+    networks:
+      - external_network
+      - internal_network
+{% if tinedockercompose_traefik_host is not defined %}
+    ports:
+      - "{{ tinedockercompose_ports }}"
+{% endif %}
+{% if tinedockercompose_extra_hosts is defined %}
+    extra_hosts:
+      - "{{ tinedockercompose_extra_hosts }}"
+{% endif %}
+{% if tinedockercompose_dns is defined %}
+    dns: "{{ tinedockercompose_dns }}"
+{% endif %}
+{% if tinedockercompose_traefik_host is defined %}
+    ### for traefik support (see https://doc.traefik.io/traefik/providers/docker/)
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.web.rule=Host(`{{ tinedockercompose_traefik_host }}`)"
+      - "traefik.http.routers.web.entrypoints=websecure"
+{% if tinedockercompose_traefik_cert is defined and tinedockercompose_traefik_key is defined %}
+      - "traefik.http.routers.web.tls=true"
+{% else %}
+      - "traefik.http.routers.web.tls.certresolver=http01"
+{% endif %}
+      - "traefik.http.services.web.loadbalancer.server.port=80"
+{% endif %}
+
+{% if tinedockercompose_redis_service is defined and tinedockercompose_redis_service|bool %}
+  cache:
+    image: redis:{{ tinedockercompose_redis_version }}
+    restart: always
+    networks:
+      - internal_network
+
+{% endif %}
+{% if tinedockercompose_docservice_version is defined %}
+  docservice:
+    image: tinegroupware/document-preview-service:{{ tinedockercompose_docservice_version }}
+    restart: always
+    networks:
+      - internal_network
+
+{% endif %}
+{% if tinedockercompose_broadcasthub is defined and tinedockercompose_broadcasthub|bool %}
+  broadcasthub:
+    image: tinegroupware/broadcasthub:0.7
+    restart: always
+    # todo: drop external network and port, in favor of proxy on web container
+    ports:
+      - "5001:80"
+    networks:
+      - external_network
+      - internal_network
+    environment:
+      REDIS_URL: redis://{{ tinedockercompose_redis_hostname }}:6379
+      REDIS_CHANNEL: broadcasthub
+      TINE20_JSON_API_URL: http://web
+      AUTH_TIMEOUT: 5000
+      WS_PORT: 80
+      ENABLE_MULTITENANCY_MODE: false
+      DEBUG: '*'
+      DEBUG_DEFAULT_LOGGING: "on"
+      DEBUG_LOG_TO_FILE: "off"
+      DEBUG_LOG_FILE: ../../stdout.log
+
+{% endif %}
+{% if tinedockercompose_edocument_service is defined and tinedockercompose_edocument_service|bool %}
+  edocument:
+    image: registry.rz1.metaways.net/tine/edocument-services:0.0.14-amd64
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      - internal_network
+
+{% endif %}
+{% if tinedockercompose_documentserver is defined and tinedockercompose_documentserver|bool %}
+  documentserver:
+    image: onlyoffice/documentserver:{{ tinedockercompose_documentserver_version }}
+    restart: always
+    ports:
+      - "4020:80"
+    environment:
+      JWT_ENABLED: "true"
+      JWT_SECRET: "{{ tinedockercompose_documentserver_secret }}"
+    networks:
+      - external_network
+      - internal_network
+{% if tinedockercompose_documentserver_additional_mounts is defined %}
+    volumes:
+{% for mount in tinedockercompose_documentserver_additional_mounts %}
+      - "{{ mount }}"
+{% endfor %}
+{% endif %}
+{% endif %}
+{% if tinedockercompose_clamav is defined %}
+  clamav:
+    image: tiredofit/clamav
+    container_name: clamav
+    environment:
+      - ZABBIX_HOSTNAME=clamav
+    volumes:
+      - "clamav_files:/data"
+    networks:
+      - internal_network
+{% endif %}
+{% if tinedockercompose_traefik_host is defined %}
+  traefik:
+    image: "traefik:v2.6"
+    restart: always
+    container_name: "traefik"
+    command:
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
+      - "--entrypoints.web.http.redirections.entrypoint.permanent=true"
+      - "--entrypoints.websecure.address=:443"
+{% if tinedockercompose_traefik_cert is defined and tinedockercompose_traefik_key is defined %}
+      - "--providers.file.directory=/etc/traefik/dynamic_conf"
+      - "--providers.file.watch=true"
+{% else %}
+      - "--certificatesresolvers.http01.acme.httpchallenge=true"
+      - "--certificatesresolvers.http01.acme.httpchallenge.entrypoint=web"
+      - "--certificatesresolvers.http01.acme.storage=/letsencrypt/acme.json"
+{% endif %}
+      # use this for debugging / web ui
+      # - "--api.insecure=true"
+      # - "--log.level=DEBUG"
+    ports:
+      - "80:80"
+      - "443:443"
+      # web ui (needs api.insecure)
+      # - "8080:8080"
+    networks:
+      - internal_network
+      - external_network
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+{% if tinedockercompose_traefik_cert is defined and tinedockercompose_traefik_key is defined %}
+      - "{{ tinedockercompose_path }}/traefik/certs/:/certs/:ro"
+      - "{{ tinedockercompose_path }}/traefik/traefik.yml:/etc/traefik/dynamic_conf/conf.yml:ro"
+{% else %}
+      - "./letsencrypt:/letsencrypt"
+{% endif %}
+{% endif %}
+{% if tinedockercompose_volumes is defined %}
+### use docker volumes instead of directory mounts
+volumes:
+{% for volume in tinedockercompose_volumes %}
+  {{ volume }}:
+{% endfor %}
+{% endif %}
+
+networks:
+  external_network:
+  internal_network:
+    internal: true

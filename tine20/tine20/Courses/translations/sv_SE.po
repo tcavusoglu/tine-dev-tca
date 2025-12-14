@@ -1,0 +1,198 @@
+#
+# Translators:
+# BrianLuckBad <tulken_hultan@hotmail.com>, 2012
+# Niklas Ye <niklas@idontgetlaid.com>, 2013
+# BrianLuckBad <tulken_hultan@hotmail.com>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2018-11-28 11:09+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Swedish (Sweden) (http://www.transifex.com/tine20/tine20/language/sv_SE/)\n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Add new user"
+msgstr "Lägg till ny användare"
+
+msgid "Add new user as member to a course"
+msgstr "Lägg till ny användare som medlem i en kurs"
+
+msgid "Add existing user"
+msgstr "Lägg till befintlig användare"
+
+msgid "Add existing user as member to a course"
+msgstr "Lägg till befintlig användare som medlem i en kurs"
+
+msgid "Manage shared courses favorites"
+msgstr ""
+
+msgid "Create or update shared courses favorites"
+msgstr ""
+
+msgid "Set additional memberships"
+msgstr ""
+
+msgid "Set additional course member group memberships"
+msgstr ""
+
+msgid "Additional Group Memberships"
+msgstr ""
+
+msgid "Array of IDs of Groups students can be members of"
+msgstr ""
+
+msgid "Internet Access"
+msgstr "Internet Tillgängligt"
+
+msgid "Internet access options."
+msgstr "Inställningar för internettillgänglighet."
+
+msgid "On"
+msgstr "På"
+
+msgid "Off"
+msgstr "Av"
+
+msgid "Filtered"
+msgstr "Filtrerad"
+
+msgid "Internet Access Group (ON)"
+msgstr "Internetåtkomsts-grupp (ON)"
+
+msgid "Internet Access Group (FILTERED)"
+msgstr "Internetåkomsts-grupp (FILTERED)"
+
+msgid "Students Group"
+msgstr "Studentgrupp"
+
+msgid "Students Import Definition"
+msgstr "Studentimports-definition"
+
+msgid "Students login name prefix"
+msgstr "Prefix för studenters inloggningsnamn"
+
+msgid "Students password suffix"
+msgstr ""
+
+msgid "Teacher password"
+msgstr ""
+
+msgid "Student username schema"
+msgstr ""
+
+msgid "Student username schema (0 = only lastname (10 chars), 1 = lastname + 2 chars of firstname"
+msgstr ""
+
+msgid "Samba user settings"
+msgstr "Samba användarinställningar"
+
+msgid "Default department"
+msgstr ""
+
+msgid "The default department for new Courses"
+msgstr ""
+
+msgid "Course -> Department Mapping"
+msgstr ""
+
+msgid "Course"
+msgid_plural "Courses"
+msgstr[0] "Kurs"
+msgstr[1] "Kurser"
+
+msgid "Teacher"
+msgstr "Lärare"
+
+msgid "Teacher Account"
+msgstr "Lärar Konto"
+
+msgid "My course"
+msgstr "Min kurs"
+
+msgid "First Name"
+msgstr "Förnamn"
+
+msgid "Last Name"
+msgstr "Efternamn"
+
+msgid "Add new member to course"
+msgstr "Lägg till ny medlem till kurs"
+
+msgid "Errors"
+msgstr "Fel"
+
+msgid "Please fix the errors noted."
+msgstr "Vänligen åtgärda de fel som noterats."
+
+msgid "Import course members"
+msgstr "Importera kurs medlemmar"
+
+msgid "Add new member"
+msgstr "Lägg till ny medlem"
+
+msgid "Course Name"
+msgstr "Kurs namn "
+
+msgid "Course / School Type"
+msgstr "Kurs / Skol Typ"
+
+msgid "Description"
+msgstr "Beskrivning"
+
+msgid "Members"
+msgstr "Medlemmar"
+
+msgid "Login"
+msgstr "Logga in"
+
+msgid "unknown"
+msgstr "Okänd"
+
+msgid "Reset Password"
+msgstr "Återställ lösenord"
+
+msgid "Please enter the new Password."
+msgstr ""
+
+msgid "Name"
+msgstr "Namn"
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "Failed"
+msgstr "Misslyckades"
+
+msgid "Some error occured while trying to update the courses."
+msgstr "Fel uppstod vid försök att uppdatera kurserna"
+
+msgid "Quick Search"
+msgstr ""
+
+msgid "Course Type"
+msgid_plural "Course Types"
+msgstr[0] "Kurs Typ"
+msgstr[1] "Kurs Typer"
+
+msgid "All courses"
+msgstr "Alla Kurser"
+
+msgid "The default favorite which is loaded on Classes startup"
+msgstr "Standard favoriten som laddas på lektionsstart"
+
+msgid "School"
+msgstr ""
+
+msgid "Defaul school for Courses application"
+msgstr ""
+
+msgid "Courses"
+msgstr "Kurser"

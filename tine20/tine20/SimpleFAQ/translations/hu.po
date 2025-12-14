@@ -1,0 +1,137 @@
+#
+# Translators:
+# Tamás Faragó <>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-04-02 13:32+0000\n"
+"Last-Translator: Tamás Faragó <>, 2012\n"
+"Language-Team: Hungarian (http://app.transifex.com/tine/groupware/language/hu/)\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Draft"
+msgstr "Sablon"
+
+msgid "released"
+msgstr "kiadott"
+
+msgid "obsolete"
+msgstr "elavult"
+
+msgid "Internal"
+msgstr "Belső"
+
+msgid "Public"
+msgstr "Publikus"
+
+msgid "FAQ Status"
+msgid_plural "FAQ Status"
+msgstr[0] "GYIK állapot"
+msgstr[1] "GYIK állapot"
+
+msgid "FAQ Type"
+msgid_plural "FAQ Types"
+msgstr[0] "GYIK típus"
+msgstr[1] "GYIK típusok"
+
+msgid "Defaults"
+msgstr "Alapérelmezettek"
+
+msgid "Question"
+msgstr "Kérdés"
+
+msgid "Enter a question..."
+msgstr "Írj be egy kérdést..."
+
+msgid "Answer"
+msgstr "Válasz"
+
+msgid "Enter a answer..."
+msgstr "Írj be egy választ..."
+
+msgid "Type"
+msgstr "Típus"
+
+msgid "Status"
+msgstr "Állapot"
+
+msgid "FAQ Infos"
+msgstr "GYIK információk"
+
+msgid "Tags"
+msgstr "Címkék"
+
+msgid "Creation Time"
+msgstr "Létrehozás ideje"
+
+msgid "Created By"
+msgstr "Készítette"
+
+msgid "No answer yet"
+msgstr "Nincs még válasz"
+
+msgid "FAQ id"
+msgstr "GYIK id"
+
+msgid "Add a new FAQ Status..."
+msgstr "Új GYIK állapot hozzáadása..."
+
+msgid "Add a new FAQ Type..."
+msgstr "Új GYIK típus hozzáadása..."
+
+msgid "FAQ"
+msgid_plural "FAQs"
+msgstr[0] "GYIK"
+msgstr[1] "GYIK"
+
+msgid "FAQ List"
+msgid_plural "FAQ Lists"
+msgstr[0] "GYIK lista"
+msgstr[1] "GYIK listák"
+
+msgid "FAQ Lists"
+msgstr "GYIK listák"
+
+msgid "Quick Search"
+msgstr ""
+
+msgid "Search FAQ"
+msgstr ""
+
+msgid "Find Question"
+msgstr ""
+
+msgid "Search question"
+msgstr ""
+
+msgid "All my FAQs"
+msgstr "Minden GYIKom"
+
+msgid "Default Favorite"
+msgstr "Alapértelmezett kedvenc"
+
+msgid "The default favorite which is loaded on FAQ startup"
+msgstr "Az alapértelmezett kedvenc, amelyik a GYIK indításakor betöltődik"
+
+msgid "Default FAQ List"
+msgstr "Alapértelmezett GYIK lista"
+
+msgid "The default FAQ list to create new FAQ in."
+msgstr "Az alapértelmezett GYIK lista új GYIK létrehozására."
+
+msgid "All FAQs of my FAQ Lists"
+msgstr "Minden GYIK a GYIK listámból"
+
+msgid "Last modified by me"
+msgstr "Utoljára álltalam módosított"
+
+msgid "All FAQs that I have last modified"
+msgstr "Minden GYIK amit utoljára én módosítottam"

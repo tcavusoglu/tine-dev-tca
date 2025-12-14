@@ -1,0 +1,628 @@
+#
+# Translators:
+# BrianLuckBad <tulken_hultan@hotmail.com>, 2012
+# Niklas Ye <niklas@idontgetlaid.com>, 2013
+# BrianLuckBad <tulken_hultan@hotmail.com>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:59+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Swedish (Sweden) (http://www.transifex.com/tine20/tine20/language/sv_SE/)\n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Maximum number of users reached. "
+msgstr ""
+
+msgid "Please contact Metaways Infosystems GmbH to buy a license that supports a "
+msgstr ""
+
+msgid "Name"
+msgstr "Namn"
+
+msgid "Enabled"
+msgstr "Aktiverad"
+
+msgid "Order"
+msgstr "Order"
+
+msgid "Installed Version"
+msgstr "Installerad Version"
+
+msgid "Available Version"
+msgstr "Tillgänglig Version"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Depends on"
+msgstr "Beror på"
+
+msgid "Install application"
+msgstr "Installera applikation"
+
+msgid "Uninstall application"
+msgstr "Avinstallera applikation"
+
+msgid "Update applications"
+msgstr ""
+
+#, python-brace-format
+msgid "Go to {0} login"
+msgstr "Gå till {0} Logga in"
+
+msgid "uninstall"
+msgstr "Avinstallera"
+
+msgid "Do you really want to uninstall the application(s)?"
+msgstr "Vill du verkligen avinstallera programmet (n)?"
+
+msgid "This may take a while"
+msgstr "Detta kan ta ett tag"
+
+msgid "Dependency Violation"
+msgstr "Överträdelse"
+
+msgid "CLI Required"
+msgstr ""
+
+msgid "Delete all existing users and groups"
+msgstr "radera alla existerande användare och grupper"
+
+msgid "Switching from SQL to LDAP will delete all existing User Accounts, Groups and Roles. Do you really want to switch the accounts storage backend to LDAP ?"
+msgstr "Växla från SQL till LDAP kommer att ta bort alla befintliga användarkonton, grupper och roller. Vill du verkligen byta konto lagring backend till LDAP?"
+
+msgid "Backend"
+msgstr "Backend"
+
+msgid "TLS client certificate"
+msgstr ""
+
+msgid "Initial Admin User"
+msgstr "Första Administratörs Användare"
+
+msgid "Initial admin login name"
+msgstr "Första administratörs användarnamn"
+
+msgid "Initial admin Password"
+msgstr "Första administratörs Lösenord"
+
+msgid "Password confirmation"
+msgstr "Lösenords konfirmation"
+
+msgid "Authentication provider"
+msgstr "autentiserings leverantör"
+
+msgid "Try to split username"
+msgstr "Försök att dela användarnamn"
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "No"
+msgstr "nej"
+
+msgid "Account canonical form"
+msgstr "Konto canonical form"
+
+msgid "Account domain name"
+msgstr ""
+
+msgid "Account domain short name"
+msgstr "Konto Domän kort namn"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Login name"
+msgstr "Inloggnins namn"
+
+msgid "Password"
+msgstr "Lösenord"
+
+msgid "Bind requires DN"
+msgstr "Bind kräver DN"
+
+msgid "Start TLS"
+msgstr ""
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "Port"
+msgstr "port"
+
+msgid "Base DN"
+msgstr "Bas DN"
+
+msgid "Search filter"
+msgstr "Sök filter"
+
+msgid "Hostname"
+msgstr "Host namn"
+
+msgid "Secure Connection"
+msgstr "Säker Anslutning"
+
+msgid "None"
+msgstr "Ingen"
+
+msgid "TLS"
+msgstr "TLS"
+
+msgid "Append domain to login name"
+msgstr "Fäst domän till inloggnings namn"
+
+msgid "Certificate validation"
+msgstr ""
+
+msgid "CA file"
+msgstr ""
+
+msgid "CRL directory"
+msgstr ""
+
+msgid "Accounts storage"
+msgstr "Konto lagring"
+
+msgid "Default user group name"
+msgstr "Standard användare grupp namn"
+
+msgid "Default admin group name"
+msgstr "Standard admin grupp namn"
+
+msgid "Login panel"
+msgstr ""
+
+msgid "Reuse last username logged"
+msgstr ""
+
+msgid "Password Settings"
+msgstr "Lösenordsinställningar"
+
+msgid "User can change password"
+msgstr "Användare kan byta lösenord"
+
+msgid "Enable password policy"
+msgstr "Aktivera lösenordspolicy"
+
+msgid "Only ASCII"
+msgstr "Endast ASCII"
+
+msgid "Minimum length"
+msgstr "Minst antal tecken"
+
+msgid "Minimum word chars"
+msgstr "Minsta antal små bokstäver"
+
+msgid "Minimum uppercase chars"
+msgstr "Minsta antal stora bokstäver"
+
+msgid "Minimum special chars"
+msgstr "Minsta antal specialtecken"
+
+msgid "Minimum numbers"
+msgstr "Minsta antal siffror"
+
+msgid "Change password after ... days"
+msgstr ""
+
+msgid "Forbid part of username in password"
+msgstr ""
+
+msgid "Redirect Settings"
+msgstr "Ändra Inställningar"
+
+msgid "Redirect Url (redirect to login screen if empty)"
+msgstr "Ändra Url (Ändra till logga in sida om det är tomt)"
+
+msgid "Redirect Always (if No, only redirect after logout)"
+msgstr "Ändra Alltid (om Nej, bara ändra efter utloggning)"
+
+msgid "Redirect to referring site, if exists"
+msgstr "Ändra till hänvisnings sida, om en sådan existerar"
+
+msgid "Password encoding"
+msgstr "Lösenord kodning"
+
+msgid "des"
+msgstr ""
+
+msgid "crypt"
+msgstr ""
+
+msgid "blowfish_crypt"
+msgstr ""
+
+msgid "md5_crypt"
+msgstr ""
+
+msgid "ext_crypt"
+msgstr ""
+
+msgid "md5"
+msgstr ""
+
+msgid "smd5"
+msgstr ""
+
+msgid "sha"
+msgstr ""
+
+msgid "ssha"
+msgstr ""
+
+msgid "ntpassword"
+msgstr ""
+
+msgid "plain"
+msgstr ""
+
+msgid "User DN"
+msgstr "Användar DN"
+
+msgid "User Filter"
+msgstr "Användar Filter"
+
+msgid "E-Mail Attribute"
+msgstr ""
+
+msgid "Write Password to SQL backend"
+msgstr ""
+
+msgid "User Search Scope"
+msgstr "Användar Sök Fällt"
+
+msgid "Groups DN"
+msgstr "Grupp DN"
+
+msgid "Group Filter"
+msgstr "Grupp Filter"
+
+msgid "Group Search Scope"
+msgstr "Grupp Sök Fällt"
+
+msgid "Use Rfc 2307 bis"
+msgstr "Använd Rfc 2307 bis"
+
+msgid "Maintain RFC 2307 attributes"
+msgstr ""
+
+msgid "Min User Id"
+msgstr "Minsta Användar Id"
+
+msgid "Max User Id"
+msgstr "Max användar Id"
+
+msgid "Min Group Id"
+msgstr "Minsta Grupp Id"
+
+msgid "Max Group Id"
+msgstr "Max Grupp Id"
+
+msgid "Group UUID Attribute name"
+msgstr "Grupp UUID Attributnamn"
+
+msgid "User UUID Attribute name"
+msgstr "Användare UUID Attributnamn"
+
+msgid "Readonly access"
+msgstr "Bara läsrättighet"
+
+msgid "Save config and install"
+msgstr "Spara ändring och installera"
+
+msgid "Save config"
+msgstr "Spara ändring"
+
+msgid "Passwords don't match"
+msgstr "Lösenord matchar inte"
+
+msgid "Should not be empty"
+msgstr "Ska inte vara tom"
+
+msgid "File"
+msgstr "Fil"
+
+msgid "Setup Authentication"
+msgstr "Inställnings Autentisering"
+
+msgid "Username"
+msgstr "Användarnamn"
+
+msgid "Database"
+msgstr "Databas"
+
+msgid "User"
+msgstr "Användare"
+
+msgid "Prefix"
+msgstr "Prefix"
+
+msgid "Logging"
+msgstr "Loggar"
+
+msgid "Filename"
+msgstr "Filnamn"
+
+msgid "Priority"
+msgstr "Prioritet"
+
+msgid "Caching"
+msgstr "Fångar"
+
+msgid "Lifetime (seconds)"
+msgstr "Livstid (sekunder)"
+
+msgid "Path"
+msgstr "Väg"
+
+msgid "Queue"
+msgstr ""
+
+msgid "Session"
+msgstr "Se"
+
+msgid "Temporary files"
+msgstr "Temporära filer"
+
+msgid "Temporary Files Path"
+msgstr "Temporära Fil Vägar"
+
+msgid "Filestore directory"
+msgstr "Session"
+
+msgid "Filestore Path"
+msgstr "Fillagrings väg"
+
+msgid "Addressbook Map panel"
+msgstr "Adressboks karta"
+
+msgid "Map panel"
+msgstr "Karta"
+
+msgid "disabled"
+msgstr "Inaktiverad"
+
+msgid "enabled"
+msgstr "Aktiverad"
+
+msgid "Config file is not writable"
+msgstr "Config fil är inte skrivbar"
+
+msgid "Download config file"
+msgstr "Ladda ner config fil"
+
+#, python-brace-format
+msgid "This prefix is too long. Please choose a prefix no longer than {0} chars."
+msgstr ""
+
+msgid "Standard IMAP"
+msgstr "Standard IMAP"
+
+msgid "Standard SMTP"
+msgstr "Standard SMTP"
+
+msgid "Imap"
+msgstr "Imap"
+
+msgid "Verify peer Certificate"
+msgstr ""
+
+msgid "Use system account"
+msgstr "Använd system konto"
+
+msgid "Use email address as login name"
+msgstr ""
+
+msgid "Cyrus Admin"
+msgstr "Cyrus Administratör"
+
+msgid "Cyrus Admin Password"
+msgstr "Cyrus Administratörs Lösenord"
+
+msgid "Use proxy auth"
+msgstr ""
+
+msgid "Smtp"
+msgstr "Smtp"
+
+msgid "Authentication"
+msgstr "Autentisering"
+
+msgid "Login"
+msgstr "Logga in"
+
+msgid "Plain"
+msgstr "Vanlig"
+
+msgid "Primary Domain"
+msgstr "Primär Domän"
+
+msgid "Secondary Domains (comma separated)"
+msgstr "Sekundära Domäner (komma separerade)"
+
+msgid "Aditional Domains (comma separated)"
+msgstr ""
+
+msgid "Notifications service address"
+msgstr "Meddelande service adress"
+
+msgid "Notification Username"
+msgstr "Meddelande Användarnamn"
+
+msgid "Notification Password"
+msgstr "Meddelande Lösenord"
+
+msgid "Notifications local client (hostname or IP address)"
+msgstr "Meddelande lokal klient (hostname eller IP adress)"
+
+msgid "SIEVE"
+msgstr "SIEVE"
+
+msgid "MySql Hostname"
+msgstr "MySql Hostname"
+
+msgid "MySql Database"
+msgstr "Mysql Databas"
+
+msgid "MySql User"
+msgstr "MySql Användare"
+
+msgid "MySql Password"
+msgstr "MySql Lösenord"
+
+msgid "MySql Port"
+msgstr "MySql Port"
+
+msgid "User or UID"
+msgstr "Användare eller UID"
+
+msgid "Group or GID"
+msgstr "Grupp eller GID"
+
+msgid "Home Template"
+msgstr "hem-mall"
+
+msgid "Password Scheme"
+msgstr "Lösenord ordning"
+
+msgid "PLAIN-MD5"
+msgstr "VANLIG-MD5"
+
+msgid "MD5-CRYPT"
+msgstr "MD5-CRYPT"
+
+msgid "SHA1"
+msgstr "SHA1"
+
+msgid "SHA256"
+msgstr "SHA256"
+
+msgid "SSHA256"
+msgstr "SSHA256"
+
+msgid "SHA512"
+msgstr "SHA512"
+
+msgid "SSHA512"
+msgstr "SSHA512"
+
+msgid "PLAIN"
+msgstr "VANLIG"
+
+msgid "Performing Environment Checks..."
+msgstr "Gör Omgivnings Kontroller..."
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria, view-options or the {1} you search in."
+msgstr "Inga "
+
+msgid "Check"
+msgstr "Kontrollera"
+
+msgid "Result"
+msgstr "Resultat"
+
+msgid "Message"
+msgstr ""
+
+msgid "Run setup tests"
+msgstr "Kör installations tester"
+
+msgid "Ignore setup tests"
+msgstr "Ignorera installations tester"
+
+msgid "Setup"
+msgstr ""
+
+msgid "Delete current Subscription"
+msgstr ""
+
+msgid "Your Subscription is not valid."
+msgstr ""
+
+msgid "Subscription Configuration"
+msgstr ""
+
+msgid "Upload from disk"
+msgstr ""
+
+msgid "Select file containing your Subscription key"
+msgstr ""
+
+msgid "No valid Subscription"
+msgstr ""
+
+msgid "Contract ID"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "Activation Key"
+msgstr ""
+
+msgid "Maximum Users (0=unlimited)"
+msgstr ""
+
+msgid "Valid from"
+msgstr ""
+
+msgid "Valid to"
+msgstr ""
+
+msgid "Subscription Information"
+msgstr ""
+
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] "Applikation"
+msgstr[1] "Applikationer"
+
+msgid "I have read the license agreement and accept it"
+msgstr "Jag har läst licens avtalet och accepterat det"
+
+msgid "License Agreement"
+msgstr "Licens Avtal"
+
+msgid "I have read the privacy agreement and accept it"
+msgstr "jag har läst sekretess avtalet och accepterat det."
+
+msgid "Privacy Agreement"
+msgstr "Sekretess Avtal"
+
+msgid "Accept Terms and Conditions"
+msgstr "Acceptera Villkor"
+
+msgid "Terms and Conditions"
+msgstr "Villkor"
+
+msgid "Setup Checks"
+msgstr "Inställnings Kontroller"
+
+msgid "Config Manager"
+msgstr "Config hanterare"
+
+msgid "Authentication/Accounts"
+msgstr "Verifiering / konton"
+
+msgid "Email"
+msgstr "E-post"
+
+msgid "Application Manager"
+msgstr "Applikation Hanterare"
+
+msgid "Subscription"
+msgstr ""
+
+#~ msgid "Update application"
+#~ msgstr "Uppdatera applikation"

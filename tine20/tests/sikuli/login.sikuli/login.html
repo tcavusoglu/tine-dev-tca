@@ -1,0 +1,124 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>login.sikuli</h2> <a href="login.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">from</span> __future__ <span class="kw">import</span> with_statement
+<span class="kw">import</span> unittest
+
+<span class="kw">from</span> sikuli.Sikuli <span class="kw">import</span> *
+
+<span class="kw">class</span> Chromium(object):
+
+    <span class="kw">def</span> __init__(self, url):
+        self.url = url
+
+    <span class="kw">def</span> __enter__(self):
+        Screen(<span class="dig">0</span>)
+        app = App.open(<span class="str">'chromium-browser'</span>)
+        <span class="skw">wait</span>(<span class="dig">2</span>)
+        <span class="skw">type</span>(<span class="str">"%s\n"</span> % self.url)
+        <span class="skw">wait</span>(<span class="dig">2</span>)
+
+    <span class="kw">def</span> __exit__(self, type_, value, traceback):
+        <span class="skw">type</span>(Key.F4, KEY_ALT)
+
+
+<span class="kw">class</span> TestBasicScenario(unittest.TestCase):
+
+    <span class="kw">def</span> test_01_login(self):
+        <span class="skw">click</span>(<img src="username.png" />)
+        <span class="skw">type</span>(<span class="str">"unittest"</span>)
+        <span class="skw">click</span>(<img src="password.png" />)
+        <span class="skw">type</span>(<span class="str">"password"</span>)
+        <span class="skw">click</span>(<img src="1379932483974.png" />)
+        <span class="skw">wait</span>(<span class="dig">3</span>)
+        <span class="kw">assert</span> exists(<img src="1389349522098.png" />)
+
+
+    <span class="kw">def</span> test_02_logout(self):
+        <span class="skw">click</span>(<img src="logout.png" />)
+        <span class="skw">click</span>(<img src="1389349732360.png" />)
+        <span class="skw">wait</span>(<span class="dig">3</span>)
+        <span class="kw">assert</span> exists(<img src="loginlogo.png" />)
+
+
+
+<span class="cmt"># Sikuli settings (no logs)
+</span>Settings.ActionLogs = False
+Settings.InfoLogs = False
+Settings.DebugLogs = False
+
+<span class="kw">with</span> Chromium(<span class="str">'localhost&amp;tine20'</span>):
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestBasicScenario)
+    unittest.TextTestRunner(verbosity=<span class="dig">2</span>).run(suite)
+</pre>
+</body>
+</html>

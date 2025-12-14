@@ -1,0 +1,55 @@
+/**
+ * Tine 2.0
+ * 
+ * @package     Tasks
+ * @license     http://www.gnu.org/licenses/agpl.html AGPL Version 3
+ * @author      Cornelius Weiss <c.weiss@metaways.de>
+ * @copyright   Copyright (c) 2007-2008 Metaways Infosystems GmbH (http://www.metaways.de)
+ * @version     $Id$
+ *
+ */
+
+.TasksIconCls, .TasksTask {
+    background-image:url(../../images/icon-set/icon_tasks.svg) !important;
+}
+
+.TasksMainGridStatus {
+    width: 12px;
+    height: 12px;
+}
+
+.tasks-action_create_from_template {
+    background-image:url(../../images/icon-set/icon_template.svg) !important;
+}
+/***** tasks grid panel classes ******/
+
+.tasks-grid-overdue {
+    color: #aa0000;
+}
+
+.tasks-grid-duetoday {
+    color: #00aa00;
+}
+
+.tasks-grid-completed {
+    color: #777;
+}
+
+.t-contenttype-task .action_add {
+    background-image: url(../../images/icon-set/icon_task_plus.svg) !important;
+}
+
+.t-contenttype-task .action_edit {
+    background-image: url(../../images/icon-set/icon_task_edit.svg) !important;
+}
+
+.t-contenttype-task .action_delete {
+    background-image: url(../../images/icon-set/icon_task_clear.svg) !important;
+}
+
+.tasks-dependency-source {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 50px;
+    display: inline-grid;
+}

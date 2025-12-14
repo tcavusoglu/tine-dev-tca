@@ -1,0 +1,33 @@
+---
+
+- name: create logger dir
+  file:
+    path: "{{ item }}"
+    owner: tine20
+    group: root
+    state: directory
+    mode: 0750
+  with_items:
+    - "{{ tinedockercompose_file_log_dir }}"
+  become: true
+  when:
+    - not ansible_check_mode
+    - tinedockercompose_createdirs|bool
+
+- name: config logrotate for logs
+  template:
+    src: tine-logrotate.j2
+    dest: /etc/logrotate.d/tine-logs
+    owner: root
+    group: root
+    mode: 0644
+  become: true
+
+- name: configure tine logger
+  template:
+    src: logger.inc.php.j2
+    dest: "{{ tinedockercompose_confd_path }}/logger.inc.php"
+    owner: tine20
+    group: root
+    mode: 0640
+  become: true

@@ -1,0 +1,626 @@
+#
+# Translators:
+# Rivo Zängov <eraser@eraser.ee>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:59+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Estonian (http://www.transifex.com/tine20/tine20/language/et/)\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Maximum number of users reached. "
+msgstr ""
+
+msgid "Please contact Metaways Infosystems GmbH to buy a license that supports a "
+msgstr ""
+
+msgid "Name"
+msgstr "Nimi"
+
+msgid "Enabled"
+msgstr "Sisse lülitatud"
+
+msgid "Order"
+msgstr "Järjekord"
+
+msgid "Installed Version"
+msgstr "Paigaldatud versioon"
+
+msgid "Available Version"
+msgstr "Saadaolev versioon"
+
+msgid "Status"
+msgstr "Staatus"
+
+msgid "Depends on"
+msgstr "Sõltub"
+
+msgid "Install application"
+msgstr "Paigalda rakendus"
+
+msgid "Uninstall application"
+msgstr "Eemalda rakendus"
+
+msgid "Update applications"
+msgstr ""
+
+#, python-brace-format
+msgid "Go to {0} login"
+msgstr ""
+
+msgid "uninstall"
+msgstr "eemalda"
+
+msgid "Do you really want to uninstall the application(s)?"
+msgstr ""
+
+msgid "This may take a while"
+msgstr "See võib veidi aega võtta"
+
+msgid "Dependency Violation"
+msgstr "Sõltuvuse rikkumine"
+
+msgid "CLI Required"
+msgstr ""
+
+msgid "Delete all existing users and groups"
+msgstr ""
+
+msgid "Switching from SQL to LDAP will delete all existing User Accounts, Groups and Roles. Do you really want to switch the accounts storage backend to LDAP ?"
+msgstr ""
+
+msgid "Backend"
+msgstr ""
+
+msgid "TLS client certificate"
+msgstr ""
+
+msgid "Initial Admin User"
+msgstr ""
+
+msgid "Initial admin login name"
+msgstr ""
+
+msgid "Initial admin Password"
+msgstr ""
+
+msgid "Password confirmation"
+msgstr ""
+
+msgid "Authentication provider"
+msgstr ""
+
+msgid "Try to split username"
+msgstr ""
+
+msgid "Yes"
+msgstr "Jah"
+
+msgid "No"
+msgstr "Ei"
+
+msgid "Account canonical form"
+msgstr ""
+
+msgid "Account domain name"
+msgstr ""
+
+msgid "Account domain short name"
+msgstr ""
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Login name"
+msgstr "Kasutajanimi"
+
+msgid "Password"
+msgstr "Parool"
+
+msgid "Bind requires DN"
+msgstr ""
+
+msgid "Start TLS"
+msgstr ""
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Base DN"
+msgstr ""
+
+msgid "Search filter"
+msgstr ""
+
+msgid "Hostname"
+msgstr "Hostinimi"
+
+msgid "Secure Connection"
+msgstr "Turvaline ühendus"
+
+msgid "None"
+msgstr "Pole"
+
+msgid "TLS"
+msgstr "TLS"
+
+msgid "Append domain to login name"
+msgstr ""
+
+msgid "Certificate validation"
+msgstr ""
+
+msgid "CA file"
+msgstr ""
+
+msgid "CRL directory"
+msgstr ""
+
+msgid "Accounts storage"
+msgstr ""
+
+msgid "Default user group name"
+msgstr ""
+
+msgid "Default admin group name"
+msgstr ""
+
+msgid "Login panel"
+msgstr ""
+
+msgid "Reuse last username logged"
+msgstr ""
+
+msgid "Password Settings"
+msgstr ""
+
+msgid "User can change password"
+msgstr ""
+
+msgid "Enable password policy"
+msgstr ""
+
+msgid "Only ASCII"
+msgstr ""
+
+msgid "Minimum length"
+msgstr ""
+
+msgid "Minimum word chars"
+msgstr ""
+
+msgid "Minimum uppercase chars"
+msgstr ""
+
+msgid "Minimum special chars"
+msgstr ""
+
+msgid "Minimum numbers"
+msgstr ""
+
+msgid "Change password after ... days"
+msgstr ""
+
+msgid "Forbid part of username in password"
+msgstr ""
+
+msgid "Redirect Settings"
+msgstr ""
+
+msgid "Redirect Url (redirect to login screen if empty)"
+msgstr ""
+
+msgid "Redirect Always (if No, only redirect after logout)"
+msgstr ""
+
+msgid "Redirect to referring site, if exists"
+msgstr ""
+
+msgid "Password encoding"
+msgstr ""
+
+msgid "des"
+msgstr ""
+
+msgid "crypt"
+msgstr ""
+
+msgid "blowfish_crypt"
+msgstr ""
+
+msgid "md5_crypt"
+msgstr ""
+
+msgid "ext_crypt"
+msgstr ""
+
+msgid "md5"
+msgstr ""
+
+msgid "smd5"
+msgstr ""
+
+msgid "sha"
+msgstr ""
+
+msgid "ssha"
+msgstr ""
+
+msgid "ntpassword"
+msgstr ""
+
+msgid "plain"
+msgstr ""
+
+msgid "User DN"
+msgstr ""
+
+msgid "User Filter"
+msgstr ""
+
+msgid "E-Mail Attribute"
+msgstr ""
+
+msgid "Write Password to SQL backend"
+msgstr ""
+
+msgid "User Search Scope"
+msgstr ""
+
+msgid "Groups DN"
+msgstr ""
+
+msgid "Group Filter"
+msgstr ""
+
+msgid "Group Search Scope"
+msgstr ""
+
+msgid "Use Rfc 2307 bis"
+msgstr ""
+
+msgid "Maintain RFC 2307 attributes"
+msgstr ""
+
+msgid "Min User Id"
+msgstr ""
+
+msgid "Max User Id"
+msgstr ""
+
+msgid "Min Group Id"
+msgstr ""
+
+msgid "Max Group Id"
+msgstr ""
+
+msgid "Group UUID Attribute name"
+msgstr ""
+
+msgid "User UUID Attribute name"
+msgstr ""
+
+msgid "Readonly access"
+msgstr ""
+
+msgid "Save config and install"
+msgstr ""
+
+msgid "Save config"
+msgstr ""
+
+msgid "Passwords don't match"
+msgstr ""
+
+msgid "Should not be empty"
+msgstr ""
+
+msgid "File"
+msgstr "Fail"
+
+msgid "Setup Authentication"
+msgstr ""
+
+msgid "Username"
+msgstr "Kasutajanimi"
+
+msgid "Database"
+msgstr "Andmebaas"
+
+msgid "User"
+msgstr "Kasutaja"
+
+msgid "Prefix"
+msgstr "Eesliide"
+
+msgid "Logging"
+msgstr "Logimine"
+
+msgid "Filename"
+msgstr "Failinimi"
+
+msgid "Priority"
+msgstr "Tähtsus"
+
+msgid "Caching"
+msgstr "Puhverdamine"
+
+msgid "Lifetime (seconds)"
+msgstr ""
+
+msgid "Path"
+msgstr "Asukoht"
+
+msgid "Queue"
+msgstr ""
+
+msgid "Session"
+msgstr "Sessioon"
+
+msgid "Temporary files"
+msgstr ""
+
+msgid "Temporary Files Path"
+msgstr ""
+
+msgid "Filestore directory"
+msgstr ""
+
+msgid "Filestore Path"
+msgstr ""
+
+msgid "Addressbook Map panel"
+msgstr ""
+
+msgid "Map panel"
+msgstr ""
+
+msgid "disabled"
+msgstr "välja lülitatud"
+
+msgid "enabled"
+msgstr "sisse lülitatud"
+
+msgid "Config file is not writable"
+msgstr ""
+
+msgid "Download config file"
+msgstr ""
+
+#, python-brace-format
+msgid "This prefix is too long. Please choose a prefix no longer than {0} chars."
+msgstr ""
+
+msgid "Standard IMAP"
+msgstr ""
+
+msgid "Standard SMTP"
+msgstr ""
+
+msgid "Imap"
+msgstr "Imap"
+
+msgid "Verify peer Certificate"
+msgstr ""
+
+msgid "Use system account"
+msgstr ""
+
+msgid "Use email address as login name"
+msgstr ""
+
+msgid "Cyrus Admin"
+msgstr ""
+
+msgid "Cyrus Admin Password"
+msgstr ""
+
+msgid "Use proxy auth"
+msgstr ""
+
+msgid "Smtp"
+msgstr "Smtp"
+
+msgid "Authentication"
+msgstr "Autentimine"
+
+msgid "Login"
+msgstr ""
+
+msgid "Plain"
+msgstr ""
+
+msgid "Primary Domain"
+msgstr ""
+
+msgid "Secondary Domains (comma separated)"
+msgstr ""
+
+msgid "Aditional Domains (comma separated)"
+msgstr ""
+
+msgid "Notifications service address"
+msgstr ""
+
+msgid "Notification Username"
+msgstr ""
+
+msgid "Notification Password"
+msgstr ""
+
+msgid "Notifications local client (hostname or IP address)"
+msgstr ""
+
+msgid "SIEVE"
+msgstr ""
+
+msgid "MySql Hostname"
+msgstr "MySql hostinimi"
+
+msgid "MySql Database"
+msgstr "MySql andmebaas"
+
+msgid "MySql User"
+msgstr "MySql kasutaja"
+
+msgid "MySql Password"
+msgstr "MySql parool"
+
+msgid "MySql Port"
+msgstr "MySql port"
+
+msgid "User or UID"
+msgstr "Kasutaja või UID"
+
+msgid "Group or GID"
+msgstr "Grupp või GID"
+
+msgid "Home Template"
+msgstr ""
+
+msgid "Password Scheme"
+msgstr ""
+
+msgid "PLAIN-MD5"
+msgstr "PLAIN-MD5"
+
+msgid "MD5-CRYPT"
+msgstr "MD5-CRYPT"
+
+msgid "SHA1"
+msgstr "SHA1"
+
+msgid "SHA256"
+msgstr "SHA256"
+
+msgid "SSHA256"
+msgstr "SSHA256"
+
+msgid "SHA512"
+msgstr "SHA512"
+
+msgid "SSHA512"
+msgstr ""
+
+msgid "PLAIN"
+msgstr ""
+
+msgid "Performing Environment Checks..."
+msgstr ""
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria, view-options or the {1} you search in."
+msgstr ""
+
+msgid "Check"
+msgstr ""
+
+msgid "Result"
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "Run setup tests"
+msgstr ""
+
+msgid "Ignore setup tests"
+msgstr ""
+
+msgid "Setup"
+msgstr ""
+
+msgid "Delete current Subscription"
+msgstr ""
+
+msgid "Your Subscription is not valid."
+msgstr ""
+
+msgid "Subscription Configuration"
+msgstr ""
+
+msgid "Upload from disk"
+msgstr ""
+
+msgid "Select file containing your Subscription key"
+msgstr ""
+
+msgid "No valid Subscription"
+msgstr ""
+
+msgid "Contract ID"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "Activation Key"
+msgstr ""
+
+msgid "Maximum Users (0=unlimited)"
+msgstr ""
+
+msgid "Valid from"
+msgstr ""
+
+msgid "Valid to"
+msgstr ""
+
+msgid "Subscription Information"
+msgstr ""
+
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "I have read the license agreement and accept it"
+msgstr ""
+
+msgid "License Agreement"
+msgstr ""
+
+msgid "I have read the privacy agreement and accept it"
+msgstr ""
+
+msgid "Privacy Agreement"
+msgstr ""
+
+msgid "Accept Terms and Conditions"
+msgstr ""
+
+msgid "Terms and Conditions"
+msgstr ""
+
+msgid "Setup Checks"
+msgstr ""
+
+msgid "Config Manager"
+msgstr ""
+
+msgid "Authentication/Accounts"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Application Manager"
+msgstr ""
+
+msgid "Subscription"
+msgstr ""
+
+#~ msgid "Update application"
+#~ msgstr "Uuenda rakendust"

@@ -1,0 +1,34 @@
+/**
+ * Tine 2.0
+ * 
+ * @package     Inventory
+ * @license     http://www.gnu.org/licenses/agpl.html AGPL Version 3
+ * @author      Philipp Schüle <p.schuele@metaways.de>
+ * @copyright   Copyright (c) 2007-2011 Metaways Infosystems GmbH (http://www.metaways.de)
+ *
+ */
+
+.InventoryIconCls {
+    background-image: url(../../images/icon-set/icon_inventor.svg) !important;
+}
+
+
+.t-contenttype-inventoryitem .action_add {
+    background-image: url(../../images/icon-set/icon_inventar_plus.svg) !important;
+}
+
+.t-contenttype-inventoryitem .action_edit {
+    background-image: url(../../images/icon-set/icon_inventar_edit.svg) !important;
+}
+
+.t-contenttype-inventoryitem .action_delete {
+    background-image: url(../../images/icon-set/icon_inventar_clear.svg) !important;
+}
+
+.t-contenttype-inventoryitem .action_export {
+    background-image: url(../../images/icon-set/icon_inventar_export.svg) !important;
+}
+
+.t-contenttype-inventoryitem .action_import {
+    background-image: url(../../images/icon-set/icon_inventar_import.svg) !important;
+}

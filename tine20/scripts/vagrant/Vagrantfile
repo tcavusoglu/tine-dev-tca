@@ -1,0 +1,47 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+	# Name
+	config.vm.box = "trusty"
+    config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-i386-vagrant-disk1.box"
+
+	# vagrant-cachier caches packages for your vm local
+	if Vagrant.has_plugin?("vagrant-cachier")
+		config.cache.scope = :box
+
+		# does not work for encrypted homedirs
+		#config.cache.synced_folder_opts = {
+		#	type: :nfs,
+		#	mount_options: ['rw', 'vers=3', 'tcp', 'nolock']
+		#}
+	end
+
+	config.vm.synced_folder "", "/vagrant", disabled: true
+
+	# cookies special provisioning
+	config.vm.provision :shell, :path => "bootstrap_vagrant.sh"
+
+	# Configure NFS shared folder
+    config.vm.synced_folder "", "/vagrant/", type: "nfs"
+    config.vm.synced_folder "../../", "/usr/local/share/tine20.git", type: "nfs"
+
+	# Create a private network, which allows host-only access to the machine
+	# using a specific IP.
+	# Hope it's free - yey!
+	config.vm.network :private_network, ip: "10.10.10.10"
+
+	# Provider-specific configuration so you can fine-tune various
+	# backing providers for Vagrant. These expose provider-specific options.
+	# Example for VirtualBox:
+	config.vm.provider :virtualbox do |vb|
+		vb.customize ["modifyvm", :id, "--memory", "1524"]
+		vb.customize ["modifyvm", :id, "--cpus", "2"]
+		vb.customize ["modifyvm", :id, "--ioapic", "on"]
+	end
+
+	config.vm.network "forwarded_port", guest: 80, host: 8080
+end

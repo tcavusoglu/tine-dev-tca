@@ -1,0 +1,166 @@
+#
+# Translators:
+# Enri Mullai <enri_mullai@albnet.net>, 2013
+# Enri Mullai <enri_mullai@albnet.net>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-10-04 15:23+0000\n"
+"Last-Translator: Enri Mullai <enri_mullai@albnet.net>, 2013\n"
+"Language-Team: Albanian (http://app.transifex.com/tine/groupware/language/sq/)\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Inventory Status Available"
+msgstr "Statusi i mundshëm i inventarit"
+
+msgid "Possible status."
+msgstr "Statusi i mundshëm"
+
+msgid "Ordered"
+msgstr ""
+
+msgid "Available"
+msgstr ""
+
+msgid "Defect"
+msgstr ""
+
+msgid "Missing"
+msgstr ""
+
+msgid "Removed"
+msgstr "Hequr"
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Stored"
+msgstr ""
+
+msgid "Sold"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Types"
+msgstr ""
+
+msgid "Tine 2.0 inventory CSV import"
+msgstr ""
+
+msgid "Import CSV formated contacts from Tine 2.0 Inventory (Export Format)"
+msgstr ""
+
+msgid "Import list (###CURRENTDATE###)"
+msgstr "importo listen (###CURRENTDATE###)"
+
+msgid "Inventory Items imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr ""
+
+msgid "Inventory CSV import"
+msgstr "Import CSV i inventarit"
+
+msgid "Items imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr "Artikuj të importuar në ###CURRENTDATE### më ###CURRENTTIME### nga ###USERFULLNAME###"
+
+msgid "The active number must be less than or equal total number."
+msgstr "Numëri aktiv duhet të jetë më i vogël ose i barabartë."
+
+msgid "Purchase Invoice"
+msgstr ""
+
+msgid "General"
+msgstr "I Përgjithshëm"
+
+msgid "Name"
+msgstr "Emri"
+
+msgid "Serial Number"
+msgstr ""
+
+msgid "Inventory Type"
+msgstr ""
+
+msgid "Employee"
+msgstr ""
+
+msgid "Description"
+msgstr "Përshkrimi"
+
+msgid "Enter description"
+msgstr "Vendosni përshkrimin"
+
+msgid "Location"
+msgstr "Vendndodhja"
+
+msgid "Added"
+msgstr "Shtuar"
+
+msgid "Warranty"
+msgstr "Garancia"
+
+msgid "Total number"
+msgstr "Numri total"
+
+msgid "Available number"
+msgstr "Numri i disponueshëm"
+
+msgid "Status"
+msgstr "Statusi"
+
+msgid "Accounting"
+msgstr "Llogaritje"
+
+msgid "Price"
+msgstr "Çmimi"
+
+msgid "Invoice date"
+msgstr "Data e Faturës"
+
+msgid "Depreciate"
+msgstr "Zhvlerëso"
+
+msgid "Inventory item"
+msgid_plural "Inventory items"
+msgstr[0] "Artikull Inventari"
+msgstr[1] "Artikuj Inventari"
+
+msgid "Inventory item list"
+msgid_plural "Inventory item lists"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Inventory ID"
+msgstr "ID Inventari"
+
+msgid "Depreciated"
+msgstr ""
+
+msgid "Inventory type"
+msgid_plural "Inventory types"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Default Inventory Item Container"
+msgstr "Kontenieri i paracaktuar i artikujve te inventarit"
+
+msgid "The default container for new items"
+msgstr "Kontenieri i paracaktuar për artikujt e rinj"
+
+msgid "All Inventory Items"
+msgstr "Të gjithë Artikujt e inventarit"
+
+msgid "All existing Inventory Items"
+msgstr "Të gjithë Artikujt egzistues të inventarit"
+
+msgid "Inventory"
+msgstr "Inventari"

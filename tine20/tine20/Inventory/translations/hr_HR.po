@@ -1,0 +1,169 @@
+#
+# Translators:
+# fvisic <visicfilip@gmail.com>, 2012
+# fvisic <visicfilip@gmail.com>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-10-04 15:23+0000\n"
+"Last-Translator: fvisic <visicfilip@gmail.com>, 2012\n"
+"Language-Team: Croatian (Croatia) (http://app.transifex.com/tine/groupware/language/hr_HR/)\n"
+"Language: hr_HR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Inventory Status Available"
+msgstr "Dostupan status inventara"
+
+msgid "Possible status."
+msgstr "Mogući status."
+
+msgid "Ordered"
+msgstr ""
+
+msgid "Available"
+msgstr ""
+
+msgid "Defect"
+msgstr ""
+
+msgid "Missing"
+msgstr ""
+
+msgid "Removed"
+msgstr "Uklonjen"
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Stored"
+msgstr ""
+
+msgid "Sold"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Types"
+msgstr ""
+
+msgid "Tine 2.0 inventory CSV import"
+msgstr ""
+
+msgid "Import CSV formated contacts from Tine 2.0 Inventory (Export Format)"
+msgstr ""
+
+msgid "Import list (###CURRENTDATE###)"
+msgstr ""
+
+msgid "Inventory Items imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr ""
+
+msgid "Inventory CSV import"
+msgstr ""
+
+msgid "Items imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr ""
+
+msgid "The active number must be less than or equal total number."
+msgstr "Aktivni broj mora biti manji ili jednak ukupnom broju."
+
+msgid "Purchase Invoice"
+msgstr ""
+
+msgid "General"
+msgstr "Opće"
+
+msgid "Name"
+msgstr "Ime"
+
+msgid "Serial Number"
+msgstr ""
+
+msgid "Inventory Type"
+msgstr ""
+
+msgid "Employee"
+msgstr ""
+
+msgid "Description"
+msgstr "Opis"
+
+msgid "Enter description"
+msgstr "Unesite opis"
+
+msgid "Location"
+msgstr "Lokacija"
+
+msgid "Added"
+msgstr "Dodaj"
+
+msgid "Warranty"
+msgstr "Garancija"
+
+msgid "Total number"
+msgstr "Ukupno"
+
+msgid "Available number"
+msgstr ""
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Accounting"
+msgstr "Predračun"
+
+msgid "Price"
+msgstr "Cijena"
+
+msgid "Invoice date"
+msgstr ""
+
+msgid "Depreciate"
+msgstr ""
+
+msgid "Inventory item"
+msgid_plural "Inventory items"
+msgstr[0] "Stavka inventara"
+msgstr[1] "Stavki inventara"
+msgstr[2] "Stavke inventara"
+
+msgid "Inventory item list"
+msgid_plural "Inventory item lists"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Inventory ID"
+msgstr "ID inventara"
+
+msgid "Depreciated"
+msgstr ""
+
+msgid "Inventory type"
+msgid_plural "Inventory types"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Default Inventory Item Container"
+msgstr "Zadani kontejner inventara "
+
+msgid "The default container for new items"
+msgstr "Zadani kontejner za nove stavke"
+
+msgid "All Inventory Items"
+msgstr ""
+
+msgid "All existing Inventory Items"
+msgstr ""
+
+msgid "Inventory"
+msgstr "Inventar"

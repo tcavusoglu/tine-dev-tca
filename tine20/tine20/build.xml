@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ============================================  -->
+<!-- Build Definition for Tine 2.0                 -->
+<!--                                               -->
+<!-- http://www.tine20.org                         -->
+<!-- http://www.phing.info                         -->
+<!-- ============================================  -->
+<project name="tine20" description="Tine 2.0 build file" default="build">
+
+    <property name="builddir" value="${project.basedir}/build" override="true" />
+    <property name="userdatadir" value="${project.basedir}/userdata" override="true" />
+    <property name="localedir" value="Tinebase/js/Locale" override="true" />
+    <property name="configdir" value="${project.basedir}" override="true" />
+    <property name="testconfigdir" value="${project.basedir}/../tests/tine20" override="true" />
+    
+    <!-- ============================================  -->
+    <!-- Target: prepare                               -->
+    <!-- ============================================  -->
+    <target name="prepare" depends="translation-test">
+        <echo msg="basedir: ${project.basedir}" />
+        <init />
+
+        <php expression="Tinebase_Helper::getDevelopmentRevision();" returnProperty="buildRevision" />
+        <echo msg="$buildRevision: ${buildRevision}" />
+
+        <php expression="date_create('now', new DateTimeZone('UTC'))->format('Y-m-d H:i:s');" returnProperty="buildDate" />
+        <echo msg="$buildDate: ${buildDate}" />
+
+        <echo msg="Making build directory" />
+        <mkdir dir="${builddir}" />
+        <mkdir dir="${builddir}/${localedir}/build" />
+        <mkdir dir="${builddir}/${localedir}/static" />
+    </target>
+
+    <!-- ============================================  -->
+    <!-- Target: build                                 -->
+    <!-- ============================================  -->
+    <target name="build" depends="prepare">
+        <foreach param="name" absparam="path" target="prepared-build-module">
+            <fileset dir=".">
+                <type type="dir" />
+                <!-- build all apps -->
+                <include name="*" />
+
+                <!-- only build a single app -->
+                <!--<include name="ExampleApplication" />-->
+
+                <exclude name="/" />
+                <exclude name="*.*" />
+                <exclude name=".tx" />
+                <exclude name="build" />
+                <exclude name="docs" />
+                <exclude name="fonts" />
+                <exclude name="images" />
+                <exclude name="library" />
+                <exclude name="styles" />
+                <exclude name="themes" />
+                <exclude name="vendor" />
+                <exclude name="userdata" />
+                <exclude name="Tool" />
+                <exclude name="Zend" />
+            </fileset>
+        </foreach>
+    </target>
+
+    <!-- ============================================  -->
+    <!-- Target: phpdoc                                -->
+    <!-- ============================================  -->
+    <target name="phpdoc">
+        <echo msg="Building Tine 2.0 PHP API Documentation..." />
+
+        <includepath classpath="${project.basedir}/vendor/phpdocumentor" />
+
+        <mkdir dir="${builddir}/apidocs" />
+
+        <phpdoc2 title="Tine 2.0 PHP API Documentation" destdir="${builddir}/apidocs" template="responsive-twig">
+            <fileset dir=".">
+                <include name="**/*.php" />
+                <exclude name="Zend/**.php" />
+                <exclude name="library/**.php" />
+                <exclude name="vendor/**.php" />
+            </fileset>
+        </phpdoc2>
+    </target>
+    
+    <!-- ============================================                       -->
+    <!-- Target: phpunit                                                    -->
+    <!--                                                                    -->
+    <!-- you can define the includes like this (runs all Tinebase tests):   -->
+    <!-- $ vendor/bin/phing phpunit -Dtestinclude=Tinebase/**/*Test.php     -->
+    <!-- ============================================                       -->
+    <target name="phpunit">
+        <!-- TODO we still have some test files that are named *Tests.php, rename them or adjust the include property -->
+        <property name="testinclude" value="**/*Test.php" override="true" />
+        
+        <echo msg="Starting Tests..." />
+        <echo msg="Using config file ${testconfigdir}/phpunit.xml" />
+        
+        <!-- do we need this? -->
+        <!--includepath classpath = "${testconfigdir}" /-->
+        
+        <delete dir="${builddir}/reports" />
+        <mkdir dir="${builddir}/reports" />
+        <mkdir dir="${builddir}/reports/tests" />
+        
+        <phpunit configuration="${testconfigdir}/phpunit.xml" haltonfailure="true" printsummary="true">
+            <formatter type="plain" usefile="false" />
+            <formatter type="xml" todir="${builddir}/reports" />
+            <batchtest>
+                <fileset dir="${project.basedir}/../tests/tine20">
+                  <include name="${testinclude}" />
+                  <exclude name="Tinebase/AccountTest.php" />
+                </fileset>
+            </batchtest>
+        </phpunit>
+        
+        <phpunitreport infile="${builddir}/reports/testsuites.xml" format="frames" todir="${builddir}/reports/tests" />
+    </target>
+
+    <!-- ============================================  -->
+    <!-- Target: phpunit-prepare                       -->
+    <!-- ============================================  -->
+    <target name="phpunit-prepare">
+        <echo msg="Preparing for phpunit" />
+
+        <echo msg="Making report directories" />
+        <mkdir dir="${builddir}/reports" />
+
+        <echo msg="Making userdata directories" />
+        <mkdir dir="${userdatadir}/cache"/>
+        <mkdir dir="${userdatadir}/sessions"/>
+        <mkdir dir="${userdatadir}/tmp"/>
+        <mkdir dir="${userdatadir}/files"/>
+        <mkdir dir="${userdatadir}/log"/>
+    </target>
+    
+    <!-- ============================================      -->
+    <!-- Target: phpunit-exec                              -->
+    <!--                                                   -->
+    <!-- this runs phpunit in an exec task. we do this     -->
+    <!-- to overcome some drawbacks (for example we can't  -->
+    <!-- use the LogListener) of the phing phpunit task.   -->
+    <!-- ============================================      -->
+    <target name="phpunit-exec" depends="clean, phpunit-prepare">
+        <property name="testinclude" value="AllTests.php" override="true" />
+        <property name="includepath" value=".:/usr/share/php/:${configdir}:${project.basedir}:${project.basedir}/library:${project.basedir}/vendor/zendframework/zendframework1/library" override="true" />
+        <property name="testadditionalparams" value="" override="true" />
+        <property name="testsuite" value="tine20" override="true" />
+        
+        <echo msg="Starting Tests..." />
+        <echo msg="Using config file ${testconfigdir}/phpunit.xml" />
+        <echo msg="Setting include_path to ${includepath}" />
+        
+        <exec executable="${project.basedir}/vendor/bin/phpunit" dir="${project.basedir}/../tests/${testsuite}" passthru="true">
+             <arg line="-d max_execution_time=0
+             -d include_path=${includepath}
+             --configuration ${testconfigdir}/phpunit.xml
+             --log-junit ${builddir}/reports/junit.xml
+             ${testadditionalparams}
+             ${testinclude} " />
+        </exec>
+    </target>
+
+    <!-- ============================================      -->
+    <!-- Target: phpunit-exec-build                        -->
+    <!--                                                   -->
+    <!-- - no clean here as we need the build files!       -->
+    <!--                                                   -->
+    <!-- this runs phpunit in an exec task. we do this     -->
+    <!-- to overcome some drawbacks (for example we can't  -->
+    <!-- use the LogListener) of the phing phpunit task.   -->
+    <!-- ============================================      -->
+    <target name="phpunit-exec-build" depends="phpunit-prepare">
+        <property name="testinclude" value="AllTests.php" override="true" />
+        <property name="includepath" value=".:/usr/share/php/:${configdir}:${project.basedir}:${project.basedir}/library:${project.basedir}/vendor/zendframework/zendframework1/library" override="true" />
+        <property name="testadditionalparams" value="" override="true" />
+        <property name="testsuite" value="tine20" override="true" />
+
+        <echo msg="Starting Tests..." />
+        <echo msg="Using config file ${testconfigdir}/phpunit.xml" />
+        <echo msg="Setting include_path to ${includepath}" />
+
+        <exec executable="${project.basedir}/vendor/bin/phpunit" dir="${project.basedir}/../tests/${testsuite}" passthru="true">
+            <arg line="-d max_execution_time=0
+             -d include_path=${includepath}
+             --configuration ${testconfigdir}/phpunit.xml
+             --log-junit ${builddir}/reports/junit.xml
+             ${testadditionalparams}
+             ${testinclude} " />
+        </exec>
+    </target>
+
+    <!-- ============================================      -->
+    <!-- Target: phpunit-serv                              -->
+    <!--                                                   -->
+    <!-- this runs phpunit in an exec task. we do this     -->
+    <!-- to overcome some drawbacks (for example we can't  -->
+    <!-- use the LogListener) of the phing phpunit task.   -->
+    <!-- ============================================      -->
+    <target name="phpunit-serv" depends="clean, phpunit-prepare">
+        <property name="testinclude" value="AllServerTests.php" override="true" />
+        <property name="includepath" value=".:/usr/share/php/:${configdir}:${project.basedir}:${project.basedir}/library/:${project.basedir}/vendor/zendframework/zendframework1/library" override="true" />
+        <property name="testadditionalparams" value="" override="true" />
+
+        <echo msg="Starting Server Tests..." />
+        <echo msg="Using config file ${testconfigdir}/phpunit.xml" />
+        <echo msg="Setting include_path to ${includepath}" />
+
+        <exec executable="${project.basedir}/vendor/bin/phpunit" dir="${project.basedir}/../tests/tine20" passthru="true">
+            <arg line="-d max_execution_time=0
+             -d include_path=${includepath}
+             --configuration ${testconfigdir}/phpunit.xml
+             --log-junit ${builddir}/reports/junit.xml
+             ${testadditionalparams}
+             ${testinclude} " />
+        </exec>
+    </target>
+
+    <!-- ============================================  -->
+    <!-- Target: report                                -->
+    <!-- TODO remove code duplication (phpunit target) OR remove this -->
+    <!-- ============================================  -->
+    <target name="report">
+        <echo msg="Starting Tests..." />
+
+        <delete dir="${builddir}/reports"/>
+        <mkdir dir="${builddir}/reports/tests"/>
+        <mkdir dir="${builddir}/reports/coverage"/>
+        <coverage-setup database="${builddir}/reports/coverage.db">
+            <fileset dir=".">
+                <include name="**/*.php" />
+                <exclude name="Zend/**.php" />
+                <exclude name="library/**.php" />
+                <exclude name="vendor/**.php" />
+            </fileset>
+        </coverage-setup>
+        <phpunit configuration="../tests/tine20/phpunit.xml" haltonfailure="true" haltonerror="true" printsummary="true" codecoverage="true">
+            <formatter type="xml" todir="${builddir}/reports"/>
+            <batchtest>
+                <fileset dir="../tests/tine20">
+                  <include name="**/*Test.php"/>
+                  <exclude name="Tinebase/AccountTest.php"/>
+                </fileset>
+            </batchtest>
+        </phpunit>
+        <phpunitreport infile="${builddir}/reports/testsuites.xml" format="frames" todir="${builddir}/reports/tests"/>
+        <coverage-report outfile="${builddir}/reports/coverage.xml">
+            <report todir="${builddir}/reports/coverage" title="Tine 2.0"/>
+        </coverage-report>
+    </target>
+
+    <!-- ============================================  -->
+    <!-- Target: build-module                          -->
+    <!-- ============================================  -->
+    <target name="build-module" description="build single module" depends="prepare">
+        <phingcall target="prepared-build-module">
+            <property name="name" value="${name}" />
+        </phingcall>
+    </target>
+    <target name="prepared-build-module" description="build single module">
+        <echo msg="Building ${name}" />
+
+        <echo message="[Translations] Checking js dir ${project.basedir}/${name}/js ..." />
+        <if>
+            <available file="${project.basedir}/${name}/js" type="dir" property="has_jsdir"/>
+            <then>
+                <echo message="[Translations] Building translations..." />
+                <mkdir dir="${builddir}/${name}/js" />
+                <translation-build appName="${name}" />
+                <jsMin targetDir="${builddir}/${name}/js" failOnError="false">
+                    <fileset dir="${builddir}/${name}/js">
+                        <include name="*-lang-*-debug.js"/>
+                    </fileset>
+                </jsMin>
+
+                <copy toDir="${project.basedir}/${name}/js">
+                    <fileset dir="${builddir}/${name}/js">
+                        <include name="*-lang-*-debug.js" />
+                    </fileset>
+                </copy>
+
+                <copy toDir="${project.basedir}/${name}/js">
+                    <fileset dir="${builddir}/${name}/js">
+                        <include name="*-lang-*-debug-min.js" />
+                    </fileset>
+
+                    <mapper type="regexp" from="^(.*)-debug-min.js" to="\1.js"/>
+                </copy>
+            </then>
+        </if>
+    </target>
+
+    <!-- ============================================  -->
+    <!-- Target: clean                                 -->
+    <!-- ============================================  -->
+    <target name="clean">
+        <delete dir="${builddir}" includeemptydirs="true" verbose="false" failonerror="false" />
+        <delete dir="${userdatadir}" includeemptydirs="true" verbose="false" failonerror="false" />
+        <delete>
+            <fileset dir=".">
+                <include name="*/*/*-FAT*" />
+                <include name="*/*/*/*/*-FAT*" />
+                <include name="*/js/*-lang-*" />
+                <include name="vendor/*/*/lib/*/*/*-FAT*" />
+                <include name="vendor/*/*/lib/*/js/*-lang-*" />
+                <include name="${project.basedir}/${localedir}/build/*" />
+            </fileset>
+        </delete>
+    </target>
+
+    <!-- ============================================  -->
+    <!-- Target: mimetypes                                 -->
+    <!-- ============================================  -->
+    <target name="mimetypes">
+        <build-mimetypes appName="${name}" />
+    </target>
+
+    <!-- ============================================  -->
+    <!-- Target: translation-test                      -->
+    <!-- ============================================  -->
+    <target name="translation-test">
+        <echo msg="find duplicates or syntax errors" />
+        <exec command="for i in `ls ./*/translations/*.po`; do msgfmt -o - --strict $i 1>/dev/null || exit 1; done"
+              passthru="true" returnProperty="return"/>
+        <if>
+            <equals arg1="${return}" arg2="0" />
+            <then>
+                <echo message="Translation test successful" />
+            </then>
+            <else>
+                <fail message="Translation test failed" />
+            </else>
+        </if>
+    </target>
+
+    <!-- ============================================  -->
+    <!-- Target: tine-install                               -->
+    <!-- ============================================  -->
+    <target name="tine-install">
+        <property file="${configdir}/install.properties" />
+        <echo msg="Installing Tine 2.0 with initial admin '${adminLoginName}'" />
+        <exec command="php -d include_path=.:${configdir} setup.php \
+            --install -- \
+                adminLoginName=${adminLoginName} \
+                adminPassword=${adminPassword} \
+                adminEmailAddress=${adminEmailAddress} \
+                acceptedTermsVersion=1000 \
+                imap=${imap} \
+                smtp=${smtp} \
+                lang=${lang} \
+                authentication=${authentication} \
+                accounts=${accounts} \
+                sieve=${sieve} \
+                license=${license}
+" passthru="true" returnProperty="return"/>
+        <if>
+        <equals arg1="${return}" arg2="0" />
+        <then>
+            <echo message="Installation successful" />
+        </then>
+        <else>
+            <fail message="Installation failed" />
+        </else>
+        </if>
+    </target>
+
+    <!-- ============================================  -->
+    <!-- Target: tine-uninstall                               -->
+    <!-- ============================================  -->
+    <target name="tine-uninstall">
+        <echo msg="Uninstalling Tine 2.0" />
+        <exec command="php -d include_path=.:${configdir} setup.php \
+            --uninstall" passthru="true"/>
+    </target>
+    
+    <!-- ============================================  -->
+    <!-- Task: init                                    -->
+    <!-- ============================================  -->
+    <adhoc-task name="init"><![CDATA[
+        class initTask extends Task {
+            function main() {
+                passthru('composer install --ignore-platform-reqs --prefer-source --no-interaction --no-scripts');
+                require_once 'vendor/autoload.php';
+            }
+        }
+    ]]></adhoc-task>
+
+    <!-- ============================================  -->
+    <!-- Task: translation-build                       -->
+    <!-- ============================================  -->
+    <adhoc-task name="translation-build"><![CDATA[
+        class translationTask extends Task {
+            private $appName;
+
+            function setAppName($appName) {
+                $this->appName = $appName;
+            }
+
+            function main() {
+                if (! file_exists('${builddir}/' . "{$this->appName}/js")) return;
+                $availableTranslations = Tinebase_Translation::getAvailableTranslations();
+
+                foreach ($availableTranslations as $translation) {
+                    $localeString = $translation['locale'];
+                    $locale = new Zend_Locale($localeString);
+
+                    $jsTranslation = Tinebase_Translation::getJsTranslations($locale, $this->appName);
+
+                    if ($this->appName == 'Tinebase' && file_exists('${project.basedir}/langstatistics.json')) {
+                        $langstatistics = json_decode(file_get_contents('${project.basedir}/langstatistics.json'), TRUE);
+                        $localeStats = array_values(array_filter($langstatistics['langStats'], function($stats) use ($localeString) {return $stats['locale'] == $localeString;}));
+                        $jsTranslation .= ("Tine.__translationData.translationStats=" . json_encode($localeStats[0]) . ";\n");
+                    }
+
+                    file_put_contents('${builddir}/' . "{$this->appName}/js/{$this->appName}-lang-{$locale}-debug.js", $jsTranslation);
+                }
+
+                foreach (Tinebase_Translation::getTranslationDirs() as $appName => $translationPath) {
+                    // TODO do this for all apps??
+                    /*
+                    if ($this->appName !== $appName) {
+                        continue;
+                    }
+                    */
+                    foreach (scandir($translationPath) as $poFile) {
+                        if (substr($poFile, -3) == '.po') {
+                            $langName = substr($poFile, 0, -3);
+                            `cd "$translationPath"
+                            msgfmt -o $langName.mo $poFile`;
+                        } else if (substr($poFile, -5) == 'extra') {
+                            // TODO improve detection of files/directories
+                            $extraTranslationPath = $translationPath . '/extra';
+                            foreach (scandir($extraTranslationPath) as $app) {
+                                foreach (scandir($extraTranslationPath . '/' . $app) as $extraPoFile) {
+                                    if (substr($extraPoFile, -3) == '.po') {
+                                        $langName = substr($extraPoFile, 0, -3);
+                                        `cd "$extraTranslationPath/$app"
+                                        msgfmt -o $langName.mo $extraPoFile`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]]></adhoc-task>
+
+    <!-- ============================================  -->
+    <!-- Task: build-mimetypes                         -->
+    <!-- ============================================  -->
+    <adhoc-task name="build-mimetypes"><![CDATA[
+        class mimetypeTask extends Task {
+            private $appName;
+
+            function setAppName($appName) {
+                $this->appName = $appName;
+            }
+
+            function buildMimeTypesStyleFile($resolution, &$styleSheet) {
+
+                $relatedImgPath = '/images/oxygen/'.$resolution.'/mimetypes/';
+                $imgPath = '${project.basedir}'.$relatedImgPath;
+                if (! file_exists($imgPath) || ! is_dir($imgPath)) {
+                    echo 'Mimetype images no found!';
+                    return;
+                }
+
+                // öffnen des Verzeichnisses
+                if ( $handle = opendir($imgPath) ) {
+
+                    fwrite($styleSheet, ".standardFileClass_".$resolution." .x-grid3-cell-inner {\n");
+                    fwrite($styleSheet, "    background-image: url(../..".$relatedImgPath."application-octet-stream.png);\n");
+                    fwrite($styleSheet, "    background-repeat:  no-repeat;\n");
+                    fwrite($styleSheet, "    padding-left: 19px;\n");
+                    fwrite($styleSheet, "}\n\n");
+
+                    // einlesen der Verzeichnisses
+                    while (($file = readdir($handle)) !== false)
+                    {
+                        $fileName = basename($file, '.png');
+
+                        $addToStyle = strcmp($fileName, "..") + strcmp($fileName, "..");
+                        if($addToStyle > 0) {
+
+                            fwrite($styleSheet, ".".$fileName."_".$resolution." .x-grid3-cell-inner {\n");
+                            fwrite($styleSheet, "    background-image: url(../..".$relatedImgPath.$file.") !important;\n");
+                            fwrite($styleSheet, "    background-repeat:  no-repeat;\n");
+                            fwrite($styleSheet, "    padding-left: 19px;\n");
+                            fwrite($styleSheet, "}\n\n");
+                        }
+                    }
+
+                    closedir($handle);
+                }
+            }
+
+            function main() {
+                    $styleSheet = fopen('Tinebase/css/mimetypes.css', 'w+');
+                    $this->buildMimeTypesStyleFile('16x16', $styleSheet);
+                    $this->buildMimeTypesStyleFile('22x22', $styleSheet);
+                    $this->buildMimeTypesStyleFile('32x32', $styleSheet);
+                    fclose($styleSheet);
+            }
+        }
+    ]]></adhoc-task>
+</project>

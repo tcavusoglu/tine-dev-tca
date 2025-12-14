@@ -1,0 +1,163 @@
+#
+# Translators:
+# jaruwan <luca.ingianni@gmail.com>, 2014
+# 1a8e3140e5b8a374784ecdfdf83f7d9e_5e6d67c <d882eac74045deada33a9c470758040d_143165>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: tine-groupware\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2012-10-04 15:23+0000\n"
+"Last-Translator: jaruwan <luca.ingianni@gmail.com>, 2014\n"
+"Language-Team: Thai (http://app.transifex.com/tine/groupware/language/th/)\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Inventory Status Available"
+msgstr ""
+
+msgid "Possible status."
+msgstr "สถานะเป็นไปได้"
+
+msgid "Ordered"
+msgstr ""
+
+msgid "Available"
+msgstr ""
+
+msgid "Defect"
+msgstr ""
+
+msgid "Missing"
+msgstr ""
+
+msgid "Removed"
+msgstr "เอาออกแล้ว"
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Stored"
+msgstr ""
+
+msgid "Sold"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Types"
+msgstr ""
+
+msgid "Tine 2.0 inventory CSV import"
+msgstr ""
+
+msgid "Import CSV formated contacts from Tine 2.0 Inventory (Export Format)"
+msgstr ""
+
+msgid "Import list (###CURRENTDATE###)"
+msgstr "นำเข้ารายชื่อ  (###วันปัจจุบัน###)"
+
+msgid "Inventory Items imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr ""
+
+msgid "Inventory CSV import"
+msgstr ""
+
+msgid "Items imported on ###CURRENTDATE### at ###CURRENTTIME### by ###USERFULLNAME###"
+msgstr "สิ่งของถูกนำเข้าเมื่อ ###วันปัจจุบัน### ณ ###เวลาปัจจุบัน### โดย ###ชื่อเต็มของผู้ใช้###"
+
+msgid "The active number must be less than or equal total number."
+msgstr ""
+
+msgid "Purchase Invoice"
+msgstr ""
+
+msgid "General"
+msgstr "ทั่วไป"
+
+msgid "Name"
+msgstr "ชื่อ"
+
+msgid "Serial Number"
+msgstr ""
+
+msgid "Inventory Type"
+msgstr ""
+
+msgid "Employee"
+msgstr ""
+
+msgid "Description"
+msgstr "การอธิบาย"
+
+msgid "Enter description"
+msgstr "ใส่ คำอธิบาย"
+
+msgid "Location"
+msgstr "สถานที่"
+
+msgid "Added"
+msgstr "ได้เพิ่มแล้ว"
+
+msgid "Warranty"
+msgstr "การรับประกัน"
+
+msgid "Total number"
+msgstr "หมายเลขรวบยอด"
+
+msgid "Available number"
+msgstr "หมายเลขที่มีอยู่"
+
+msgid "Status"
+msgstr "สถานะ"
+
+msgid "Accounting"
+msgstr "การบัญชี"
+
+msgid "Price"
+msgstr "ราคา"
+
+msgid "Invoice date"
+msgstr "วันที่ของใบกำกับสินค้า"
+
+msgid "Depreciate"
+msgstr ""
+
+msgid "Inventory item"
+msgid_plural "Inventory items"
+msgstr[0] "รายการสิ่งของที่มีอยู่"
+
+msgid "Inventory item list"
+msgid_plural "Inventory item lists"
+msgstr[0] ""
+
+msgid "Inventory ID"
+msgstr "รหัสรายการสิ่งของ"
+
+msgid "Depreciated"
+msgstr ""
+
+msgid "Inventory type"
+msgid_plural "Inventory types"
+msgstr[0] ""
+
+msgid "Default Inventory Item Container"
+msgstr ""
+
+msgid "The default container for new items"
+msgstr ""
+
+msgid "All Inventory Items"
+msgstr ""
+
+msgid "All existing Inventory Items"
+msgstr ""
+
+msgid "Inventory"
+msgstr ""

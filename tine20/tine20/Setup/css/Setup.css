@@ -1,0 +1,59 @@
+/*
+ * Tine 2.0
+ * 
+ * @package     Setup
+ * @license     http://www.gnu.org/licenses/agpl.html AGPL Version 3
+ * @author      Cornelius Weiss <c.weiss@metaways.de>
+ * @copyright   Copyright (c) 2009-2018 Metaways Infosystems GmbH (http://www.metaways.de)
+ */
+
+.setup_info {
+    background-image:url(../../images/icon-set/icon_info.svg) !important;
+}
+
+.setup_action_install {
+    background-image:url(../../images/icon-set/icon_action_plus.svg) !important;
+}
+
+.setup_action_uninstall {
+    background-image:url(../../images/icon-set/icon_action_minus.svg) !important;
+}
+
+.setup_action_update {
+    background-image:url(../../images/icon-set/icon_action_up.svg) !important;
+}
+
+.setup_checks_success {
+    background-image:url(../../images/icon-set/icon_ok.svg) !important;
+}
+
+.setup_checks_fail {
+    background-image:url(../../images/icon-set/icon_stop.svg) !important;
+}
+
+.setup_authentication_manager {
+    background-image:url(../../images/icon-set/Icon_key.svg) !important;
+}
+
+.setup_config_manager {
+    background-image:url(../../images/icon-set/icon_settings.svg) !important;
+}
+
+.setup_application_manager {
+    background-image:url(../../images/icon-set/icon_app.svg) !important;
+}
+
+.setup_action_save_config {
+    background-image:url(../../images/icon-set/icon_safe.svg) !important;
+}
+
+.setup_action_download_config {
+    background-image:url(../../images/icon-set/icon_download.svg) !important;
+}
+
+.setup-envcheck-grid-status {
+    margin-top: -2px;
+    margin-bottom: -2px;
+    width: 18px;
+    height: 18px;
+}

@@ -1,0 +1,626 @@
+#
+# Translators:
+# Miguel Gutierrez <>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:59+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Spanish (Mexico) (http://www.transifex.com/tine20/tine20/language/es_MX/)\n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Maximum number of users reached. "
+msgstr ""
+
+msgid "Please contact Metaways Infosystems GmbH to buy a license that supports a "
+msgstr ""
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Enabled"
+msgstr "Habilitado"
+
+msgid "Order"
+msgstr "Ordenar"
+
+msgid "Installed Version"
+msgstr "Versión Instalada"
+
+msgid "Available Version"
+msgstr "Versión Disponible"
+
+msgid "Status"
+msgstr "Estatus"
+
+msgid "Depends on"
+msgstr "Depende de"
+
+msgid "Install application"
+msgstr "Instalar aplicación"
+
+msgid "Uninstall application"
+msgstr "Desinstalar aplicación"
+
+msgid "Update applications"
+msgstr ""
+
+#, python-brace-format
+msgid "Go to {0} login"
+msgstr "Ir al {0} de ingreso"
+
+msgid "uninstall"
+msgstr "desinstalar"
+
+msgid "Do you really want to uninstall the application(s)?"
+msgstr "¿Realmente deseas desinstalar la(s) aplicación(es)?"
+
+msgid "This may take a while"
+msgstr "Esto puede tomar algo de tiempo"
+
+msgid "Dependency Violation"
+msgstr "Violación de Dependencia"
+
+msgid "CLI Required"
+msgstr ""
+
+msgid "Delete all existing users and groups"
+msgstr "Borrar todos los usuarios y grupos existentes"
+
+msgid "Switching from SQL to LDAP will delete all existing User Accounts, Groups and Roles. Do you really want to switch the accounts storage backend to LDAP ?"
+msgstr "Cambiar de SQL a LDAP borrará todas las Cuentas de Usuario, Grupos y Roles. ¿Realmente deseas cambiar la administración de almacenamiento de cuentas a LDAP?"
+
+msgid "Backend"
+msgstr "Administración"
+
+msgid "TLS client certificate"
+msgstr ""
+
+msgid "Initial Admin User"
+msgstr "Usuario inicial de administrador"
+
+msgid "Initial admin login name"
+msgstr "Nombre inicial de ingreso de administrador"
+
+msgid "Initial admin Password"
+msgstr "Contraseña inicial de administrador"
+
+msgid "Password confirmation"
+msgstr "Confirmación de Contraseña"
+
+msgid "Authentication provider"
+msgstr "Proveedor de autentificación"
+
+msgid "Try to split username"
+msgstr "Intenta dividir el nombre de usuario"
+
+msgid "Yes"
+msgstr "Si"
+
+msgid "No"
+msgstr "No"
+
+msgid "Account canonical form"
+msgstr "Forma canónica de la cuenta"
+
+msgid "Account domain name"
+msgstr ""
+
+msgid "Account domain short name"
+msgstr "Nombre corto de dominio de la cuenta"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Login name"
+msgstr "Nombre de ingreso"
+
+msgid "Password"
+msgstr "Contraseña"
+
+msgid "Bind requires DN"
+msgstr "Bind requiere DN"
+
+msgid "Start TLS"
+msgstr ""
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "Port"
+msgstr "Puerto"
+
+msgid "Base DN"
+msgstr "Base DN"
+
+msgid "Search filter"
+msgstr "Filtro de búsqueda"
+
+msgid "Hostname"
+msgstr "Nombre del Host"
+
+msgid "Secure Connection"
+msgstr "Conexión Segura"
+
+msgid "None"
+msgstr "Ninguno"
+
+msgid "TLS"
+msgstr "TLS"
+
+msgid "Append domain to login name"
+msgstr "Anexar dominio a nombre de ingreso"
+
+msgid "Certificate validation"
+msgstr ""
+
+msgid "CA file"
+msgstr ""
+
+msgid "CRL directory"
+msgstr ""
+
+msgid "Accounts storage"
+msgstr "Almacenamiento de cuentas"
+
+msgid "Default user group name"
+msgstr "Nombre predeterminado de grupo de usuarios"
+
+msgid "Default admin group name"
+msgstr "Nombre predeterminado de grupo de administradores"
+
+msgid "Login panel"
+msgstr ""
+
+msgid "Reuse last username logged"
+msgstr ""
+
+msgid "Password Settings"
+msgstr ""
+
+msgid "User can change password"
+msgstr "Usuario puede cambiar contraseña"
+
+msgid "Enable password policy"
+msgstr ""
+
+msgid "Only ASCII"
+msgstr ""
+
+msgid "Minimum length"
+msgstr ""
+
+msgid "Minimum word chars"
+msgstr ""
+
+msgid "Minimum uppercase chars"
+msgstr ""
+
+msgid "Minimum special chars"
+msgstr ""
+
+msgid "Minimum numbers"
+msgstr ""
+
+msgid "Change password after ... days"
+msgstr ""
+
+msgid "Forbid part of username in password"
+msgstr ""
+
+msgid "Redirect Settings"
+msgstr "Configuración de Redirección"
+
+msgid "Redirect Url (redirect to login screen if empty)"
+msgstr "Redireccionar URL (redireccionar a pantalla de inicio de sesión si está vacio)"
+
+msgid "Redirect Always (if No, only redirect after logout)"
+msgstr "Redireccionar Siempre (si No, únicamente redireccionar después de cerrar sesión)"
+
+msgid "Redirect to referring site, if exists"
+msgstr "Redireccionar a sitio de referencia, si existe"
+
+msgid "Password encoding"
+msgstr "Codificación de contraseña"
+
+msgid "des"
+msgstr ""
+
+msgid "crypt"
+msgstr ""
+
+msgid "blowfish_crypt"
+msgstr ""
+
+msgid "md5_crypt"
+msgstr ""
+
+msgid "ext_crypt"
+msgstr ""
+
+msgid "md5"
+msgstr ""
+
+msgid "smd5"
+msgstr ""
+
+msgid "sha"
+msgstr ""
+
+msgid "ssha"
+msgstr ""
+
+msgid "ntpassword"
+msgstr ""
+
+msgid "plain"
+msgstr ""
+
+msgid "User DN"
+msgstr "Usuario DN"
+
+msgid "User Filter"
+msgstr "Filtro de Usuarios"
+
+msgid "E-Mail Attribute"
+msgstr ""
+
+msgid "Write Password to SQL backend"
+msgstr ""
+
+msgid "User Search Scope"
+msgstr "Ámbito de Búsqueda de Usuario"
+
+msgid "Groups DN"
+msgstr "Grupos DN"
+
+msgid "Group Filter"
+msgstr "Filtro de Grupos"
+
+msgid "Group Search Scope"
+msgstr "Ámbito de Búsqueda de Grupos"
+
+msgid "Use Rfc 2307 bis"
+msgstr "Usar RFC 2037 bits"
+
+msgid "Maintain RFC 2307 attributes"
+msgstr ""
+
+msgid "Min User Id"
+msgstr "ID Mínimo de Usuario"
+
+msgid "Max User Id"
+msgstr "ID Máximo de Usuario"
+
+msgid "Min Group Id"
+msgstr "ID Mínimo de Grupo"
+
+msgid "Max Group Id"
+msgstr "ID Máximo de Grupo"
+
+msgid "Group UUID Attribute name"
+msgstr "Nombre del Atributo del Grupo UUID"
+
+msgid "User UUID Attribute name"
+msgstr "Nombre del Atributo del Usuario UUID"
+
+msgid "Readonly access"
+msgstr "Acceso de solo lectura"
+
+msgid "Save config and install"
+msgstr "Guardar configuración e instalar"
+
+msgid "Save config"
+msgstr "Guardar configuración"
+
+msgid "Passwords don't match"
+msgstr "Las contraseñas no coinciden"
+
+msgid "Should not be empty"
+msgstr "No debería estar vacío"
+
+msgid "File"
+msgstr "Archivo"
+
+msgid "Setup Authentication"
+msgstr "Autentificación del Instalador"
+
+msgid "Username"
+msgstr "Nombre de Usuario"
+
+msgid "Database"
+msgstr "Base de Datos"
+
+msgid "User"
+msgstr "Usuario"
+
+msgid "Prefix"
+msgstr "Prefijo"
+
+msgid "Logging"
+msgstr "Registro de Eventos"
+
+msgid "Filename"
+msgstr "Nombre de Archivo"
+
+msgid "Priority"
+msgstr "Prioridad"
+
+msgid "Caching"
+msgstr "Cacheo"
+
+msgid "Lifetime (seconds)"
+msgstr "Tiempo de Vida (segundos)"
+
+msgid "Path"
+msgstr "Ruta"
+
+msgid "Queue"
+msgstr ""
+
+msgid "Session"
+msgstr "Sesión"
+
+msgid "Temporary files"
+msgstr "Archivos Temporales"
+
+msgid "Temporary Files Path"
+msgstr "Ruta de Archivos Temporales"
+
+msgid "Filestore directory"
+msgstr "Directorio de Almacenamiento de Archivos"
+
+msgid "Filestore Path"
+msgstr "Ruta de Almacenamiento de Archivos"
+
+msgid "Addressbook Map panel"
+msgstr "Panel de Mapa de Directorio"
+
+msgid "Map panel"
+msgstr "Panel de Mapa"
+
+msgid "disabled"
+msgstr "deshabilitado"
+
+msgid "enabled"
+msgstr "habilitado"
+
+msgid "Config file is not writable"
+msgstr "El archivo de configuración no tiene permisos de escritura"
+
+msgid "Download config file"
+msgstr "Descargar archivo de configuración"
+
+#, python-brace-format
+msgid "This prefix is too long. Please choose a prefix no longer than {0} chars."
+msgstr ""
+
+msgid "Standard IMAP"
+msgstr "IMAP estándar"
+
+msgid "Standard SMTP"
+msgstr "SMTP estándar"
+
+msgid "Imap"
+msgstr "IMAP"
+
+msgid "Verify peer Certificate"
+msgstr ""
+
+msgid "Use system account"
+msgstr "Utiliza cuenta del sistema"
+
+msgid "Use email address as login name"
+msgstr ""
+
+msgid "Cyrus Admin"
+msgstr "Administrador Cyrus"
+
+msgid "Cyrus Admin Password"
+msgstr "Contraseña de Administrador Cyrus"
+
+msgid "Use proxy auth"
+msgstr ""
+
+msgid "Smtp"
+msgstr "SMTP"
+
+msgid "Authentication"
+msgstr "Autentificación"
+
+msgid "Login"
+msgstr "Iniciar Sesión"
+
+msgid "Plain"
+msgstr "Plano"
+
+msgid "Primary Domain"
+msgstr "Dominio Primario"
+
+msgid "Secondary Domains (comma separated)"
+msgstr "Dominios Secundarios (separados por coma)"
+
+msgid "Aditional Domains (comma separated)"
+msgstr ""
+
+msgid "Notifications service address"
+msgstr "Dirección del Servicio de Notificaciones"
+
+msgid "Notification Username"
+msgstr "Nombre de Usuario de Notificaciones"
+
+msgid "Notification Password"
+msgstr "Contraseña de Notificaciones"
+
+msgid "Notifications local client (hostname or IP address)"
+msgstr "Cliente Local de Notificaciones (nombre del host o dirección IP)"
+
+msgid "SIEVE"
+msgstr "SIEVE"
+
+msgid "MySql Hostname"
+msgstr "Nombre del host MySQL"
+
+msgid "MySql Database"
+msgstr "Base de Datos MySQL"
+
+msgid "MySql User"
+msgstr "Usuario de MySQL"
+
+msgid "MySql Password"
+msgstr "Contraseña de MySQL"
+
+msgid "MySql Port"
+msgstr "Puerto de MySQL"
+
+msgid "User or UID"
+msgstr "Usuario o UID"
+
+msgid "Group or GID"
+msgstr "Grupo o GIP"
+
+msgid "Home Template"
+msgstr "Plantilla de Inicio"
+
+msgid "Password Scheme"
+msgstr "Esquema de Contraseñas"
+
+msgid "PLAIN-MD5"
+msgstr "PLAIN-MD5"
+
+msgid "MD5-CRYPT"
+msgstr "MD5-CRYPT"
+
+msgid "SHA1"
+msgstr "SHA1"
+
+msgid "SHA256"
+msgstr "SHA256"
+
+msgid "SSHA256"
+msgstr "SSHA256"
+
+msgid "SHA512"
+msgstr "SHA512"
+
+msgid "SSHA512"
+msgstr "SSHA512"
+
+msgid "PLAIN"
+msgstr "PLAIN"
+
+msgid "Performing Environment Checks..."
+msgstr "Realizando Comprobaciones de Ambiente..."
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria, view-options or the {1} you search in."
+msgstr ""
+
+msgid "Check"
+msgstr "Verificar"
+
+msgid "Result"
+msgstr "Resultado"
+
+msgid "Message"
+msgstr ""
+
+msgid "Run setup tests"
+msgstr "Realizar pruebas de instalación"
+
+msgid "Ignore setup tests"
+msgstr "Ignorar pruebas de instalación"
+
+msgid "Setup"
+msgstr ""
+
+msgid "Delete current Subscription"
+msgstr ""
+
+msgid "Your Subscription is not valid."
+msgstr ""
+
+msgid "Subscription Configuration"
+msgstr ""
+
+msgid "Upload from disk"
+msgstr ""
+
+msgid "Select file containing your Subscription key"
+msgstr ""
+
+msgid "No valid Subscription"
+msgstr ""
+
+msgid "Contract ID"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "Activation Key"
+msgstr ""
+
+msgid "Maximum Users (0=unlimited)"
+msgstr ""
+
+msgid "Valid from"
+msgstr ""
+
+msgid "Valid to"
+msgstr ""
+
+msgid "Subscription Information"
+msgstr ""
+
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] "Aplicación"
+msgstr[1] "Aplicaciones"
+
+msgid "I have read the license agreement and accept it"
+msgstr "He leído el acuerdo de la licenciamiento y lo acepto"
+
+msgid "License Agreement"
+msgstr "Acuerdo de Licenciamiento"
+
+msgid "I have read the privacy agreement and accept it"
+msgstr "He leído el acuerdo de privacidad y lo acepto"
+
+msgid "Privacy Agreement"
+msgstr "Acuerdo de Privacidad"
+
+msgid "Accept Terms and Conditions"
+msgstr "Aceptar Términos y Condiciones"
+
+msgid "Terms and Conditions"
+msgstr "Términos y Condiciones"
+
+msgid "Setup Checks"
+msgstr "Verificaciones de Instalación"
+
+msgid "Config Manager"
+msgstr "Administrador de Configuración"
+
+msgid "Authentication/Accounts"
+msgstr "Autentificación/Cuentas"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Application Manager"
+msgstr "Administrador de Aplicación"
+
+msgid "Subscription"
+msgstr ""
+
+#~ msgid "Update application"
+#~ msgstr "Actualizar aplicación"

@@ -1,0 +1,192 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0 - Courses\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2008-07-29 21:14+0100\n"
+"Last-Translator: Cornelius Weiss <c.weiss@metaways.de>\n"
+"Language-Team: Tine 2.0 Translators\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Add a new user"
+msgstr "Add a new user"
+
+msgid "Add a new user as a member to a course"
+msgstr "Add a new user as a member to a course"
+
+msgid "Add an existing user"
+msgstr "Add an existing user"
+
+msgid "Add an existing user as a member to a course"
+msgstr "Add an existing user as a member to a course"
+
+msgid "Manage shared course favorites"
+msgstr "Manage shared course favorites"
+
+msgid "Create or update shared course favorites"
+msgstr "Create or update shared course favorites"
+
+msgid "Set additional memberships"
+msgstr "Set additional memberships"
+
+msgid "Set additional group memberships for course members"
+msgstr "Set additional group memberships for course members"
+
+msgid "Additional Group Memberships"
+msgstr "Additional Group Memberships"
+
+msgid "Array of group IDs that students can be members of"
+msgstr "Array of group IDs that students can be members of"
+
+msgid "Internet Access"
+msgstr "Internet Access"
+
+msgid "Internet access options."
+msgstr "Internet access options."
+
+msgid "On"
+msgstr "On"
+
+msgid "Off"
+msgstr "Off"
+
+msgid "Filtered"
+msgstr "Filtered"
+
+msgid "Internet Access Group (ON)"
+msgstr "Internet Access Group (ON)"
+
+msgid "Internet Access Group (FILTERED)"
+msgstr "Internet Access Group (FILTERED)"
+
+msgid "Student Group"
+msgstr "Student Group"
+
+msgid "Student Import Definition"
+msgstr "Student Import Definition"
+
+msgid "Student login name prefix"
+msgstr "Student login name prefix"
+
+msgid "Student password suffix"
+msgstr "Student password suffix"
+
+msgid "Teacher password"
+msgstr "Teacher password"
+
+msgid "Student username schema"
+msgstr "Student username schema"
+
+msgid "Student username schema (0 = only lastname (10 chars), 1 = lastname + 2 chars of firstname"
+msgstr "Student username schema (0 = only lastname (10 chars), 1 = lastname + 2 chars of firstname"
+
+msgid "Samba user settings"
+msgstr "Samba user settings"
+
+msgid "Default department"
+msgstr "Default department"
+
+msgid "The default department for new Courses"
+msgstr "The default department for new Courses"
+
+msgid "Course -> Department Mapping"
+msgstr "Course -> Department Mapping"
+
+msgid "Course"
+msgid_plural "Courses"
+msgstr[0] "Course"
+msgstr[1] "Courses"
+
+msgid "Teacher"
+msgstr "Teacher"
+
+msgid "Teacher Account"
+msgstr "Teacher Account"
+
+msgid "My course"
+msgstr "My course"
+
+msgid "First Name"
+msgstr "First Name"
+
+msgid "Last Name"
+msgstr "Last Name"
+
+msgid "Add a new member to a course"
+msgstr "Add a new member to a course"
+
+msgid "Errors"
+msgstr "Errors"
+
+msgid "Please fix the noted errors."
+msgstr "Please fix the noted errors."
+
+msgid "Import course members"
+msgstr "Import course members"
+
+msgid "Add a new member"
+msgstr "Add a new member"
+
+msgid "Course Name"
+msgstr "Course Name"
+
+msgid "Course / School Type"
+msgstr "Course / School Type"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Members"
+msgstr "Members"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "unknown"
+msgstr "unknown"
+
+msgid "Reset Password"
+msgstr "Reset Password"
+
+msgid "Please enter the new password."
+msgstr "Please enter the new password."
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Failed"
+msgstr "Failed"
+
+msgid "An error occurred while trying to update the courses"
+msgstr "An error occurred while trying to update the courses"
+
+msgid "Quick Search"
+msgstr "Quick Search"
+
+msgid "Course Type"
+msgid_plural "Course Types"
+msgstr[0] "Course Type"
+msgstr[1] "Course Types"
+
+msgid "All courses"
+msgstr "All courses"
+
+msgid "The default favorite that is loaded when Classes start up."
+msgstr "The default favorite that is loaded when Classes start up."
+
+msgid "School"
+msgstr "School"
+
+msgid "Default school for the Courses application"
+msgstr "Default school for the Courses application"
+
+msgid "Courses"
+msgstr "Courses"

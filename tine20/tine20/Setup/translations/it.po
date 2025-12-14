@@ -1,0 +1,629 @@
+#
+# Translators:
+# Daniele Gobbetti <daniele@gobbetti.name>, 2013
+# Samuel Barbera <samuel.barbera@email.it>, 2013
+# Vincenzo Anzisi <v.anzisi@gurusys.it>, 2012
+# Vincenzo Anzisi <v.anzisi@gurusys.it>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:59+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Italian (http://www.transifex.com/tine20/tine20/language/it/)\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Maximum number of users reached. "
+msgstr ""
+
+msgid "Please contact Metaways Infosystems GmbH to buy a license that supports a "
+msgstr ""
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Enabled"
+msgstr "Abilitato"
+
+msgid "Order"
+msgstr "Ordine"
+
+msgid "Installed Version"
+msgstr "Versione Installata"
+
+msgid "Available Version"
+msgstr "Versione Disponibile"
+
+msgid "Status"
+msgstr "Stato"
+
+msgid "Depends on"
+msgstr "Dipende da"
+
+msgid "Install application"
+msgstr "Installa applicazione"
+
+msgid "Uninstall application"
+msgstr "Disinstalla applicazione"
+
+msgid "Update applications"
+msgstr ""
+
+#, python-brace-format
+msgid "Go to {0} login"
+msgstr "Vai a {0} login"
+
+msgid "uninstall"
+msgstr "disinstalla"
+
+msgid "Do you really want to uninstall the application(s)?"
+msgstr "Vuoi veramente disinstallare la/le applicazioni?"
+
+msgid "This may take a while"
+msgstr "Potrebbe richiedere del tempo"
+
+msgid "Dependency Violation"
+msgstr "Violazione di dipendenze"
+
+msgid "CLI Required"
+msgstr ""
+
+msgid "Delete all existing users and groups"
+msgstr "Cancella tutte gli utenti e i gruppi esistenti"
+
+msgid "Switching from SQL to LDAP will delete all existing User Accounts, Groups and Roles. Do you really want to switch the accounts storage backend to LDAP ?"
+msgstr "Il passaggio da SQL a LDAP cancellerà tutti gli Account Utente esistenti, i Gruppi e i Ruoli. Vuoi veramente migrare il sistema di memorizzazione account a LDAP?"
+
+msgid "Backend"
+msgstr "Sistema"
+
+msgid "TLS client certificate"
+msgstr ""
+
+msgid "Initial Admin User"
+msgstr "Utente Admin iniziale"
+
+msgid "Initial admin login name"
+msgstr "Nome login iniziale amministratore"
+
+msgid "Initial admin Password"
+msgstr "Password iniziale amministratore"
+
+msgid "Password confirmation"
+msgstr "Conferma password"
+
+msgid "Authentication provider"
+msgstr "Provider di autenticazione"
+
+msgid "Try to split username"
+msgstr "Prova a dividere il nome utente"
+
+msgid "Yes"
+msgstr "Yes"
+
+msgid "No"
+msgstr "No"
+
+msgid "Account canonical form"
+msgstr "Form canonica account"
+
+msgid "Account domain name"
+msgstr ""
+
+msgid "Account domain short name"
+msgstr "Nome breve di dominio dell'account"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Login name"
+msgstr "Nome login"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Bind requires DN"
+msgstr "Bind richiede DN"
+
+msgid "Start TLS"
+msgstr "Start TLS"
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "Port"
+msgstr "Porta"
+
+msgid "Base DN"
+msgstr "DN base"
+
+msgid "Search filter"
+msgstr "Filtro di ricerca"
+
+msgid "Hostname"
+msgstr "Nome host"
+
+msgid "Secure Connection"
+msgstr "Connessione Sicura"
+
+msgid "None"
+msgstr "Nessuno"
+
+msgid "TLS"
+msgstr "TLS"
+
+msgid "Append domain to login name"
+msgstr "Aggiungi il dominio al nome di login"
+
+msgid "Certificate validation"
+msgstr ""
+
+msgid "CA file"
+msgstr ""
+
+msgid "CRL directory"
+msgstr ""
+
+msgid "Accounts storage"
+msgstr "Sistema di salvataggio Account"
+
+msgid "Default user group name"
+msgstr "Nome gruppo utenti di default"
+
+msgid "Default admin group name"
+msgstr "Nome gruppo amministratori di default"
+
+msgid "Login panel"
+msgstr "Pannello di login"
+
+msgid "Reuse last username logged"
+msgstr "Riutilizza l'ultimo username loggato"
+
+msgid "Password Settings"
+msgstr "Impostazione Password"
+
+msgid "User can change password"
+msgstr "L'utente può cambiare la password"
+
+msgid "Enable password policy"
+msgstr "Abilita le politiche sulle password"
+
+msgid "Only ASCII"
+msgstr "Solo ASCII"
+
+msgid "Minimum length"
+msgstr "Lunghezza minima"
+
+msgid "Minimum word chars"
+msgstr "Numero caratteri minimo per parola"
+
+msgid "Minimum uppercase chars"
+msgstr "Numero caratteri maiuscoli minimi"
+
+msgid "Minimum special chars"
+msgstr "Numero caratteri speciali minimi"
+
+msgid "Minimum numbers"
+msgstr "Numero caratteri numerici minimi"
+
+msgid "Change password after ... days"
+msgstr ""
+
+msgid "Forbid part of username in password"
+msgstr "Vietato utilizzare parte del nome utente nella password"
+
+msgid "Redirect Settings"
+msgstr "Impostazioni di redirezione"
+
+msgid "Redirect Url (redirect to login screen if empty)"
+msgstr "Indirizzo di redirezione (redirige alla schermata di login se vuoto)"
+
+msgid "Redirect Always (if No, only redirect after logout)"
+msgstr "Redirigi Sempre (se No, redirige solamente dopo logout)"
+
+msgid "Redirect to referring site, if exists"
+msgstr "Redirige al sito di riferimento, se esiste"
+
+msgid "Password encoding"
+msgstr "Encoding della password"
+
+msgid "des"
+msgstr "des"
+
+msgid "crypt"
+msgstr ""
+
+msgid "blowfish_crypt"
+msgstr "blowfish_crypt"
+
+msgid "md5_crypt"
+msgstr "md5_crypt"
+
+msgid "ext_crypt"
+msgstr "ext_crypt"
+
+msgid "md5"
+msgstr "md5"
+
+msgid "smd5"
+msgstr "smd5"
+
+msgid "sha"
+msgstr "sha"
+
+msgid "ssha"
+msgstr "ssha"
+
+msgid "ntpassword"
+msgstr "ntpassword"
+
+msgid "plain"
+msgstr "plain"
+
+msgid "User DN"
+msgstr "DN Utente"
+
+msgid "User Filter"
+msgstr "Filtro utente"
+
+msgid "E-Mail Attribute"
+msgstr ""
+
+msgid "Write Password to SQL backend"
+msgstr ""
+
+msgid "User Search Scope"
+msgstr "Ambito di ricerca utente"
+
+msgid "Groups DN"
+msgstr "DN Gruppo"
+
+msgid "Group Filter"
+msgstr "Filtro gruppo"
+
+msgid "Group Search Scope"
+msgstr "Ambito di ricerca utente "
+
+msgid "Use Rfc 2307 bis"
+msgstr "Usa Rfc 2307 bis"
+
+msgid "Maintain RFC 2307 attributes"
+msgstr "Mantieni attributi RFC 2307"
+
+msgid "Min User Id"
+msgstr "Minimo Id Utente"
+
+msgid "Max User Id"
+msgstr "Massimo Id Utente"
+
+msgid "Min Group Id"
+msgstr "Min Id Gruppo"
+
+msgid "Max Group Id"
+msgstr "Massimo Id Gruppo"
+
+msgid "Group UUID Attribute name"
+msgstr "Nome Attributo UUID Gruppo"
+
+msgid "User UUID Attribute name"
+msgstr "Nome Attributo UUID Utente"
+
+msgid "Readonly access"
+msgstr "Accesso in sola lettura"
+
+msgid "Save config and install"
+msgstr "Salva configurazione e installa"
+
+msgid "Save config"
+msgstr "Salva configurazione"
+
+msgid "Passwords don't match"
+msgstr "Le password non corrispondono"
+
+msgid "Should not be empty"
+msgstr "Non dovrebbe essere vuota"
+
+msgid "File"
+msgstr "File"
+
+msgid "Setup Authentication"
+msgstr "Impostazione Autenticazione"
+
+msgid "Username"
+msgstr "Nome utente"
+
+msgid "Database"
+msgstr "Database"
+
+msgid "User"
+msgstr "Utente"
+
+msgid "Prefix"
+msgstr "Prefisso"
+
+msgid "Logging"
+msgstr "Logging"
+
+msgid "Filename"
+msgstr "Nome file"
+
+msgid "Priority"
+msgstr "Priorità"
+
+msgid "Caching"
+msgstr "Caching"
+
+msgid "Lifetime (seconds)"
+msgstr "Tempo di vita (secondi)"
+
+msgid "Path"
+msgstr "Percorso"
+
+msgid "Queue"
+msgstr "Coda"
+
+msgid "Session"
+msgstr "Sessione"
+
+msgid "Temporary files"
+msgstr "File Temporanei"
+
+msgid "Temporary Files Path"
+msgstr "Percorso File Temporanei"
+
+msgid "Filestore directory"
+msgstr "Directory di salvataggio"
+
+msgid "Filestore Path"
+msgstr "Percorso di salvataggio"
+
+msgid "Addressbook Map panel"
+msgstr "Pannello Mappa Rubrica"
+
+msgid "Map panel"
+msgstr "Pannello Mappa"
+
+msgid "disabled"
+msgstr "disabilitato"
+
+msgid "enabled"
+msgstr "abilitato"
+
+msgid "Config file is not writable"
+msgstr "Il file di Configurazione non è scrivibile"
+
+msgid "Download config file"
+msgstr "Scarica il file di Configurazione"
+
+#, python-brace-format
+msgid "This prefix is too long. Please choose a prefix no longer than {0} chars."
+msgstr ""
+
+msgid "Standard IMAP"
+msgstr "IMAP Standard"
+
+msgid "Standard SMTP"
+msgstr "SMTP Standard"
+
+msgid "Imap"
+msgstr "Imap"
+
+msgid "Verify peer Certificate"
+msgstr ""
+
+msgid "Use system account"
+msgstr "Usa l'account di sistema"
+
+msgid "Use email address as login name"
+msgstr ""
+
+msgid "Cyrus Admin"
+msgstr "Amministratore Cyrus"
+
+msgid "Cyrus Admin Password"
+msgstr "Password Admin Cyrus"
+
+msgid "Use proxy auth"
+msgstr "Utilizza autenticazione proxy"
+
+msgid "Smtp"
+msgstr "Smtp"
+
+msgid "Authentication"
+msgstr "Autenticazione"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Plain"
+msgstr "Plain"
+
+msgid "Primary Domain"
+msgstr "Dominio Primario"
+
+msgid "Secondary Domains (comma separated)"
+msgstr "Domini Secondari (separati da virgole)"
+
+msgid "Aditional Domains (comma separated)"
+msgstr ""
+
+msgid "Notifications service address"
+msgstr "Indirizzo notifiche di servizio"
+
+msgid "Notification Username"
+msgstr "Username di notifica"
+
+msgid "Notification Password"
+msgstr "Password di notifica"
+
+msgid "Notifications local client (hostname or IP address)"
+msgstr "Notifica client locali (nome host o indirizzo IP)"
+
+msgid "SIEVE"
+msgstr "SIEVE"
+
+msgid "MySql Hostname"
+msgstr "Nome host MySql"
+
+msgid "MySql Database"
+msgstr "Database MySql"
+
+msgid "MySql User"
+msgstr "Utente MySql"
+
+msgid "MySql Password"
+msgstr "Password MySql"
+
+msgid "MySql Port"
+msgstr "Porta MySql"
+
+msgid "User or UID"
+msgstr "Utente o UID"
+
+msgid "Group or GID"
+msgstr "Gruppo o GID"
+
+msgid "Home Template"
+msgstr "Template Home"
+
+msgid "Password Scheme"
+msgstr "Schema password"
+
+msgid "PLAIN-MD5"
+msgstr "PLAIN-MD5"
+
+msgid "MD5-CRYPT"
+msgstr "MD5-CRYPT"
+
+msgid "SHA1"
+msgstr "SHA1"
+
+msgid "SHA256"
+msgstr "SHA256"
+
+msgid "SSHA256"
+msgstr "SSHA256"
+
+msgid "SHA512"
+msgstr "SHA512"
+
+msgid "SSHA512"
+msgstr "SSHA512"
+
+msgid "PLAIN"
+msgstr "PLAIN"
+
+msgid "Performing Environment Checks..."
+msgstr "Esecuzione Controlli di Ambiente..."
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria, view-options or the {1} you search in."
+msgstr "Non è stato trovato alcun {0}. Prova a cambiare i criteri del filtro, le opzioni di visualizzazione o {1} nella tua ricerca"
+
+msgid "Check"
+msgstr "Controlla"
+
+msgid "Result"
+msgstr "Risultati"
+
+msgid "Message"
+msgstr ""
+
+msgid "Run setup tests"
+msgstr "Avvia test di installazione"
+
+msgid "Ignore setup tests"
+msgstr "Ignora test di installazione"
+
+msgid "Setup"
+msgstr ""
+
+msgid "Delete current Subscription"
+msgstr ""
+
+msgid "Your Subscription is not valid."
+msgstr ""
+
+msgid "Subscription Configuration"
+msgstr ""
+
+msgid "Upload from disk"
+msgstr ""
+
+msgid "Select file containing your Subscription key"
+msgstr ""
+
+msgid "No valid Subscription"
+msgstr ""
+
+msgid "Contract ID"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "Activation Key"
+msgstr ""
+
+msgid "Maximum Users (0=unlimited)"
+msgstr ""
+
+msgid "Valid from"
+msgstr ""
+
+msgid "Valid to"
+msgstr ""
+
+msgid "Subscription Information"
+msgstr ""
+
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] "Applicazione"
+msgstr[1] "Applicazioni"
+
+msgid "I have read the license agreement and accept it"
+msgstr "Ho letto l'informativa di licenza e lo accetto"
+
+msgid "License Agreement"
+msgstr "Informativa di Licenza"
+
+msgid "I have read the privacy agreement and accept it"
+msgstr "Ho letto l'accordo"
+
+msgid "Privacy Agreement"
+msgstr "Informativa della Privacy"
+
+msgid "Accept Terms and Conditions"
+msgstr "Accetto i Termini e le Condizioni"
+
+msgid "Terms and Conditions"
+msgstr "Termini e Condizioni"
+
+msgid "Setup Checks"
+msgstr "Controlli di installazione"
+
+msgid "Config Manager"
+msgstr "Manager di Configurazione"
+
+msgid "Authentication/Accounts"
+msgstr "Autenticazione/Account"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Application Manager"
+msgstr "Manager di Applicazione"
+
+msgid "Subscription"
+msgstr ""
+
+#~ msgid "Update application"
+#~ msgstr "Aggiorna applicazione"

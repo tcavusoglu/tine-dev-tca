@@ -1,0 +1,629 @@
+#
+# Translators:
+# 18262d37a2046bf899d5a46590a449ab, 2014
+# skippy8472 <skippy8472@hotmail.com>, 2014
+# Whatsek <Whatsek@gmail.com>, 2015
+# Whatsek <Whatsek@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:59+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Dutch (Netherlands) (http://www.transifex.com/tine20/tine20/language/nl_NL/)\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Maximum number of users reached. "
+msgstr ""
+
+msgid "Please contact Metaways Infosystems GmbH to buy a license that supports a "
+msgstr ""
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+msgid "Order"
+msgstr ""
+
+msgid "Installed Version"
+msgstr "Geïnstalleerde versie"
+
+msgid "Available Version"
+msgstr "Beschikbare versie"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Depends on"
+msgstr "Afhankelijk van"
+
+msgid "Install application"
+msgstr "Installeer toepassing"
+
+msgid "Uninstall application"
+msgstr "De-installeer toepassing"
+
+msgid "Update applications"
+msgstr ""
+
+#, python-brace-format
+msgid "Go to {0} login"
+msgstr ""
+
+msgid "uninstall"
+msgstr ""
+
+msgid "Do you really want to uninstall the application(s)?"
+msgstr ""
+
+msgid "This may take a while"
+msgstr "Dit kan even duren"
+
+msgid "Dependency Violation"
+msgstr ""
+
+msgid "CLI Required"
+msgstr ""
+
+msgid "Delete all existing users and groups"
+msgstr "Verwijder alle bestaande gebruikers en groepen"
+
+msgid "Switching from SQL to LDAP will delete all existing User Accounts, Groups and Roles. Do you really want to switch the accounts storage backend to LDAP ?"
+msgstr ""
+
+msgid "Backend"
+msgstr ""
+
+msgid "TLS client certificate"
+msgstr ""
+
+msgid "Initial Admin User"
+msgstr ""
+
+msgid "Initial admin login name"
+msgstr ""
+
+msgid "Initial admin Password"
+msgstr ""
+
+msgid "Password confirmation"
+msgstr ""
+
+msgid "Authentication provider"
+msgstr ""
+
+msgid "Try to split username"
+msgstr ""
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "No"
+msgstr "Nee"
+
+msgid "Account canonical form"
+msgstr ""
+
+msgid "Account domain name"
+msgstr ""
+
+msgid "Account domain short name"
+msgstr ""
+
+msgid "Host"
+msgstr ""
+
+msgid "Login name"
+msgstr "Login naam"
+
+msgid "Password"
+msgstr "Wachtwoord"
+
+msgid "Bind requires DN"
+msgstr ""
+
+msgid "Start TLS"
+msgstr ""
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "Port"
+msgstr "Poort"
+
+msgid "Base DN"
+msgstr ""
+
+msgid "Search filter"
+msgstr "Zoekfilter"
+
+msgid "Hostname"
+msgstr ""
+
+msgid "Secure Connection"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "TLS"
+msgstr "TLS"
+
+msgid "Append domain to login name"
+msgstr ""
+
+msgid "Certificate validation"
+msgstr ""
+
+msgid "CA file"
+msgstr ""
+
+msgid "CRL directory"
+msgstr ""
+
+msgid "Accounts storage"
+msgstr ""
+
+msgid "Default user group name"
+msgstr ""
+
+msgid "Default admin group name"
+msgstr ""
+
+msgid "Login panel"
+msgstr ""
+
+msgid "Reuse last username logged"
+msgstr ""
+
+msgid "Password Settings"
+msgstr "Wachtwoord instellingen"
+
+msgid "User can change password"
+msgstr "Gebruiker mag wachtwoord wijzigen"
+
+msgid "Enable password policy"
+msgstr ""
+
+msgid "Only ASCII"
+msgstr "Uitsluitend ASCII "
+
+msgid "Minimum length"
+msgstr "Minimumlengte"
+
+msgid "Minimum word chars"
+msgstr ""
+
+msgid "Minimum uppercase chars"
+msgstr "Minimum aantal hoofdletters"
+
+msgid "Minimum special chars"
+msgstr "Minimum aantal speciale tekens"
+
+msgid "Minimum numbers"
+msgstr "Minimum aantal cijfers"
+
+msgid "Change password after ... days"
+msgstr ""
+
+msgid "Forbid part of username in password"
+msgstr ""
+
+msgid "Redirect Settings"
+msgstr ""
+
+msgid "Redirect Url (redirect to login screen if empty)"
+msgstr ""
+
+msgid "Redirect Always (if No, only redirect after logout)"
+msgstr ""
+
+msgid "Redirect to referring site, if exists"
+msgstr ""
+
+msgid "Password encoding"
+msgstr ""
+
+msgid "des"
+msgstr ""
+
+msgid "crypt"
+msgstr ""
+
+msgid "blowfish_crypt"
+msgstr ""
+
+msgid "md5_crypt"
+msgstr ""
+
+msgid "ext_crypt"
+msgstr ""
+
+msgid "md5"
+msgstr ""
+
+msgid "smd5"
+msgstr ""
+
+msgid "sha"
+msgstr ""
+
+msgid "ssha"
+msgstr ""
+
+msgid "ntpassword"
+msgstr ""
+
+msgid "plain"
+msgstr ""
+
+msgid "User DN"
+msgstr ""
+
+msgid "User Filter"
+msgstr ""
+
+msgid "E-Mail Attribute"
+msgstr ""
+
+msgid "Write Password to SQL backend"
+msgstr ""
+
+msgid "User Search Scope"
+msgstr ""
+
+msgid "Groups DN"
+msgstr ""
+
+msgid "Group Filter"
+msgstr ""
+
+msgid "Group Search Scope"
+msgstr ""
+
+msgid "Use Rfc 2307 bis"
+msgstr ""
+
+msgid "Maintain RFC 2307 attributes"
+msgstr ""
+
+msgid "Min User Id"
+msgstr ""
+
+msgid "Max User Id"
+msgstr ""
+
+msgid "Min Group Id"
+msgstr ""
+
+msgid "Max Group Id"
+msgstr ""
+
+msgid "Group UUID Attribute name"
+msgstr ""
+
+msgid "User UUID Attribute name"
+msgstr ""
+
+msgid "Readonly access"
+msgstr ""
+
+msgid "Save config and install"
+msgstr ""
+
+msgid "Save config"
+msgstr "Opslaan configuratie"
+
+msgid "Passwords don't match"
+msgstr "Wachtwoorden komen niet overeen"
+
+msgid "Should not be empty"
+msgstr ""
+
+msgid "File"
+msgstr "Bestand"
+
+msgid "Setup Authentication"
+msgstr ""
+
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+msgid "Database"
+msgstr "Database"
+
+msgid "User"
+msgstr "Gebruiker"
+
+msgid "Prefix"
+msgstr "Voorvoegsel"
+
+msgid "Logging"
+msgstr ""
+
+msgid "Filename"
+msgstr "Bestandsnaam"
+
+msgid "Priority"
+msgstr "Prioriteit"
+
+msgid "Caching"
+msgstr ""
+
+msgid "Lifetime (seconds)"
+msgstr ""
+
+msgid "Path"
+msgstr ""
+
+msgid "Queue"
+msgstr ""
+
+msgid "Session"
+msgstr "Sessie"
+
+msgid "Temporary files"
+msgstr "Tijdelijke bestanden"
+
+msgid "Temporary Files Path"
+msgstr "Pad voor tijdelijke bestanden"
+
+msgid "Filestore directory"
+msgstr ""
+
+msgid "Filestore Path"
+msgstr ""
+
+msgid "Addressbook Map panel"
+msgstr ""
+
+msgid "Map panel"
+msgstr ""
+
+msgid "disabled"
+msgstr "uitgeschakeld"
+
+msgid "enabled"
+msgstr "ingeschakeld"
+
+msgid "Config file is not writable"
+msgstr "Configuratie bestand is niet beschrijfbaar"
+
+msgid "Download config file"
+msgstr "Download configuratie bestand"
+
+#, python-brace-format
+msgid "This prefix is too long. Please choose a prefix no longer than {0} chars."
+msgstr ""
+
+msgid "Standard IMAP"
+msgstr ""
+
+msgid "Standard SMTP"
+msgstr ""
+
+msgid "Imap"
+msgstr "Imap"
+
+msgid "Verify peer Certificate"
+msgstr ""
+
+msgid "Use system account"
+msgstr ""
+
+msgid "Use email address as login name"
+msgstr ""
+
+msgid "Cyrus Admin"
+msgstr ""
+
+msgid "Cyrus Admin Password"
+msgstr ""
+
+msgid "Use proxy auth"
+msgstr ""
+
+msgid "Smtp"
+msgstr ""
+
+msgid "Authentication"
+msgstr ""
+
+msgid "Login"
+msgstr ""
+
+msgid "Plain"
+msgstr ""
+
+msgid "Primary Domain"
+msgstr ""
+
+msgid "Secondary Domains (comma separated)"
+msgstr ""
+
+msgid "Aditional Domains (comma separated)"
+msgstr ""
+
+msgid "Notifications service address"
+msgstr ""
+
+msgid "Notification Username"
+msgstr ""
+
+msgid "Notification Password"
+msgstr ""
+
+msgid "Notifications local client (hostname or IP address)"
+msgstr ""
+
+msgid "SIEVE"
+msgstr ""
+
+msgid "MySql Hostname"
+msgstr ""
+
+msgid "MySql Database"
+msgstr ""
+
+msgid "MySql User"
+msgstr ""
+
+msgid "MySql Password"
+msgstr ""
+
+msgid "MySql Port"
+msgstr ""
+
+msgid "User or UID"
+msgstr ""
+
+msgid "Group or GID"
+msgstr ""
+
+msgid "Home Template"
+msgstr ""
+
+msgid "Password Scheme"
+msgstr ""
+
+msgid "PLAIN-MD5"
+msgstr ""
+
+msgid "MD5-CRYPT"
+msgstr ""
+
+msgid "SHA1"
+msgstr ""
+
+msgid "SHA256"
+msgstr ""
+
+msgid "SSHA256"
+msgstr ""
+
+msgid "SHA512"
+msgstr ""
+
+msgid "SSHA512"
+msgstr ""
+
+msgid "PLAIN"
+msgstr ""
+
+msgid "Performing Environment Checks..."
+msgstr ""
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria, view-options or the {1} you search in."
+msgstr ""
+
+msgid "Check"
+msgstr ""
+
+msgid "Result"
+msgstr "Resultaat"
+
+msgid "Message"
+msgstr ""
+
+msgid "Run setup tests"
+msgstr ""
+
+msgid "Ignore setup tests"
+msgstr ""
+
+msgid "Setup"
+msgstr ""
+
+msgid "Delete current Subscription"
+msgstr ""
+
+msgid "Your Subscription is not valid."
+msgstr ""
+
+msgid "Subscription Configuration"
+msgstr ""
+
+msgid "Upload from disk"
+msgstr ""
+
+msgid "Select file containing your Subscription key"
+msgstr ""
+
+msgid "No valid Subscription"
+msgstr ""
+
+msgid "Contract ID"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "Activation Key"
+msgstr ""
+
+msgid "Maximum Users (0=unlimited)"
+msgstr ""
+
+msgid "Valid from"
+msgstr ""
+
+msgid "Valid to"
+msgstr ""
+
+msgid "Subscription Information"
+msgstr ""
+
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] "Toepassing"
+msgstr[1] "Toepassingen"
+
+msgid "I have read the license agreement and accept it"
+msgstr "Ik heb de licentie voorwaarden gelezen en accepteer deze"
+
+msgid "License Agreement"
+msgstr "Licentie voorwaarden"
+
+msgid "I have read the privacy agreement and accept it"
+msgstr "Ik heb de privacy voorwaarden gelezen en accepteer deze"
+
+msgid "Privacy Agreement"
+msgstr "Privacy voorwaarden"
+
+msgid "Accept Terms and Conditions"
+msgstr "Accepteer de voorwaarden"
+
+msgid "Terms and Conditions"
+msgstr "Voorwaarden"
+
+msgid "Setup Checks"
+msgstr ""
+
+msgid "Config Manager"
+msgstr ""
+
+msgid "Authentication/Accounts"
+msgstr ""
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Application Manager"
+msgstr ""
+
+msgid "Subscription"
+msgstr ""
+
+#~ msgid "Update application"
+#~ msgstr "Toepassing bewerken"

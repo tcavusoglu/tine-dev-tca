@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<application>
+    <name>HumanResources</name>
+    <version>19.0</version>
+    <order>51</order>
+    <depends>
+        <application>CoreData</application>
+        <application>Timetracker</application>
+    </depends>
+    <status>enabled</status>
+</application>

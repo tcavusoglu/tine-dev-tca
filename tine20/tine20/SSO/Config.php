@@ -1,0 +1,163 @@
+<?php declare(strict_types=1);
+/**
+ * @package     SSO
+ * @subpackage  Config
+ * @license     http://www.gnu.org/licenses/agpl.html AGPL Version 3
+ * @author      Paul Mehrer <p.mehrer@metaways.de>
+ * @copyright   Copyright (c) 2021-2025 Metaways Infosystems GmbH (http://www.metaways.de)
+ */
+
+/**
+ * SSO config class
+ * 
+ * @package     SSO
+ * @subpackage  Config
+ */
+class SSO_Config extends Tinebase_Config_Abstract
+{
+    use Tinebase_Controller_SingletonTrait;
+
+    public const APP_NAME = 'SSO';
+    public const ENABLED = 'enabled';
+
+    public const KEY_ROTATION_ENABLED = 'keyRotationEnabled';
+
+    public const OAUTH2 = 'oauth2';
+    public const OAUTH2_KEYS = 'keys';
+    public const OAUTH2_GRANTS = 'grants';
+    public const OAUTH2_GRANTS_AUTHORIZATION_CODE = 'authorization_code';
+    public const OAUTH2_GRANTS_DEVICE_CODE = 'device_code';
+
+    public const SAML2 = 'saml2';
+    public const SAML2_ENTITYID = 'entityid';
+    public const SAML2_KEYS = 'keys';
+    public const SAML2_TINELOGOUT = 'tineLogout';
+    public const SAML2_BINDINGS = 'saml2Bindings';
+    public const SAML2_BINDINGS_POST = 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST';
+    public const SAML2_BINDINGS_REDIRECT = 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect';
+
+    public const PWD_LESS_LOGIN = 'pwdLessLogin';
+    public const PWD_LESS_LOGIN_NONE = 'none';
+    public const PWD_LESS_LOGIN_ONLY_LOCAL = 'onlyLocal';
+    public const PWD_LESS_LOGIN_ONLY_PROXY = 'onlyProxy';
+    public const PWD_LESS_LOGIN_BOTH = 'both';
+
+    /**
+     * (non-PHPdoc)
+     * @see tine20/Tinebase/Config/Definition::$_properties
+     */
+    protected static $_properties = [
+        self::PWD_LESS_LOGIN        => [
+            //_('Passwordless Login')
+            self::LABEL                 => 'Passwordless Login',
+            //_('Passwordless Login')
+            self::DESCRIPTION           => 'Passwordless Login',
+            self::TYPE                  => self::TYPE_STRING,
+            self::CLIENTREGISTRYINCLUDE => true,
+            self::SETBYADMINMODULE      => true,
+            self::SETBYSETUPMODULE      => true,
+        ],
+        self::OAUTH2_GRANTS         => [
+            self::TYPE                  => self::TYPE_KEYFIELD_CONFIG,
+            self::CLIENTREGISTRYINCLUDE => true,
+            self::SETBYADMINMODULE      => false,
+            self::SETBYSETUPMODULE      => false,
+            self::DEFAULT_STR           => [
+                self::RECORDS               => [
+                    [
+                        'id' => self::OAUTH2_GRANTS_AUTHORIZATION_CODE,
+                        'value' => self::OAUTH2_GRANTS_AUTHORIZATION_CODE,
+                        'icon' => null,
+                        'system' => true,
+                    ], [
+                        'id' => self::OAUTH2_GRANTS_DEVICE_CODE,
+                        'value' => self::OAUTH2_GRANTS_DEVICE_CODE,
+                        'icon' => null,
+                        'system' => true,
+                    ],
+                ],
+            ],
+        ],
+        self::OAUTH2                => [
+            //_('Oauth2')
+            self::LABEL                 => 'Oauth2',
+            //_('Oauth2')
+            self::DESCRIPTION           => 'Oauth2',
+            self::TYPE                  => self::TYPE_OBJECT,
+            self::CLASSNAME             => Tinebase_Config_Struct::class,
+            self::CLIENTREGISTRYINCLUDE => false,
+            self::CONTENT               => [
+                self::ENABLED               => [
+                    self::TYPE                  => self::TYPE_BOOL,
+                    self::DEFAULT_STR           => false
+                ],
+                self::OAUTH2_KEYS           => [
+                    self::TYPE                  => self::TYPE_ARRAY,
+                    self::DEFAULT_STR           => []
+                ],
+            ],
+            self::DEFAULT_STR           => [],
+        ],
+        self::SAML2                 => [
+            //_('SAML2')
+            self::LABEL                 => 'SAML2',
+            //_('SAML2')
+            self::DESCRIPTION           => 'SAML2',
+            self::TYPE                  => self::TYPE_OBJECT,
+            self::CLASSNAME             => Tinebase_Config_Struct::class,
+            self::CLIENTREGISTRYINCLUDE => false,
+            self::CONTENT               => [
+                self::ENABLED               => [
+                    self::TYPE                  => self::TYPE_BOOL,
+                    self::DEFAULT_STR           => false
+                ],
+                self::SAML2_ENTITYID        => [
+                    self::TYPE                  => self::TYPE_STRING,
+                    self::DEFAULT_STR           => 'tine20'
+                ],
+                self::SAML2_KEYS            => [
+                    self::TYPE                  => self::TYPE_ARRAY,
+                    self::DEFAULT_STR           => []
+                ],
+                self::SAML2_TINELOGOUT      => [
+                    self::TYPE                  => self::TYPE_BOOL,
+                    self::DEFAULT_STR           => false,
+                ],
+            ],
+            self::DEFAULT_STR           => [],
+        ],
+        self::SAML2_BINDINGS => [
+            self::LABEL                 => 'SAML2 Bindings', //_('SAML2 Bindings')
+            self::DESCRIPTION           => 'SAML2 Bindings', //_('SAML2 Bindings')
+            self::TYPE                  => self::TYPE_KEYFIELD_CONFIG,
+            self::CLIENTREGISTRYINCLUDE => true,
+            self::SETBYADMINMODULE      => false,
+            self::DEFAULT_STR           => [
+                self::RECORDS               => [
+                    ['id' => self::SAML2_BINDINGS_POST,     'value' => self::SAML2_BINDINGS_POST],
+                    ['id' => self::SAML2_BINDINGS_REDIRECT, 'value' => self::SAML2_BINDINGS_REDIRECT],
+                ],
+                self::DEFAULT_STR           => self::SAML2_BINDINGS_POST,
+            ],
+        ],
+        self::KEY_ROTATION_ENABLED => [
+            self::LABEL                 => 'Key rotation enabled', //_('Key rotation enabled')
+            self::DESCRIPTION           => 'Key rotation enabled', //_('Key rotation enabled')
+            self::TYPE                  => self::TYPE_BOOL,
+            self::CLIENTREGISTRYINCLUDE => false,
+            self::SETBYADMINMODULE      => true,
+            self::DEFAULT_STR           => true,
+        ],
+    ];
+
+    static function getProperties()
+    {
+        return self::$_properties;
+    }
+
+    /**
+     * (non-PHPdoc)
+     * @see tine20/Tinebase/Config/Abstract::$_appName
+     */
+    protected $_appName = self::APP_NAME;
+}

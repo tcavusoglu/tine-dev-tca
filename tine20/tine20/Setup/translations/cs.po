@@ -1,0 +1,627 @@
+#
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:59+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Czech (http://www.transifex.com/tine20/tine20/language/cs/)\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Maximum number of users reached. "
+msgstr ""
+
+msgid "Please contact Metaways Infosystems GmbH to buy a license that supports a "
+msgstr ""
+
+msgid "Name"
+msgstr "Název"
+
+msgid "Enabled"
+msgstr "Povoleno"
+
+msgid "Order"
+msgstr "Pořadí"
+
+msgid "Installed Version"
+msgstr "Nainstalovaná verze"
+
+msgid "Available Version"
+msgstr "Dostupná verze"
+
+msgid "Status"
+msgstr "Stav"
+
+msgid "Depends on"
+msgstr "Závisí na"
+
+msgid "Install application"
+msgstr "Instalovat aplikaci"
+
+msgid "Uninstall application"
+msgstr "Odinstalovat aplikaci"
+
+msgid "Update applications"
+msgstr ""
+
+#, python-brace-format
+msgid "Go to {0} login"
+msgstr "Jít na příhlášení do {0}"
+
+msgid "uninstall"
+msgstr "odinstalovat"
+
+msgid "Do you really want to uninstall the application(s)?"
+msgstr "Opravdu chcete aplikaci/e odinstalovat?"
+
+msgid "This may take a while"
+msgstr "Tato operace může chvíli trvat"
+
+msgid "Dependency Violation"
+msgstr "Porušení závislosti"
+
+msgid "CLI Required"
+msgstr ""
+
+msgid "Delete all existing users and groups"
+msgstr "Smazat všechny stávající uživatele a skupiny"
+
+msgid "Switching from SQL to LDAP will delete all existing User Accounts, Groups and Roles. Do you really want to switch the accounts storage backend to LDAP ?"
+msgstr "Přechod z SQL na LDAP smaže všechny stávající uživatelské účty, skupiny a role. Opravdu chcete změnit backend pro uložení účtů na LDAP?"
+
+msgid "Backend"
+msgstr "Backend"
+
+msgid "TLS client certificate"
+msgstr ""
+
+msgid "Initial Admin User"
+msgstr ""
+
+msgid "Initial admin login name"
+msgstr "Počáteční přihlašovací jméno administrátora"
+
+msgid "Initial admin Password"
+msgstr "Počáteční heslo administrátora"
+
+msgid "Password confirmation"
+msgstr "Potvrzení hesla"
+
+msgid "Authentication provider"
+msgstr "Poskytovatel autentikace"
+
+msgid "Try to split username"
+msgstr "Zkusit rozdělit uživatelské jméno"
+
+msgid "Yes"
+msgstr "Ano"
+
+msgid "No"
+msgstr "Ne"
+
+msgid "Account canonical form"
+msgstr "Kanonická forma účtu"
+
+msgid "Account domain name"
+msgstr ""
+
+msgid "Account domain short name"
+msgstr "Krátký název domény"
+
+msgid "Host"
+msgstr "Server"
+
+msgid "Login name"
+msgstr "Přihlašovací jméno"
+
+msgid "Password"
+msgstr "Heslo"
+
+msgid "Bind requires DN"
+msgstr "Připojení vyžaduje DN"
+
+msgid "Start TLS"
+msgstr ""
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Base DN"
+msgstr "Základní DN"
+
+msgid "Search filter"
+msgstr "Vyhledávací filtr"
+
+msgid "Hostname"
+msgstr "Název nebo adresa počítače"
+
+msgid "Secure Connection"
+msgstr "Zabezpečení připojení"
+
+msgid "None"
+msgstr "Žádné"
+
+msgid "TLS"
+msgstr "TLS"
+
+msgid "Append domain to login name"
+msgstr "Připojit doménu k přihlašovacímu jménu"
+
+msgid "Certificate validation"
+msgstr ""
+
+msgid "CA file"
+msgstr ""
+
+msgid "CRL directory"
+msgstr ""
+
+msgid "Accounts storage"
+msgstr "Uložení účtů"
+
+msgid "Default user group name"
+msgstr "Jméno výchozí skupiny pro uživatele"
+
+msgid "Default admin group name"
+msgstr "Jméno výchozí skupiny pro administrátory"
+
+msgid "Login panel"
+msgstr ""
+
+msgid "Reuse last username logged"
+msgstr ""
+
+msgid "Password Settings"
+msgstr ""
+
+msgid "User can change password"
+msgstr "Uživatel si může měnit heslo"
+
+msgid "Enable password policy"
+msgstr ""
+
+msgid "Only ASCII"
+msgstr ""
+
+msgid "Minimum length"
+msgstr ""
+
+msgid "Minimum word chars"
+msgstr ""
+
+msgid "Minimum uppercase chars"
+msgstr ""
+
+msgid "Minimum special chars"
+msgstr ""
+
+msgid "Minimum numbers"
+msgstr ""
+
+msgid "Change password after ... days"
+msgstr ""
+
+msgid "Forbid part of username in password"
+msgstr ""
+
+msgid "Redirect Settings"
+msgstr "Nastavení přesměrování"
+
+msgid "Redirect Url (redirect to login screen if empty)"
+msgstr "URL pro přesměrování (ponecháte-li prázdné, přesměrovat na přihlašovací obrazovku)"
+
+msgid "Redirect Always (if No, only redirect after logout)"
+msgstr "Vždy přesměrovat (pokud Ne, přesměrovat jen při odhlášení)"
+
+msgid "Redirect to referring site, if exists"
+msgstr "Přesměrovat na odkazovaný web, pokud existuje"
+
+msgid "Password encoding"
+msgstr "Kódování hesla"
+
+msgid "des"
+msgstr ""
+
+msgid "crypt"
+msgstr ""
+
+msgid "blowfish_crypt"
+msgstr ""
+
+msgid "md5_crypt"
+msgstr ""
+
+msgid "ext_crypt"
+msgstr ""
+
+msgid "md5"
+msgstr ""
+
+msgid "smd5"
+msgstr ""
+
+msgid "sha"
+msgstr ""
+
+msgid "ssha"
+msgstr ""
+
+msgid "ntpassword"
+msgstr ""
+
+msgid "plain"
+msgstr ""
+
+msgid "User DN"
+msgstr "DN uživatele"
+
+msgid "User Filter"
+msgstr "Filtr uživatelů"
+
+msgid "E-Mail Attribute"
+msgstr ""
+
+msgid "Write Password to SQL backend"
+msgstr ""
+
+msgid "User Search Scope"
+msgstr "Oblast hledání uživatelů"
+
+msgid "Groups DN"
+msgstr "DN pro skupiny"
+
+msgid "Group Filter"
+msgstr "Filtr skupin"
+
+msgid "Group Search Scope"
+msgstr "Oblast hledání skupin"
+
+msgid "Use Rfc 2307 bis"
+msgstr "Používat Rfc 2307 bis"
+
+msgid "Maintain RFC 2307 attributes"
+msgstr ""
+
+msgid "Min User Id"
+msgstr "Minimální Id uživatele"
+
+msgid "Max User Id"
+msgstr "Maximální Id uživatele"
+
+msgid "Min Group Id"
+msgstr "Minimální Id skupiny"
+
+msgid "Max Group Id"
+msgstr "Maximální Id skupiny"
+
+msgid "Group UUID Attribute name"
+msgstr "Název atributu pro UUID skupiny"
+
+msgid "User UUID Attribute name"
+msgstr "Název atributu pro UUID uživatele"
+
+msgid "Readonly access"
+msgstr ""
+
+msgid "Save config and install"
+msgstr "Uložit konfiguraci a instalovat"
+
+msgid "Save config"
+msgstr "Uložit konfiguraci"
+
+msgid "Passwords don't match"
+msgstr "Hesla se neshodují"
+
+msgid "Should not be empty"
+msgstr "Nemělo by být prázdné"
+
+msgid "File"
+msgstr ""
+
+msgid "Setup Authentication"
+msgstr "Přihlášení do instalačního programu"
+
+msgid "Username"
+msgstr "Uživatelské jméno"
+
+msgid "Database"
+msgstr "Databáze"
+
+msgid "User"
+msgstr "Uživatel"
+
+msgid "Prefix"
+msgstr "Prefix"
+
+msgid "Logging"
+msgstr "Logování"
+
+msgid "Filename"
+msgstr "Název souboru"
+
+msgid "Priority"
+msgstr "Priorita"
+
+msgid "Caching"
+msgstr "Kešování"
+
+msgid "Lifetime (seconds)"
+msgstr "Životnost (v sekundách)"
+
+msgid "Path"
+msgstr "Cesta"
+
+msgid "Queue"
+msgstr ""
+
+msgid "Session"
+msgstr ""
+
+msgid "Temporary files"
+msgstr "Dočasné soubory"
+
+msgid "Temporary Files Path"
+msgstr "Cesta pro dočasné soubory"
+
+msgid "Filestore directory"
+msgstr ""
+
+msgid "Filestore Path"
+msgstr ""
+
+msgid "Addressbook Map panel"
+msgstr "Mapový panel v Adresáři"
+
+msgid "Map panel"
+msgstr "Mapový panel"
+
+msgid "disabled"
+msgstr "zakázáno"
+
+msgid "enabled"
+msgstr "povoleno"
+
+msgid "Config file is not writable"
+msgstr "Do konfiguračního souboru nelze zapisovat"
+
+msgid "Download config file"
+msgstr "Stáhnout konfigurační soubor"
+
+#, python-brace-format
+msgid "This prefix is too long. Please choose a prefix no longer than {0} chars."
+msgstr ""
+
+msgid "Standard IMAP"
+msgstr "Standardní IMAP"
+
+msgid "Standard SMTP"
+msgstr "Standardní SMTP"
+
+msgid "Imap"
+msgstr "IMAP"
+
+msgid "Verify peer Certificate"
+msgstr ""
+
+msgid "Use system account"
+msgstr "Použít systémový účet"
+
+msgid "Use email address as login name"
+msgstr ""
+
+msgid "Cyrus Admin"
+msgstr ""
+
+msgid "Cyrus Admin Password"
+msgstr ""
+
+msgid "Use proxy auth"
+msgstr ""
+
+msgid "Smtp"
+msgstr "SMTP"
+
+msgid "Authentication"
+msgstr "Autentikace"
+
+msgid "Login"
+msgstr "Přihlášení"
+
+msgid "Plain"
+msgstr "Prosté"
+
+msgid "Primary Domain"
+msgstr "Primární doména"
+
+msgid "Secondary Domains (comma separated)"
+msgstr "Sekundární domény (oddělené čárkou)"
+
+msgid "Aditional Domains (comma separated)"
+msgstr ""
+
+msgid "Notifications service address"
+msgstr "Adresa služby pro zasílání upozornění"
+
+msgid "Notification Username"
+msgstr "Uživatelské jméno pro upozornění"
+
+msgid "Notification Password"
+msgstr "Heslo pro upozornění"
+
+msgid "Notifications local client (hostname or IP address)"
+msgstr ""
+
+msgid "SIEVE"
+msgstr ""
+
+msgid "MySql Hostname"
+msgstr "Adresa MySQL serveru"
+
+msgid "MySql Database"
+msgstr "Název MySQL databáze"
+
+msgid "MySql User"
+msgstr "Uživatel MySQL"
+
+msgid "MySql Password"
+msgstr "Heslo k MySQL databázi"
+
+msgid "MySql Port"
+msgstr "Port MySQL"
+
+msgid "User or UID"
+msgstr ""
+
+msgid "Group or GID"
+msgstr ""
+
+msgid "Home Template"
+msgstr ""
+
+msgid "Password Scheme"
+msgstr ""
+
+msgid "PLAIN-MD5"
+msgstr ""
+
+msgid "MD5-CRYPT"
+msgstr ""
+
+msgid "SHA1"
+msgstr ""
+
+msgid "SHA256"
+msgstr ""
+
+msgid "SSHA256"
+msgstr ""
+
+msgid "SHA512"
+msgstr ""
+
+msgid "SSHA512"
+msgstr ""
+
+msgid "PLAIN"
+msgstr ""
+
+msgid "Performing Environment Checks..."
+msgstr "Provádím test prostředí"
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria, view-options or the {1} you search in."
+msgstr ""
+
+msgid "Check"
+msgstr "Kontrola"
+
+msgid "Result"
+msgstr "Výsledek"
+
+msgid "Message"
+msgstr ""
+
+msgid "Run setup tests"
+msgstr "Spustit instalační testy"
+
+msgid "Ignore setup tests"
+msgstr "Ignorovat instalační testy"
+
+msgid "Setup"
+msgstr ""
+
+msgid "Delete current Subscription"
+msgstr ""
+
+msgid "Your Subscription is not valid."
+msgstr ""
+
+msgid "Subscription Configuration"
+msgstr ""
+
+msgid "Upload from disk"
+msgstr ""
+
+msgid "Select file containing your Subscription key"
+msgstr ""
+
+msgid "No valid Subscription"
+msgstr ""
+
+msgid "Contract ID"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "Activation Key"
+msgstr ""
+
+msgid "Maximum Users (0=unlimited)"
+msgstr ""
+
+msgid "Valid from"
+msgstr ""
+
+msgid "Valid to"
+msgstr ""
+
+msgid "Subscription Information"
+msgstr ""
+
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] "Aplikace"
+msgstr[1] "Aplikace"
+msgstr[2] "Aplikací"
+msgstr[3] "Aplikací"
+
+msgid "I have read the license agreement and accept it"
+msgstr "Přečetl(a) jsem si licenční ujednání a souhlasím"
+
+msgid "License Agreement"
+msgstr "Licenční ujednání"
+
+msgid "I have read the privacy agreement and accept it"
+msgstr "Přečetl(a) jsem si ujednání o ochraně soukromí a souhlasím"
+
+msgid "Privacy Agreement"
+msgstr "Ujednání o ochraně soukromí"
+
+msgid "Accept Terms and Conditions"
+msgstr "Přijmout podmínky"
+
+msgid "Terms and Conditions"
+msgstr "Podmínky a ujednání"
+
+msgid "Setup Checks"
+msgstr "Instalační kontroly"
+
+msgid "Config Manager"
+msgstr "Správce konfigurace"
+
+msgid "Authentication/Accounts"
+msgstr "Autentikace/Účty"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Application Manager"
+msgstr "Správce aplikací"
+
+msgid "Subscription"
+msgstr ""
+
+#~ msgid "Update application"
+#~ msgstr "Aktualizovat aplikaci"

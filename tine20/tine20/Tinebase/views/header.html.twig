@@ -1,0 +1,9 @@
+<header>
+    <div class="m-10">
+        <a href="{{ config(constant('Tinebase_Config::BRANDING_WEBURL')) }}">
+            <img src="{{ app.installation.logoContent.getBody() | data_uri }}"
+                 style="max-width: 100%; max-height: calc(var(--header-height) - (var(--spacing) * 2 ));"
+                 alt="Logo" />
+        </a>
+    </div>
+</header>

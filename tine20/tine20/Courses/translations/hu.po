@@ -1,0 +1,196 @@
+#
+# Translators:
+# Tamás Faragó <>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2018-11-28 11:09+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Hungarian (http://www.transifex.com/tine20/tine20/language/hu/)\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Add new user"
+msgstr "Új felhasználó hozzáadása"
+
+msgid "Add new user as member to a course"
+msgstr "Új felhasználó résztvevőként hozzáadása a kurzushoz"
+
+msgid "Add existing user"
+msgstr "Meglévő felhasználó hozzáadása"
+
+msgid "Add existing user as member to a course"
+msgstr "Meglévő felhasználó résztvevőként hozzáadása a kurzushoz"
+
+msgid "Manage shared courses favorites"
+msgstr ""
+
+msgid "Create or update shared courses favorites"
+msgstr ""
+
+msgid "Set additional memberships"
+msgstr ""
+
+msgid "Set additional course member group memberships"
+msgstr ""
+
+msgid "Additional Group Memberships"
+msgstr ""
+
+msgid "Array of IDs of Groups students can be members of"
+msgstr ""
+
+msgid "Internet Access"
+msgstr "Internet elérés"
+
+msgid "Internet access options."
+msgstr "Internet kapcsolat opciók."
+
+msgid "On"
+msgstr "Be"
+
+msgid "Off"
+msgstr "Ki"
+
+msgid "Filtered"
+msgstr "Szűrt"
+
+msgid "Internet Access Group (ON)"
+msgstr "Internet elérési csoport (Be)"
+
+msgid "Internet Access Group (FILTERED)"
+msgstr "Internet elérési csoport (Szűrt)"
+
+msgid "Students Group"
+msgstr "Tanuló csoport"
+
+msgid "Students Import Definition"
+msgstr "Tanuló importálási leírások"
+
+msgid "Students login name prefix"
+msgstr "Tanulói bejelentkezési név előtag"
+
+msgid "Students password suffix"
+msgstr ""
+
+msgid "Teacher password"
+msgstr ""
+
+msgid "Student username schema"
+msgstr ""
+
+msgid "Student username schema (0 = only lastname (10 chars), 1 = lastname + 2 chars of firstname"
+msgstr ""
+
+msgid "Samba user settings"
+msgstr "Samba felhasználó beállítások"
+
+msgid "Default department"
+msgstr ""
+
+msgid "The default department for new Courses"
+msgstr ""
+
+msgid "Course -> Department Mapping"
+msgstr ""
+
+msgid "Course"
+msgid_plural "Courses"
+msgstr[0] "Kurzus"
+msgstr[1] "Kurzusok"
+
+msgid "Teacher"
+msgstr "Tanár"
+
+msgid "Teacher Account"
+msgstr "Tanár felhasználó"
+
+msgid "My course"
+msgstr "Kurzusom"
+
+msgid "First Name"
+msgstr "Kereszt név"
+
+msgid "Last Name"
+msgstr "Vezeték név"
+
+msgid "Add new member to course"
+msgstr "Új résztvevő hozzáadása a kurzushoz"
+
+msgid "Errors"
+msgstr "Hibák"
+
+msgid "Please fix the errors noted."
+msgstr "Kérlek javítsd a jegyzett hibákat."
+
+msgid "Import course members"
+msgstr "Kurzus tagok importálása"
+
+msgid "Add new member"
+msgstr "Új résztvevő hozzáadása"
+
+msgid "Course Name"
+msgstr "Kurzus név"
+
+msgid "Course / School Type"
+msgstr "Kurzus / Iskola típus"
+
+msgid "Description"
+msgstr "Leírás"
+
+msgid "Members"
+msgstr "Tagok"
+
+msgid "Login"
+msgstr "Bejelentkezés"
+
+msgid "unknown"
+msgstr "ismeretlen"
+
+msgid "Reset Password"
+msgstr "Jelszó újraállítása"
+
+msgid "Please enter the new Password."
+msgstr ""
+
+msgid "Name"
+msgstr "Név"
+
+msgid "Type"
+msgstr "Típus"
+
+msgid "Failed"
+msgstr "Hibás"
+
+msgid "Some error occured while trying to update the courses."
+msgstr "Néhány hiba történt a kurzus frissítése közben."
+
+msgid "Quick Search"
+msgstr ""
+
+msgid "Course Type"
+msgid_plural "Course Types"
+msgstr[0] "Kurzus típus"
+msgstr[1] "Kurzus típusok"
+
+msgid "All courses"
+msgstr "Minden kurzus"
+
+msgid "The default favorite which is loaded on Classes startup"
+msgstr "Az alapértelmezett kedvenc, amely az Osztályok indulásakor betöltődik"
+
+msgid "School"
+msgstr ""
+
+msgid "Defaul school for Courses application"
+msgstr ""
+
+msgid "Courses"
+msgstr "Kurzusok"

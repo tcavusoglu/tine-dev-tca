@@ -1,0 +1,626 @@
+#
+# Translators:
+# 1a8e3140e5b8a374784ecdfdf83f7d9e_5e6d67c <d882eac74045deada33a9c470758040d_143165>, 2014
+# 1a8e3140e5b8a374784ecdfdf83f7d9e_5e6d67c <d882eac74045deada33a9c470758040d_143165>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2020-05-11 11:59+0000\n"
+"Last-Translator: Christian Feitl <c.feitl@metaways.de>\n"
+"Language-Team: Thai (http://www.transifex.com/tine20/tine20/language/th/)\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Maximum number of users reached. "
+msgstr ""
+
+msgid "Please contact Metaways Infosystems GmbH to buy a license that supports a "
+msgstr ""
+
+msgid "Name"
+msgstr "ชื่อ"
+
+msgid "Enabled"
+msgstr "เปิดใช้งานแล้ว"
+
+msgid "Order"
+msgstr "คำสั่ง"
+
+msgid "Installed Version"
+msgstr "เวอร์ชั่นที่ได้ติดตั้ง"
+
+msgid "Available Version"
+msgstr "เวอร์ชั่นที่มี"
+
+msgid "Status"
+msgstr "สถานะ"
+
+msgid "Depends on"
+msgstr "ขึ้นอยู่กับ"
+
+msgid "Install application"
+msgstr "ติดตั้งแอพพลิเคชั่น"
+
+msgid "Uninstall application"
+msgstr "ถอนการติดตั้งแอพพลิเคชั่น"
+
+msgid "Update applications"
+msgstr ""
+
+#, python-brace-format
+msgid "Go to {0} login"
+msgstr "ไปยังการเข้าใช้ {0} "
+
+msgid "uninstall"
+msgstr "ถอนการติดตั้ง"
+
+msgid "Do you really want to uninstall the application(s)?"
+msgstr "คุณแน่ใจว่าต้องการถอนการติดตั้งแอพพลิเคชั่น(s)?"
+
+msgid "This may take a while"
+msgstr "นี่อาจจะใช้เวลาสักครู่"
+
+msgid "Dependency Violation"
+msgstr ""
+
+msgid "CLI Required"
+msgstr ""
+
+msgid "Delete all existing users and groups"
+msgstr "ลบผ๔้ใช้และกลุ่มที่มีอยู่ทั้งหมด"
+
+msgid "Switching from SQL to LDAP will delete all existing User Accounts, Groups and Roles. Do you really want to switch the accounts storage backend to LDAP ?"
+msgstr "การสลับจาก SQL ไปยัง LDAP จะลบบัญชี กลุ่ม และหน้าที่ของผู้ใช้ที่มีอยู่ทั้งหมด คุณแน่ใจว่าต้องการสลับการจัดเก็บบัญชีส่วนหลังไปใช้ LDAP?"
+
+msgid "Backend"
+msgstr "ส่วนหลัง"
+
+msgid "TLS client certificate"
+msgstr ""
+
+msgid "Initial Admin User"
+msgstr ""
+
+msgid "Initial admin login name"
+msgstr ""
+
+msgid "Initial admin Password"
+msgstr ""
+
+msgid "Password confirmation"
+msgstr "การยืนยันรหัสผ่าน"
+
+msgid "Authentication provider"
+msgstr "ผู้ให้การอนุญาต"
+
+msgid "Try to split username"
+msgstr "พยายามที่จะแตกชื่อผู้ใช้"
+
+msgid "Yes"
+msgstr "ใช่"
+
+msgid "No"
+msgstr "ไม่"
+
+msgid "Account canonical form"
+msgstr ""
+
+msgid "Account domain name"
+msgstr ""
+
+msgid "Account domain short name"
+msgstr ""
+
+msgid "Host"
+msgstr "แม่ข่าย"
+
+msgid "Login name"
+msgstr "ชื่อที่เข้าใช้"
+
+msgid "Password"
+msgstr "รหัสผ่าน"
+
+msgid "Bind requires DN"
+msgstr "การเชื่อมต่อต้องการ DN"
+
+msgid "Start TLS"
+msgstr "เริ่ม TLS"
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "Port"
+msgstr "พอร์ท"
+
+msgid "Base DN"
+msgstr "ฐาน DN"
+
+msgid "Search filter"
+msgstr "หาตัวกรอง"
+
+msgid "Hostname"
+msgstr "ชื่อแม่ข่าย"
+
+msgid "Secure Connection"
+msgstr "การเชื่อมต่อที่ปลอดภัย"
+
+msgid "None"
+msgstr "ไม่มีเลย"
+
+msgid "TLS"
+msgstr "TLS"
+
+msgid "Append domain to login name"
+msgstr ""
+
+msgid "Certificate validation"
+msgstr ""
+
+msgid "CA file"
+msgstr "ไฟล์ CA"
+
+msgid "CRL directory"
+msgstr "ไดเรคทอรี่ CRL "
+
+msgid "Accounts storage"
+msgstr "การจัดเก็บบัญชี"
+
+msgid "Default user group name"
+msgstr "ชื่อกลุ่มผู้ใช้หลัก"
+
+msgid "Default admin group name"
+msgstr "ชื่อกลุ่มผู้ดูแลหลัก"
+
+msgid "Login panel"
+msgstr "ช่องลงชื่อเข้าใช้"
+
+msgid "Reuse last username logged"
+msgstr ""
+
+msgid "Password Settings"
+msgstr "การรติดตั้งรหัสผ่าน"
+
+msgid "User can change password"
+msgstr "ผู้ใช้สามารถเปลี่ยนรหัสผ่านได้"
+
+msgid "Enable password policy"
+msgstr ""
+
+msgid "Only ASCII"
+msgstr "เฉพาะ ASCII"
+
+msgid "Minimum length"
+msgstr "ความยาวอย่างน้อยที่สุด"
+
+msgid "Minimum word chars"
+msgstr ""
+
+msgid "Minimum uppercase chars"
+msgstr ""
+
+msgid "Minimum special chars"
+msgstr ""
+
+msgid "Minimum numbers"
+msgstr "จำนวนหมายเลขที่น้อยที่สุด"
+
+msgid "Change password after ... days"
+msgstr ""
+
+msgid "Forbid part of username in password"
+msgstr ""
+
+msgid "Redirect Settings"
+msgstr ""
+
+msgid "Redirect Url (redirect to login screen if empty)"
+msgstr ""
+
+msgid "Redirect Always (if No, only redirect after logout)"
+msgstr ""
+
+msgid "Redirect to referring site, if exists"
+msgstr ""
+
+msgid "Password encoding"
+msgstr ""
+
+msgid "des"
+msgstr ""
+
+msgid "crypt"
+msgstr ""
+
+msgid "blowfish_crypt"
+msgstr ""
+
+msgid "md5_crypt"
+msgstr "md5_crypt"
+
+msgid "ext_crypt"
+msgstr ""
+
+msgid "md5"
+msgstr ""
+
+msgid "smd5"
+msgstr ""
+
+msgid "sha"
+msgstr ""
+
+msgid "ssha"
+msgstr ""
+
+msgid "ntpassword"
+msgstr ""
+
+msgid "plain"
+msgstr "ว่าง"
+
+msgid "User DN"
+msgstr " ผู้ใช้ DN"
+
+msgid "User Filter"
+msgstr "ตัวกรองผู้ใช้"
+
+msgid "E-Mail Attribute"
+msgstr ""
+
+msgid "Write Password to SQL backend"
+msgstr ""
+
+msgid "User Search Scope"
+msgstr "ขอบเขตการค้นหาของผู้ใช้"
+
+msgid "Groups DN"
+msgstr "กลุ่ม DN"
+
+msgid "Group Filter"
+msgstr "ตัวกรองกลุ่ม"
+
+msgid "Group Search Scope"
+msgstr "ขอบเขตการค้นหาของกลุ่ม"
+
+msgid "Use Rfc 2307 bis"
+msgstr ""
+
+msgid "Maintain RFC 2307 attributes"
+msgstr ""
+
+msgid "Min User Id"
+msgstr "รหัสของผู้ใช้ที่สั้นที่สุด"
+
+msgid "Max User Id"
+msgstr "รหัสของผู้ใช้ที่ยาวที่สุด"
+
+msgid "Min Group Id"
+msgstr "รหัสของกลุ่มที่สั้นที่สุด"
+
+msgid "Max Group Id"
+msgstr "รหัสของกลุ่มที่ยาวที่สุด"
+
+msgid "Group UUID Attribute name"
+msgstr ""
+
+msgid "User UUID Attribute name"
+msgstr ""
+
+msgid "Readonly access"
+msgstr ""
+
+msgid "Save config and install"
+msgstr ""
+
+msgid "Save config"
+msgstr ""
+
+msgid "Passwords don't match"
+msgstr "รหัสผ่านไม่ตรง"
+
+msgid "Should not be empty"
+msgstr "ไม่ควรว่างไว้"
+
+msgid "File"
+msgstr "ไฟล์"
+
+msgid "Setup Authentication"
+msgstr "การอนุญาตติดตั้ง"
+
+msgid "Username"
+msgstr "ชื่อผู้ใช้"
+
+msgid "Database"
+msgstr "ฐานข้อมูล"
+
+msgid "User"
+msgstr "ผู้ใช้"
+
+msgid "Prefix"
+msgstr ""
+
+msgid "Logging"
+msgstr ""
+
+msgid "Filename"
+msgstr "ชื่อไฟล์"
+
+msgid "Priority"
+msgstr "ลำดับความสำคัญ"
+
+msgid "Caching"
+msgstr "กำลังแคช"
+
+msgid "Lifetime (seconds)"
+msgstr "เวลาชีวิต (วินาที)"
+
+msgid "Path"
+msgstr "เส้นทาง"
+
+msgid "Queue"
+msgstr "คิว"
+
+msgid "Session"
+msgstr "เซสชัน"
+
+msgid "Temporary files"
+msgstr "ไฟล์ชั่วคราว"
+
+msgid "Temporary Files Path"
+msgstr "ทางของไฟล์ชั่วคราว"
+
+msgid "Filestore directory"
+msgstr ""
+
+msgid "Filestore Path"
+msgstr ""
+
+msgid "Addressbook Map panel"
+msgstr ""
+
+msgid "Map panel"
+msgstr ""
+
+msgid "disabled"
+msgstr "ไม่สามารถใช้งานได้"
+
+msgid "enabled"
+msgstr ""
+
+msgid "Config file is not writable"
+msgstr ""
+
+msgid "Download config file"
+msgstr ""
+
+#, python-brace-format
+msgid "This prefix is too long. Please choose a prefix no longer than {0} chars."
+msgstr ""
+
+msgid "Standard IMAP"
+msgstr "IMAP มาตรฐาน"
+
+msgid "Standard SMTP"
+msgstr "SMTP มาตรฐาน "
+
+msgid "Imap"
+msgstr ""
+
+msgid "Verify peer Certificate"
+msgstr ""
+
+msgid "Use system account"
+msgstr "ใช้บัญชีของระบบ"
+
+msgid "Use email address as login name"
+msgstr ""
+
+msgid "Cyrus Admin"
+msgstr ""
+
+msgid "Cyrus Admin Password"
+msgstr ""
+
+msgid "Use proxy auth"
+msgstr ""
+
+msgid "Smtp"
+msgstr "Smtp"
+
+msgid "Authentication"
+msgstr "การอนุญาต"
+
+msgid "Login"
+msgstr "ลงบันทึกเข้า"
+
+msgid "Plain"
+msgstr "ธรรมดา"
+
+msgid "Primary Domain"
+msgstr "โดเมนหลัก"
+
+msgid "Secondary Domains (comma separated)"
+msgstr "โดเมนรอง (แบ่งโดยจุลภาค)"
+
+msgid "Aditional Domains (comma separated)"
+msgstr ""
+
+msgid "Notifications service address"
+msgstr ""
+
+msgid "Notification Username"
+msgstr "การแจ้งชื่อผู้ใช้"
+
+msgid "Notification Password"
+msgstr "การแจ้งรหัสผ่าน"
+
+msgid "Notifications local client (hostname or IP address)"
+msgstr ""
+
+msgid "SIEVE"
+msgstr "กรอง"
+
+msgid "MySql Hostname"
+msgstr "ชื่อแม่ข่าย MySql"
+
+msgid "MySql Database"
+msgstr "ฐานข้อมูล MySql"
+
+msgid "MySql User"
+msgstr "ผู้ใช้ MySql"
+
+msgid "MySql Password"
+msgstr "รหัสผ่าน MySql"
+
+msgid "MySql Port"
+msgstr "พอร์ท MySql"
+
+msgid "User or UID"
+msgstr "ผู้ใช้ หรือ UID"
+
+msgid "Group or GID"
+msgstr "กลุ่ม หรือ GID"
+
+msgid "Home Template"
+msgstr ""
+
+msgid "Password Scheme"
+msgstr ""
+
+msgid "PLAIN-MD5"
+msgstr ""
+
+msgid "MD5-CRYPT"
+msgstr ""
+
+msgid "SHA1"
+msgstr ""
+
+msgid "SHA256"
+msgstr ""
+
+msgid "SSHA256"
+msgstr ""
+
+msgid "SHA512"
+msgstr ""
+
+msgid "SSHA512"
+msgstr ""
+
+msgid "PLAIN"
+msgstr ""
+
+msgid "Performing Environment Checks..."
+msgstr ""
+
+#, python-brace-format
+msgid "There could not be found any {0}. Please try to change your filter-criteria, view-options or the {1} you search in."
+msgstr ""
+
+msgid "Check"
+msgstr "ตรวจสอบ"
+
+msgid "Result"
+msgstr "ผลลัพธ์"
+
+msgid "Message"
+msgstr ""
+
+msgid "Run setup tests"
+msgstr ""
+
+msgid "Ignore setup tests"
+msgstr ""
+
+msgid "Setup"
+msgstr ""
+
+msgid "Delete current Subscription"
+msgstr ""
+
+msgid "Your Subscription is not valid."
+msgstr ""
+
+msgid "Subscription Configuration"
+msgstr ""
+
+msgid "Upload from disk"
+msgstr ""
+
+msgid "Select file containing your Subscription key"
+msgstr ""
+
+msgid "No valid Subscription"
+msgstr ""
+
+msgid "Contract ID"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "Activation Key"
+msgstr ""
+
+msgid "Maximum Users (0=unlimited)"
+msgstr ""
+
+msgid "Valid from"
+msgstr ""
+
+msgid "Valid to"
+msgstr ""
+
+msgid "Subscription Information"
+msgstr ""
+
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] "แอพพลิเคชั่น"
+
+msgid "I have read the license agreement and accept it"
+msgstr ""
+
+msgid "License Agreement"
+msgstr ""
+
+msgid "I have read the privacy agreement and accept it"
+msgstr ""
+
+msgid "Privacy Agreement"
+msgstr "ข้อตกลงเรื่องความเป็นส่วนตัว"
+
+msgid "Accept Terms and Conditions"
+msgstr ""
+
+msgid "Terms and Conditions"
+msgstr ""
+
+msgid "Setup Checks"
+msgstr ""
+
+msgid "Config Manager"
+msgstr ""
+
+msgid "Authentication/Accounts"
+msgstr ""
+
+msgid "Email"
+msgstr "อีเมล"
+
+msgid "Application Manager"
+msgstr "ตัวจัดการแอพพลิเคชั่น"
+
+msgid "Subscription"
+msgstr ""
+
+#~ msgid "Update application"
+#~ msgstr "อัพเดทแอพพลิเคชั่น"

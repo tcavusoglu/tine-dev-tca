@@ -1,0 +1,261 @@
+# This file defines common ci jobs.
+# They are not run on their own (because they start with ".").
+# They are used like function. And parameterised by variables starting with ARG_.
+
+.lib-services:
+  db_service:
+    - name: "$DATABASE_IMAGE"
+      alias: db
+  redis_service:
+    - name: "$REDIS_IMAGE"
+      alias: cache
+  mail_service:
+    - name: ${UTIL_REGISTRY}/postfix:1.0.0
+      alias: postfix
+      # fix service service discovery https://gitlab.com/gitlab-org/gitlab-runner/issues/1042#note_144420147
+      entrypoint: ["/bin/sh", "-c", "postconf -e 'smtp_host_lookup = native' 'lmtp_host_lookup = native' && /bin/sh /root/docker-entrypoint.sh"]
+    - name: ${UTIL_REGISTRY}/dovecot:1.0.3
+      alias: dovecot
+      entrypoint: ["/bin/sh", "-c", "/bin/sh /root/docker-entrypoint.sh"]
+  ldap_service:
+    - name: ${UTIL_REGISTRY}/ldap:1.2.5-r0
+      alias: ldap
+      entrypoint: ["/container/tool/run", "--copy-service"]
+  samba_service:
+    - name: "${UTIL_REGISTRY}/samba-ad:1.0.0-r0"
+      alias: samba
+
+
+.abstract_jobs.test:
+  image: ${CI_REGISTRY}/${CI_PROJECT_NAMESPACE}/tine20/test:${BASE_MAJOR_COMMIT_REF_NAME}-${PHP_VERSION}-${TEST_IMAGE_VERSION}
+  variables:
+    MAIL_DB_HOST: db # temporary variable, to switch form docker-machine to k8
+    MYSQL_HOST: db
+    MYSQL_ROOT_PASSWORD: rootpw
+    MYSQL_DATABASE: tine20db
+    MYSQL_USER: tine20
+    MYSQL_PASSWORD: tine20pw
+    TINE20_BUILDTYPE: DEVELOPMENT
+    TINE20_DATABASE_HOST: db
+    TINE20_DATABASE_DBNAME: tine20db
+    TINE20_DATABASE_USERNAME: tine20
+    TINE20_DATABASE_PASSWORD: tine20pw
+    TINE20_SETUPUSER_USERNAME: tine20setup
+    TINE20_SETUPUSER_PASSWORD: tine20setup
+    TINE20_LOGIN_USERNAME: tine20admin
+    TINE20_LOGIN_PASSWORD: tine20admin
+    TINE20_ADMIN_EMAIL: tine20admin@mail.test
+    TINE20_CREDENTIALCACHESHAREDKEY: realysecreatkey
+    TINE20_CACHING_BACKEND: Redis
+    TINE20_CACHING_REDIS_HOST: cache
+    TINE20_SESSION_BACKEND: Redis
+    TINE20_SESSION_HOST: cache
+    TINE20_LOGGER_ADDITIONALWRITERS_FILENAME: ${CI_PROJECT_DIR}/tine20.log
+    TINE20_LOGGER_ADDITIONALWRITERS_PRIORITY: 7
+    TINE20_LOGGER_FILENAME: /var/log/tine20/tine20.log # do not log to php://stdout it breaks php unit 8.5 processIsolation
+    TINE20_EMAIL_IMAP: "active:true,host:dovecot,port:143,useSystemAccount:1,ssl:none,verifyPeer:0,backend:dovecot_imap,domain:mail.test,instanceName:tine.test,dovecot_host:db,dovecot_dbname:dovecot,dovecot_username:tine20,dovecot_password:tine20pw,dovecot_uid:vmail,dovecot_gid:vmail,dovecot_home:/var/vmail/%d/%u,dovecot_scheme:SSHA256"
+    TINE20_EMAIL_SMTP: "active:true,backend:postfix,hostname:postfix,port:25,ssl:none,auth:none,name:postfix,primarydomain:mail.test,secondarydomains:secondary.test,instanceName:tine.test,postfix_host:db,postfix_dbname:postfix,postfix_username:tine20,postfix_password:tine20pw"
+    TINE20_EMAIL_SIEVE: "hostname:dovecot,port:4190,ssl:none"
+    TINE20_ACTIONQUEUE: "false"
+    NODE_TOTAL: $CI_NODE_TOTAL
+    NODE_INDEX: $CI_NODE_INDEX
+    TINE20_SETUP_HTPASSWD: "dev:$$apr1$$Ivpb7VfS$$kLnOg/uI0eNpTUhbeZF7n/" # dev:dev #this only works for the build container - for services 4 $ are required. which dose not work for build
+    TINE20_ACCEPTED_TERMS_VERSION: 1000
+    TINE20_LICENSE_PATH: "${CI_BUILDS_DIR}/${CI_PROJECT_NAMESPACE}/tine20/tests/tine20/Tinebase/License/license_contract_MW-TEST-3.0.0.pem" # be default use test license from cloned tine repo
+    ARG_EXCLUDE_GROUP: longrunning,needsbuild,nogitlabci
+    ARG_TEST: AllTests.php
+    ARG_FILTER: $PHPUNIT_FILTER
+    ARG_TEST_PATH_FROM_TINE20ROOT: tests/tine20/
+    ARG_POSTFIX_INIT_SQL_PATH: /config/sql/postfix_tables.sql
+    KUBERNETES_CPU_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_CPU_REQUEST
+    KUBERNETES_CPU_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_CPU_LIMIT
+    KUBERNETES_MEMORY_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_MEMORY_REQUEST
+    KUBERNETES_MEMORY_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_MEMORY_LIMIT
+    KUBERNETES_HELPER_CPU_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_HELPER_CPU_REQUEST
+    KUBERNETES_HELPER_CPU_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_HELPER_CPU_LIMIT
+    KUBERNETES_HELPER_MEMORY_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_HELPER_MEMORY_REQUEST
+    KUBERNETES_HELPER_MEMORY_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_HELPER_MEMORY_LIMIT
+    KUBERNETES_SERVICE_CPU_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_SERVICE_CPU_REQUEST
+    KUBERNETES_SERVICE_CPU_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_SERVICE_CPU_LIMIT
+    KUBERNETES_SERVICE_MEMORY_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_SERVICE_MEMORY_REQUEST
+    KUBERNETES_SERVICE_MEMORY_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_SERVICE_MEMORY_LIMIT
+    WAIT_FOR_DB_TIMEOUT: '120'
+    LANG: en_US.UTF-8
+  services:
+    - !reference [.lib-services, db_service]
+    - !reference [.lib-services, redis_service]
+    - !reference [.lib-services, mail_service]
+  retry:
+    max: 2
+    when:
+      - runner_system_failure
+
+.abstract_jobs.php_unit_cache:
+  extends: .abstract_jobs.test
+  image: ${TEST_IMAGE}
+  tags:
+    - custom-cache
+  variables:
+    TINE20ROOT: ${CI_BUILDS_DIR}/${CI_PROJECT_NAMESPACE}/tine20
+    TINE20_LICENSE_PATH: "${TINE20ROOT}/tests/tine20/Tinebase/License/license_contract_MW-TEST-3.0.0.pem"
+  needs: []
+  before_script:
+    - !reference [.lib, script]
+    - test_prepare_working_dir
+    - test_prepare_global_configs
+    - test_composer_install
+    # - test_npm_install # 2023 >= do not need npm install
+    - tine20_await_db
+    - test_prepare_mail_db
+    - tine20_install
+    - /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
+  script:
+    - !reference [.lib, script]
+    - test_phpunit
+  # custom-cache is faster
+  # cache:
+  #   - key:
+  #       files:
+  #         - tine20/Tinebase/js/package.json
+  #         - tine20/Tinebase/js/npm-shrinkwrap.json
+  #     paths:
+  #       - tine20/Tinebase/js/node_modules
+  artifacts:
+    paths:
+      - ${CI_PROJECT_DIR}/tine20.log
+      - ${CI_PROJECT_DIR}/phpunit-report.xml
+      - ${CI_PROJECT_DIR}/phpunit-coverage.xml
+    expire_in: 1 day
+    when: always
+    reports:
+      junit: ${CI_PROJECT_DIR}/phpunit-report.xml
+      coverage_report:
+        coverage_format: cobertura
+        path: ${CI_PROJECT_DIR}/phpunit-coverage.xml
+  services:
+    - !reference [.lib-services, db_service]
+    - !reference [.lib-services, redis_service]
+    - !reference [.lib-services, mail_service]
+
+# Has a db, redis and installs tine. Then runs a php unit test.
+# $ARG_IMAGE e.g. test-built-commit
+# $ARG_EXCLUDE_GROUP optional e.g. longrunning,needsbuild,nogitlabci
+# $ARG_TEST e.g. AllTests
+# $ARG_FILTER optional e.g. CashBook
+# $ARG_GROUP optional e.g nogitlab
+# $ARG_COPY_SOURCE copy source from gitlab repo onto image
+.abstract_jobs.php_unit:
+  extends: .abstract_jobs.test
+  before_script:
+    - if test "${CI_PROJECT_NAME}" != "tine20"; then git clone -b $TINE20_BRANCH --single-branch --depth 1 $TINE20_REPO_URL ${CI_BUILDS_DIR}/${CI_PROJECT_NAMESPACE}/tine20; fi
+    - if test "${ARG_COPY_SOURCE}" == "true"; then ${CI_BUILDS_DIR}/${CI_PROJECT_NAMESPACE}/tine20/ci/scripts/copy_source.sh; fi
+    - rm /etc/supervisor.d/worker.ini || true
+    - gomplate --config /etc/gomplate/config.yaml
+    - tine20_await_db
+    - mysql -h$MAIL_DB_HOST -uroot -p"$MYSQL_ROOT_PASSWORD" -e"SET GLOBAL wait_timeout=31536000; SET GLOBAL interactive_timeout=31536000"
+    - mysql -h$MAIL_DB_HOST -uroot -p"$MYSQL_ROOT_PASSWORD" -e"CREATE DATABASE IF NOT EXISTS dovecot"
+    - mysql -h$MAIL_DB_HOST -uroot -p"$MYSQL_ROOT_PASSWORD" -e"CREATE DATABASE IF NOT EXISTS postfix"
+    - mysql -h$MAIL_DB_HOST -uroot -p"$MYSQL_ROOT_PASSWORD" -e"CREATE USER IF NOT EXISTS '$MYSQL_USER'@'%' IDENTIFIED BY '$MYSQL_PASSWORD';"
+    - mysql -h$MAIL_DB_HOST -uroot -p"$MYSQL_ROOT_PASSWORD" -e"GRANT ALL PRIVILEGES ON postfix.* TO '$MYSQL_USER'@'%'"
+    - mysql -h$MAIL_DB_HOST -uroot -p"$MYSQL_ROOT_PASSWORD" -e"GRANT ALL PRIVILEGES ON dovecot.* TO '$MYSQL_USER'@'%'"
+    - mysql -h$MAIL_DB_HOST -uroot -p"$MYSQL_ROOT_PASSWORD" "dovecot" < /config/sql/dovecot_tables.sql
+    - mysql -h$MAIL_DB_HOST -uroot -p"$MYSQL_ROOT_PASSWORD" "postfix" < $ARG_POSTFIX_INIT_SQL_PATH
+    - tine20_install
+    - /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
+  script:
+    - test -f ${TINE20ROOT}/scripts/postInstallGitlab.sh && ${TINE20ROOT}/scripts/postInstallGitlab.sh
+    - echo cd ${TINE20ROOT}/${ARG_TEST_PATH_FROM_TINE20ROOT}
+    - cd ${TINE20ROOT}/${ARG_TEST_PATH_FROM_TINE20ROOT}
+    - php -v
+    - cmd="php -dopcache.enable=1 -dopcache.enable_cli=1 -dopcache.jit=1205 -dopcache.jit_buffer_size=100M ${TINE20ROOT}/tine20/vendor/bin/phpunit --color --log-junit ${CI_PROJECT_DIR}/phpunit-report.xml --debug";
+      if test -n "${ARG_FILTER}"; then cmd="${cmd} --filter ${ARG_FILTER}"; fi;
+      if test -n "${ARG_EXCLUDE_GROUP}"; then cmd="${cmd} --exclude-group ${ARG_EXCLUDE_GROUP}"; fi;
+      if test -n "${ARG_GROUP}"; then cmd="${cmd} --group ${ARG_GROUP}"; fi;
+      cmd="${cmd} ${ARG_TEST}";
+      echo ${cmd};
+      echo ${NODE_TOTAL} ${NODE_INDEX};
+      ${cmd}
+  image:
+    name: ${REGISTRY}/${ARG_IMAGE}-commit:${IMAGE_TAG}
+  artifacts:
+    paths:
+      - ${CI_PROJECT_DIR}/tine20.log
+      - ${CI_PROJECT_DIR}/phpunit-report.xml
+    expire_in: 1 day
+    when: always
+    reports:
+      junit: ${CI_PROJECT_DIR}/phpunit-report.xml
+  services:
+    - !reference [.lib-services, db_service]
+    - !reference [.lib-services, redis_service]
+    - !reference [.lib-services, mail_service]
+
+# extends .abstract_jobs.php_unit with ldap.
+.abstract_jobs.php_unit_ldap:
+  extends: .abstract_jobs.php_unit_cache
+  variables:
+    LDAP_ORGANISATION: "Tine20 dev"
+    LDAP_DOMAIN: "tine.test"
+    LDAP_ADMIN_PASSWORD: "admin"
+    TINE20_AUTHENTICATION: "bindRequiresDn:1,backend:ldap,host:ldap\\://ldap,port:389,username:cn=admin\\,dc=tine\\,dc=test,password:admin,baseDn:ou=users\\,dc=tine\\,dc=test,accountFilterFormat:(&(objectClass=posixAccount)(uid=%s)),accountCanonicalForm:2"
+    TINE20_ACCOUNTS: "backend:ldap,host:ldap\\://ldap,port:389,username:cn=admin\\,dc=tine\\,dc=test,password:admin,userDn:ou=users\\,dc=tine\\,dc=test,groupsDn:ou=groups\\,dc=tine\\,dc=test,defaultUserGroupName:Users,defaultAdminGroupName:Administrators"
+    KUBERNETES_CPU_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_LDAP_KUBERNETES_CPU_REQUEST
+    KUBERNETES_CPU_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_LDAP_KUBERNETES_CPU_LIMIT
+    KUBERNETES_MEMORY_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_LDAP_KUBERNETES_MEMORY_REQUEST
+    KUBERNETES_MEMORY_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_LDAP_KUBERNETES_MEMORY_LIMIT
+    KUBERNETES_HELPER_CPU_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_LDAP_KUBERNETES_HELPER_CPU_REQUEST
+    KUBERNETES_HELPER_CPU_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_LDAP_KUBERNETES_HELPER_CPU_LIMIT
+    KUBERNETES_HELPER_MEMORY_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_LDAP_KUBERNETES_HELPER_MEMORY_REQUEST
+    KUBERNETES_HELPER_MEMORY_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_LDAP_KUBERNETES_HELPER_MEMORY_LIMIT
+    KUBERNETES_SERVICE_CPU_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_LDAP_KUBERNETES_SERVICE_CPU_REQUEST
+    KUBERNETES_SERVICE_CPU_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_LDAP_KUBERNETES_SERVICE_CPU_LIMIT
+    KUBERNETES_SERVICE_MEMORY_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_LDAP_KUBERNETES_SERVICE_MEMORY_REQUEST
+    KUBERNETES_SERVICE_MEMORY_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_LDAP_KUBERNETES_SERVICE_MEMORY_LIMIT
+  services:
+    - !reference [.lib-services, db_service]
+    - !reference [.lib-services, redis_service]
+    - !reference [.lib-services, mail_service]
+    - !reference [.lib-services, ldap_service]
+
+# basic docker setup.
+.abstract_jobs.docker:
+  variables:
+    DOCKER_DRIVER: overlay2
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+    KUBERNETES_CPU_REQUEST: $ABSTRACT_JOBS_DOCKER_KUBERNETES_CPU_REQUEST
+    KUBERNETES_CPU_LIMIT: $ABSTRACT_JOBS_DOCKER_KUBERNETES_CPU_LIMIT
+    KUBERNETES_MEMORY_REQUEST: $ABSTRACT_JOBS_DOCKER_KUBERNETES_MEMORY_REQUEST
+    KUBERNETES_MEMORY_LIMIT: $ABSTRACT_JOBS_DOCKER_KUBERNETES_MEMORY_LIMIT
+    KUBERNETES_HELPER_CPU_REQUEST: $ABSTRACT_JOBS_DOCKER_KUBERNETES_HELPER_CPU_REQUEST
+    KUBERNETES_HELPER_CPU_LIMIT: $ABSTRACT_JOBS_DOCKER_KUBERNETES_HELPER_CPU_LIMIT
+    KUBERNETES_HELPER_MEMORY_REQUEST: $ABSTRACT_JOBS_DOCKER_KUBERNETES_HELPER_MEMORY_REQUEST
+    KUBERNETES_HELPER_MEMORY_LIMIT: $ABSTRACT_JOBS_DOCKER_KUBERNETES_HELPER_MEMORY_LIMIT
+    KUBERNETES_SERVICE_CPU_REQUEST: $ABSTRACT_JOBS_DOCKER_KUBERNETES_SERVICE_CPU_REQUEST
+    KUBERNETES_SERVICE_CPU_LIMIT: $ABSTRACT_JOBS_DOCKER_KUBERNETES_SERVICE_CPU_LIMIT
+    KUBERNETES_SERVICE_MEMORY_REQUEST: $ABSTRACT_JOBS_DOCKER_KUBERNETES_SERVICE_MEMORY_REQUEST
+    KUBERNETES_SERVICE_MEMORY_LIMIT: $ABSTRACT_JOBS_DOCKER_KUBERNETES_SERVICE_MEMORY_LIMIT
+  services:
+    - name: ${UTIL_REGISTRY}/docker:27.0.3-dind
+      alias: docker
+  image: ${UTIL_REGISTRY}/docker:27.0.3-r1
+  before_script:
+    - export DOCKER_BUILDKIT=1
+    - export PROGRESS_NO_TRUNC=1 # stop docker from truncating aws image names
+    - !reference [.lib, script]
+    - docker_registry_login ${REGISTRY} ${REGISTRY_USER} ${REGISTRY_PASSWORD}
+    - docker_registry_login ${CI_DEPENDENCY_PROXY_SERVER} ${CI_DEPENDENCY_PROXY_USER} ${CI_DEPENDENCY_PROXY_PASSWORD}
+    - |
+      WAIT_TIME=0
+      until [ $WAIT_TIME -eq 60 ] || docker version > /dev/null 2>&1
+      do
+        echo "."
+        sleep 1
+        WAIT_TIME=$((WAIT_TIME+1))
+      done
+      [ $WAIT_TIME -lt 60 ]
+
+  retry:
+    max: 2
+    when:
+      - runner_system_failure

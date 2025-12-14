@@ -1,0 +1,425 @@
+﻿/*
+ * Tine 2.0
+ * 
+ * @package     Timetracker
+ * @license     http://www.gnu.org/licenses/agpl.html AGPL Version 3
+ * @author      Philipp Schüle <p.schuele@metaways.de>
+ * @copyright   Copyright (c) 2007-2011 Metaways Infosystems GmbH (http://www.metaways.de)
+ *
+ */
+ 
+Ext.namespace('Tine.Timetracker');
+
+/**
+ * Timesheet grid panel
+ * 
+ * @namespace   Tine.Timetracker
+ * @class       Tine.Timetracker.TimesheetGridPanel
+ * @extends     Tine.widgets.grid.GridPanel
+ * 
+ * <p>Timesheet Grid Panel</p>
+ * <p><pre>
+ * </pre></p>
+ * 
+ * @license     http://www.gnu.org/licenses/agpl.html AGPL Version 3q
+ * @author      Philipp Schüle <p.schuele@metaways.de>
+ * 
+ * @param       {Object} config
+ * @constructor
+ * Create a new Tine.Timetracker.TimesheetGridPanel
+ */
+Tine.Timetracker.TimesheetGridPanel = Ext.extend(Tine.widgets.grid.GridPanel, {
+
+    recordClass: 'Tine.Timetracker.Model.Timesheet',
+    multipleEdit: true,
+
+    /**
+     * @private
+     */
+
+    /**
+     * activates copy action
+     */
+    copyEditAction: true,
+
+    /**
+     * only allow multi edit with manage_timeaccounts right (because of timeaccount handling in edit dlg)
+     */
+    multipleEditRequiredRight: 'manage_timeaccounts',
+
+    initComponent: function() {
+        this.defaultSortInfo = {field: 'start_date', direction: 'DESC'};
+        this.gridConfig = Object.assign({
+            autoExpandColumn: 'description'
+        }, this.gridConfig || {});
+
+        this.defaultFilters = [
+            {field: 'start_date', operator: 'within', value: 'weekThis'},
+            {field: 'account_id', operator: 'equals', value: Tine.Tinebase.registry.get('currentAccount')}
+        ];
+
+        this.initDetailsPanel();
+        
+        // only eval grants in action updater if user does not have the right to manage timeaccounts
+        this.evalGrants = ! Tine.Tinebase.common.hasRight('manage', 'Timetracker', 'timeaccounts');
+
+
+        Tine.Timetracker.TimesheetGridPanel.superclass.initComponent.call(this);
+    },
+
+    /**
+     * initLayout: we add the title bar here
+     */
+    initLayout: function() {
+        Tine.Timetracker.TimesheetGridPanel.superclass.initLayout.call(this);
+        
+        this.pagingToolbar.insert(this.pagingToolbar.items.length -3,
+            Ext.create({ id: 'wt-label', xtype: 'tbtext', text: this.app.i18n._('Working Time:'), displayPriority: 40}),
+            new Ext.Component({ id: 'wt-bar', displayPriority: 50, style: { margin: '3px 10px', width: '100px', height: '16px' } }),
+            Ext.create({ id: 'to-label', xtype: 'tbtext', text: this.app.i18n._('Turnover:'), displayPriority: 40 }),
+            new Ext.Component({ id: 'to-bar', displayPriority: 50, style: { margin: '3px 10px', width: '100px', height: '16px' } })
+        );
+    },
+
+    onStoreLoad: function(store, records, options) {
+        const data = store.reader.jsonData;
+
+        Tine.Timetracker.TimesheetGridPanel.superclass.onStoreLoad.apply(this, arguments);
+        if (data.workingTimeTarget) {
+            this.pagingToolbar.items.get('wt-bar').update(Ext.ux.PercentRenderer({
+                qtitle: this.app.i18n._('Working Time Statistics'),
+                qtip:
+                    this.app.formatMessage('Working Time Target: { target }', {
+                        target: Ext.ux.form.DurationSpinner.durationRenderer(data.workingTimeTarget, {
+                            baseUnit: 'seconds'
+                        })
+                    }) + "<br>" +
+                    this.app.formatMessage('Working Time Recorded: { recorded }', {
+                        recorded: Ext.ux.form.DurationSpinner.durationRenderer(data.totalsum || 0, {
+                            baseUnit: 'minutes'
+                        })
+                    }),
+                percent: Math.round(100 * (data.totalsum || 0) / (data.workingTimeTarget / 60))
+            }));
+        }
+        this.pagingToolbar.items.get('wt-label')[!! data.workingTimeTarget ? 'show' : 'hide']();
+        this.pagingToolbar.items.get('wt-bar')[!! data.workingTimeTarget ? 'show' : 'hide']();
+
+        if(data.turnOverGoal) {
+            this.pagingToolbar.items.get('to-bar').update(Ext.ux.PercentRenderer({
+                qtitle: this.app.i18n._('Turnover Statistics'),
+                qtip:
+                    this.app.formatMessage('Turnover Target: { target }', {target: Ext.util.Format.money(data.turnOverGoal)}) + "<br>" +
+                    this.app.formatMessage('Turnover Recorded: { recorded }', {recorded: Ext.util.Format.money(data.recordedAmount || 0)}) + "<br>" +
+                    this.app.formatMessage('Turnover Cleared: { cleared }', {cleared: Ext.util.Format.money(data.clearedAmount || 0)}),
+                percent: Math.round(100 * (data.recordedAmount || 0) / data.turnOverGoal)
+            }));
+        }
+        this.pagingToolbar.items.get('to-label')[!! data.turnOverGoal ? 'show' : 'hide']();
+        this.pagingToolbar.items.get('to-bar')[!! data.turnOverGoal ? 'show' : 'hide']();
+    },
+
+    /**
+     * @private
+     */
+    initDetailsPanel: function() {
+        if (this.detailsPanel === false) return; // e.g. in dialogs
+        this.detailsPanel = new Tine.widgets.grid.DetailsPanel({
+            gridpanel: this,
+            
+            // use default Tpl for default and multi view
+            defaultTpl: new Ext.XTemplate(
+                '<div class="preview-panel-timesheet-nobreak">',
+                    '<!-- Preview timeframe -->',           
+                    '<div class="preview-panel preview-panel-timesheet-left">',
+                        '<div class="bordercorner_1"></div>',
+                        '<div class="bordercorner_2"></div>',
+                        '<div class="bordercorner_3"></div>',
+                        '<div class="bordercorner_4"></div>',
+                        '<div class="preview-panel-declaration">' /*+ this.app.i18n._('timeframe')*/ + '</div>',
+                        '<div class="preview-panel-timesheet-leftside preview-panel-left">',
+                            '<span class="preview-panel-bold">',
+                            /*'First Entry'*/'<br/>',
+                            /*'Last Entry*/'<br/>',
+                            /*'Duration*/'<br/>',
+                            '<br/>',
+                            '</span>',
+                        '</div>',
+                        '<div class="preview-panel-timesheet-rightside preview-panel-left">',
+                            '<span class="preview-panel-nonbold">',
+                            '<br/>',
+                            '<br/>',
+                            '<br/>',
+                            '<br/>',
+                            '</span>',
+                        '</div>',
+                    '</div>',
+                    '<!-- Preview summary -->',
+                    '<div class="preview-panel-timesheet-right">',
+                        '<div class="bordercorner_gray_1"></div>',
+                        '<div class="bordercorner_gray_2"></div>',
+                        '<div class="bordercorner_gray_3"></div>',
+                        '<div class="bordercorner_gray_4"></div>',
+                        '<div class="preview-panel-declaration">'/* + this.app.i18n._('summary')*/ + '</div>',
+                        '<div class="preview-panel-timesheet-leftside preview-panel-left">',
+                            '<span class="preview-panel-bold">',
+                            this.app.i18n._('Total Timesheets') + '<br/>',
+                            this.app.i18n._('Billable Timesheets') + '<br/>',
+                            this.app.i18n._('Total Time') + '<br/>',
+                            this.app.i18n._('Time of Billable Timesheets') + '<br/>',
+                            '</span>',
+                        '</div>',
+                        '<div class="preview-panel-timesheet-rightside preview-panel-left">',
+                            '<span class="preview-panel-nonbold">',
+                            '{count}<br/>',
+                            '{countbillable}<br/>',
+                            '{sum}<br/>',
+                            '{sumbillable}<br/>',
+                            '</span>',
+                        '</div>',
+                    '</div>',
+                '</div>'            
+            ),
+            
+            showDefault: function(body) {
+                
+                var data = {
+                    count: this.gridpanel.store.proxy.jsonReader.jsonData.totalcount,
+                    countbillable: (this.gridpanel.store.proxy.jsonReader.jsonData.totalcountbillable) ? this.gridpanel.store.proxy.jsonReader.jsonData.totalcountbillable : 0,
+                    sum:  Tine.Tinebase.common.minutesRenderer(this.gridpanel.store.proxy.jsonReader.jsonData.totalsum),
+                    sumbillable: Tine.Tinebase.common.minutesRenderer(this.gridpanel.store.proxy.jsonReader.jsonData.totalsumbillable)
+                };
+                
+                this.defaultTpl.overwrite(body, data);
+            },
+            
+            showMulti: function(sm, body) {
+                
+                var data = {
+                    count: sm.getCount(),
+                    countbillable: 0,
+                    sum: 0,
+                    sumbillable: 0
+                };
+                sm.each(function(record){
+                    
+                    data.sum = data.sum + parseInt(record.data.duration);
+                    if (record.data.is_billable == '1') {
+                        data.countbillable++;
+                        data.sumbillable = data.sumbillable + parseInt(record.data.accounting_time);
+                    }
+                });
+                data.sum = Tine.Tinebase.common.minutesRenderer(data.sum);
+                data.sumbillable = Tine.Tinebase.common.minutesRenderer(data.sumbillable);
+                
+                this.defaultTpl.overwrite(body, data);
+            },
+            
+            tpl: new Ext.XTemplate(
+                '<div class="preview-panel-timesheet-nobreak">',    
+                    '<!-- Preview beschreibung -->',
+                    '<div class="preview-panel preview-panel-timesheet-left">',
+                        '<div class="bordercorner_1"></div>',
+                        '<div class="bordercorner_2"></div>',
+                        '<div class="bordercorner_3"></div>',
+                        '<div class="bordercorner_4"></div>',
+                        '<div class="preview-panel-declaration">' /* + this.app.i18n._('Description') */ + '</div>',
+                        '<div class="preview-panel-timesheet-description preview-panel-left">',
+                            '<span class="preview-panel-nonbold">',
+                             '{[this.encode(values.description)]}',
+                            '<br/>',
+                            '</span>',
+                        '</div>',
+                    '</div>',
+                    '<!-- Preview detail-->',
+                    '<div class="preview-panel-timesheet-right">',
+                        '<div class="bordercorner_gray_1"></div>',
+                        '<div class="bordercorner_gray_2"></div>',
+                        '<div class="bordercorner_gray_3"></div>',
+                        '<div class="bordercorner_gray_4"></div>',
+                        '<div class="preview-panel-declaration">' /* + this.app.i18n._('Detail') */ + '</div>',
+                        '<div class="preview-panel-timesheet-leftside preview-panel-left">',
+                        // @todo add custom fields here
+                        /*
+                            '<span class="preview-panel-bold">',
+                            'Ansprechpartner<br/>',
+                            'Newsletter<br/>',
+                            'Ticketnummer<br/>',
+                            'Ticketsubjekt<br/>',
+                            '</span>',
+                        */
+                        '</div>',
+                        '<div class="preview-panel-timesheet-rightside preview-panel-left">',
+                            '<span class="preview-panel-nonbold">',
+                            '<br/>',
+                            '<br/>',
+                            '<br/>',
+                            '<br/>',
+                            '</span>',
+                        '</div>',
+                    '</div>',
+                '</div>',{
+                encode: function(value, type, prefix) {
+                    if (value) {
+                        if (type) {
+                            switch (type) {
+                                case 'longtext':
+                                    value = Ext.util.Format.ellipsis(value, 150);
+                                    break;
+                                default:
+                                    value += type;
+                            }
+                        }
+                        
+                        var encoded = Ext.util.Format.htmlEncode(value);
+                        encoded = Ext.util.Format.nl2br(encoded);
+                        
+                        return encoded;
+                    } else {
+                        return '';
+                    }
+                }
+            })
+        });
+    },
+
+    /**
+     * @private
+     */
+    initActions: function() {
+        var hiddenQuickTag = false,
+            quicktagName,
+            quicktagId;
+
+        quicktagId = Tine.Timetracker.registry.get('quicktagId');
+        quicktagName = Tine.Timetracker.registry.get('quicktagName');
+
+        if (!quicktagId || !quicktagName) {
+            hiddenQuickTag = true;
+        }
+
+        this.actions_massQuickTag = new Ext.Action({
+            hidden: hiddenQuickTag,
+            requiredGrant: 'editGrant',
+            text: String.format(
+                this.app.i18n._('Assign \'{0}\' Tag'),
+                quicktagName
+            ),
+            disabled: true,
+            allowMultiple: true,
+            handler: this.onApplyQuickTag.createDelegate(this),
+            iconCls: 'action_tag',
+            scope: this
+        });
+        
+        // register actions in updater
+        this.actionUpdater.addActions([
+            this.actions_massQuickTag
+        ]);
+        
+        Tine.Timetracker.TimesheetGridPanel.superclass.initActions.call(this);
+
+        this.actions_export.initialConfig.actionUpdater = this.updateExportAction.createDelegate(this);
+    },
+
+    /**
+     * Apply quick tag to current selection
+     */
+    onApplyQuickTag: function() {
+        var quickTagId,
+            filter,
+            filterModel,
+            me;
+
+        me = this;
+
+        // Tag to assign
+        quickTagId = Tine.Timetracker.registry.get('quicktagId');
+
+        // Get filter model for current selection
+        filter = this.selectionModel.getSelectionFilter();
+        filterModel = this.recordClass.getMeta('appName') + '_Model_' +  this.recordClass.getMeta('modelName') + 'Filter';
+
+        // Send request to backend
+        Ext.Ajax.request({
+            scope: this,
+            timeout: 1800000,
+            success: function(response, options) {
+                // In case of success, just reload grid
+                me.getStore().reload();
+            },
+            params: {
+                method: 'Tinebase.attachTagToMultipleRecords',
+                filterData: filter,
+                filterName: filterModel,
+                tag: quickTagId
+            },
+            failure: function(response, options) {
+                Tine.Tinebase.ExceptionHandler.handleRequestException(response, options);
+            }
+        });
+    },
+
+    /**
+     * check user exportGrant for timeaccounts
+     * NOTE: manage_timeaccounts ALWAYS allows to export
+     *
+     * @param action
+     * @param grants
+     * @param records
+     * @returns {boolean}
+     */
+    updateExportAction: function(action, grants, records) {
+        // export should be allowed always if user is allowed to manage timeaccounts
+        if (Tine.Tinebase.common.hasRight('manage', 'Timetracker', 'timeaccounts')) {
+            action.setDisabled(false);
+
+            // stop further events
+            return false;
+        }
+
+        // By default disallow export, this apply for example, if there is no selection yet
+        // E.g. filter changes and so on
+        var exportGrant = false;
+
+        // We need to go through all timeaccounts and check if the user is trying to export a timesheet of a timeaccount
+        // where he has no permission to export.
+        Ext.each(records, function (record) {
+            var timeaccount = record.get('timeaccount_id');
+            var c = timeaccount.container_id;
+            if (c.hasOwnProperty('account_grants')) {
+                var grants = c.account_grants;
+
+                if (!grants.exportGrant) {
+                    exportGrant = false;
+
+                    // stop loop
+                    return false;
+                } else {
+                    // If there was at least one selection which had the exportGrant, allow to export
+                    exportGrant = true;
+                }
+            }
+        });
+
+        var disable = !exportGrant;
+        action.setDisabled(disable);
+
+        // stop further events
+        return false;
+    },
+    
+    /**
+     * add custom items to context menu
+     * 
+     * @return {Array}
+     */
+    getContextMenuItems: function() {
+        var items = [
+            '-',
+            this.actions_massQuickTag,
+        ];
+        
+        return items;
+    }
+});

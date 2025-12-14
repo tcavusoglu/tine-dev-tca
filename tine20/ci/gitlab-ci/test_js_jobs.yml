@@ -1,0 +1,185 @@
+.js-e2e-tests-source:
+  extends: .abstract_jobs.test
+  stage: test
+  needs: []
+  variables:
+    KUBERNETES_CPU_REQUEST: $ABSTRACT_JOBS_E2E_TEST_KUBERNETES_CPU_REQUEST
+    KUBERNETES_CPU_LIMIT: $ABSTRACT_JOBS_E2E_TEST_KUBERNETES_CPU_LIMIT
+    KUBERNETES_MEMORY_REQUEST: $ABSTRACT_JOBS_E2E_TEST_KUBERNETES_MEMORY_REQUEST
+    KUBERNETES_MEMORY_LIMIT: $ABSTRACT_JOBS_E2E_TEST_KUBERNETES_MEMORY_LIMIT
+    KUBERNETES_HELPER_CPU_REQUEST: $ABSTRACT_JOBS_E2E_TEST_KUBERNETES_HELPER_CPU_REQUEST
+    KUBERNETES_HELPER_CPU_LIMIT: $ABSTRACT_JOBS_E2E_TEST_KUBERNETES_HELPER_CPU_LIMIT
+    KUBERNETES_HELPER_MEMORY_REQUEST: $ABSTRACT_JOBS_E2E_TEST_KUBERNETES_HELPER_MEMORY_REQUEST
+    KUBERNETES_HELPER_MEMORY_LIMIT: $ABSTRACT_JOBS_E2E_TEST_KUBERNETES_HELPER_MEMORY_LIMIT
+    KUBERNETES_SERVICE_CPU_REQUEST: $ABSTRACT_JOBS_E2E_TEST_KUBERNETES_SERVICE_CPU_REQUEST
+    KUBERNETES_SERVICE_CPU_LIMIT: $ABSTRACT_JOBS_E2E_TEST_KUBERNETES_SERVICE_CPU_LIMIT
+    KUBERNETES_SERVICE_MEMORY_REQUEST: $ABSTRACT_JOBS_E2E_TEST_KUBERNETES_SERVICE_MEMORY_REQUEST
+    KUBERNETES_SERVICE_MEMORY_LIMIT: $ABSTRACT_JOBS_E2E_TEST_KUBERNETES_SERVICE_MEMORY_LIMIT
+    TEST_DOCKER: "true"
+    TEST_WORKER: "2"
+    TEST_BROWSER_LANGUAGE: en
+    TINE20_INSTALL_LANG: de
+    TINE20ROOT: ${CI_BUILDS_DIR}/${CI_PROJECT_NAMESPACE}/tine20
+    TINE20_LOGGER_ADDITIONALWRITERS_FILENAME: php://stdout
+    WAIT_FOR_DB_TIMEOUT: '120'
+    TINE_CONTAINER_NAME: svc-5
+    TINE20_SETUP_HTPASSWD: "dev:$$$$apr1$$$$Ivpb7VfS$$$$kLnOg/uI0eNpTUhbeZF7n/" # dev:dev #this only works for the svc container - for the build container only 2 $ are required. which dose not work for svc
+  services:
+    - !reference [.lib-services, db_service]
+    - !reference [.lib-services, redis_service]
+    - !reference [.lib-services, mail_service]
+    - name: ${UTIL_REGISTRY}/node:18.9.0-alpine-r2
+      alias: webpack
+      entrypoint:
+        !reference [.lib, entry_points, tine_as_a_service_webpack]
+    - name: ${TEST_IMAGE}
+      alias: tine
+      entrypoint:
+        !reference [.lib, entry_points, tine_as_a_service]
+  image:
+    name: dockerregistry.metaways.net/tine20/tine20/puppeteer:2.0.0
+  before_script:
+    - touch ${CI_BUILDS_DIR}/${CI_PROJECT_NAMESPACE}/tine20/signal_mount_ready
+    - echo -n 'wait for signal_files_ready ...'; while [ ! -f ${CI_BUILDS_DIR}/${CI_PROJECT_NAMESPACE}/tine20/signal_files_ready ]; do sleep 1; done; echo ' done'
+    # install e2e test dependencies
+    - npm --prefix $TINE20ROOT/tests/e2etests/ install
+    # wait for service to become ready
+    - echo -n 'wait for signal_tine_ready ...'; while [ ! -f ${CI_BUILDS_DIR}/${CI_PROJECT_NAMESPACE}/tine20/signal_tine_ready ]; do sleep 1; done; echo ' done'
+    # todo wait for 
+    - if [ -f ${CI_BUILDS_DIR}/${CI_PROJECT_NAMESPACE}/tine20/signal_wait_for_database_failed ]; then echo "waiting for database failed"; exit 1; fi
+    - if [ -f ${CI_BUILDS_DIR}/${CI_PROJECT_NAMESPACE}/tine20/signal_demo_data_install_failed ]; then echo "demo data install failed"; exit 1; fi
+  script:
+    - export TEST_URL=http://tine:10443;
+    - while ! wget $TEST_URL; do sleep 1; done
+    - echo TEST_URL=${TEST_URL}
+    - export TEST_ENVIROMENT=""
+    - cd $TINE20ROOT/tests/e2etests
+    - npm test -- $JS_E2E_TEST_FILTER --reporters=default --reporters=jest-junit
+  after_script:
+    - |
+      export now=$(date +%s000);
+      export start=$(date -d '-2 hour' +%s000);
+      echo tine20 log: "${GRAFANA_URL}&left=%5B%22${start}%22,%22${now}%22,%22Loki%22,%7B%22refId%22:%22A%22,%22expr%22:%22%7Bapp%3D%5C%22${HOSTNAME}%5C%22,%20container%3D%5C%22${TINE_CONTAINER_NAME}%5C%22%7D%22%7D%5D"
+    - cp ${CI_BUILDS_DIR}/${CI_PROJECT_NAMESPACE}/tine20/tests/e2etests/junit.xml ${CI_PROJECT_DIR}/junit.xml
+    - |
+      if [ "${CI_COMMIT_REF_NAME}" == "${MAJOR_COMMIT_REF_NAME}" ]; then
+        s3cmd --access_key=${SCREENSHOTS_S3_ACCESS_KEY} --secret_key=${SCREENSHOTS_S3_SECRET_KEY} --host ${SCREENSHOTS_S3_HOST} --host-bucket "%(bucket)s.${SCREENSHOTS_S3_HOST}" --acl-public --delete-removed --no-mime-magic sync ${CI_PROJECT_DIR}/tests/e2etests/screenshots/ s3://${SCREENSHOTS_S3_BUCKET}/${CI_COMMIT_REF_NAME}/${CI_RESOLUTION}/
+      fi
+  artifacts:
+    when: always
+    reports:
+      junit: ${CI_PROJECT_DIR}/junit.xml
+    paths:
+      - ${CI_PROJECT_DIR}/tine20.log
+      - ${CI_PROJECT_DIR}/phpunit-report.xml
+      - ${CI_PROJECT_DIR}/tests/e2etests/screenshots/Error/
+    expire_in: 7 day
+  interruptible: true
+  rules:
+    - if: $RUN_NO_TESTS == "true"
+      when: never
+    - if: $JS_E2E_TESTS_SOURCE == "false"
+      when: never
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /skip-js-e2e-tests-source/
+      when: never
+    - if: $JS_E2E_TESTS_SOURCE == "true"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $JS_E2E_TESTS_SOURCE_MERGE_REQUEST != "false"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /js-e2e-tests-source/
+    - if: $PIPELINE_TYPE =~ /default-tests/
+    - if: $PIPELINE_TYPE =~ /mr-tests/
+    - if: $PIPELINE_TYPE =~ /e2e-tests/
+    - if: $CI_COMMIT_TAG
+js-e2e-tests-source:
+  extends: .js-e2e-tests-source
+  rules:
+    - if: $JS_E2E_TESTS_SOURCE_TYPE != "sequential"
+      when: never
+    - if: $JS_E2E_TESTS_SOURCE_SAVE_SCREENSHOTS == "true" || $CI_MERGE_REQUEST_LABELS =~ /js-e2e-tests-source-save-screenshots/ || $CI_PIPELINE_SOURCE == "schedule"
+      when: never
+    - !reference [.js-e2e-tests-source, rules]
+js-e2e-tests-source-save-screenshots-720p:
+  extends: .js-e2e-tests-source
+  variables:
+    TEST_RESOLUTION: '{"width": 1280, "height": 720}'
+    CI_RESOLUTION: '720p'
+  artifacts:
+    when: always
+    reports:
+      junit: ${CI_PROJECT_DIR}/junit.xml
+    paths:
+      - ${CI_PROJECT_DIR}/tine20.log
+      - ${CI_PROJECT_DIR}/phpunit-report.xml
+      - ${CI_PROJECT_DIR}/tests/e2etests/screenshots/
+    expire_in: 7 day
+  rules:
+    - if: $JS_E2E_TESTS_SOURCE_TYPE != "sequential"
+      when: never
+    - if: $JS_E2E_TESTS_SOURCE_SAVE_SCREENSHOTS != "true" && $CI_MERGE_REQUEST_LABELS !~ /js-e2e-tests-source-save-screenshots/ && $CI_PIPELINE_SOURCE != "schedule"
+      when: never
+    - !reference [.js-e2e-tests-source, rules]
+  allow_failure: true
+js-e2e-tests-source-save-screenshots-1080p:
+  extends: js-e2e-tests-source-save-screenshots-720p
+  variables:
+    TEST_RESOLUTION: '{"width": 1920, "height": 1020}'
+    CI_RESOLUTION: '1080p'
+js-e2e-tests-source-php-version-matrix:
+  extends: .js-e2e-tests-source
+  parallel:
+    matrix:
+      - PHP_VERSION:
+          - "8.1"
+          - "8.2"
+          - "8.3"
+  rules:
+    - if: $PIPELINE_TYPE =~ /matrix-tests/
+    - if: $JS_E2E_TESTS_SOURCE_TYPE != "matrix"
+      when: never
+    - !reference [.js-e2e-tests-source, rules]
+
+js-unit-tests:
+  image: ${UTIL_REGISTRY}/node:18.9.0-alpine-r2
+  stage: test
+  needs: []
+  timeout: 30m
+  variables:
+    KUBERNETES_CPU_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_CPU_REQUEST
+    KUBERNETES_CPU_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_CPU_LIMIT
+    KUBERNETES_MEMORY_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_MEMORY_REQUEST
+    KUBERNETES_MEMORY_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_MEMORY_LIMIT
+    KUBERNETES_HELPER_CPU_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_HELPER_CPU_REQUEST
+    KUBERNETES_HELPER_CPU_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_HELPER_CPU_LIMIT
+    KUBERNETES_HELPER_MEMORY_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_HELPER_MEMORY_REQUEST
+    KUBERNETES_HELPER_MEMORY_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_HELPER_MEMORY_LIMIT
+    KUBERNETES_SERVICE_CPU_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_SERVICE_CPU_REQUEST
+    KUBERNETES_SERVICE_CPU_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_SERVICE_CPU_LIMIT
+    KUBERNETES_SERVICE_MEMORY_REQUEST: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_SERVICE_MEMORY_REQUEST
+    KUBERNETES_SERVICE_MEMORY_LIMIT: $ABSTRACT_JOBS_PHP_UNIT_KUBERNETES_SERVICE_MEMORY_LIMIT
+    TINE20ROOT: ${CI_BUILDS_DIR}/${CI_PROJECT_NAMESPACE}/tine20
+    # Pass variable configured in settings to service
+    TINE20_REPO_URL: ${TINE20_REPO_URL}
+  services:
+    - name: ${TEST_IMAGE}
+      alias: tine
+      entrypoint:
+        !reference [.lib, entry_points, prepare_working_dir_js_tests]
+  before_script:
+    - !reference [.lib, script]
+    - touch ${CI_BUILDS_DIR}/${CI_PROJECT_NAMESPACE}/signal_mount_ready
+    - echo -n 'wait for signal_php_deps_installed ...'; while [ ! -f ${CI_BUILDS_DIR}/${CI_PROJECT_NAMESPACE}/tine20/signal_php_deps_installed ]; do sleep 1; done; echo ' done'
+    - test_npm_install --ignore-scripts
+  script:
+    - !reference [.lib, script]
+    - cd ${TINE20ROOT}/tine20/Tinebase/js && node --experimental-vm-modules node_modules/jest/bin/jest.js -c ${TINE20ROOT}/tests/js/jest/jest.config.js
+  rules:
+    - if: $RUN_NO_TESTS == "true"
+      when: never
+    - if: $JS_UNIT_TESTS == "false"
+      when: never
+    - if: $JS_UNIT_TESTS == "true"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $JS_UNIT_TESTS_MERGE_REQUEST != "false"
+      changes:
+        paths:
+          - "**/*.js"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /js-unit-tests/
+    - if: $PIPELINE_TYPE =~ /default-tests/

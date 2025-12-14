@@ -1,0 +1,498 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0 - Timetracker\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2008-07-29 21:14+0100\n"
+"Last-Translator: Cornelius Weiss <c.weiss@metaways.de>\n"
+"Language-Team: Tine 2.0 Translators\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Manage time accounts"
+msgstr "Manage time accounts"
+
+msgid "Add, edit and delete time accounts (includes all timesheet permissions)"
+msgstr "Add, edit and delete time accounts (includes all timesheet permissions)"
+
+msgid "Add time accounts"
+msgstr "Add time accounts"
+
+msgid "Manage shared time account favorites"
+msgstr "Manage shared time account favorites"
+
+msgid "Create or update shared time account favorites"
+msgstr "Create or update shared time account favorites"
+
+msgid "Manage shared timesheet favorites"
+msgstr "Manage shared timesheet favorites"
+
+msgid "Create or update shared timesheet favorites"
+msgstr "Create or update shared timesheet favorites"
+
+msgid "Enabled Features"
+msgstr "Enabled Features"
+
+msgid "Enabled Features in the Timetracker Application."
+msgstr "Enabled Features in the Timetracker Application."
+
+msgid "Time Account Bookmarks"
+msgstr "Time Account Bookmarks"
+
+msgid "Add time accounts as favorite to speed up timesheet creation."
+msgstr "Add time accounts as favorite to speed up timesheet creation."
+
+msgid "none"
+msgstr "none"
+
+msgid "last week"
+msgstr "last week"
+
+msgid "not yet billed"
+msgstr "not yet billed"
+
+msgid "status to bill"
+msgstr "status to bill"
+
+msgid "billed"
+msgstr "billed"
+
+msgid "Requested"
+msgstr "Requested"
+
+msgid "Accepted"
+msgstr "Accepted"
+
+msgid "Declined"
+msgstr "Declined"
+
+#, python-format, php-format
+msgid "There are %s timesheets will be updated."
+msgstr "There are %s timesheets will be updated."
+
+msgid "You are about to change the value of the “Timesheets are invoiceable” field. Should this new value also be changed in all timesheets in the timeaccount if they have not yet been cleared?"
+msgstr "You are about to change the value of the “Timesheets are invoiceable” field. Should this new value also be changed in all timesheets in the timeaccount if they have not yet been cleared?"
+
+msgid "Apply to timesheets?"
+msgstr "Apply to timesheets?"
+
+msgid "You are about to change the factor for the timeaccount. Should this new factor also be changed in all timesheets for the timeaccount, provided that these have not yet been cleared and the factor has not already been changed manually?"
+msgstr "You are about to change the factor for the timeaccount. Should this new factor also be changed in all timesheets for the timeaccount, provided that these have not yet been cleared and the factor has not already been changed manually?"
+
+msgid "Time accounts are still in use! Are you sure you want to delete them?"
+msgstr "Time accounts are still in use! Are you sure you want to delete them?"
+
+msgid "End date cannot be before start date"
+msgstr "End date cannot be before start date"
+
+msgid "start time and end time need to be set for multi day"
+msgstr "start time and end time need to be set for multi day"
+
+msgid "The invoice you tried to edit has already been cleared. Changing the date will rebill the invoice. Do you still want to perform this action?"
+msgstr "The invoice you tried to edit has already been cleared. Changing the date will rebill the invoice. Do you still want to perform this action?"
+
+msgid "The related time account is already closed. Do you still want to perform this action?"
+msgstr "The related time account is already closed. Do you still want to perform this action?"
+
+msgid "Excel overview"
+msgstr "Excel overview"
+
+msgid "Add Timesheet"
+msgstr "Add Timesheet"
+
+msgid "Timesheets of this Task:"
+msgstr "Timesheets of this Task:"
+
+msgid "Time Account - Billed"
+msgstr "Time Account - Billed"
+
+msgid "to bill"
+msgstr "to bill"
+
+msgid "Contract"
+msgstr "Contract"
+
+msgid "without contract"
+msgstr "without contract"
+
+msgid "Unit"
+msgstr "Unit"
+
+msgid "Unit Price"
+msgstr "Unit Price"
+
+msgid "Factor"
+msgstr "Factor"
+
+msgid "Budget in hours"
+msgstr "Budget in hours"
+
+msgid "All timesheet durations are aggregated here, no matter if they are billable or not"
+msgstr "All timesheet durations are aggregated here, no matter if they are billable or not"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "closed"
+msgstr "closed"
+
+msgid "open"
+msgstr "open"
+
+msgid "Cleared at"
+msgstr "Cleared at"
+
+msgid "Responsible Person"
+msgstr "Responsible Person"
+
+msgid "Project time is invoiceable"
+msgstr "Project time is invoiceable"
+
+msgid "Invoice"
+msgstr "Invoice"
+
+msgid "Time Account"
+msgid_plural "Time Accounts"
+msgstr[0] "Time Account"
+msgstr[1] "Time Accounts"
+
+msgid "Number"
+msgstr "Number"
+
+msgid "Title"
+msgstr "Title"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Select invoice"
+msgstr "Select invoice"
+
+msgid "Remove Budget?"
+msgstr "Remove Budget?"
+
+msgid "The timeaccount contains a budget. Should this be deleted in the copy?"
+msgstr "The timeaccount contains a budget. Should this be deleted in the copy?"
+
+msgid "Update Timesheets?"
+msgstr "Update Timesheets?"
+
+msgid "Attention: There are timesheets that have not yet been accounted. If you continue, they will be set to accounted. This action cannot be undone. Continue anyway?"
+msgstr "Attention: There are timesheets that have not yet been accounted. If you continue, they will be set to accounted. This action cannot be undone. Continue anyway?"
+
+msgid "Time Account Favorites"
+msgstr "Time Account Favorites"
+
+#, python-brace-format
+msgid "Delete {0}"
+msgid_plural "Delete {0}"
+msgstr[0] "Delete {0}"
+msgstr[1] "Delete {0}"
+
+msgid "Favorite"
+msgstr "Favorite"
+
+msgid "Bookmark Time Account"
+msgstr "Bookmark Time Account"
+
+msgid "Close Time Account"
+msgstr "Close Time Account"
+
+msgid "Show closed"
+msgstr "Show closed"
+
+msgid "Responsible"
+msgstr "Responsible"
+
+msgid "without responsible"
+msgstr "without responsible"
+
+msgid "Time Account - Status"
+msgstr "Time Account - Status"
+
+msgid "Mark project time as invoiceable?"
+msgstr "Mark project time as invoiceable?"
+
+msgid "In the timesheet, the value “Project time is invoiceable” is currently set to “No.” Should this be changed to Yes”?"
+msgstr "In the timesheet, the value “Project time is invoiceable” is currently set to “No.” Should this be changed to Yes”?"
+
+msgid "Change all Correlated Timesheets"
+msgstr "Change all Correlated Timesheets"
+
+msgid "Apply these changes to all correlated Timesheets?"
+msgstr "Apply these changes to all correlated Timesheets?"
+
+msgid "Timesheet"
+msgid_plural "Timesheets"
+msgstr[0] "Timesheet"
+msgstr[1] "Timesheets"
+
+msgid "This Item is part of a multi day series of correlated Timesheets."
+msgstr "This Item is part of a multi day series of correlated Timesheets."
+
+msgid "Ccorrelated Timesheets:"
+msgstr "Ccorrelated Timesheets:"
+
+msgid "End must not be before start."
+msgstr "End must not be before start."
+
+msgid "Accounting"
+msgstr "Accounting"
+
+msgid "Invoiceable time"
+msgstr "Invoiceable time"
+
+msgid "Failed"
+msgstr "Failed"
+
+#, python-brace-format
+msgid "Could not save {0}."
+msgstr "Could not save {0}."
+
+msgid "Booking deadline for this time account has been exceeded."
+msgstr "Booking deadline for this time account has been exceeded."
+
+msgid "Closed time account warning!"
+msgstr "Closed time account warning!"
+
+msgid "The selected time account is already closed."
+msgstr "The selected time account is already closed."
+
+msgid "The selected time account is already closed. Do you wish to continue anyway?"
+msgstr "The selected time account is already closed. Do you wish to continue anyway?"
+
+msgid "Working Time:"
+msgstr "Working Time:"
+
+msgid "Turnover:"
+msgstr "Turnover:"
+
+msgid "Working Time Statistics"
+msgstr "Working Time Statistics"
+
+msgid "Working Time Target: { target }"
+msgstr "Working Time Target: { target }"
+
+msgid "Working Time Recorded: { recorded }"
+msgstr "Working Time Recorded: { recorded }"
+
+msgid "Turnover Statistics"
+msgstr "Turnover Statistics"
+
+msgid "Turnover Target: { target }"
+msgstr "Turnover Target: { target }"
+
+msgid "Turnover Recorded: { recorded }"
+msgstr "Turnover Recorded: { recorded }"
+
+msgid "Turnover Cleared: { cleared }"
+msgstr "Turnover Cleared: { cleared }"
+
+msgid "timeframe"
+msgstr "timeframe"
+
+msgid "summary"
+msgstr "summary"
+
+msgid "Total Timesheets"
+msgstr "Total Timesheets"
+
+msgid "Billable Timesheets"
+msgstr "Billable Timesheets"
+
+msgid "Total Time"
+msgstr "Total Time"
+
+msgid "Time of Billable Timesheets"
+msgstr "Time of Billable Timesheets"
+
+msgid "Detail"
+msgstr "Detail"
+
+#, python-brace-format
+msgid "Assign '{0}' Tag"
+msgstr "Assign '{0}' Tag"
+
+msgid "Export Timesheets"
+msgstr "Export Timesheets"
+
+msgid "Export as ODS"
+msgstr "Export as ODS"
+
+msgid "Export as CSV"
+msgstr "Export as CSV"
+
+msgid "Export as..."
+msgstr "Export as..."
+
+msgid "Read Own"
+msgstr "Read Own"
+
+msgid "Permission to read own timesheets in this time account."
+msgstr "Permission to read own timesheets in this time account."
+
+msgid "Request Own"
+msgstr "Request Own"
+
+msgid "Permission to request own timesheets in this time account."
+msgstr "Permission to request own timesheets in this time account."
+
+msgid "Book Own"
+msgstr "Book Own"
+
+msgid "Permission to add timesheets to this time account."
+msgstr "Permission to add timesheets to this time account."
+
+msgid "View All"
+msgstr "View All"
+
+msgid "Permission to view timesheets of other users."
+msgstr "Permission to view timesheets of other users."
+
+msgid "Book All"
+msgstr "Book All"
+
+msgid "Permission to add timesheets for other users."
+msgstr "Permission to add timesheets for other users."
+
+msgid "Manage Clearing"
+msgstr "Manage Clearing"
+
+msgid "Permission to manage clearing of Timesheets"
+msgstr "Permission to manage clearing of Timesheets"
+
+msgid "Project time budget in hours"
+msgstr "Project time budget in hours"
+
+msgid "Price"
+msgstr "Price"
+
+msgid "Project time cleared in"
+msgstr "Project time cleared in"
+
+msgid "Project time billed"
+msgstr "Project time billed"
+
+msgid "Booking deadline"
+msgstr "Booking deadline"
+
+msgid "Accounting time factor"
+msgstr "Accounting time factor"
+
+msgid "Stream"
+msgstr "Stream"
+
+msgid "Budget level in %"
+msgstr "Budget level in %"
+
+msgid "Budget booked hours"
+msgstr "Budget booked hours"
+
+msgid "hour"
+msgstr "hour"
+
+msgid "Account"
+msgstr "Account"
+
+msgid "Time Account (Number - Title)"
+msgstr "Time Account (Number - Title)"
+
+msgid "Project time is invoiceable (combined)"
+msgstr "Project time is invoiceable (combined)"
+
+msgid "Billable"
+msgstr "Billable"
+
+msgid "Project time Invoice"
+msgstr "Project time Invoice"
+
+msgid "Project time is cleared"
+msgstr "Project time is cleared"
+
+msgid "Cleared amount"
+msgstr "Cleared amount"
+
+msgid "Recorded amount"
+msgstr "Recorded amount"
+
+msgid "Date"
+msgstr "Date"
+
+msgid "Start time"
+msgstr "Start time"
+
+msgid "End date"
+msgstr "End date"
+
+msgid "End time"
+msgstr "End time"
+
+msgid "Duration"
+msgstr "Duration"
+
+msgid "Need for Clarification"
+msgstr "Need for Clarification"
+
+msgid "Project Time Accounting factor"
+msgstr "Project Time Accounting factor"
+
+msgid "Working time is cleared"
+msgstr "Working time is cleared"
+
+msgid "Working time cleared in"
+msgstr "Working time cleared in"
+
+msgid "Process Status"
+msgstr "Process Status"
+
+msgid "Source"
+msgstr "Source"
+
+msgid "Timesheets ODS export configuration"
+msgstr "Timesheets ODS export configuration"
+
+msgid "Use this configuration for the timesheet ODS export."
+msgstr "Use this configuration for the timesheet ODS export."
+
+msgid "A Tag which is available in the context menu for fast assignment"
+msgstr "A Tag which is available in the context menu for fast assignment"
+
+msgid "Quick Tag allows you to simply assign a predefined tag by the context menu."
+msgstr "Quick Tag allows you to simply assign a predefined tag by the context menu."
+
+msgid "default"
+msgstr "default"
+
+msgid "Requested Timesheets"
+msgstr "Requested Timesheets"
+
+msgid "My Timesheets today"
+msgstr "My Timesheets today"
+
+msgid "My Timesheets this week"
+msgstr "My Timesheets this week"
+
+msgid "My Timesheets last week"
+msgstr "My Timesheets last week"
+
+msgid "My Timesheets this month"
+msgstr "My Timesheets this month"
+
+msgid "My Timesheets last month"
+msgstr "My Timesheets last month"
+
+msgid "Time accounts to bill"
+msgstr "Time accounts to bill"
+
+msgid "Time accounts not yet billed"
+msgstr "Time accounts not yet billed"
+
+msgid "Time accounts already billed"
+msgstr "Time accounts already billed"
+
+msgid "Timetracker"
+msgstr "Timetracker"

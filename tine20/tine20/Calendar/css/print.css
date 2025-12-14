@@ -1,0 +1,259 @@
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0;}img,body,html{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul {list-style:none;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;}q:before,q:after{content:'';}
+
+table {
+  width: 100%;
+  text-align: left;
+  font-size: 11px;
+  font-family: arial;
+  border-collapse: collapse;
+}
+
+table th {
+  padding: 4px 3px 4px 5px;
+  border: 1px solid #d0d0d0;
+  border-left-color: #eee;
+  background-color: #ededed;
+}
+
+table td {
+  padding: 4px 3px 4px 5px;
+  border-style: none solid solid;
+  border-width: 5px;
+  border-color: #ededed;
+}
+
+/* irritating in cal views
+@media print {
+   thead {display: table-header-group;}
+}
+*/
+
+#csscheck {
+    display: none;
+}
+
+div.page
+{
+    page-break-after: always;
+    page-break-inside: avoid;
+}
+
+.cal-print-title {
+    text-align: center;
+    font-size: 20px;
+}
+
+.cal-print-daysview-day td {
+    vertical-align: top;
+}
+
+.cal-print-daysview-day-dayOfMonth {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.cal-print-daysview-day-weekDay {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.cal-print-daysview-day-duration {
+    font-style: italic;
+}
+
+.cal-print-daysview-day-color {
+    width: 16px;
+    border-right: 0;
+}
+
+.cal-print-daysview-day-starttime,
+.cal-print-daysview-day-endtime {
+    width: 25px;
+}
+
+.cal-print-daysview-day-endtime {
+    text-align: left;
+}
+
+.cal-print-daysview-day-untilseperator {
+    width: 5px;
+    text-align: center;
+}
+
+.cal-print-daysview-day-color,
+.cal-print-daysview-day-starttime,
+.cal-print-daysview-day-untilseperator,
+.cal-print-daysview-day-endtime,
+.cal-print-daysview-day-summary {
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.cal-print-daysview-day-summary {
+    word-break: break-all;
+}
+
+.cal-print-daycell {
+    vertical-align: top;
+    border: 0;
+}
+
+.cal-print-day-singleday th {
+    display: none;
+}
+
+/* ------------ daysview  ------------ */
+.cal-daysviewpanel-daycolumn-row-on,
+.cal-daysviewpanel-daycolumn-row-off,
+.cal-daysviewpanel-daycolumn-row {
+    color: #FFFFFF;
+    font-size: 0px;
+}
+
+.cal-daysviewpanel-body-daycolumn-hint-above,
+.cal-daysviewpanel-body-daycolumn-hint-below {
+    display: none;
+    background-image: none;
+}
+
+.cal-daysviewpanel-body-daycolumn-today {
+    background-color: transparent;
+}
+
+.cal-daysviewpanel-body-daycolumn-today .cal-daysviewpanel-daycolumn-row {
+    color: transparent;
+}
+
+.cal-daysviewpanel-dayheader-today, .cal-daysviewpanel-dayheader-day-wrap:hover {
+    background:#F9F9F9 url(../../library/ExtJS/resources/images/default/grid/grid3-hrow.gif) repeat-x scroll 0 top;
+}
+
+.cal-daysviewpanel-header {
+    page-break-after: avoid;
+}
+
+.cal-daysviewpanel-body,
+.cal-daysviewpanel-cropper,
+.cal-daysviewpanel-scroller {
+    page-break-before: avoid;
+}
+
+.cal-daysviewpanel-scroller {
+    border-top: none;
+    display: inline;
+}
+/* .cal-daysviewpanel-header-inner {
+    background: none;
+} */
+
+/* ------------ monthview ------------ */
+.cal-print-monthview-daycell {
+    border: 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #FFFFFF;
+    padding-top: 20px;
+}
+
+.cal-print-monthview .cal-print-daycell {
+    width: 13%;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: 5px solid #d0d0d0;
+}
+
+.cal-print-monthview .cal-print-daysview-day th {
+    border: 0;
+    border-bottom: 5px solid #d0d0d0;
+}
+
+.cal-print-monthview {
+    font-size: 10px;
+}
+
+.cal-print-monthview .cal-print-daysview-day-weekDay {
+    display: none;
+}
+
+.cal-print-monthview .cal-print-daysview-day-dayOfMonth {
+    font-size: 15px;
+}
+
+.cal-print-monthview .cal-print-daysview-day-color {
+    width: 5px;
+}
+
+.cal-print-monthview .cal-print-daysview-day-starttime {
+    width: 15px;
+}
+
+.cal-print-monthview .cal-print-daysview-day-untilseperator,
+.cal-print-monthview .cal-print-daysview-day-endtime {
+    display: none;
+}
+
+/* ------------ yearview ------------ */
+.cal-print-yearview .cal-print-daycell {
+    width: 8%;
+    padding: 0px;
+    padding-left: 1px;
+    border: 1px solid #d0d0d0;
+}
+.cal-print-rowheader {
+    width: 1% !important;
+}
+
+/* ------------ single record ------------ */
+
+.print-single-details-row:nth-of-type(odd) {
+    background: #e0e0e0;
+}
+
+.customfield-rendered-label,
+.cal-print-single-label {
+    font-style: italic;
+    display: inline-block;
+    width: 6cm;
+}
+
+.cal-print-single-block {
+    margin-left: 0.5cm;
+}
+
+.cal-print-single-summary .cal-print-single-value {
+    font-weight: bold;
+}
+
+.cal-print-single {
+    margin-left: 1cm;
+    margin-right: 1cm;
+}
+
+.cal-print-single-logo {
+    text-align: right;
+    margin-bottom: 1cm;
+}
+
+.cal-print-single-logo img {
+    max-width: 400px;
+    max-height: 80px;
+}
+
+/* ------------ tags (from)
+ tinebase ------------ */
+.tb-grid-tags {
+    width: 8px;
+    height: 8px;
+    border: 1px solid black;
+    float: left;
+    margin-right: 2px;
+    margin-top: 1px;
+    border-radius: 5px;
+}
+
+.tine-keyfield-icon {
+    height: 20px;
+    vertical-align: middle;
+}

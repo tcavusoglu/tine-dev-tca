@@ -1,0 +1,100 @@
+---
+
+- name: set group_vars_dir
+  set_fact: "group_vars_dir='group_vars{{ inventory_file | replace(inventory_dir, \"\") }}'"
+
+- set_fact:
+    confdincludes: "{{ group_vars_dir }}/conf.d/*"
+
+- set_fact:
+    confdfiles: "{{ lookup('fileglob',confdincludes,wantlist=true) | reject('search','.j2') | list }}"
+
+#- name: "found confdfiles"
+#  debug: var=confdfiles
+
+- name: create conf.d files (without *.j2)
+  copy:
+    src: "{{ item }}"
+    dest: "{{ tinedockercompose_confd_path }}"
+    owner: tine20
+    group: root
+    mode: 0640
+  with_items: "{{ confdfiles }}"
+  become: true
+
+- name: create conf.d files (j2)
+  template:
+    src: "{{ item }}"
+    dest: "{{ tinedockercompose_confd_path }}/{{ item | basename | regex_replace('\\.j2$', '') }}"
+    owner: tine20
+    group: root
+    mode: 0640
+  with_fileglob:
+    - "{{ group_vars_dir }}/conf.d/*.j2"
+  become: true
+
+- name: deploy custom docker-compose.yml
+  template:
+    src: "{{ item }}"
+    dest: "{{ tinedockercompose_path }}/docker-compose.yml"
+    owner: root
+    group: root
+    mode: 0640
+  with_fileglob:
+    - "{{ group_vars_dir }}/docker-compose.yml.j2"
+  become: true
+  when:
+    - tinedockercompose_custom_compose is defined
+    - tinedockercompose_custom_compose|bool == true
+
+- name: create script files
+  copy:
+    src: "{{ item }}"
+    dest: "{{ tinedockercompose_path }}/scripts"
+    owner: root
+    group: root
+    mode: 0740
+  with_fileglob:
+    - "{{ group_vars_dir }}/scripts/*.sh"
+  become: true
+
+- name: create script (j2)
+  template:
+    src: "{{ item }}"
+    dest: "{{ tinedockercompose_path }}/scripts/{{ item | basename | regex_replace('\\.j2$', '') }}"
+    owner: root
+    group: root
+    mode: 0740
+  with_fileglob:
+    - "{{ group_vars_dir }}/scripts/*.j2"
+  become: true
+
+- name: configure OOI/documentserver
+  template:
+    src: ooi.inc.php.j2
+    dest: "{{ tinedockercompose_confd_path }}/ooi.inc.php"
+    owner: tine20
+    group: root
+    mode: 0640
+  become: true
+  when: tinedockercompose_documentserver is defined and tinedockercompose_documentserver|bool
+
+- name: configure broadcasthub
+  template:
+    src: broadcasthub.inc.php.j2
+    dest: "{{ tinedockercompose_confd_path }}/broadcasthub.inc.php"
+    owner: tine20
+    group: root
+    mode: 0640
+  become: true
+  when: tinedockercompose_broadcasthub is defined and tinedockercompose_broadcasthub|bool
+
+- name: configure edocument
+  template:
+    src: edocument.inc.php.j2
+    dest: "{{ tinedockercompose_confd_path }}/edocument.inc.php"
+    owner: tine20
+    group: root
+    mode: 0640
+  become: true
+  when: tinedockercompose_edocument_service is defined and tinedockercompose_edocument_service|bool

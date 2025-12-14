@@ -1,0 +1,110 @@
+{% extends 'Filemanager/views/base.html.twig' %}
+
+{% block custom_style %}
+    {{ parent() }}
+    .file-details-card {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 0;
+        margin-top: 20px;
+        overflow: hidden;
+        border: 1px solid #dee2e6;
+    }
+
+    .card-header {
+        background-color: #007bff;
+        color: white;
+        padding: 15px 20px;
+        font-weight: 600;
+    }
+
+    .details-table {
+        margin: 0;
+        background-color: white;
+    }
+
+    .details-table td {
+        padding: 15px 20px;
+        vertical-align: middle;
+    }
+
+    .details-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .details-table tr:nth-child(even) {
+        background-color: #f8f9fa;
+    }
+
+    .label-cell {
+        font-weight: 600;
+        color: #495057;
+        width: 20%;
+        background-color: #e9ecef !important;
+    }
+
+    .value-cell {
+        color: #212529;
+        font-family: system-ui, -apple-system, sans-serif;
+        display: flex;
+        align-items: center;
+    }
+{% endblock %}
+
+
+{% block title %}
+    <title>{{ _('File') }}</title>
+{% endblock %}
+
+{% block content %}
+    <!-- Current Path -->
+    <div class="path-breadcrumb">
+        <i class="fas me-2"></i>
+        <strong>{{ path }}</strong>
+    </div>
+
+    <!-- File Details Card -->
+    <div class="file-details-card">
+        <table class="table details-table mb-0">
+            <tbody>
+            <tr>
+                <td class="label-cell">
+                    {{ _('Name') }}
+                </td>
+                <td class="value-cell">
+                    <span class="mime-icon mime-icon-file {{ getMimeIconCls(file) }}"></span>
+                    <i class="fas fa-file-alt me-2"></i>
+                    <span>{{ file.name|e }}</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-cell">
+                    {{ _('Size') }}
+                </td>
+                <td class="value-cell">
+                    <span>{{ getSize(file.size) }}</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-cell">
+                    {{ _('Last Modified') }}
+                </td>
+                <td class="value-cell">
+                    <div>{{ dateFormat(file.last_modified_time, Date.patterns.ISO8601Long) }}</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-cell">
+                    {{ _('Action') }}
+                </td>
+                <td class="value-cell">
+                    <a class="btn btn-primary p-2" href="{{ path }}" role="button">{{ _('Download') }}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

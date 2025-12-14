@@ -1,0 +1,121 @@
+.x-ux-display .x-panel-body {
+    background-color: #F3F6F7;
+}
+.x-ux-display .x-panel-bwrap {
+    background: none;
+}
+
+.x-ux-display .x-form-item {
+    overflow: hidden;
+    line-height: 12px;
+}
+
+.x-ux-display label.x-form-item-label {
+    color:#A0A0A0;
+    text-align:right;
+    font-size:11px;
+    padding-left: 5px;
+    padding-bottom: 1px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.x-ux-display .x-form-element {
+    color:#404040;
+    font-family:verdana;
+    font-size:11px;
+    padding-left: 5px !important;
+}
+
+.x-form-item.x-ux-dislplay-no-label,
+.x-ux-display .x-form-element.x-ux-dislplay-no-label {
+    padding: 0 !important;
+}
+
+.x-ux-display textarea.x-ux-display-textarea {
+    background: none;
+    border: none;
+}
+
+.x-ux-display .x-ux-display-background-border textarea.x-ux-display-textarea {
+    background: none;
+    border: none;
+    /*border: 1px solid #99BBE8;*/
+    /*-moz-border-radius: 8px;*/
+    /*-webkit-border-radius: 8px;*/
+    /*-khtml-border-radius: 8px;*/
+}
+
+.x-ux-display .x-ux-display-background-solid {
+    border: none;
+    /*border: 1px solid #e5e6fe;*/
+    /*background-color: #e5e6fe;*/
+    /*-moz-border-radius: 8px;*/
+    /*-webkit-border-radius: 8px;*/
+    /*-khtml-border-radius: 8px;*/
+}
+
+.x-ux-display .x-ux-display-background-inner {
+    border: none;
+    /*background-color: #e5e6fe;*/
+    /*-moz-border-radius: 0px;*/
+    /*-webkit-border-radius: 0px;*/
+    /*-khtml-border-radius: 0px;*/
+}
+
+.x-ux-display .x-ux-display-background-border {
+    border: none;
+    /*border: 1px solid #99BBE8;*/
+    /*-moz-border-radius: 8px;*/
+    /*-webkit-border-radius: 8px;*/
+    /*-khtml-border-radius: 8px;*/
+}
+
+.x-ux-display-background-border {
+    background-color: #F3F6F7;
+}
+
+.x-ux-display .x-ux-display-declaration {
+    color:#A0A0A0;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.x-ux-display .x-ux-display-header {
+    color:#505050;
+    font-size:10px;
+    font-weight:bold;
+}
+
+.x-ux-display .x-ux-display-header .x-tree-node-leaf img {
+    height: 16px;
+}
+
+.x-ux-display .x-ux-display-background-declaration {
+    position: absolute;
+    left:5px;
+    bottom:6px;
+}
+
+.x-ux-display .x-form-item {
+    display: flex;
+    padding-left: 2px;
+}
+
+/* NOTE: this makes ugly details panel in edit dialogs
+.tw-editdialog .x-form-item .x-form-display-field {*/
+    /*border: 1px solid #b5b8c8;*/
+    /*padding: 3px;*/
+    /*height: 11px;*/
+    /*background-color:#fff;*/
+    /*background-image:url(../../../../themes/tine20/resources/images/tine20/form/text-bg.gif);*/
+/*}*/
+
+.x-ux-displayfield-text {
+    background-image: none;
+}
+
+.x-ux-display p {
+    padding: 2px;
+    color: #505050;
+}

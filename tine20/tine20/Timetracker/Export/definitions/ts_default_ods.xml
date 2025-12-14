@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <model>Timetracker_Model_Timesheet</model>
+    <name>ts_default_ods</name>
+    <label>ODS overview</label>
+    <type>export</type>
+    <plugin>Timetracker_Export_Ods_Timesheet</plugin>
+    <icon_class>tinebase-action-export-ods</icon_class>
+    <template>timesheet_export_default.ots</template>
+    <description>default ods timesheet export definition</description>
+    <favorite>true</favorite>
+    <scope>multi</scope>
+    <header>1</header>
+    <columns>
+        <column>
+            <identifier>account_id</identifier>
+            <header>Staff Member</header>
+            <type>varchar(255)</type>
+        </column>
+        <column>
+            <identifier>timeaccount_number</identifier>
+            <header>Timeaccount Number</header>
+            <type>timeaccount</type>
+            <field>number</field>
+        </column>
+        <column>
+            <identifier>timeaccount_id</identifier>
+            <header>Timeaccount</header>
+            <type>timeaccount</type>
+            <field>title</field>
+        </column>
+        <column>
+            <identifier>is_billable</identifier>
+            <header>Billable</header>
+            <type>boolean</type>
+        </column>
+        <column>
+            <identifier>billed_in</identifier>
+            <header>Project time cleared in</header>
+            <type>varchar(255)</type>
+        </column>
+        <column>
+            <identifier>is_cleared</identifier>
+            <header>Project time is cleared</header>
+            <type>boolean</type>
+        </column>
+        <column>
+            <identifier>start_date</identifier>
+            <header>Date</header>
+            <type>date</type>
+        </column>
+        <column>
+            <identifier>start_time</identifier>
+            <header>Start time</header>
+            <type>time</type>
+        </column>
+        <column>
+            <identifier>end_time</identifier>
+            <header>End time</header>
+            <type>time</type>
+        </column>
+        <column>
+            <identifier>duration</identifier>
+            <header>Duration in Minutes</header>
+            <type>int(11)</type>
+        </column>
+        <column>
+            <identifier>accounting_time</identifier>
+            <header>Accounting time in Minutes</header>
+            <type>int(11)</type>
+        </column>
+        <column>
+            <identifier>description</identifier>
+            <header>Description</header>
+            <type>longtext</type>
+        </column>
+        <column>
+            <identifier>invoice_id</identifier>
+            <header>Invoice</header>
+            <type>varchar(255)</type>
+        </column>
+        <column>
+            <identifier>need_for_clarification</identifier>
+            <header>Need for Clarification</header>
+            <type>boolean</type>
+        </column>
+        <column>
+            <identifier>created_by</identifier>
+            <header>Created By</header>
+            <type>created_by</type>
+            <width>4cm</width>
+            <field>accountDisplayName</field>
+        </column>
+        <column>
+            <identifier>creation_time</identifier>
+            <header>Creation Time</header>
+            <type>datetime</type>
+            <width>2,5cm</width>
+        </column>
+    </columns>
+</config>

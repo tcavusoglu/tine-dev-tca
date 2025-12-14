@@ -1,0 +1,397 @@
+<?php
+/**
+ * Tine 2.0 - http://www.tine20.org
+ * 
+ * @package     Tinebase
+ * @subpackage  Record
+ * @license     http://www.gnu.org/licenses/agpl.html
+ * @copyright   Copyright (c) 2007-2018 Metaways Infosystems GmbH (http://www.metaways.de)
+ * @author      Matthias Greiling <m.greiling@metaways.de>
+ */
+
+/**
+ * Test helper
+ */
+require_once dirname(dirname(dirname(__FILE__))) . DIRECTORY_SEPARATOR . 'TestHelper.php';
+
+/**
+ * Test class for Tinebase_Record
+ */
+class Tinebase_Record_RecordTest extends Tinebase_Record_AbstractTest
+{
+    /**
+     * @var array test objects
+     */
+    protected $objects = array();
+
+    /**
+     * Runs the test methods of this class.
+     *
+     * @access public
+     * @static
+     */
+    public static function main()
+    {
+        $suite  = new \PHPUnit\Framework\TestSuite('Tinebase_Record_RecordTest');
+        PHPUnit_TextUI_TestRunner::run($suite);
+    }
+
+    /**
+     * Sets up the fixture.
+     * This method is called before a test is executed.
+     *
+     * @access protected
+     */
+    protected function setUp(): void
+{
+        // initial object
+        $this->objects['TestRecord'] = new Tinebase_Record_DummyRecord(array(), true);
+        $tmpData = array('id'=>'2', 'test_2'=>NULL, );
+        $this->objects['TestRecord']->setFromArray($tmpData, NULL);
+        
+        // date management
+        $date = new Tinebase_DateTime();
+        $this->objects['TestRecord']->date_single = clone($date);
+        $this->objects['TestRecord']->date_multiple = array($date);
+        // bypass filters
+        $this->objects['TestRecordBypassFilters'] = new Tinebase_Record_DummyRecord(array('id'=>'7', 'test_2'=>'STRING'), true) ;
+    
+        $this->expectFailure['TestRecord']['testSetId'][] = array('2','3');
+        $this->expectFailure['TestRecord']['testSetId'][] = array('30000000','3000000000000000000000000000');
+        $this->expectSuccess['TestRecord']['testSetId'][] = array('2','2');
+        
+        $this->expectFailure['TestRecordBypassFilters']['testSetIdBypassFilters'][] = array('2','3');
+        $this->expectFailure['TestRecordBypassFilters']['testSetIdBypassFilters'][] = array('30000000','3000000000000000000000000000');
+        $this->expectSuccess['TestRecordBypassFilters']['testSetIdBypassFilters'][] = array('2','2');
+        
+        $this->expectSuccess['TestRecord']['testSetFromArray'][] = array(array('test_1'=>'2', 'test_2'=>NULL), 'test_1');
+        $this->expectFailure['TestRecord']['testSetFromArrayException'][] = array('Tinebase_Exception_Record_Validation', array('test_2' => 'string'), );
+        $this->expectFailure['TestRecord']['testSetTimezoneException'][] = array('Tinebase_Exception_Record_NotAllowed', 'UTC', );
+        
+        $dummy = array(
+                    'id'=>2, 
+                    'test_2'=>'',
+                    'date_single' => $date->get(Tinebase_Record_Abstract::ISO8601LONG), 
+                    'date_multiple'=> array($date->get(Tinebase_Record_Abstract::ISO8601LONG)));
+        
+        $this->expectSuccess['TestRecord']['testToArray'][] = array($dummy);
+        
+        
+        $this->expectSuccess['TestRecord']['__set'][] = array('test_3', 4 );
+        
+        $this->expectSuccess['TestRecord']['__get'][] = array('test_3', 4 );
+        
+        $this->expectSuccess['TestRecord']['test__isset'][] = array('id');
+        
+        $this->expectFailure['TestRecord']['test__isset'][] = array('string');
+        
+        
+        $this->expectFailure['TestRecord']['test__setException'][] = array( 'Tinebase_Exception_UnexpectedValue', 'test_100',);
+        $this->expectFailure['TestRecord']['test__getException'][] = array( 'Tinebase_Exception_UnexpectedValue', 'test_100',);
+        
+        
+        $this->expectFailure['TestRecord']['testOffsetUnset'][] = array( 'Tinebase_Exception_Record_NotAllowed', 'test_2',);
+    }
+
+    /**
+     * Tears down the fixture
+     * This method is called after a test is executed.
+     *
+     * @access protected
+     */
+    protected function tearDown(): void
+{
+    
+    }
+    
+    /**
+     * testDiff
+     */
+    public function testDiff()
+    {
+        $record1 = new Tinebase_Record_DummyRecord(array(
+            'string' => 'test',
+            'test_1' => 25,
+            'test_2' => 99,
+            'date_single' => Tinebase_DateTime::now()->get(Tinebase_Record_Abstract::ISO8601LONG),
+            'set1' => new Tinebase_Record_RecordSet('Tinebase_Record_DummyRecord'),
+            'string0' => '0',
+            'int0'    => 0,
+        ), true);
+        
+        $record2 = clone $record1;
+        $record2->string = 'anders';
+        $record2->test_1 = 26;
+        $record2->set2 = new Tinebase_Record_RecordSet('Tinebase_Record_DummyRecord');
+        $record2->string0 = '';
+        $record2->int0 = null;
+        $diff = $record1->diff($record2)->diff;
+        $this->assertSame(4, count($diff), 'expected difference in string & test_1 & string0 & int0: ' . print_r($diff, TRUE));
+        $this->assertSame('anders', $diff['string']);
+        $this->assertSame(26, $diff['test_1']);
+        $this->assertSame('', $diff['string0']);
+        $this->assertSame(null, $diff['int0']);
+
+        $diff = $record2->diff($record1)->diff;
+        $this->assertSame(4, count($diff), 'expected difference in string & test_1 & string0 & int0: ' . print_r($diff, TRUE));
+        $this->assertSame('test', $diff['string']);
+        $this->assertSame(25, $diff['test_1']);
+        $this->assertSame('0', $diff['string0']);
+        $this->assertSame(0, $diff['int0']);
+
+        $record2 = clone $record1;
+        $record2->date_single = clone $record1->date_single;
+        $record2->date_single = $record2->date_single->addDay(1);
+        $diff = $record1->diff($record2)->diff;
+        $this->assertEquals(1, count($diff));
+        $this->assertTrue((isset($diff['date_single']) || array_key_exists('date_single', $diff)));
+    }
+
+    public function testMerge()
+    {
+        $record1 = new Tinebase_Record_DummyRecord(array(
+            'string'  => 'test',
+            'test_1'  => 0,
+            'string0' => '0',
+            'int0'    => null,
+            'set1'    => '',
+        ), true);
+
+        $record2 = new Tinebase_Record_DummyRecord(array(
+            'string'  => 'bla',
+            'test_1'  => 10,
+            'string0' => '10',
+            'int0'    => 10,
+            'set1'    => 'set1',
+            'set2'    => 'set2'
+        ), true);
+
+        $record1->merge($record2);
+
+        static::assertSame('test', $record1->string);
+        static::assertSame(0, $record1->test_1);
+        static::assertSame('0', $record1->string0);
+        static::assertSame(10, $record1->int0);
+        static::assertSame('set1', $record1->set1);
+        static::assertSame('set2', $record1->set2);
+    }
+
+    /**
+     * test clone
+     */
+    public function testClone()
+    {
+        $record = $this->objects['TestRecord'];
+        
+        $clone = clone $record;
+        $clone->date_single->addDay(1);
+        $clone->date_multiple[0]->addDay(1);
+        
+        $this->assertFalse($record->date_single == $clone->date_single, 'date in record and clone is equal');
+        $this->assertFalse($record->date_multiple[0] == $clone->date_multiple[0],
+            'date_multiple in record and clone is equal');
+    }
+    
+    /**
+     * test if record is dirty
+     *
+     */
+    public function testIsDirty()
+    {
+        $record = new Tinebase_Record_DummyRecord(array(
+            'string' => 'test',
+            'test_1' => 25,
+            'test_2' => 99,
+            'date_single' => Tinebase_DateTime::now()->get(Tinebase_Record_Abstract::ISO8601LONG)
+        ), true);
+        
+        $this->assertFalse($record->isDirty(), 'record is not clean');
+        
+        $record->string = 'anders';
+        $this->assertTrue($record->isDirty(), 'records is not dirty');
+    }
+    
+    /**
+     * test if equal
+     */
+    public function testIsEqual()
+    {
+        $record1 = new Tinebase_Record_DummyRecord(array(
+            'string' => 'test',
+            'test_1' => 25,
+            'test_2' => 99,
+            'date_single' => Tinebase_DateTime::now()->get(Tinebase_Record_Abstract::ISO8601LONG)
+        ), true);
+        $record2 = clone $record1;
+        $this->assertTrue($record1->isEqual($record2), 'records are equal');
+        
+        $record2->string = 'anders';
+        $this->assertFalse($record1->isEqual($record2), 'records are differnet');
+        
+        $this->assertTrue($record1->isEqual($record2, array('string')), 'records are different, but omited');
+        
+    }
+    
+    /**
+     * test record translation
+     */
+    public function testTranslate()
+    {
+        $oldLocale = Tinebase_Core::getLocale();
+        Tinebase_Core::setLocale('de');
+
+        $record = new Tinebase_Record_DummyRecord(array(
+            'string' => 'test',
+            'leadstate' => 'waiting for feedback',
+        ), true);
+        
+        $record->translate();
+        
+        $this->assertEquals('Wartet auf Feedback', $record->leadstate);
+        Tinebase_Core::setLocale($oldLocale);
+    }
+    
+    /**
+     * Test standard record
+     */
+    public function testRecord()
+    {
+        $record = new Tinebase_Record_DummyRecord();
+        $this->assertEquals(true, $record->isValid());
+    }
+    
+    /**
+     * Test invalid record bypassing filters
+     */
+    public function testInvalidRecord()
+    {
+        $record = new Tinebase_Record_DummyRecord(array('string' => '123'), true);
+        $this->assertEquals(false, $record->isValid());
+    }
+    
+    /**
+     * Test invalid record provoking exception
+     */
+    public function testRecordException()
+    {
+        $this->expectException('Tinebase_Exception_Record_Validation');
+        $record = new Tinebase_Record_DummyRecord(array('string' => '123'));
+    }
+    
+    /**
+     * Test date conversion
+     */
+    public function testDateConversion()
+    {
+        $record = new Tinebase_Record_DummyRecord(array('date_single' => '2008-12-12 00:00:00'));
+        $this->assertEquals('2008-12-12 00:00:00', $record->date_single->get(Tinebase_Record_Abstract::ISO8601LONG));
+    }
+    
+    /**
+     * Test date to string conversion
+     */
+    public function testDateStringConversion()
+    {
+        $record = new Tinebase_Record_DummyRecord(array('date_stringtrim' => '2008-12-12 00:00:00'));
+        $this->assertEquals('string', gettype($record->date_stringtrim), 'implicit conversion of Tinebase_DateTime to string failed');
+    }
+    
+    /**
+     * Test string trim
+     */
+    public function testStringTrim()
+    {
+        $record = new Tinebase_Record_DummyRecord(array('stringtrim' => '   teststring   '));
+        $this->assertEquals('teststring', $record->stringtrim, 'string trim filter failed');
+    }
+    
+    /**
+     * Test inserting data into en empty record
+     *
+     */
+    public function testInsertData()
+    {
+        $record = new Tinebase_Record_DummyRecord(array(), true);
+        $record->string = '123';
+        $record->bypassFilters = false;
+        $record->isValid();
+    }
+    
+    /**
+     * Test set ID
+     */
+    public function testSetId()
+    {
+        $record = new Tinebase_Record_DummyRecord(array('string' => 'test'));
+        $test_id = '1';
+        $record->setId($test_id);
+        $this->assertEquals($test_id, $record['id']);
+    }
+    
+    /**
+     * Test get ID
+     */
+    public function testGetId()
+    {
+        $test_id = '1';
+        $record = new Tinebase_Record_DummyRecord(array('id' => $test_id, 'string' => 'test'));
+        $this->assertEquals($test_id, $record->getId());
+    }
+    
+    /**
+     * Test getApplication
+     */
+    public function testGetApplication()
+    {
+        $record = new Tinebase_Record_DummyRecord();
+        $this->assertEquals($record->getApplication(), 'Crm');
+    }
+    
+    /**
+     * Test has
+     */
+    public function testHas()
+    {
+        $record = new Tinebase_Record_DummyRecord(array(
+            'test_4' => 'test'
+        ), true);
+        $this->assertEquals((bool)1, (bool)$record->has('test_4'));
+    }
+    
+    /**
+    * test is valid / test InArray validator
+    */
+    public function testIsValid()
+    {
+        // should throw an exception
+        try {
+            $recordToTest = new Tinebase_Record_DummyRecord(array(
+                'id'      => 256,
+                'string'  => '',
+            ));
+            $this->fail('should throw validation exeption');
+        } catch (Tinebase_Exception_Record_Validation $terv) {
+            $this->assertTrue(TRUE);
+        }
+        
+        $recordToTest = new Tinebase_Record_DummyRecord(array(
+            'id'      => 256,
+            'inarray' => 'value3',
+        ), TRUE);
+        $this->assertFalse($recordToTest->isValid(), 'InArray validator should detect invalid value!');
+        
+        $recordToTest->inarray = 'value1';
+        $this->assertTrue($recordToTest->isValid());
+    }
+
+    public function testXPropsSet()
+    {
+        $uit = new Tinebase_Record_DummyRecord();
+        $uit->xprops()['someproperty'] = 'somevalue';
+        $uit->xprops()['foo']['bar'] = 'baz';
+
+        $this->assertEquals('somevalue', $uit->xprops()['someproperty']);
+        $this->assertEquals('baz', $uit->xprops()['foo']['bar']);
+        $this->assertEquals(array('bar' => 'baz'), $uit->xprops()['foo']);
+    }
+}

@@ -1,0 +1,141 @@
+docker_build_built:
+  extends: .abstract_jobs.docker
+  stage: build2
+  needs: []
+  script:
+    - !reference [.lib, script]
+    - cp $DOCKER_GIT_CONFIG ./ci/dockerimage/.gitconfig
+    - docker_build_image_built
+    - docker_build_image_built_test
+  rules:
+    - if: $PIPELINE_TYPE =~ /release-weekly/
+      variables:
+        RELEASE_TYPE: weekly
+    - if: $PIPELINE_TYPE =~ /build-nightly/ # todo: to become release-nightly. Then remove this. release will be the cache all.
+      variables:
+        RELEASE_TYPE: be
+    - if: $PIPELINE_TYPE =~ /release/
+      variables:
+        RELEASE_TYPE: be
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /docker-build-built/
+    - !reference [.php-unit-all-tests-built, rules]
+    - !reference [.php-unit-tinebase-tests-built, rules]
+    - !reference [.php-unit-nogitlabci-tests-built, rules]
+    - !reference [docker_build_packages, rules]
+    - !reference [deploy-customer-image-to-registry, rules]
+    - !reference [deploy-built-image-to-dockerhub, rules]
+    - !reference [release-image-to-mw-registry, rules]
+  timeout: 120m
+  interruptible: true
+# docker_build_built_arm64:
+#   services:
+#     - name: ${UTIL_REGISTRY}/docker:20.10.21-dind-r1
+#       alias: docker
+#   image: ${UTIL_REGISTRY}/docker:20.10.21-r1
+#   extends: docker_build_built
+#   variables:
+#     IMAGE_TAG_PLATFORM_POSTFIX: -arm64
+#     IMAGE_TAG: ${CI_PIPELINE_ID}-${PHP_VERSION}-arm64
+#   tags:
+#     - arm64
+#   rules:
+#     - if: $DOCKER_BUILD_BUILT_ARM64 == "false"
+#       when: never
+#     - if: $DOCKER_BUILD_BUILT_ARM64 == "true"
+#     - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /docker-build-built-arm64/
+
+docker-build-dev:
+  image:
+    name: moby/buildkit:master
+    entrypoint: [ "sh", "-c" ]
+  before_script:
+    - !reference [.lib, script]
+    - mkdir -p ~/.docker
+    - echo "{\"auths\":{\"${REGISTRY}\":{\"auth\":\"$(printf "%s:%s" "${REGISTRY_USER}" "${REGISTRY_PASSWORD}" | base64 | tr -d '\n')\"},\"${CI_DEPENDENCY_PROXY_SERVER}\":{\"auth\":\"$(printf "%s:%s" "${CI_DEPENDENCY_PROXY_USER}" "${CI_DEPENDENCY_PROXY_PASSWORD}" | base64 | tr -d '\n')\"}}}" > ~/.docker/config.json
+  parallel:
+      matrix:
+        - ARCH: amd64
+          PHP_VERSION:
+            - "8.1"
+            - "8.2"
+            - "8.3"
+            - "8.4"
+        - ARCH: arm64
+          PHP_VERSION:
+            - "8.1"
+            - "8.2"
+            - "8.3"
+            - "8.4"
+  script:
+    - |
+      if [[ $ARCH == "arm64" ]]; then
+        APT_MIRROR=""
+      fi
+    - |
+      buildctl-daemonless.sh build \
+      --frontend=dockerfile.v0 \
+      --local context="${CI_PROJECT_DIR}" \
+      --local dockerfile=${CI_PROJECT_DIR}/ci/dockerimage \
+      --output type=image,\"name=${REGISTRY}/dev-commit:${IMAGE_TAG}-${ARCH}\",push=true \
+      --opt platform=linux/${ARCH} \
+      --opt target=dev \
+      --opt build-arg:PHP_IMAGE=php${PHP_VERSION} \
+      --opt build-arg:DOCKER_HUB_PROXY=${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/ \
+      --opt build-arg:APT_MIRROR=${APT_MIRROR}
+  timeout: 2h
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /docker-build-dev/
+    - !reference [.release-dev-image-to-dockerhub, rules]
+
+docker_build_test:
+  extends: .abstract_jobs.docker
+  stage: build1
+  parallel:
+    matrix:
+      - PHP_VERSION:
+          - "8.1"
+          - "8.2"
+          - "8.3"
+          - "8.4"
+  before_script:
+    - export DOCKER_BUILDKIT=0
+    - export PROGRESS_NO_TRUNC=1 # stop docker from truncating aws image names
+    - !reference [.lib, script]
+    - docker_registry_login ${REGISTRY} ${REGISTRY_USER} ${REGISTRY_PASSWORD}
+    - docker_registry_login ${CI_REGISTRY} ${CI_REGISTRY_USER} ${CI_REGISTRY_PASSWORD}
+    - |
+      WAIT_TIME=0
+      until [ $WAIT_TIME -eq 60 ] || docker version > /dev/null 2>&1
+      do
+        echo "."
+        sleep 1
+        WAIT_TIME=$((WAIT_TIME+1))
+      done
+      [ $WAIT_TIME -lt 60 ]
+  script:
+    - !reference [.lib, script]
+    - docker_build_image_test
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /docker-build-test/ 
+    - if: $PIPELINE_TYPE =~ /build-test-images/
+  timeout: 60m
+  interruptible: false
+
+docker_build_packages:
+  extends: .abstract_jobs.docker
+  stage: build3
+  variables:
+    GIT_DEPTH: 100
+  script:
+    - !reference [.lib, script]
+    - packaging
+  rules:
+    # !references should come first, they may include variables to be set
+    - !reference [release-packages-to-gitlab, rules]
+    - !reference [release-packages-to-github, rules]
+    - !reference [release-packages-to-vpackages, rules]
+    - if: $PIPELINE_TYPE =~ /build-nightly/
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_LABELS =~ /docker-build-packages/
+    - if: $CI_COMMIT_TAG
+  timeout: 120m
+  interruptible: true

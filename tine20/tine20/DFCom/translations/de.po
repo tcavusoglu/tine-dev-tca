@@ -1,0 +1,197 @@
+#
+# Translators:
+# corneliusweiss <mail@corneliusweiss.de>, 2024
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tine 2.0 - DFCom\n"
+"POT-Creation-Date: 2008-05-17 22:12+0100\n"
+"PO-Revision-Date: 2024-11-25 16:05+0000\n"
+"Last-Translator: corneliusweiss <mail@corneliusweiss.de>, 2024\n"
+"Language-Team: German (https://app.transifex.com/tine/teams/16133/de/)\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: GB\n"
+"X-Poedit-Language: en\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Device List Status"
+msgstr "Gerätelistenstatus"
+
+msgid "Possible list statuses based on device list feedback records"
+msgstr "Mögliche Status der Gerätelisten in den Rückmeldungs-Datensätzen."
+
+msgid "List was sent to device"
+msgstr "Liste wurde zum Gerät gesendet"
+
+msgid "List has been accepted"
+msgstr "Liste wurde übernommen"
+
+msgid "Generic error"
+msgstr "Allgemeiner Fehler"
+
+msgid "Invalid label"
+msgstr "Ungültiger Bezeichner"
+
+msgid "Unknown list"
+msgstr "Unbekannte Liste"
+
+msgid "Parameter missing"
+msgstr "Parameter fehlt"
+
+msgid "Error in list row"
+msgstr "Fehler in der Listenzeile"
+
+msgid "List is ignored"
+msgstr "Liste wird ignoriert"
+
+msgid "Duplicate list definition"
+msgstr "Doppelte Listendefinition"
+
+msgid "Another list upgrade is in progress"
+msgstr "Eine weitere Listen-Aktualisierung ist im Gange"
+
+msgid "Device List Percentage"
+msgstr ""
+
+msgid "Device list containing percentage entries."
+msgstr ""
+
+msgid "Initial AuthKey for Device Setup"
+msgstr "Authentifikationsschlüssel für die Geräte Einrichtung"
+
+msgid "Must be set as the default value for the global variable authKey (max 20 chars) in DataFox Studio for device setup."
+msgstr "Muss als Standard der globalen Variable authKey (max 20 Zeichen) im DataFox Studio Geräte-Setup gesetzt werden."
+
+msgid "Default Container for Devices"
+msgstr "Standard Ordner für Geräte"
+
+msgid "The container where new devices are created."
+msgstr "Der Ordner in dem neue Geräte erstellt werden."
+
+msgid "Default Device Lists"
+msgstr "Standard Gerätelisten"
+
+msgid "List export definition names that are loaded into devices by default."
+msgstr "Listen Export-Definitions-Namen die standardmäßig in das Gerät geladen werden."
+
+msgid "Device Record Handlers"
+msgstr "Geräte-Datensatz Handler"
+
+msgid "Handler class for a given device record."
+msgstr "Handler Klasse für angegebenen Geräte-Datensatz."
+
+msgid "New Device"
+msgstr "Neue Geräteliste"
+
+msgid "Device List for Absence Reasons"
+msgstr "Geräte Liste für Abwesenheitsgründe"
+
+msgid "Device List for Employee"
+msgstr "Geräte Liste für Mitarbeiter"
+
+msgid "Device list"
+msgid_plural "Device lists"
+msgstr[0] "Geräteliste"
+msgstr[1] "Gerätelisten"
+
+msgid "Device"
+msgid_plural "Devices"
+msgstr[0] "Gerät"
+msgstr[1] "Geräte"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Export Definition"
+msgstr "Export Definition"
+
+msgid "Active list version"
+msgstr "Version der aktiven Liste"
+
+msgid "List status"
+msgstr "Listenstatus"
+
+msgid "Control Commands Based on List Feedback"
+msgstr "Kontrollbefehle bei der Listenrückmeldung"
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "Serial number"
+msgstr "Seriennummer"
+
+msgid "Auth key"
+msgstr "Authentifikationsschlüssel"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "Location"
+msgstr "Standort"
+
+msgid "Timezone"
+msgstr "Zeitzone"
+
+msgid "Firmware"
+msgstr "Firmware"
+
+msgid "Setup Version"
+msgstr "Setup Version"
+
+msgid "Setup Status"
+msgstr ""
+
+msgid "Last seen"
+msgstr "Letzter Kontakt"
+
+msgid "Cellular data"
+msgstr "Mobilfunkdaten"
+
+msgid "GPRS alive counter"
+msgstr "GPRS Aktivitätszähler"
+
+msgid "GPRS data"
+msgstr "GPRS Daten"
+
+msgid "Digital status"
+msgstr "Digital Status"
+
+msgid "Lists"
+msgstr "Listen"
+
+msgid "Control Commands"
+msgstr "Steuer Kommandos"
+
+msgid "Device Record"
+msgid_plural "Device Records"
+msgstr[0] "Geräte Datensatz"
+msgstr[1] "Geräte Datensätze"
+
+msgid "Device Records Container"
+msgid_plural "Device Records Containers"
+msgstr[0] "Geräte Datensatz Ordner"
+msgstr[1] "Geräte Datensatz Ordner"
+
+msgid "Device Table"
+msgstr "Geräte Tabelle"
+
+msgid "Data"
+msgstr "Daten"
+
+msgid "Processed by"
+msgstr ""
+
+#, php-format
+msgid "Clock in: %1$s"
+msgstr "Kommen: %1$s"
+
+#, php-format
+msgid "Clock out: %1$s"
+msgstr "Gehen: %1$s"
+
+msgid "Transponder Id"
+msgstr ""

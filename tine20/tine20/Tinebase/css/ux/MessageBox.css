@@ -1,0 +1,18 @@
+.x-ux-messagebox-msg .x-box-mc {
+    font-size:14px;
+}
+#x-ux-messagebox-msg-div {
+    position:absolute;
+    left:100px;
+    top:10px;
+    width:250px;
+    z-index:20000;
+}
+
+.x-ux-messagebox-msg li::before {
+    content: '';
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    background-image: url("../../../images/icon-set/icon_arrow_right.svg")
+}

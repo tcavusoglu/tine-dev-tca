@@ -40,7 +40,8 @@ const getLayoutClass = (pxOrMode, overrides) => {
         {level: 1, name: 'small', width: 600},
         {level: 2, name: 'medium', width: 1000},
         {level: 3, name: 'big', width: 1800},
-        {level: 4, name: 'large', width: Infinity},
+        {level: 4, name: 'tiles', width: 2200},
+        {level: 5, name: 'large', width: Infinity},
     ];
     let confs;
     const findByLevel = (level) => confs.findIndex(conf => conf.level === level)
@@ -93,7 +94,8 @@ const getDefaultLayoutClasses = (columns = []) => {
         {level: 1, name: 'small', width: 600},
         {level: 2, name: 'medium', width: 1000},
         {level: 3, name: 'big', width: 1800},
-        {level: 4, name: 'large', width: Infinity},
+        {level: 4, name: 'tiles', width: 2200},
+        {level: 5, name: 'large', width: Infinity},
     ];
     const supportLevels = ['oneColumn', 'big'].concat([...new Set(columns.map((col) => col?.responsiveLevel).filter(Boolean))]);
     return defaultConfigs.filter(config => supportLevels.includes(config.name));

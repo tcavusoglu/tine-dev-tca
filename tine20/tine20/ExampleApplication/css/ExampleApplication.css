@@ -11,3 +11,135 @@
 .ExampleApplicationIconCls {
     background-image: url(../../images/icon-set/icon_debug.svg) !important;
 }
+
+/* Tile View Styles */
+.example-tiles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.example-tile-wrap {
+    display: flex;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.example-tile-wrap:hover {
+    transform: translateY(-2px);
+}
+
+.example-tile {
+    background: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 180px;
+}
+
+.example-tile:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: #157fcc;
+}
+
+.x-view-selected .example-tile {
+    background: #dfe8f6;
+    border-color: #157fcc;
+    box-shadow: 0 4px 8px rgba(21, 127, 204, 0.2);
+}
+
+.example-tile-over .example-tile {
+    border-color: #99c8e8;
+}
+
+.example-tile-header {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.example-tile-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.example-tile-body {
+    flex: 1;
+    overflow: hidden;
+}
+
+.example-tile-field {
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.example-tile-label {
+    font-weight: 600;
+    color: #666;
+    margin-right: 6px;
+}
+
+.example-tile-value {
+    color: #333;
+}
+
+.example-tile-description {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #f0f0f0;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.example-tile-footer {
+    margin-top: 12px;
+    padding-top: 8px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 11px;
+    color: #999;
+}
+
+.example-tile-meta {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+    .example-tiles-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .example-tiles-container {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 12px;
+        padding: 12px;
+    }
+    
+    .example-tile {
+        padding: 12px;
+        min-height: 160px;
+    }
+}
+
+@media (max-width: 600px) {
+    .example-tiles-container {
+        grid-template-columns: 1fr;
+    }
+}
+

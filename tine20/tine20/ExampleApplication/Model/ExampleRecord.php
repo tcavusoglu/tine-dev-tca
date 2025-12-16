@@ -124,6 +124,9 @@ class ExampleApplication_Model_ExampleRecord extends Tinebase_Record_NewAbstract
                 self::LABEL                     => 'Status', // _('Status')
                 self::NAME                      => 'exampleStatus',
                 self::DEFAULT_VAL               => 'IN-PROCESS',
+                self::UI_CONFIG                 => [
+                    'responsiveLevel'               => 'tiles',
+                ],
             ],
             self::FLD_REASON                => [
                 self::TYPE                      => self::TYPE_KEY_FIELD,
@@ -131,6 +134,9 @@ class ExampleApplication_Model_ExampleRecord extends Tinebase_Record_NewAbstract
                 self::LABEL                     => 'Reason', // _('Reason')
                 self::NAME                      => 'exampleReason',
                 self::NULLABLE                  => true,
+                self::UI_CONFIG                 => [
+                    'responsiveLevel'               => 'tiles',
+                ],
             ],
             self::FLD_NUMBER_STR            => [
                 self::TYPE                      => self::TYPE_NUMBERABLE_STRING,

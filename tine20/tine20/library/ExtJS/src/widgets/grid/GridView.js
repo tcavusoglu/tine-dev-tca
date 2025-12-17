@@ -772,6 +772,11 @@ viewConfig: {
 
     // private
     layout : function(){
+
+        //Tine.log.debug('== GridView.layout()');
+        //Tine.log.debug('mainBody:');
+        //Tine.log.debug(this.mainBody);
+
         if(!this.mainBody){
             return; // not rendered
         }
@@ -850,6 +855,12 @@ viewConfig: {
             level: -1, 
             name: null
         };
+
+        //Tine.log.debug('== GridView.getResponsiveMode()');
+        //Tine.log.debug('== disableResponsiveLayout: ' + this.disableResponsiveLayout);
+        //Tine.log.debug('== cm.config:');
+        //Tine.log.debug(this.cm.config);
+
         if (this.disableResponsiveLayout) return result;
         let width = this.grid?.getWidth?.() ?? 0;
         if (width === 0 && this.grid?.lastSize) {
@@ -861,13 +872,25 @@ viewConfig: {
         
         if (this.responsiveMode === 'auto') {
             result = getLayoutClassByWidth(width, this.cm.config);
+        } else if (this.responsiveMode === 'multiColumn') {
+            // HACK: Force multiColumn layout
+            result = {level: 1, name: 'multiColumn', width: 500};
+            // HACK END
         } else {
             result = getLayoutClassByMode(this.responsiveMode, this.cm.config);
         }
+
+        //Tine.log.debug('== getResponsiveMode result:');
+        //Tine.log.debug(result);
+
         return result;
     },
     
     setResponsiveMode(mode) {
+
+        //Tine.log.debug('== GridView.setResponsiveMode() with mode: ' + mode);
+        //Tine.log.debug('== disableResponsiveLayout: ' + this.disableResponsiveLayout);
+
         if (this.disableResponsiveLayout) return;
         this.responsiveMode = mode;
     },

@@ -18,7 +18,11 @@
         {
           "text": "ExampleGridPanel.js",
           "path": "js/"
-        },            
+        },
+        {
+          "text": "ExampleTileView.js",
+          "path": "js/"
+        },
         {
           "text": "ExampleRecordEditDialog.js",
           "path": "js/"

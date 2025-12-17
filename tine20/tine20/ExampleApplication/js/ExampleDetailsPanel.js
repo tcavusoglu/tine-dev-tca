@@ -26,6 +26,9 @@ Tine.ExampleApplication.ExampleDetailsPanel = Ext.extend(Tine.widgets.grid.Detai
     defaultHeight: 100,
     
     initComponent: function() {
+
+        Tine.log.debug('== Tine.ExampleApplication.ExampleDetailsPanel.initComponent()');
+
         this.summaryRecord = new Ext.data.Record({
             count: 0
         }, 0);
@@ -90,6 +93,9 @@ Tine.ExampleApplication.ExampleDetailsPanel = Ext.extend(Tine.widgets.grid.Detai
      * @param {Mixed} body
      */
     updateDetails: function(record, body) {
+
+        Tine.log.debug('== Tine.ExampleApplication.ExampleDetailsPanel.updateDetails()');
+
         this.getSingleRecordPanel().loadRecord.defer(100, this.getSingleRecordPanel(), [record]);
     },
     
@@ -99,6 +105,9 @@ Tine.ExampleApplication.ExampleDetailsPanel = Ext.extend(Tine.widgets.grid.Detai
      * @param {Mixed} body
      */
     showDefault: function(body) {
+
+        Tine.log.debug('== Tine.ExampleApplication.ExampleDetailsPanel.showDefault()');
+
         this.showMulti(this.grid.getSelectionModel());
     },
     
@@ -109,6 +118,9 @@ Tine.ExampleApplication.ExampleDetailsPanel = Ext.extend(Tine.widgets.grid.Detai
      * @param {Mixed} body
      */
     showMulti: function(sm, body) {
+
+        Tine.log.debug('== Tine.ExampleApplication.ExampleDetailsPanel.showMulti()');
+
         if (sm.getCount() === 0) {
             var count = this.grid.store.proxy.jsonReader.jsonData.totalcount;
         } else {

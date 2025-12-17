@@ -1749,6 +1749,9 @@ Ext.extend(Tine.widgets.grid.GridPanel, Ext.Panel, {
      * @private
      */
     initGrid: async function () {
+
+        //Tine.log.debug('== Tine.widgets.grid.GridPanel::initGrid');
+
         var preferences = Tine.Tinebase.registry.get('preferences');
         
         if (preferences) {
@@ -1800,6 +1803,10 @@ Ext.extend(Tine.widgets.grid.GridPanel, Ext.Panel, {
                 nested: !!this.editDialog
             }, this.pagingConfig));
             const columns = this.gridConfig?.cm?.columns ?? this.gridConfig?.columns;
+
+            //Tine.log.debug('== columns for sorting and responsive layout:');
+            //Tine.log.debug(columns);
+
             const sortActions = columns
                 .filter((col) => col.sortable === true)
                 .map((column) => {
@@ -1832,22 +1839,56 @@ Ext.extend(Tine.widgets.grid.GridPanel, Ext.Panel, {
             });
             // todo : hide the layout action if disableResponsiveLayout ?
             const levels = [...new Set(columns.map((col) => col?.responsiveLevel).filter(Boolean))];
-            this.widthClasses = ['auto', 'oneColumn', 'big'].concat(levels);
-            
+
+            // HACK: Enable multiColumn and disable oneColumn layout for Tasks.
+            if (this.app.appName === 'Tasks') {
+                this.widthClasses = ['auto', 'multiColumn', 'big'].concat(levels);
+            } else {
+                this.widthClasses = ['auto', 'oneColumn', 'big'].concat(levels);
+            }
+            // HACK END
+
+            //Tine.log.debug('== responsive levels found in columns:');
+            //Tine.log.debug(this.widthClasses);
+
             const layoutActions = this.widthClasses.map((level) => {
-                const text = level === 'oneColumn' ? 'one column' : level;
+                const text = level === 'oneColumn' ? 'one column' : (level === 'multiColumn' ? 'multi column' : level);
                 return new Ext.Action({
                     text: Ext.util.Format.capitalize(i18n._(text)),
                     dataIndex: level,
                     handler: (action) => {
+
+                        //Tine.log.debug('== layoutAction handler called for level: ' + action.dataIndex);
+
+                        // HACK: Disable responsive layout for Tasks when multiColumn is selected.
+                        if (this.app.appName === 'Tasks' && action.dataIndex === 'multiColumn') {
+                            //Tine.log.debug('== setting disableResponsiveLayout = FALSE');
+                            this.grid.getView().disableResponsiveLayout = false;
+                        }
+                        // HACK END
+
+                        //Tine.log.debug('== View cm config:');
+                        //Tine.log.debug(this.grid.getView().cm.config);
+
                         this.grid.getView().setResponsiveMode(action.dataIndex);
                         this.regionConfig[this.detailsPanelRegion].responsiveLevel = action.dataIndex;
+
+                        //Tine.log.debug('== setting Ext.state.Manager with:');
+                        //Tine.log.debug('regionConfigStateId: ');
+                        //Tine.log.debug(this.regionConfigStateId);
+                        //Tine.log.debug('regionConfig: ');
+                        //Tine.log.debug(this.regionConfig);
+
                         Ext.state.Manager.set(this.regionConfigStateId, this.regionConfig);
 
                         this.grid.view.layout();
                     }
                 });
             });
+
+            //Tine.log.debug('== layout actions for responsive levels:');
+            //Tine.log.debug(layoutActions);
+
             this.layoutMenu = new Ext.Action({
                 xtype: 'tbsplit',
                 menu: new Ext.menu.Menu({items: layoutActions}),
@@ -1856,6 +1897,9 @@ Ext.extend(Tine.widgets.grid.GridPanel, Ext.Panel, {
                 tooltip: 'Layout',
                 handler: (action) => {
                     const mode = this.grid.getView().getResponsiveMode().name;
+
+                    //Tine.log.debug('== responsive mode changed:' + mode);
+
                     layoutActions.forEach((action) => {
                         if (action.initialConfig.dataIndex !== 'auto') {
                             const item = action.items[0];
@@ -2035,7 +2079,9 @@ Ext.extend(Tine.widgets.grid.GridPanel, Ext.Panel, {
      */
     createView: function() {
         // init view
-        
+
+        //Tine.log.debug('== Tine.widgets.grid.GridPanel::createView');
+
         if (this.groupField && ! this.groupTextTpl) {
             this.groupTextTpl = '{text} ({[values.rs.length]} {[values.rs.length > 1 ? "' + i18n._("Records") + '" : "' + i18n._("Record") + '"]})';
         }

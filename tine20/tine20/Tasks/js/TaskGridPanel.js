@@ -35,7 +35,19 @@ Tine.Tasks.TaskGridPanel = Ext.extend(Tine.widgets.grid.GridPanel, {
      * @cfg {Tine.Tasks.Model.Task} recordClass
      */
     recordClass: 'Tine.Tasks.Model.Task',
-    
+
+    /**
+     * @property {Boolean} useMultiColumnView
+     * Track if multiColumn view is active
+     */
+    useMultiColumnView: false,
+
+    /**
+     * @property {Tine.Tasks.TaskMultiColumnView} multiColumnView
+     * Reference to multiColumn view
+     */
+    multiColumnView: null,
+
     /**
      * @private grid cfg
      */
@@ -58,9 +70,17 @@ Tine.Tasks.TaskGridPanel = Ext.extend(Tine.widgets.grid.GridPanel, {
      * @private
      */
     initComponent: function() {
+
+        //Tine.log.debug('== Tine.Tasks.TaskGridPanel.initComponent()');
+
         this.recordProxy = Tine.Tasks.taskBackend;
         this.gridConfig.cm = this.getColumnModel();
-        
+
+        //Tine.log.debug('== Tine.Tasks.TaskGridPanel.gridConfig:');
+        //Tine.log.debug(this.gridConfig);
+
+        this.initMultiColumnView();
+
         this.defaultFilters = [
             {field: 'container_id', operator: 'equals', value: {path: Tine.Tinebase.container.getMyNodePath()}}
         ];
@@ -70,6 +90,16 @@ Tine.Tasks.TaskGridPanel = Ext.extend(Tine.widgets.grid.GridPanel, {
         // this leads to a 'flicker' effect we dont want!
         // mhh! but disabling this, breaks keynav 
         //this.grid.view.focusCell = Ext.emptyFn;
+
+        // Listen for layout changes
+        if (this.grid && this.grid.getView()) {
+            const originalSetResponsiveMode = this.grid.getView().setResponsiveMode;
+            const self = this;
+            this.grid.getView().setResponsiveMode = function(mode) {
+                originalSetResponsiveMode.call(this, mode);
+                self.onLayoutChange(mode);
+            };
+        }
     },
     
     /**
@@ -192,6 +222,85 @@ Tine.Tasks.TaskGridPanel = Ext.extend(Tine.widgets.grid.GridPanel, {
             },
             columns: columns
         });
+    },
+
+    /**
+     * Initialize multiColumn view
+     * @private
+     */
+    initMultiColumnView: function() {
+        this.multiColumnView = new Tine.Tasks.TaskMultiColumnView({
+            store: this.store,
+            hidden: true
+        });
+    },
+
+    /**
+     * Called after grid render
+     */
+    afterRender: function() {
+        Tine.Tasks.TaskGridPanel.superclass.afterRender.call(this);
+
+        // Add multiColumn view to the center panel
+        if (this.centerPanel && this.multiColumnView) {
+            this.centerPanel.add(this.multiColumnView);
+            this.centerPanel.doLayout();
+        }
+    },
+
+    /**
+     * Handle layout change
+     * @param {String} mode
+     */
+    onLayoutChange: function(mode) {
+        if (mode === 'multiColumn') {
+            this.switchToMultiColumnView();
+        } else if (this.useMultiColumnView) {
+            this.switchToGridView();
+        }
+    },
+
+    /**
+     * Switch to multiColumn view
+     */
+    switchToMultiColumnView: function() {
+        if (this.useMultiColumnView) return;
+
+        this.useMultiColumnView = true;
+
+        if (this.grid) {
+            this.grid.hide();
+        }
+
+        if (this.multiColumnView) {
+            this.multiColumnView.show();
+            //this.multiColumnView.refresh();
+        }
+
+        if (this.centerPanel) {
+            this.centerPanel.doLayout();
+        }
+    },
+
+    /**
+     * Switch to grid view
+     */
+    switchToGridView: function() {
+        if (!this.useMultiColumnView) return;
+
+        this.useMultiColumnView = false;
+
+        if (this.multiColumnView) {
+            this.multiColumnView.hide();
+        }
+
+        if (this.grid) {
+            this.grid.show();
+        }
+
+        if (this.centerPanel) {
+            this.centerPanel.doLayout();
+        }
     },
 
     /**

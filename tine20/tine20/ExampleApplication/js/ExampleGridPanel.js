@@ -29,11 +29,35 @@ Ext.namespace('Tine.ExampleApplication');
  * Create a new Tine.ExampleApplication.ExampleGridPanel
  */
 Tine.ExampleApplication.ExampleGridPanel = Ext.extend(Tine.widgets.grid.GridPanel, {
+
     initComponent: function() {
+
+        Tine.log.debug('== Tine.ExampleApplication.ExampleGridPanel.initComponent()');
+
+        if (this.gridConfig.view) {
+            Tine.log.debug('== setting gridConfig.view.enableMultiColumnLayout SUCCESS');
+            this.gridConfig.view.enableMultiColumnLayout = true;
+        } else {
+            Tine.log.debug('== setting gridConfig.view.enableMultiColumnLayout FAILED');
+        }
+
         this.initDetailsPanel();
+
         Tine.ExampleApplication.ExampleGridPanel.superclass.initComponent.call(this);
+
+        // Listen for layout changes
+        if (this.grid && this.grid.getView()) {
+            Tine.log.debug('== ExampleGridPanel: layout change listener attached');
+            const originalSetResponsiveMode = this.grid.getView().setResponsiveMode;
+            const self = this;
+            this.grid.getView().setResponsiveMode = function(mode) {
+                Tine.log.debug('== ExampleGridPanel: setResponsiveMode called: ' + mode);
+                originalSetResponsiveMode.call(this, mode);
+                self.onLayoutChange(mode);
+            };
+        }
     },
-    
+
     /**
      * @private
      */
@@ -42,5 +66,36 @@ Tine.ExampleApplication.ExampleGridPanel = Ext.extend(Tine.widgets.grid.GridPane
             grid : this,
             app: this.app
         });
-    }
+    },
+
+    /**
+     * Called after grid render
+     */
+    afterRender: function() {
+        Tine.ExampleApplication.ExampleGridPanel.superclass.afterRender.call(this);
+
+        Tine.log.debug('== Tine.ExampleApplication.ExampleGridPanel.afterRender()');
+        Tine.log.debug('== this.centerPanel');
+        Tine.log.debug(this.centerPanel);
+        Tine.log.debug('== this.tileView');
+        Tine.log.debug(this.tileView);
+
+        // Add multiColumn view to the center panel
+        if (this.centerPanel && this.tileView) {
+            this.centerPanel.add(this.tileView);
+            this.centerPanel.doLayout();
+        }
+    },
+
+    /**
+     * Handle layout change
+     * @param {String} mode
+     */
+    onLayoutChange: function(mode) {
+        if (mode === 'multiColumn') {
+            Tine.log.debug('== layout change: multiColumn !!!');
+        } else {
+            Tine.log.debug('== layout change: not multiColumn: ' + mode);
+        }
+    },
 });

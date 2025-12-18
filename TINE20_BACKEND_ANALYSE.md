@@ -169,7 +169,7 @@ Frontend (ExtJS)
 
 **Ext.Direct Provider:**
 ```javascript
-// JsonRpcProvider in Tinebase/js/ux/Direct/JsonRpcProvider.js
+// Implementierung: siehe JsonRpcProvider im Frontend-JS
 Ext.Direct.addProvider({
     type: 'jsonrpcprovider',
     url: '/index.php',
@@ -182,7 +182,7 @@ Tine.ExampleApplication.searchExampleRecords(filter, paging, callback);
 
 **Record Proxy:**
 ```javascript
-// RecordProxy in Tinebase/js/data/RecordProxy.js
+// Implementierung: siehe RecordProxy im Frontend-JS
 var proxy = new Tine.Tinebase.data.RecordProxy({
     appName: 'ExampleApplication',
     modelName: 'ExampleRecord',

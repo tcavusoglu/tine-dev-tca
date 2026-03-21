@@ -124,6 +124,10 @@ class ExampleApplication_Model_ExampleRecord extends Tinebase_Record_NewAbstract
                 self::LABEL                     => 'Status', // _('Status')
                 self::NAME                      => 'exampleStatus',
                 self::DEFAULT_VAL               => 'IN-PROCESS',
+                // Workaround to get the multiColumn view into the list of gridConfig columns.
+                self::UI_CONFIG                 => [
+                    'responsiveLevel'               => 'multiColumn',
+                ],
             ],
             self::FLD_REASON                => [
                 self::TYPE                      => self::TYPE_KEY_FIELD,

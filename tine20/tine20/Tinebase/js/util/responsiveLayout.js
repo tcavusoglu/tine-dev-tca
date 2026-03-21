@@ -12,6 +12,11 @@
  */
 const getLayoutClassByWidth = (px, columns) => {
     const config = getDefaultLayoutClasses(columns);
+
+    //Tine.log.debug('== getLayoutClassByWidth px: ' + px);
+    //Tine.log.debug('== config:');
+    //Tine.log.debug(config);
+
     let result = config[config.length - 1];
     config.some((config) => {
         if (px <= config.width) {
@@ -19,11 +24,18 @@ const getLayoutClassByWidth = (px, columns) => {
             return true;
         }
     })
+    //Tine.log.debug('== result:');
+    //Tine.log.debug(result);
     return result;
 }
 
 const getLayoutClassByMode = (mode, columns) => {
     const config = getDefaultLayoutClasses(columns);
+
+    //Tine.log.debug('== getLayoutClassByMode mode: ' + mode);
+    //Tine.log.debug('== config:');
+    //Tine.log.debug(config);
+
     let result = config[config.length - 1];
     config.some((config) => {
         if (mode === config.name) {
@@ -31,16 +43,19 @@ const getLayoutClassByMode = (mode, columns) => {
             return true;
         }
     })
+    //Tine.log.debug('== result:');
+    //Tine.log.debug(result);
     return result;
 }
 
 const getLayoutClass = (pxOrMode, overrides) => {
     const defaultConfigs = [
         {level: 0, name: 'oneColumn', width: 400},
-        {level: 1, name: 'small', width: 600},
-        {level: 2, name: 'medium', width: 1000},
-        {level: 3, name: 'big', width: 1800},
-        {level: 4, name: 'large', width: Infinity},
+        {level: 1, name: 'multiColumn', width: 500},
+        {level: 2, name: 'small', width: 600},
+        {level: 3, name: 'medium', width: 1000},
+        {level: 4, name: 'big', width: 1800},
+        {level: 5, name: 'large', width: Infinity},
     ];
     let confs;
     const findByLevel = (level) => confs.findIndex(conf => conf.level === level)
@@ -90,10 +105,11 @@ const getLayoutClass = (pxOrMode, overrides) => {
 const getDefaultLayoutClasses = (columns = []) => {
     const defaultConfigs = [
         {level: 0, name: 'oneColumn', width: 400},
-        {level: 1, name: 'small', width: 600},
-        {level: 2, name: 'medium', width: 1000},
-        {level: 3, name: 'big', width: 1800},
-        {level: 4, name: 'large', width: Infinity},
+        {level: 1, name: 'multiColumn', width: 500},
+        {level: 2, name: 'small', width: 600},
+        {level: 3, name: 'medium', width: 1000},
+        {level: 4, name: 'big', width: 1800},
+        {level: 5, name: 'large', width: Infinity},
     ];
     const supportLevels = ['oneColumn', 'big'].concat([...new Set(columns.map((col) => col?.responsiveLevel).filter(Boolean))]);
     return defaultConfigs.filter(config => supportLevels.includes(config.name));

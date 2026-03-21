@@ -85,6 +85,7 @@ Tine.Tasks.TaskTreePanel = function(config) {
 };
 Ext.extend(Tine.Tasks.TaskTreePanel, Tine.widgets.container.TreePanel, {
     afterRender: function() {
+        //Tine.log.debug('== Tine.Tasks.TaskTreePanel.afterRender()');
         this.supr().afterRender.apply(this, arguments);
     }
 });

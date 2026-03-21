@@ -24,6 +24,10 @@
           "path": "js/"
         },
         {
+          "text": "TaskMultiColumnView.js",
+          "path": "js/"
+        },
+        {
           "text": "TaskEditDialog.js",
           "path": "js/"
         },
